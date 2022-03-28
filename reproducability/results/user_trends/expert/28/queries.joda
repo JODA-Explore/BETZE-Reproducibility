@@ -1,0 +1,21 @@
+# Created with Random Explorer Benchmark Generator (version v0.0.1), seed 28 (MinSelectivity: 0.2, MaxSelectivity: 0.9, MaxChain: 3, MaxTries: 100, RandomBrowseProb: 0.05, GoBackProb: 0.2, Weighted-Paths: false, Predicates: [Exists,BoolEquality,IsString,IntEquality,FloatComparison,StrPrefix,ObjectSize,ArraySize])
+LOAD Twitter CHOOSE (((ISSTRING('/retweeted_status/quoted_status/place/country') || STARTSWITH('/retweeted_status/quoted_status/in_reply_to_status_id_str',"859")) || (STARTSWITH('/geo/type',"Poi") && STARTSWITH('/geo/type',"Po"))) || EXISTS('/retweeted_status/created_at')) STORE Twitter_1
+LOAD Twitter CHOOSE ISSTRING('/retweeted_status/user/created_at') STORE Twitter_2
+LOAD Twitter_2 CHOOSE ('/quoted_status/user/geo_enabled' == false || '/retweeted_status/user/geo_enabled' == true) STORE Twitter_2_1
+LOAD Twitter_2 CHOOSE (EXISTS('/retweeted_status/extended_tweet/entities/urls') || EXISTS('/retweeted_status/possibly_sensitive')) STORE Twitter_2_2
+LOAD Twitter_2 CHOOSE ('/retweeted_status/user/statuses_count' == 5940440 || EXISTS('/user/profile_banner_url')) STORE Twitter_2_3
+LOAD Twitter_2_3 CHOOSE (EXISTS('/quoted_status/user/profile_background_tile') || EXISTS('/entities/media')) STORE Twitter_2_3_1
+LOAD Twitter_2_3 CHOOSE EXISTS('/extended_entities') STORE Twitter_2_3_2
+LOAD Twitter_2_3_2 CHOOSE ((EXISTS('/quoted_status/truncated') || EXISTS('/quoted_status/user/profile_link_color')) || '/retweeted_status/user/profile_background_tile' == true) STORE Twitter_2_3_2_1
+LOAD Twitter_2_3_2_1 CHOOSE (STARTSWITH('/retweeted_status/quoted_status/user/profile_background_color',"C0DE") || ISSTRING('/user/url')) STORE Twitter_2_3_2_1_1
+LOAD Twitter_2_3_2_1_1 CHOOSE '/user/default_profile' == true STORE Twitter_2_3_2_1_1_1
+LOAD Twitter_2_3_2_1_1_1 CHOOSE ((EXISTS('/quoted_status/user/default_profile') || EXISTS('/quoted_status/entities/user_mentions')) || '/retweeted_status/user/profile_use_background_image' == true) STORE Twitter_2_3_2_1_1_1_1
+LOAD Twitter_2_3_2_1_1_1 CHOOSE ISSTRING('/retweeted_status/user/location') STORE Twitter_2_3_2_1_1_1_2
+LOAD Twitter_2_3_2_1_1_1 CHOOSE EXISTS('/retweeted_status/display_text_range') STORE Twitter_2_3_2_1_1_1_3
+LOAD Twitter_2_3_2_1_1_1_3 CHOOSE ISSTRING('/user/time_zone') STORE Twitter_2_3_2_1_1_1_3_1
+LOAD Twitter_2_3_2_1_1_1_3_1 CHOOSE ((EXISTS('/retweeted_status/quoted_status/user/profile_sidebar_fill_color') || ISSTRING('/retweeted_status/place/id')) || '/user/geo_enabled' == true) STORE Twitter_2_3_2_1_1_1_3_1_1
+LOAD Twitter_2_3_2_1_1_1_3_1_1 CHOOSE ((STARTSWITH('/user/lang',"e") || STARTSWITH('/user/lang',"t")) || STARTSWITH('/user/lang',"f")) STORE Twitter_2_3_2_1_1_1_3_1_1_1
+LOAD Twitter_2_3_2_1_1_1_3_1_1_1 CHOOSE (((STARTSWITH('/retweeted_status/place/name',"S") || STARTSWITH('/retweeted_status/place/name',"Vien")) && STARTSWITH('/retweeted_status/place/name',"Vie")) || '/retweeted_status/user/utc_offset' >= 377.799191) STORE Twitter_2_3_2_1_1_1_3_1_1_1_1
+LOAD Twitter_2_3_2_1_1_1_3_1_1_1 CHOOSE (((STARTSWITH('/retweeted_status/quoted_status_id_str',"85909633") && STARTSWITH('/retweeted_status/quoted_status_id_str',"859096")) || ((STARTSWITH('/retweeted_status/quoted_status/user/profile_text_color',"615E59") && STARTSWITH('/retweeted_status/quoted_status/user/profile_text_color',"615E5")) && STARTSWITH('/retweeted_status/quoted_status/user/profile_text_color',"6"))) || '/retweeted_status/user/id' <= 982326184.700953) STORE Twitter_2_3_2_1_1_1_3_1_1_1_2
+LOAD Twitter_2_3_2_1_1_1_3_1_1_1_2 CHOOSE (((((STARTSWITH('/retweeted_status/user/screen_name',"T") || STARTSWITH('/retweeted_status/user/screen_name',"C")) || STARTSWITH('/retweeted_status/user/screen_name',"A")) || STARTSWITH('/retweeted_status/user/screen_name',"m")) || STARTSWITH('/retweeted_status/user/screen_name',"c")) || ((((STARTSWITH('/retweeted_status/user/url',"https:/") || STARTSWITH('/retweeted_status/user/url',"https:")) || STARTSWITH('/retweeted_status/user/url',"https")) || STARTSWITH('/retweeted_status/user/url',"http://o")) || STARTSWITH('/retweeted_status/user/url',"http://9g"))) STORE Twitter_2_3_2_1_1_1_3_1_1_1_2_1
+LOAD Twitter_2_3_2_1_1_1_3_1_1_1_2_1 CHOOSE '/retweeted_status/user/utc_offset' <= 13076.968214 STORE Twitter_2_3_2_1_1_1_3_1_1_1_2_1_1

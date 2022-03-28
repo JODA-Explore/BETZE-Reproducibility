@@ -1,0 +1,4 @@
+2022-03-04 07:12:36.402 UTC [4166] LOG:  statement: SELECT * FROM Twitter  WHERE jsonb_path_exists(doc,'$.user.lang.type() ? (@ == "string")') ;
+2022-03-04 08:08:53.212 UTC [4166] LOG:  duration: 3376856.178 ms
+2022-03-04 12:37:01.387 UTC [4166] LOG:  statement: SELECT * FROM Twitter  WHERE ( jsonb_path_exists(doc,'$.user.lang.type() ? (@ == "string")') AND jsonb_path_exists(doc,'$.retweeted_status.place') ) ;
+2022-03-04 13:29:22.866 UTC [4166] LOG:  duration: 3141479.200 ms

@@ -1,0 +1,21 @@
+# Created with Random Explorer Benchmark Generator (version v0.0.1), seed 20 (MinSelectivity: 0.2, MaxSelectivity: 0.9, MaxChain: 3, MaxTries: 100, RandomBrowseProb: 0.3, GoBackProb: 0.5, Predicates: [Exists,BoolEquality,IsString,IntEquality,FloatComparison,StrPrefix,ObjectSize,ArraySize])
+LOAD Twitter CHOOSE (((EXISTS('/retweeted_status/quoted_status/extended_tweet/full_text') || ISSTRING('/quoted_status/user/notifications')) || (STARTSWITH('/retweeted_status/user/profile_link_color',"0") || STARTSWITH('/retweeted_status/user/profile_link_color',"1"))) || '/retweeted_status/user/favourites_count' <= 440969.777271) STORE Twitter_1
+LOAD Twitter_1 CHOOSE SIZE('/retweeted_status/display_text_range') <= 2 STORE Twitter_1_1
+LOAD Twitter CHOOSE (((ISSTRING('/quoted_status/extended_tweet/entities/symbols') || STARTSWITH('/retweeted_status/quoted_status/quoted_status_id_str',"85")) || ISSTRING('/retweeted_status/user/utc_offset')) || EXISTS('/retweeted_status/possibly_sensitive')) STORE Twitter_2
+LOAD Twitter_2 CHOOSE (ISSTRING('/retweeted_status/id') || EXISTS('/retweeted_status/extended_entities/media')) STORE Twitter_2_1
+LOAD Twitter_2_1 CHOOSE (EXISTS('/retweeted_status/quoted_status/user/follow_request_sent') || EXISTS('/extended_entities')) STORE Twitter_2_1_1
+LOAD Twitter_2_1 CHOOSE (((((STARTSWITH('/quoted_status/extended_tweet/full_text',"#") && STARTSWITH('/quoted_status/extended_tweet/full_text',"Catalonia")) || STARTSWITH('/quoted_status/extended_tweet/full_text',"Cataloni")) || STARTSWITH('/quoted_status/extended_tweet/full_text',"C")) || ISSTRING('/quoted_status/extended_tweet')) || EXISTS('/user/profile_banner_url')) STORE Twitter_2_1_2
+LOAD Twitter_2_1_2 CHOOSE (((EXISTS('/retweeted_status/quoted_status/place/id') || ISSTRING('/quoted_status/created_at')) || EXISTS('/quoted_status/contributors')) || '/possibly_sensitive' == false) STORE Twitter_2_1_2_1
+LOAD Twitter_2_1_2 CHOOSE ((EXISTS('/retweeted_status/quoted_status/entities/hashtags') || EXISTS('/retweeted_status/quoted_status/user/notifications')) || '/retweeted_status/user/default_profile' == false) STORE Twitter_2_1_2_2
+LOAD Twitter_2_1_2 CHOOSE EXISTS('/retweeted_status/display_text_range') STORE Twitter_2_1_2_3
+LOAD Twitter_2_1_2 CHOOSE ((ISSTRING('/retweeted_status/entities') || EXISTS('/retweeted_status/quoted_status/place/name')) || EXISTS('/extended_entities/media')) STORE Twitter_2_1_2_4
+LOAD Twitter_2_1_2 CHOOSE (((EXISTS('/coordinates') && (STARTSWITH('/user/created_at',"T") || STARTSWITH('/user/created_at',"Mon "))) || EXISTS('/quoted_status/user/follow_request_sent')) || '/retweeted_status/user/utc_offset' <= 30315.712524) STORE Twitter_2_1_2_5
+LOAD Twitter_2_1_2 CHOOSE (((EXISTS('/retweeted_status/quoted_status/extended_entities/media') || EXISTS('/retweeted_status/quoted_status/id_str')) || EXISTS('/retweeted_status/quoted_status/user/profile_background_image_url')) || '/id' >= 859116185925356928.000000) STORE Twitter_2_1_2_6
+LOAD Twitter_2_1_2_6 CHOOSE ('/quoted_status/user/favourites_count' == 3837 || EXISTS('/possibly_sensitive')) STORE Twitter_2_1_2_6_1
+LOAD Twitter_2_1_2_6 CHOOSE ISSTRING('/user/time_zone') STORE Twitter_2_1_2_6_2
+LOAD Twitter_2_1_2_6 CHOOSE ((EXISTS('/retweeted_status/truncated') && EXISTS('/quoted_status/extended_tweet/entities/symbols')) || ISSTRING('/retweeted_status/user/location')) STORE Twitter_2_1_2_6_3
+LOAD Twitter_2_1_2_6_2 CHOOSE '/user/profile_use_background_image' == true STORE Twitter_2_1_2_6_2_1
+LOAD Twitter_2_1_2_6_2 CHOOSE (EXISTS('/retweeted_status/quoted_status/user/profile_background_color') || '/user/utc_offset' <= -1914.529358) STORE Twitter_2_1_2_6_2_2
+LOAD Twitter_2_1_2_6_2 CHOOSE ((MEMCOUNT('/entities') <= 4 && ISSTRING('/quoted_status/user/statuses_count')) || ISSTRING('/retweeted_status/user/url')) STORE Twitter_2_1_2_6_2_3
+LOAD Twitter_2_1_2_6_2 CHOOSE SIZE('/extended_entities/media') <= 1 STORE Twitter_2_1_2_6_2_4
+LOAD Twitter_2_1_2_6_2 CHOOSE EXISTS('/possibly_sensitive') STORE Twitter_2_1_2_6_2_5

@@ -1,0 +1,20 @@
+# 0th
+novice	intermediate	expert
+18.83	9.63	11.19
+
+# 25th
+novice	intermediate	expert
+38.86	22.26	15.97
+
+
+# 50th
+novice	intermediate	expert
+57.53	26.57	19.71
+
+# 75th
+novice	intermediate	expert
+85.18	36.01	23.43
+
+#100th
+novice	intermediate	expert
+123.10	59.29	34.17

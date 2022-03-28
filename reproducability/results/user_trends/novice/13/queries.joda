@@ -1,0 +1,21 @@
+# Created with Random Explorer Benchmark Generator (version v0.0.1), seed 13 (MinSelectivity: 0.2, MaxSelectivity: 0.9, MaxChain: 3, MaxTries: 100, RandomBrowseProb: 0.3, GoBackProb: 0.5, Predicates: [Exists,BoolEquality,IsString,IntEquality,FloatComparison,StrPrefix,ObjectSize,ArraySize])
+LOAD Twitter CHOOSE MEMCOUNT('/retweeted_status/user') <= 37 STORE Twitter_1
+LOAD Twitter_1 CHOOSE (EXISTS('/retweeted_status/place/place_type') || EXISTS('/user/default_profile_image')) STORE Twitter_1_1
+LOAD Twitter CHOOSE ((EXISTS('/quoted_status/place/bounding_box') || '/retweeted_status/user/protected' == true) || EXISTS('/retweeted_status/user/time_zone')) STORE Twitter_2
+LOAD Twitter CHOOSE '/user/listed_count' <= 37784.603714 STORE Twitter_3
+LOAD Twitter CHOOSE EXISTS('/retweeted_status/lang') STORE Twitter_4
+LOAD Twitter CHOOSE (((EXISTS('/retweeted_status/quoted_status/user/profile_image_url') || SIZE('/retweeted_status/contributors') >= 1) || ISSTRING('/quoted_status/user/following')) || EXISTS('/user/geo_enabled')) STORE Twitter_5
+LOAD Twitter_5 CHOOSE (EXISTS('/retweeted_status/quoted_status/lang') || EXISTS('/retweeted_status/id_str')) STORE Twitter_5_1
+LOAD Twitter_5_1 CHOOSE (((((((STARTSWITH('/retweeted_status/user/name',"M") || STARTSWITH('/retweeted_status/user/name',"A")) || STARTSWITH('/retweeted_status/user/name',"S")) || STARTSWITH('/retweeted_status/user/name',"C")) || STARTSWITH('/retweeted_status/user/name',"B")) || ISSTRING('/entities/hashtags')) || ISSTRING('/quoted_status/id')) || '/user/geo_enabled' == false) STORE Twitter_5_1_1
+LOAD Twitter_5_1_1 CHOOSE ((((((STARTSWITH('/user/description',"I") || STARTSWITH('/user/description',"A")) || STARTSWITH('/user/description',"S")) || STARTSWITH('/user/description',"B")) || STARTSWITH('/user/description',"#")) || EXISTS('/retweeted_status/entities/hashtags')) && EXISTS('/possibly_sensitive')) STORE Twitter_5_1_1_1
+LOAD Twitter_5_1_1 CHOOSE ((EXISTS('/retweeted_status/quoted_status/entities/hashtags') || ISSTRING('/coordinates')) || '/retweeted_status/user/profile_background_tile' == false) STORE Twitter_5_1_1_2
+LOAD Twitter_5_1_1 CHOOSE '/user/utc_offset' <= 12547.590896 STORE Twitter_5_1_1_3
+LOAD Twitter_1 CHOOSE (((ISSTRING('/retweeted_status/place/attributes') || EXISTS('/retweeted_status/truncated')) || ISSTRING('/retweeted_status/quoted_status/extended_tweet/entities/urls')) || EXISTS('/retweeted')) STORE Twitter_1_2
+LOAD Twitter_1 CHOOSE (((EXISTS('/geo/coordinates') || ISSTRING('/quoted_status/user/notifications')) || EXISTS('/extended_tweet/entities/symbols')) || EXISTS('/user/utc_offset')) STORE Twitter_1_3
+LOAD Twitter_1_3 CHOOSE ((((((STARTSWITH('/user/location',"S") || STARTSWITH('/user/location',"M")) || STARTSWITH('/user/location',"C")) || STARTSWITH('/user/location',"B")) || STARTSWITH('/user/location',"A")) || EXISTS('/place/attributes')) || '/user/profile_background_tile' == true) STORE Twitter_1_3_1
+LOAD Twitter_1 CHOOSE '/user/verified' == false STORE Twitter_1_4
+LOAD Twitter_1 CHOOSE ('/retweeted_status/quoted_status/user/favourites_count' == 161651 || EXISTS('/entities')) STORE Twitter_1_5
+LOAD Twitter_2 CHOOSE ((((STARTSWITH('/retweeted_status/quoted_status/user/created_at',"T") || STARTSWITH('/retweeted_status/quoted_status/user/created_at',"S")) || STARTSWITH('/retweeted_status/quoted_status/user/created_at',"Mo")) || STARTSWITH('/retweeted_status/quoted_status/user/created_at',"Fr")) || '/retweeted_status/user/geo_enabled' == true) STORE Twitter_2_1
+LOAD Twitter_2 CHOOSE (((EXISTS('/user/contributors_enabled') && ISSTRING('/retweeted_status/user')) || EXISTS('/retweeted_status/quoted_status/place')) || EXISTS('/retweeted_status/possibly_sensitive')) STORE Twitter_2_2
+LOAD Twitter CHOOSE ISSTRING('/retweeted_status/user/profile_background_image_url') STORE Twitter_6
+LOAD Twitter_6 CHOOSE (((EXISTS('/retweeted_status/user/protected') && ISSTRING('/quoted_status/extended_tweet/entities/symbols')) || EXISTS('/retweeted_status/user/is_translator')) && SIZE('/entities/media') <= 1) STORE Twitter_6_1

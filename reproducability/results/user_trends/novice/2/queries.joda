@@ -1,0 +1,21 @@
+# Created with Random Explorer Benchmark Generator (version v0.0.1), seed 2 (MinSelectivity: 0.2, MaxSelectivity: 0.9, MaxChain: 3, MaxTries: 100, RandomBrowseProb: 0.3, GoBackProb: 0.5, Predicates: [Exists,BoolEquality,IsString,IntEquality,FloatComparison,StrPrefix,ObjectSize,ArraySize])
+LOAD Twitter CHOOSE ((ISSTRING('/quoted_status/favorited') || '/quoted_status/favorited' == true) || ISSTRING('/retweeted_status/user/profile_background_color')) STORE Twitter_1
+LOAD Twitter CHOOSE EXISTS('/retweeted_status/user/lang') STORE Twitter_2
+LOAD Twitter CHOOSE ((ISSTRING('/retweeted_status/quoted_status/user/following') || ISSTRING('/place/bounding_box/coordinates')) || EXISTS('/in_reply_to_screen_name')) STORE Twitter_3
+LOAD Twitter CHOOSE (STARTSWITH('/retweeted_status/quoted_status/in_reply_to_status_id_str',"858") || '/user/utc_offset' <= 15223.111546) STORE Twitter_4
+LOAD Twitter_1 CHOOSE EXISTS('/retweeted_status/display_text_range') STORE Twitter_1_1
+LOAD Twitter_1 CHOOSE ((('/quoted_status/user/contributors_enabled' == false || EXISTS('/retweeted_status/quoted_status/user/profile_background_image_url')) || ((((STARTSWITH('/retweeted_status/user/description',"A") || STARTSWITH('/retweeted_status/user/description',"S")) || STARTSWITH('/retweeted_status/user/description',"I")) || STARTSWITH('/retweeted_status/user/description',"T")) || STARTSWITH('/retweeted_status/user/description',"#"))) || ((((STARTSWITH('/retweeted_status/lang',"e") || STARTSWITH('/retweeted_status/lang',"t")) || STARTSWITH('/retweeted_status/lang',"i")) || STARTSWITH('/retweeted_status/lang',"h")) || STARTSWITH('/retweeted_status/lang',"n"))) STORE Twitter_1_2
+LOAD Twitter_1_2 CHOOSE '/user/default_profile' == false STORE Twitter_1_2_1
+LOAD Twitter_1_2 CHOOSE (ISSTRING('/entities/urls') || '/possibly_sensitive' == false) STORE Twitter_1_2_2
+LOAD Twitter_1_2_2 CHOOSE EXISTS('/entities/media') STORE Twitter_1_2_2_1
+LOAD Twitter_1_2_2 CHOOSE (((EXISTS('/retweeted_status/quoted_status/extended_tweet/entities/media') || STARTSWITH('/retweeted_status/user/url',"http://")) || EXISTS('/retweeted_status/quoted_status/contributors')) || ISSTRING('/retweeted_status/place/place_type')) STORE Twitter_1_2_2_2
+LOAD Twitter_3 CHOOSE ((ISSTRING('/retweeted_status/quoted_status/lang') || ISSTRING('/quoted_status/entities/hashtags')) || MEMCOUNT('/retweeted_status/entities') <= 4) STORE Twitter_3_1
+LOAD Twitter_3_1 CHOOSE (((ISSTRING('/retweeted_status/quoted_status/user/location') || ISSTRING('/retweeted_status/quoted_status/place/name')) || EXISTS('/quoted_status/place/country')) || ISSTRING('/retweeted_status/filter_level')) STORE Twitter_3_1_1
+LOAD Twitter_3 CHOOSE ('/quoted_status/quoted_status_id' >= 478147247258086528.000000 || '/user/profile_background_tile' == false) STORE Twitter_3_2
+LOAD Twitter_3 CHOOSE EXISTS('/retweeted_status/id') STORE Twitter_3_3
+LOAD Twitter_4 CHOOSE (((STARTSWITH('/quoted_status/user/url',"http:") && STARTSWITH('/quoted_status/user/url',"http")) && STARTSWITH('/quoted_status/user/url',"htt")) || ISSTRING('/retweeted_status/user/description')) STORE Twitter_4_1
+LOAD Twitter_4_1 CHOOSE (SIZE('/extended_tweet/entities/media') >= 1 || '/retweeted_status/possibly_sensitive' == false) STORE Twitter_4_1_1
+LOAD Twitter_4_1_1 CHOOSE (((ISSTRING('/retweeted_status/quoted_status/id') || SIZE('/retweeted_status/quoted_status/withheld_in_countries') <= 1) || ISSTRING('/retweeted_status/quoted_status/id_str')) || EXISTS('/entities/media')) STORE Twitter_4_1_1_1
+LOAD Twitter_4_1_1_1 CHOOSE ('/user/default_profile_image' == true || ISSTRING('/quoted_status/user/id_str')) STORE Twitter_4_1_1_1_1
+LOAD Twitter_4 CHOOSE (((EXISTS('/user/listed_count') && '/retweeted_status/user/friends_count' <= 448997.892811) || ISSTRING('/quoted_status/extended_entities/media')) || EXISTS('/retweeted_status/quoted_status_id_str')) STORE Twitter_4_2
+LOAD Twitter_1_2 CHOOSE (ISSTRING('/retweeted_status/retweeted') || ISSTRING('/retweeted_status/user/time_zone')) STORE Twitter_1_2_3

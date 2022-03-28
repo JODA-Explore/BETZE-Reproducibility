@@ -1,0 +1,21 @@
+# Created with Random Explorer Benchmark Generator (version v0.0.1), seed 6 (MinSelectivity: 0.2, MaxSelectivity: 0.9, MaxChain: 3, MaxTries: 100, RandomBrowseProb: 0.3, GoBackProb: 0.5, Weighted-Paths: false, Predicates: [Exists,BoolEquality,IsString,IntEquality,FloatComparison,StrPrefix,ObjectSize,ArraySize])
+LOAD Twitter CHOOSE (((((STARTSWITH('/retweeted_status/user/profile_image_url_https',"https://a") && STARTSWITH('/retweeted_status/user/profile_image_url_https',"https:/")) && STARTSWITH('/retweeted_status/user/profile_image_url_https',"ht")) || ISSTRING('/retweeted_status/place/country')) || (STARTSWITH('/retweeted_status/quoted_status/in_reply_to_user_id_str',"1") || STARTSWITH('/retweeted_status/quoted_status/in_reply_to_user_id_str',"2"))) || ISSTRING('/retweeted_status/user/profile_banner_url')) STORE Twitter_1
+LOAD Twitter CHOOSE EXISTS('/retweeted_status/user/url') STORE Twitter_2
+LOAD Twitter CHOOSE (((((STARTSWITH('/retweeted_status/place/country_code',"C") || STARTSWITH('/retweeted_status/place/country_code',"P")) || STARTSWITH('/retweeted_status/place/country_code',"I")) || STARTSWITH('/retweeted_status/place/country_code',"M")) || STARTSWITH('/retweeted_status/place/country_code',"B")) || ISSTRING('/user/created_at')) STORE Twitter_3
+LOAD Twitter CHOOSE (STARTSWITH('/retweeted_status/coordinates/type',"P") || ISSTRING('/retweeted_status/user/profile_background_image_url')) STORE Twitter_4
+LOAD Twitter CHOOSE EXISTS('/coordinates') STORE Twitter_5
+LOAD Twitter_5 CHOOSE (EXISTS('/quoted_status/entities/urls') || '/retweeted_status/favorite_count' <= 567071.779651) STORE Twitter_5_1
+LOAD Twitter CHOOSE '/retweeted' == false STORE Twitter_6
+LOAD Twitter_6 CHOOSE ((EXISTS('/retweeted_status/quoted_status/place/bounding_box/type') || EXISTS('/quoted_status/user/protected')) || EXISTS('/retweeted_status/contributors')) STORE Twitter_6_1
+LOAD Twitter_3 CHOOSE EXISTS('/retweeted_status/user/contributors_enabled') STORE Twitter_3_1
+LOAD Twitter_3 CHOOSE EXISTS('/retweeted_status/user/profile_sidebar_fill_color') STORE Twitter_3_2
+LOAD Twitter_3 CHOOSE (EXISTS('/quoted_status/retweet_count') || EXISTS('/retweeted_status/truncated')) STORE Twitter_3_3
+LOAD Twitter_3 CHOOSE (((((STARTSWITH('/retweeted_status/place/country',"B") || STARTSWITH('/retweeted_status/place/country',"S")) || STARTSWITH('/retweeted_status/place/country',"E")) || '/retweeted_status/quoted_status/user/statuses_count' >= 106859.577811) || ((((STARTSWITH('/place/name',"S") || STARTSWITH('/place/name',"C")) || STARTSWITH('/place/name',"M")) || STARTSWITH('/place/name',"B")) || STARTSWITH('/place/name',"A"))) || EXISTS('/entities/media')) STORE Twitter_3_4
+LOAD Twitter_3 CHOOSE (((((((STARTSWITH('/retweeted_status/quoted_status/in_reply_to_user_id_str',"1") || STARTSWITH('/retweeted_status/quoted_status/in_reply_to_user_id_str',"2")) || STARTSWITH('/retweeted_status/quoted_status/in_reply_to_user_id_str',"3")) || STARTSWITH('/retweeted_status/quoted_status/in_reply_to_user_id_str',"7")) || STARTSWITH('/retweeted_status/quoted_status/in_reply_to_user_id_str',"8")) || EXISTS('/retweeted_status/quoted_status/user/follow_request_sent')) || STARTSWITH('/quoted_status/user/url',"http:")) || EXISTS('/retweeted_status/in_reply_to_screen_name')) STORE Twitter_3_5
+LOAD Twitter_3 CHOOSE (STARTSWITH('/retweeted_status/quoted_status/user/profile_text_color',"F") || ISSTRING('/retweeted_status/user/profile_image_url_https')) STORE Twitter_3_6
+LOAD Twitter_1 CHOOSE ('/retweeted_status/quoted_status/user/listed_count' >= 72104.610677 || EXISTS('/retweeted_status/extended_entities')) STORE Twitter_1_1
+LOAD Twitter_1_1 CHOOSE '/retweeted_status/user/default_profile' == false STORE Twitter_1_1_1
+LOAD Twitter_5 CHOOSE ((EXISTS('/quoted_status/user/url') || ISSTRING('/quoted_status/user/created_at')) || EXISTS('/retweeted_status/user/favourites_count')) STORE Twitter_5_2
+LOAD Twitter_5 CHOOSE (EXISTS('/retweeted_status/place/id') || EXISTS('/retweeted_status/user/verified')) STORE Twitter_5_3
+LOAD Twitter_5 CHOOSE ((STARTSWITH('/retweeted_status/quoted_status/coordinates/type',"P") || ISSTRING('/quoted_status/user/profile_sidebar_border_color')) || '/user/geo_enabled' == false) STORE Twitter_5_4
+LOAD Twitter_5 CHOOSE EXISTS('/retweeted_status/user/profile_background_image_url') STORE Twitter_5_5

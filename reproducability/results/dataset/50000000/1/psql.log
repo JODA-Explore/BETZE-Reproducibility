@@ -1,0 +1,128 @@
+The files belonging to this database system will be owned by user "postgres".
+This user must also own the server process.
+
+The database cluster will be initialized with locale "en_US.utf8".
+The default database encoding has accordingly been set to "UTF8".
+The default text search configuration will be set to "english".
+
+Data page checksums are disabled.
+
+fixing permissions on existing directory /var/lib/postgresql/data ... ok
+creating subdirectories ... ok
+selecting dynamic shared memory implementation ... posix
+selecting default max_connections ... 100
+selecting default shared_buffers ... 128MB
+selecting default time zone ... UTC
+creating configuration files ... ok
+running bootstrap script ... ok
+sh: locale: not found
+2021-11-08 12:47:18.503 UTC [30] WARNING:  no usable system locales were found
+performing post-bootstrap initialization ... ok
+syncing data to disk ... ok
+
+
+Success. You can now start the database server using:
+
+initdb: warning: enabling "trust" authentication for local connections
+You can change this by editing pg_hba.conf or using the option -A, or
+--auth-local and --auth-host, the next time you run initdb.
+    pg_ctl -D /var/lib/postgresql/data -l logfile start
+
+waiting for server to start....2021-11-08 12:47:19.268 UTC [36] LOG:  starting PostgreSQL 13.4 on x86_64-pc-linux-musl, compiled by gcc (Alpine 10.3.1_git20210424) 10.3.1 20210424, 64-bit
+2021-11-08 12:47:19.296 UTC [36] LOG:  listening on Unix socket "/var/run/postgresql/.s.PGSQL.5432"
+2021-11-08 12:47:19.298 UTC [37] LOG:  database system was shut down at 2021-11-08 12:47:19 UTC
+2021-11-08 12:47:19.301 UTC [36] LOG:  database system is ready to accept connections
+ done
+server started
+2021-11-08 12:47:19.367 UTC [46] LOG:  statement: SELECT 1 FROM pg_database WHERE datname = 'postgres' ;
+2021-11-08 12:47:19.369 UTC [46] LOG:  duration: 3.078 ms
+
+/usr/local/bin/docker-entrypoint.sh: running /docker-entrypoint-initdb.d/1-benchmark.sql
+2021-11-08 12:47:19.381 UTC [48] LOG:  statement: CREATE UNLOGGED TABLE NoBench_extra (doc jsonb);
+2021-11-08 12:47:19.389 UTC [48] LOG:  duration: 7.931 ms
+CREATE TABLE
+2021-11-08 12:47:19.389 UTC [48] LOG:  statement: COPY NoBench_extra (doc) from program 'sed -e ''s/\\/\\\\/g'' /dataset/NoBench_extra.json';
+2021-11-08 12:47:21.183 UTC [48] LOG:  duration: 1793.885 ms
+COPY 50000
+2021-11-08 12:47:21.183 UTC [48] LOG:  statement: CREATE UNLOGGED TABLE NoBench (doc jsonb);
+2021-11-08 12:47:21.186 UTC [48] LOG:  duration: 2.559 ms
+CREATE TABLE
+2021-11-08 12:47:21.186 UTC [48] LOG:  statement: COPY NoBench (doc) from program 'sed -e ''s/\\/\\\\/g'' /dataset/NoBench.json';
+2021-11-08 13:11:45.936 UTC [48] LOG:  duration: 1464749.910 ms
+COPY 50000000
+2021-11-08 13:11:45.936 UTC [48] LOG:  statement: SELECT COUNT(*) FROM NoBench WHERE ( ( ( jsonb_path_exists(doc,'$.sparse_974.type() ? (@ == "string")') OR jsonb_path_exists(doc,'$.sparse_867 ? (@ starts with "GBRDA=")') ) OR jsonb_path_exists(doc,'$.sparse_371') ) OR jsonb_path_exists(doc,'$.dyn2 ? (@ >= 1704.876497)') ) ;
+2021-11-08 13:12:28.887 UTC [48] LOG:  duration: 42951.158 ms
+  count   
+----------
+ 17363080
+(1 row)
+
+2021-11-08 13:12:28.888 UTC [48] LOG:  statement: SELECT COUNT(*) FROM NoBench WHERE ( ( ( ( ( jsonb_path_exists(doc,'$.str1 ? (@ starts with "GBRDCMB")') OR jsonb_path_exists(doc,'$.str1 ? (@ starts with "GBRDCMJR")') ) OR jsonb_path_exists(doc,'$.str1 ? (@ starts with "GBRDC=")') ) OR jsonb_path_exists(doc,'$.sparse_852 ? (@ starts with "GBRDC")') ) OR jsonb_path_exists(doc,'$.sparse_757') ) OR jsonb_path_exists(doc,'$.sparse_491') ) ;
+2021-11-08 13:12:54.676 UTC [48] LOG:  duration: 25788.222 ms
+  count   
+----------
+ 41855423
+(1 row)
+
+2021-11-08 13:12:54.677 UTC [48] LOG:  statement: SELECT COUNT(*) FROM NoBench WHERE ( ( ( ( ( ( jsonb_path_exists(doc,'$.str1 ? (@ starts with "GBRDCMB")') OR jsonb_path_exists(doc,'$.str1 ? (@ starts with "GBRDCMJR")') ) OR jsonb_path_exists(doc,'$.str1 ? (@ starts with "GBRDC=")') ) OR jsonb_path_exists(doc,'$.sparse_852 ? (@ starts with "GBRDC")') ) OR jsonb_path_exists(doc,'$.sparse_757') ) OR jsonb_path_exists(doc,'$.sparse_491') ) AND ( ( ( ( jsonb_path_exists(doc,'$.sparse_783 ? (@ starts with "GBRDCM")') AND jsonb_path_exists(doc,'$.sparse_783 ? (@ starts with "GBRDC")') ) OR jsonb_path_exists(doc,'$.sparse_320') ) OR jsonb_path_exists(doc,'$.sparse_494 ? (@ starts with "GBRDC")') ) OR jsonb_path_exists(doc,'$.nested_obj.num ? (@ >= 6517.423246)') ) ) ;
+2021-11-08 13:13:43.992 UTC [48] LOG:  duration: 49315.117 ms
+  count   
+----------
+ 41849082
+(1 row)
+
+2021-11-08 13:13:43.993 UTC [48] LOG:  statement: SELECT COUNT(*) FROM NoBench WHERE ( ( ( ( ( ( jsonb_path_exists(doc,'$.str1 ? (@ starts with "GBRDCMB")') OR jsonb_path_exists(doc,'$.str1 ? (@ starts with "GBRDCMJR")') ) OR jsonb_path_exists(doc,'$.str1 ? (@ starts with "GBRDC=")') ) OR jsonb_path_exists(doc,'$.sparse_852 ? (@ starts with "GBRDC")') ) OR jsonb_path_exists(doc,'$.sparse_757') ) OR jsonb_path_exists(doc,'$.sparse_491') ) AND ( ( ( jsonb_path_exists(doc,'$.sparse_051.type() ? (@ == "string")') OR jsonb_path_exists(doc,'$.sparse_375.type() ? (@ == "string")') ) OR jsonb_path_exists(doc,'$.sparse_223') ) OR jsonb_path_exists(doc,'$.bool ? (@ == true)') ) ) ;
+2021-11-08 13:14:21.808 UTC [48] LOG:  duration: 37815.377 ms
+  count   
+----------
+ 21465843
+(1 row)
+
+2021-11-08 13:14:21.809 UTC [48] LOG:  statement: SELECT COUNT(*) FROM NoBench WHERE ( ( ( ( ( ( ( jsonb_path_exists(doc,'$.str1 ? (@ starts with "GBRDCMB")') OR jsonb_path_exists(doc,'$.str1 ? (@ starts with "GBRDCMJR")') ) OR jsonb_path_exists(doc,'$.str1 ? (@ starts with "GBRDC=")') ) OR jsonb_path_exists(doc,'$.sparse_852 ? (@ starts with "GBRDC")') ) OR jsonb_path_exists(doc,'$.sparse_757') ) OR jsonb_path_exists(doc,'$.sparse_491') ) AND ( ( ( jsonb_path_exists(doc,'$.sparse_051.type() ? (@ == "string")') OR jsonb_path_exists(doc,'$.sparse_375.type() ? (@ == "string")') ) OR jsonb_path_exists(doc,'$.sparse_223') ) OR jsonb_path_exists(doc,'$.bool ? (@ == true)') ) ) AND ( ( ( jsonb_path_exists(doc,'$.sparse_218') OR jsonb_path_exists(doc,'$.sparse_878.type() ? (@ == "string")') ) OR jsonb_path_exists(doc,'$.sparse_037.type() ? (@ == "string")') ) OR ( ( jsonb_path_exists(doc,'$.str1 ? (@ starts with "GBRDCMBR")') OR jsonb_path_exists(doc,'$.str1 ? (@ starts with "GBRDCMJQG")') ) OR jsonb_path_exists(doc,'$.str1 ? (@ starts with "GBRDC==")') ) ) ) ;
+2021-11-08 13:15:12.768 UTC [48] LOG:  duration: 50959.505 ms
+  count  
+---------
+ 9386245
+(1 row)
+
+2021-11-08 13:15:12.769 UTC [48] LOG:  statement: SELECT COUNT(*) FROM NoBench WHERE ( ( ( jsonb_path_exists(doc,'$.sparse_127.type() ? (@ == "string")') OR jsonb_path_exists(doc,'$.sparse_673 ? (@ starts with "GBRDCM")') ) OR jsonb_path_exists(doc,'$.sparse_672 ? (@ starts with "GBRDCMB")') ) OR jsonb_path_exists(doc,'$.dyn1 ? (@ <= 5165.166293)') ) ;
+2021-11-08 13:15:44.497 UTC [48] LOG:  duration: 31728.308 ms
+ count  
+--------
+ 913904
+(1 row)
+
+2021-11-08 13:15:44.498 UTC [48] LOG:  statement: SELECT COUNT(*) FROM NoBench WHERE ( ( ( ( ( ( ( ( jsonb_path_exists(doc,'$.str1 ? (@ starts with "GBRDCMB")') OR jsonb_path_exists(doc,'$.str1 ? (@ starts with "GBRDCMJR")') ) OR jsonb_path_exists(doc,'$.str1 ? (@ starts with "GBRDC=")') ) OR jsonb_path_exists(doc,'$.sparse_852 ? (@ starts with "GBRDC")') ) OR jsonb_path_exists(doc,'$.sparse_757') ) OR jsonb_path_exists(doc,'$.sparse_491') ) AND ( ( ( jsonb_path_exists(doc,'$.sparse_051.type() ? (@ == "string")') OR jsonb_path_exists(doc,'$.sparse_375.type() ? (@ == "string")') ) OR jsonb_path_exists(doc,'$.sparse_223') ) OR jsonb_path_exists(doc,'$.bool ? (@ == true)') ) ) AND ( ( ( jsonb_path_exists(doc,'$.sparse_218') OR jsonb_path_exists(doc,'$.sparse_878.type() ? (@ == "string")') ) OR jsonb_path_exists(doc,'$.sparse_037.type() ? (@ == "string")') ) OR ( ( jsonb_path_exists(doc,'$.str1 ? (@ starts with "GBRDCMBR")') OR jsonb_path_exists(doc,'$.str1 ? (@ starts with "GBRDCMJQG")') ) OR jsonb_path_exists(doc,'$.str1 ? (@ starts with "GBRDC==")') ) ) ) AND ( jsonb_path_exists(doc,'$.str2 ? (@ starts with "GBRDCMJRG")') OR jsonb_path_exists(doc,'$.str2 ? (@ starts with "GBRDCMJQGA")') ) ) ;
+2021-11-08 13:16:21.327 UTC [48] LOG:  duration: 36829.764 ms
+  count  
+---------
+ 1136586
+(1 row)
+
+2021-11-08 13:16:21.328 UTC [48] LOG:  statement: SELECT COUNT(*) FROM NoBench WHERE ( ( ( ( ( ( ( ( ( jsonb_path_exists(doc,'$.str1 ? (@ starts with "GBRDCMB")') OR jsonb_path_exists(doc,'$.str1 ? (@ starts with "GBRDCMJR")') ) OR jsonb_path_exists(doc,'$.str1 ? (@ starts with "GBRDC=")') ) OR jsonb_path_exists(doc,'$.sparse_852 ? (@ starts with "GBRDC")') ) OR jsonb_path_exists(doc,'$.sparse_757') ) OR jsonb_path_exists(doc,'$.sparse_491') ) AND ( ( ( jsonb_path_exists(doc,'$.sparse_051.type() ? (@ == "string")') OR jsonb_path_exists(doc,'$.sparse_375.type() ? (@ == "string")') ) OR jsonb_path_exists(doc,'$.sparse_223') ) OR jsonb_path_exists(doc,'$.bool ? (@ == true)') ) ) AND ( ( ( jsonb_path_exists(doc,'$.sparse_218') OR jsonb_path_exists(doc,'$.sparse_878.type() ? (@ == "string")') ) OR jsonb_path_exists(doc,'$.sparse_037.type() ? (@ == "string")') ) OR ( ( jsonb_path_exists(doc,'$.str1 ? (@ starts with "GBRDCMBR")') OR jsonb_path_exists(doc,'$.str1 ? (@ starts with "GBRDCMJQG")') ) OR jsonb_path_exists(doc,'$.str1 ? (@ starts with "GBRDC==")') ) ) ) AND ( jsonb_path_exists(doc,'$.str2 ? (@ starts with "GBRDCMJRG")') OR jsonb_path_exists(doc,'$.str2 ? (@ starts with "GBRDCMJQGA")') ) ) AND jsonb_path_exists(doc,'$.str2 ? (@ starts with "GBRDCMJRGA")') ) ;
+2021-11-08 13:16:45.066 UTC [48] LOG:  duration: 23738.721 ms
+ count  
+--------
+ 636394
+(1 row)
+
+2021-11-08 13:16:45.067 UTC [48] LOG:  statement: SELECT COUNT(*) FROM NoBench WHERE ( ( ( ( ( ( ( ( ( ( jsonb_path_exists(doc,'$.str1 ? (@ starts with "GBRDCMB")') OR jsonb_path_exists(doc,'$.str1 ? (@ starts with "GBRDCMJR")') ) OR jsonb_path_exists(doc,'$.str1 ? (@ starts with "GBRDC=")') ) OR jsonb_path_exists(doc,'$.sparse_852 ? (@ starts with "GBRDC")') ) OR jsonb_path_exists(doc,'$.sparse_757') ) OR jsonb_path_exists(doc,'$.sparse_491') ) AND ( ( ( jsonb_path_exists(doc,'$.sparse_051.type() ? (@ == "string")') OR jsonb_path_exists(doc,'$.sparse_375.type() ? (@ == "string")') ) OR jsonb_path_exists(doc,'$.sparse_223') ) OR jsonb_path_exists(doc,'$.bool ? (@ == true)') ) ) AND ( ( ( jsonb_path_exists(doc,'$.sparse_218') OR jsonb_path_exists(doc,'$.sparse_878.type() ? (@ == "string")') ) OR jsonb_path_exists(doc,'$.sparse_037.type() ? (@ == "string")') ) OR ( ( jsonb_path_exists(doc,'$.str1 ? (@ starts with "GBRDCMBR")') OR jsonb_path_exists(doc,'$.str1 ? (@ starts with "GBRDCMJQG")') ) OR jsonb_path_exists(doc,'$.str1 ? (@ starts with "GBRDC==")') ) ) ) AND ( jsonb_path_exists(doc,'$.str2 ? (@ starts with "GBRDCMJRG")') OR jsonb_path_exists(doc,'$.str2 ? (@ starts with "GBRDCMJQGA")') ) ) AND jsonb_path_exists(doc,'$.str2 ? (@ starts with "GBRDCMJRGA")') ) AND ( ( jsonb_path_exists(doc,'$.sparse_419') OR jsonb_path_exists(doc,'$.sparse_632 ? (@ starts with "GBRDC==")') ) OR jsonb_path_exists(doc,'$.dyn2.type() ? (@ == "string")') ) ) ;
+2021-11-08 13:17:08.026 UTC [48] LOG:  duration: 22959.347 ms
+ count  
+--------
+ 219870
+(1 row)
+
+2021-11-08 13:17:08.027 UTC [48] LOG:  statement: SELECT COUNT(*) FROM NoBench WHERE ( ( ( ( ( ( ( ( ( ( ( jsonb_path_exists(doc,'$.str1 ? (@ starts with "GBRDCMB")') OR jsonb_path_exists(doc,'$.str1 ? (@ starts with "GBRDCMJR")') ) OR jsonb_path_exists(doc,'$.str1 ? (@ starts with "GBRDC=")') ) OR jsonb_path_exists(doc,'$.sparse_852 ? (@ starts with "GBRDC")') ) OR jsonb_path_exists(doc,'$.sparse_757') ) OR jsonb_path_exists(doc,'$.sparse_491') ) AND ( ( ( jsonb_path_exists(doc,'$.sparse_051.type() ? (@ == "string")') OR jsonb_path_exists(doc,'$.sparse_375.type() ? (@ == "string")') ) OR jsonb_path_exists(doc,'$.sparse_223') ) OR jsonb_path_exists(doc,'$.bool ? (@ == true)') ) ) AND ( ( ( jsonb_path_exists(doc,'$.sparse_218') OR jsonb_path_exists(doc,'$.sparse_878.type() ? (@ == "string")') ) OR jsonb_path_exists(doc,'$.sparse_037.type() ? (@ == "string")') ) OR ( ( jsonb_path_exists(doc,'$.str1 ? (@ starts with "GBRDCMBR")') OR jsonb_path_exists(doc,'$.str1 ? (@ starts with "GBRDCMJQG")') ) OR jsonb_path_exists(doc,'$.str1 ? (@ starts with "GBRDC==")') ) ) ) AND ( jsonb_path_exists(doc,'$.str2 ? (@ starts with "GBRDCMJRG")') OR jsonb_path_exists(doc,'$.str2 ? (@ starts with "GBRDCMJQGA")') ) ) AND jsonb_path_exists(doc,'$.str2 ? (@ starts with "GBRDCMJRGA")') ) AND ( ( jsonb_path_exists(doc,'$.sparse_419') OR jsonb_path_exists(doc,'$.sparse_632 ? (@ starts with "GBRDC==")') ) OR jsonb_path_exists(doc,'$.dyn2.type() ? (@ == "string")') ) ) AND ( ( jsonb_path_exists(doc,'$.sparse_294') OR jsonb_path_exists(doc,'$.sparse_111') ) OR jsonb_path_exists(doc,'$.nested_obj.num ? (@ <= 3764.139065)') ) ) ;
+2021-11-08 13:17:31.126 UTC [48] LOG:  duration: 23099.556 ms
+ count 
+-------
+  7172
+(1 row)
+
+2021-11-08 13:17:31.127 UTC [48] LOG:  statement: SELECT * FROM nonexistingsopostgresstops;
+2021-11-08 13:17:31.127 UTC [48] ERROR:  relation "nonexistingsopostgresstops" does not exist at character 15
+2021-11-08 13:17:31.127 UTC [48] STATEMENT:  SELECT * FROM nonexistingsopostgresstops;
+psql:/docker-entrypoint-initdb.d/1-benchmark.sql:16: ERROR:  relation "nonexistingsopostgresstops" does not exist
+LINE 1: SELECT * FROM nonexistingsopostgresstops;
+                      ^

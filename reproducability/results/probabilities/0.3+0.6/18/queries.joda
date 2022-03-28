@@ -1,0 +1,11 @@
+# Created with Random Explorer Benchmark Generator (version v0.0.1), seed 18 (MinSelectivity: 0.2, MaxSelectivity: 0.9, MaxChain: 3, MaxTries: 100, RandomBrowseProb: 0.3, GoBackProb: 0.6, Weighted-Paths: false, Predicates: [Exists,BoolEquality,IsString,IntEquality,FloatComparison,StrPrefix,ObjectSize,ArraySize])
+LOAD Twitter CHOOSE EXISTS('/retweeted_status/user/location') 
+LOAD Twitter CHOOSE ((EXISTS('/retweeted_status/quoted_status/user/profile_image_url_https') || EXISTS('/quoted_status/retweeted')) || '/user/default_profile' == false) 
+LOAD Twitter CHOOSE EXISTS('/retweeted_status/user/following') 
+LOAD Twitter CHOOSE MEMCOUNT('/retweeted_status/entities') <= 4 
+LOAD Twitter CHOOSE ((EXISTS('/retweeted_status/quoted_status/display_text_range') || '/in_reply_to_user_id' == 394269644731623438) || ISSTRING('/user/id_str')) 
+LOAD Twitter CHOOSE EXISTS('/retweeted_status/truncated') 
+LOAD Twitter CHOOSE EXISTS('/retweeted_status/display_text_range') 
+LOAD Twitter CHOOSE EXISTS('/user/contributors_enabled') 
+LOAD Twitter CHOOSE (EXISTS('/user/contributors_enabled') && ((EXISTS('/extended_entities/media') || EXISTS('/retweeted_status/quoted_status/quoted_status_id')) || EXISTS('/quoted_status/created_at'))) 
+LOAD Twitter CHOOSE (EXISTS('/user/contributors_enabled') && EXISTS('/retweeted_status/entities/urls')) 

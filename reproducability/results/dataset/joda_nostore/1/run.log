@@ -1,0 +1,50 @@
+=== Found JODA query file, executing JODA queries ===
+= File:'NoBench.json' =
+reparse: Pulling from nicotin/joda
+Digest: sha256:3b3a321bd8632417b1ee959cb936e23a46f5d027391d080c13a9fa1728a97a46
+Status: Image is up to date for nicotin/joda:reparse
+ea0eaa9f061f4de13862cf83b2af827b2d419f1df99b1fc455b7100286dd1cbb
+0
+JODA: 33.8897 s
+joda-benchmark
+=== Results ===
+= JQ =
+Overall: 
+= JODA =
+Overall: 33.8897
+Query Time: 22.3495
+5.798122478
+5.498162828
+4.901361373
+1.943613927
+0.863385362
+1.741196231
+1.006373185
+0.24356288
+0.22681645
+0.126855801
+= Mongo =
+Overall: 
+
+Query Time: 
+= PostgreSQL =
+Overall: 
+=== AGG Results ===
+= JQ =
+
+= JODA =
+10000000
+3472172
+7963856
+7957515
+4091463
+1304726
+186632
+621867
+196486
+67997
+2294
+= Mongo =
+
+= PostgreSQL =
+

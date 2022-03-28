@@ -1,0 +1,6 @@
+# Created with Random Explorer Benchmark Generator (version v0.0.1), seed 27 (MinSelectivity: 0.2, MaxSelectivity: 0.9, MaxChain: 3, MaxTries: 100, RandomBrowseProb: 0.05, GoBackProb: 0.2, Weighted-Paths: false, Predicates: [Exists,BoolEquality,IsString,IntEquality,FloatComparison,StrPrefix,ObjectSize,ArraySize])
+LOAD Twitter CHOOSE (('/retweeted_status/quoted_status/user/geo_enabled' == true || EXISTS('/quoted_status/is_quote_status')) || '/user/id' <= 234967266815916288.000000) STORE Twitter_1
+LOAD Twitter_1 CHOOSE (((EXISTS('/retweeted_status/place/country') || ISSTRING('/quoted_status/coordinates/type')) || EXISTS('/extended_tweet')) || EXISTS('/retweeted_status/user/default_profile_image')) STORE Twitter_1_1
+LOAD Twitter_1_1 CHOOSE '/retweeted_status/user/verified' == false STORE Twitter_1_1_1
+LOAD Twitter_1_1_1 CHOOSE (ISSTRING('/retweeted_status/quoted_status/created_at') || ISSTRING('/retweeted_status/user/url')) STORE Twitter_1_1_1_1
+LOAD Twitter_1_1_1_1 CHOOSE EXISTS('/user/profile_banner_url') STORE Twitter_1_1_1_1_1

@@ -1,0 +1,11 @@
+# Created with Random Explorer Benchmark Generator (version v0.0.1), seed 3 (MinSelectivity: 0.2, MaxSelectivity: 0.9, MaxChain: 3, MaxTries: 100, RandomBrowseProb: 0.2, GoBackProb: 0.3, Weighted-Paths: false, Predicates: [Exists,BoolEquality,IsString,IntEquality,FloatComparison,StrPrefix,ObjectSize,ArraySize])
+LOAD Twitter CHOOSE (((EXISTS('/retweeted_status/quoted_status/source') || '/retweeted_status/quoted_status/user/listed_count' == 190101) || ISSTRING('/place/id')) || EXISTS('/user/id_str')) STORE Twitter_1
+LOAD Twitter CHOOSE (((STARTSWITH('/retweeted_status/quoted_status/user/lang',"e") || EXISTS('/retweeted_status/quoted_status/user/favourites_count')) || EXISTS('/quoted_status/user/screen_name')) || MEMCOUNT('/retweeted_status/entities') <= 4) STORE Twitter_2
+LOAD Twitter_2 CHOOSE EXISTS('/user/profile_background_image_url_https') STORE Twitter_2_1
+LOAD Twitter_2_1 CHOOSE EXISTS('/retweeted_status/in_reply_to_status_id') STORE Twitter_2_1_1
+LOAD Twitter_2_1 CHOOSE ((EXISTS('/retweeted_status/quoted_status/user/geo_enabled') || EXISTS('/withheld_in_countries')) || EXISTS('/retweeted_status/user/profile_banner_url')) STORE Twitter_2_1_2
+LOAD Twitter_1 CHOOSE EXISTS('/retweeted_status/entities/urls') STORE Twitter_1_1
+LOAD Twitter_1 CHOOSE ((((((STARTSWITH('/retweeted_status/quoted_status/user/profile_text_color',"0") || STARTSWITH('/retweeted_status/quoted_status/user/profile_text_color',"1")) || STARTSWITH('/retweeted_status/quoted_status/user/profile_text_color',"F")) || STARTSWITH('/retweeted_status/quoted_status/user/profile_text_color',"3")) || STARTSWITH('/retweeted_status/quoted_status/user/profile_text_color',"2")) || EXISTS('/quoted_status/user/profile_sidebar_border_color')) || EXISTS('/extended_entities/media')) STORE Twitter_1_2
+LOAD Twitter_1_2 CHOOSE ISSTRING('/retweeted_status/created_at') STORE Twitter_1_2_1
+LOAD Twitter_1_2_1 CHOOSE ((EXISTS('/quoted_status/user/profile_background_tile') || EXISTS('/retweeted_status/quoted_status/place/country')) || EXISTS('/retweeted_status/place/bounding_box/type')) STORE Twitter_1_2_1_1
+LOAD Twitter_1_2_1_1 CHOOSE ((MEMCOUNT('/quoted_status/extended_tweet/entities') <= 4 || EXISTS('/quoted_status/user/listed_count')) && EXISTS('/quoted_status/user/profile_sidebar_border_color')) STORE Twitter_1_2_1_1_1

@@ -1,0 +1,11 @@
+# Created with Random Explorer Benchmark Generator (version v0.0.1), seed 30 (MinSelectivity: 0.2, MaxSelectivity: 0.9, MaxChain: 3, MaxTries: 100, RandomBrowseProb: 0.2, GoBackProb: 0.3, Weighted-Paths: false, Predicates: [Exists,BoolEquality,IsString,IntEquality,FloatComparison,StrPrefix,ObjectSize,ArraySize])
+LOAD Twitter CHOOSE '/user/geo_enabled' == true STORE Twitter_1
+LOAD Twitter CHOOSE (EXISTS('/geo/coordinates') || EXISTS('/user/profile_background_image_url')) STORE Twitter_2
+LOAD Twitter_2 CHOOSE EXISTS('/retweeted_status/entities/user_mentions') STORE Twitter_2_1
+LOAD Twitter_2 CHOOSE (((((STARTSWITH('/user/profile_text_color',"1") || STARTSWITH('/user/profile_text_color',"D")) || STARTSWITH('/user/profile_text_color',"C")) || STARTSWITH('/user/profile_text_color',"2")) || STARTSWITH('/user/profile_text_color',"4")) || EXISTS('/retweeted_status/filter_level')) STORE Twitter_2_2
+LOAD Twitter_2 CHOOSE ((ISSTRING('/geo/type') || EXISTS('/retweeted_status/quoted_status/in_reply_to_screen_name')) || ISSTRING('/retweeted_status/user/screen_name')) STORE Twitter_2_3
+LOAD Twitter_2_3 CHOOSE (('/retweeted_status/quoted_status/user/id' >= 308472946214190720.000000 || '/retweeted_status/quoted_status/retweeted' == false) || ISSTRING('/retweeted_status/user/location')) STORE Twitter_2_3_1
+LOAD Twitter CHOOSE ((EXISTS('/retweeted_status/scopes/followers') || ISSTRING('/quoted_status/user/created_at')) || EXISTS('/retweeted_status/filter_level')) STORE Twitter_3
+LOAD Twitter CHOOSE EXISTS('/retweeted_status/user/lang') STORE Twitter_4
+LOAD Twitter_4 CHOOSE (((((STARTSWITH('/retweeted_status/quoted_status/user/location',"S") || STARTSWITH('/retweeted_status/quoted_status/user/location',"C")) || STARTSWITH('/retweeted_status/quoted_status/user/location',"M")) || STARTSWITH('/retweeted_status/quoted_status/user/location',"A")) || STARTSWITH('/retweeted_status/quoted_status/user/location',"B")) || EXISTS('/retweeted_status/extended_entities/media')) STORE Twitter_4_1
+LOAD Twitter_4_1 CHOOSE (('/retweeted_status/quoted_status/retweet_count' == 93640 || (STARTSWITH('/retweeted_status/quoted_status/user/created_at',"T") || STARTSWITH('/retweeted_status/quoted_status/user/created_at',"Sun "))) || ISSTRING('/user/location')) STORE Twitter_4_1_1

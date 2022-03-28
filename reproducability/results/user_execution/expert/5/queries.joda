@@ -1,0 +1,6 @@
+# Created with Random Explorer Benchmark Generator (version v0.0.1), seed 5 (MinSelectivity: 0.2, MaxSelectivity: 0.9, MaxChain: 3, MaxTries: 100, RandomBrowseProb: 0.05, GoBackProb: 0.2, Weighted-Paths: false, Predicates: [Exists,BoolEquality,IsString,IntEquality,FloatComparison,StrPrefix,ObjectSize,ArraySize])
+LOAD Twitter CHOOSE ('/quoted_status/id' == 742486380346001756 || ISSTRING('/retweeted_status/created_at')) STORE Twitter_1
+LOAD Twitter_1 CHOOSE '/retweeted_status/user/geo_enabled' == false STORE Twitter_1_1
+LOAD Twitter_1 CHOOSE EXISTS('/extended_entities') STORE Twitter_1_2
+LOAD Twitter CHOOSE ((STARTSWITH('/quoted_status/user/profile_sidebar_fill_color',"D") || '/retweeted_status/user/friends_count' == 1240817) || EXISTS('/user/contributors_enabled')) STORE Twitter_2
+LOAD Twitter CHOOSE EXISTS('/user/notifications') STORE Twitter_3

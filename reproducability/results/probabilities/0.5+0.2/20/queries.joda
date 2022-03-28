@@ -1,0 +1,11 @@
+# Created with Random Explorer Benchmark Generator (version v0.0.1), seed 20 (MinSelectivity: 0.2, MaxSelectivity: 0.9, MaxChain: 3, MaxTries: 100, RandomBrowseProb: 0.5, GoBackProb: 0.2, Weighted-Paths: false, Predicates: [Exists,BoolEquality,IsString,IntEquality,FloatComparison,StrPrefix,ObjectSize,ArraySize])
+LOAD Twitter CHOOSE EXISTS('/retweeted_status/entities/symbols') 
+LOAD Twitter CHOOSE (EXISTS('/retweeted_status/entities/symbols') && ISSTRING('/user/time_zone')) 
+LOAD Twitter CHOOSE '/user/is_translator' == false 
+LOAD Twitter CHOOSE EXISTS('/filter_level') 
+LOAD Twitter CHOOSE (EXISTS('/filter_level') && (ISSTRING('/extended_tweet/full_text') || ISSTRING('/retweeted_status/user/created_at'))) 
+LOAD Twitter CHOOSE ((EXISTS('/filter_level') && (ISSTRING('/extended_tweet/full_text') || ISSTRING('/retweeted_status/user/created_at'))) && (((((((STARTSWITH('/lang',"e") || STARTSWITH('/lang',"t")) || STARTSWITH('/lang',"i")) || STARTSWITH('/lang',"n")) || STARTSWITH('/lang',"u")) || ((((STARTSWITH('/retweeted_status/quoted_status/quoted_status_id_str',"85") && STARTSWITH('/retweeted_status/quoted_status/quoted_status_id_str',"8")) && STARTSWITH('/retweeted_status/quoted_status/quoted_status_id_str',"7")) || STARTSWITH('/retweeted_status/quoted_status/quoted_status_id_str',"68")) || STARTSWITH('/retweeted_status/quoted_status/quoted_status_id_str',"54902"))) || EXISTS('/retweeted_status/extended_tweet/extended_entities')) || EXISTS('/retweeted_status/quoted_status/user/screen_name'))) 
+LOAD Twitter CHOOSE (EXISTS('/filter_level') && ((ISSTRING('/retweeted_status/quoted_status/user/profile_image_url') || EXISTS('/retweeted_status/quoted_status/user/screen_name')) || ISSTRING('/retweeted_status/user/location'))) 
+LOAD Twitter CHOOSE ('/user/is_translator' == false && EXISTS('/retweeted_status/is_quote_status')) 
+LOAD Twitter CHOOSE (('/user/is_translator' == false && EXISTS('/retweeted_status/is_quote_status')) && (('/retweeted_status/user/contributors_enabled' == false && EXISTS('/quoted_status/user/verified')) || '/retweeted_status/user/geo_enabled' == true)) 
+LOAD Twitter CHOOSE ((('/user/followers_count' <= 3441999.048749 || EXISTS('/user/profile_sidebar_border_color')) && SIZE('/retweeted_status/quoted_status/extended_tweet/entities/media') <= 1) || EXISTS('/retweeted_status/is_quote_status')) 

@@ -1,0 +1,6 @@
+# Created with Random Explorer Benchmark Generator (version v0.0.1), seed 1 (MinSelectivity: 0.2, MaxSelectivity: 0.9, MaxChain: 3, MaxTries: 100, RandomBrowseProb: 0.05, GoBackProb: 0.2, Weighted-Paths: false, Predicates: [Exists,BoolEquality,IsString,IntEquality,FloatComparison,StrPrefix,ObjectSize,ArraySize])
+LOAD Twitter CHOOSE ISSTRING('/user/lang') 
+LOAD Twitter CHOOSE (ISSTRING('/user/lang') && EXISTS('/retweeted_status/place')) 
+LOAD Twitter CHOOSE (ISSTRING('/user/lang') && (((ISSTRING('/retweeted_status/quoted_status/in_reply_to_screen_name') || ((((STARTSWITH('/retweeted_status/in_reply_to_user_id_str',"2") || STARTSWITH('/retweeted_status/in_reply_to_user_id_str',"7")) || STARTSWITH('/retweeted_status/in_reply_to_user_id_str',"5")) || STARTSWITH('/retweeted_status/in_reply_to_user_id_str',"8")) || STARTSWITH('/retweeted_status/in_reply_to_user_id_str',"3"))) || EXISTS('/quoted_status/user/id_str')) || EXISTS('/retweeted_status/user/profile_sidebar_fill_color'))) 
+LOAD Twitter CHOOSE (ISSTRING('/user/lang') && (ISSTRING('/extended_tweet/full_text') || ISSTRING('/retweeted_status/user/profile_background_image_url_https'))) 
+LOAD Twitter CHOOSE (ISSTRING('/user/lang') && (('/quoted_status/user/profile_background_tile' == false || ISSTRING('/retweeted_status/quoted_status/in_reply_to_status_id_str')) || ISSTRING('/retweeted_status/user/name'))) 

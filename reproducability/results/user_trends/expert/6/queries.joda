@@ -1,0 +1,21 @@
+# Created with Random Explorer Benchmark Generator (version v0.0.1), seed 6 (MinSelectivity: 0.2, MaxSelectivity: 0.9, MaxChain: 3, MaxTries: 100, RandomBrowseProb: 0.05, GoBackProb: 0.2, Predicates: [Exists,BoolEquality,IsString,IntEquality,FloatComparison,StrPrefix,ObjectSize,ArraySize])
+LOAD Twitter CHOOSE (ISSTRING('/entities/symbols') || EXISTS('/user/location')) STORE Twitter_1
+LOAD Twitter_1 CHOOSE ((STARTSWITH('/quoted_status/user/profile_background_image_url_https',"https://pb") && STARTSWITH('/quoted_status/user/profile_background_image_url_https',"http")) || EXISTS('/retweeted_status/id_str')) STORE Twitter_1_1
+LOAD Twitter_1_1 CHOOSE STARTSWITH('/retweeted_status/user/profile_background_image_url',"http:/") STORE Twitter_1_1_1
+LOAD Twitter_1 CHOOSE EXISTS('/retweeted_status/user/default_profile') STORE Twitter_1_2
+LOAD Twitter_1_2 CHOOSE EXISTS('/retweeted_status/possibly_sensitive') STORE Twitter_1_2_1
+LOAD Twitter_1_2 CHOOSE ((EXISTS('/favorited') && SIZE('/withheld_in_countries') <= 1) || ISSTRING('/retweeted_status/user/time_zone')) STORE Twitter_1_2_2
+LOAD Twitter_1_2_2 CHOOSE (ISSTRING('/retweeted_status/quoted_status/user/screen_name') || '/user/default_profile' == false) STORE Twitter_1_2_2_1
+LOAD Twitter_1_2_2_1 CHOOSE EXISTS('/extended_entities/media') STORE Twitter_1_2_2_1_1
+LOAD Twitter_1_2_2_1_1 CHOOSE ((EXISTS('/retweeted_status/quoted_status/geo') || EXISTS('/retweeted_status/possibly_sensitive')) && SIZE('/retweeted_status/display_text_range') <= 2) STORE Twitter_1_2_2_1_1_1
+LOAD Twitter_1_2_2_1_1_1 CHOOSE (((EXISTS('/user/location') && ISSTRING('/retweeted_status/quoted_status/coordinates')) || ISSTRING('/retweeted_status/quoted_status/user/default_profile_image')) || ISSTRING('/user/time_zone')) STORE Twitter_1_2_2_1_1_1_1
+LOAD Twitter_1_2_2_1_1_1 CHOOSE '/user/utc_offset' <= 20386.848429 STORE Twitter_1_2_2_1_1_1_2
+LOAD Twitter_1_2_2_1_1_1_2 CHOOSE (((EXISTS('/retweeted_status/geo/type') || EXISTS('/retweeted_status/user/profile_text_color')) && EXISTS('/retweeted_status/quoted_status/user/geo_enabled')) || ISSTRING('/retweeted_status/user/location')) STORE Twitter_1_2_2_1_1_1_2_1
+LOAD Twitter_1_2_2_1_1_1_2_1 CHOOSE (((ISSTRING('/retweeted_status/quoted_status/place/url') || EXISTS('/user/following')) && EXISTS('/retweeted_status/quoted_status/entities/urls')) || '/retweeted_status/user/verified' == false) STORE Twitter_1_2_2_1_1_1_2_1_1
+LOAD Twitter_1_2_2_1_1_1_2_1_1 CHOOSE ((EXISTS('/quoted_status/place/full_name') || ISSTRING('/quoted_status_id')) || '/retweeted_status/user/default_profile' == false) STORE Twitter_1_2_2_1_1_1_2_1_1_1
+LOAD Twitter_1_2_2_1_1_1_2_1_1 CHOOSE (((EXISTS('/retweeted_status/quoted_status/user/profile_banner_url') || EXISTS('/retweeted_status/coordinates/type')) || EXISTS('/retweeted_status/display_text_range')) && '/retweeted_status/user/profile_background_tile' == true) STORE Twitter_1_2_2_1_1_1_2_1_1_2
+LOAD Twitter_1_2_2_1_1_1_2_1_1_2 CHOOSE ((((STARTSWITH('/retweeted_status/user/lang',"i") || STARTSWITH('/retweeted_status/user/lang',"t")) || STARTSWITH('/retweeted_status/user/lang',"en")) || STARTSWITH('/retweeted_status/user/lang',"xx-lc")) || STARTSWITH('/retweeted_status/user/lang',"fr")) STORE Twitter_1_2_2_1_1_1_2_1_1_2_1
+LOAD Twitter_1_2_2_1_1_1_2_1_1_2_1 CHOOSE ((ISSTRING('/retweeted_status/created_at') && EXISTS('/retweeted_status/entities/symbols')) && '/retweeted_status/user/geo_enabled' == false) STORE Twitter_1_2_2_1_1_1_2_1_1_2_1_1
+LOAD Twitter_1_2_2_1_1_1_2_1_1_2_1 CHOOSE ((('/user/listed_count' == 360 || ISSTRING('/retweeted_status/geo/type')) || EXISTS('/user/location')) && ISSTRING('/user/location')) STORE Twitter_1_2_2_1_1_1_2_1_1_2_1_2
+LOAD Twitter_1_2_2_1_1_1_2_1_1_2_1_2 CHOOSE '/retweeted_status/user/geo_enabled' == true STORE Twitter_1_2_2_1_1_1_2_1_1_2_1_2_1
+LOAD Twitter_1_2_2_1_1_1_2_1_1_2_1_2_1 CHOOSE '/id' <= 859113228707914112.000000 STORE Twitter_1_2_2_1_1_1_2_1_1_2_1_2_1_1

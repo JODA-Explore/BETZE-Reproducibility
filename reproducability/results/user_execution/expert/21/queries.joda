@@ -1,0 +1,6 @@
+# Created with Random Explorer Benchmark Generator (version v0.0.1), seed 21 (MinSelectivity: 0.2, MaxSelectivity: 0.9, MaxChain: 3, MaxTries: 100, RandomBrowseProb: 0.05, GoBackProb: 0.2, Weighted-Paths: false, Predicates: [Exists,BoolEquality,IsString,IntEquality,FloatComparison,StrPrefix,ObjectSize,ArraySize])
+LOAD Twitter CHOOSE (SIZE('/retweeted_status/extended_tweet/extended_entities/media') <= 1 || EXISTS('/retweeted_status/user/created_at')) STORE Twitter_1
+LOAD Twitter CHOOSE ('/retweeted_status/user/utc_offset' == -25283 || EXISTS('/retweeted_status/user/profile_image_url_https')) STORE Twitter_2
+LOAD Twitter CHOOSE EXISTS('/retweeted_status/user/favourites_count') STORE Twitter_3
+LOAD Twitter CHOOSE (EXISTS('/retweeted_status/quoted_status/extended_tweet/entities/urls') || EXISTS('/id_str')) STORE Twitter_4
+LOAD Twitter_4 CHOOSE (EXISTS('/retweeted_status/quoted_status/user/time_zone') || EXISTS('/retweeted_status/extended_entities/media')) STORE Twitter_4_1

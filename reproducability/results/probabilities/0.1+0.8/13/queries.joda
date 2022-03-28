@@ -1,0 +1,11 @@
+# Created with Random Explorer Benchmark Generator (version v0.0.1), seed 13 (MinSelectivity: 0.2, MaxSelectivity: 0.9, MaxChain: 3, MaxTries: 100, RandomBrowseProb: 0.1, GoBackProb: 0.8, Weighted-Paths: false, Predicates: [Exists,BoolEquality,IsString,IntEquality,FloatComparison,StrPrefix,ObjectSize,ArraySize])
+LOAD Twitter CHOOSE ('/quoted_status/user/default_profile' == false || ISSTRING('/timestamp_ms')) 
+LOAD Twitter CHOOSE EXISTS('/retweeted_status/user/notifications') 
+LOAD Twitter CHOOSE (EXISTS('/retweeted_status/quoted_status/id') || EXISTS('/user/profile_image_url')) 
+LOAD Twitter CHOOSE (((EXISTS('/retweeted_status/quoted_status/user/notifications') || EXISTS('/quoted_status/in_reply_to_screen_name')) || EXISTS('/user/url')) && EXISTS('/retweeted_status/is_quote_status')) 
+LOAD Twitter CHOOSE EXISTS('/entities/hashtags') 
+LOAD Twitter CHOOSE (EXISTS('/extended_tweet/full_text') || ISSTRING('/created_at')) 
+LOAD Twitter CHOOSE (EXISTS('/retweeted_status/extended_tweet/entities/hashtags') || EXISTS('/retweeted_status/created_at')) 
+LOAD Twitter CHOOSE '/is_quote_status' == false 
+LOAD Twitter CHOOSE (((EXISTS('/quoted_status/place/id') || ISSTRING('/retweeted_status/quoted_status/place/bounding_box/type')) || '/retweeted_status/quoted_status/possibly_sensitive' == false) || EXISTS('/retweeted_status/user/default_profile_image')) 
+LOAD Twitter CHOOSE (((EXISTS('/extended_tweet/full_text') || EXISTS('/retweeted_status/quoted_status/extended_tweet/extended_entities')) || EXISTS('/retweeted_status/quoted_status/entities/user_mentions')) || EXISTS('/retweeted_status/text')) 

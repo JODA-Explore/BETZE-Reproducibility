@@ -1,0 +1,1904 @@
+I1019 12:25:43.717705     1 ConfigParser.cpp:203] Setting configs
+I1019 12:25:43.717835     1 joda.cpp:88] Loaded 11 queries
+I1019 12:25:43.717896     1 joda.cpp:114] Joda Version 0.12.2 (API v2)
+I1019 12:25:43.717908     1 joda.cpp:116] Build revision 1e00442 (08:13:08 06-07-2021)
+I1019 12:25:43.717948     1 CLI.cpp:492] Using non interactive query processing due to terminal support.
+I1019 12:25:43.718138     1 QueryPlan.cpp:46] Initializing QueryThread
+I1019 12:25:43.718279     1 DirectoryRegister.cpp:44] Created directory '"/tmp/JODA/UDIR_1"'
+I1019 12:25:43.718304     1 DirectoryRegister.cpp:28] Registered directory '"/tmp/JODA/UDIR_1"'
+I1019 12:25:43.718317     1 QueryPlan.cpp:67] Starting parsing
+ResultSize: 13346336
+
+I1019 12:26:42.732435     1 CLI.cpp:243] RAM: 1007.79 GBi | Used: 262.08 GBi | Free: 74% | Proc: 82.53 GBi
+I1019 12:26:42.732594     1 Timer.cpp:44] [MAIN] Query took 59.0145 s
+-----STATISTICS------
+{
+    "Query": "LOAD Twitter FROM FILE \"/dataset/Twitter.json\" LINESEPARATED",
+    "Time": 1634646343,
+    "Pretty Time": "Tue Oct 19 12:25:43 2021\n",
+    "Parsing Threads": 8,
+    "Runtime": {
+        "Parsing": 59.013721108,
+        "Evaluation": 0.000007547,
+        "Query": 59.014544597
+    },
+    "Result Size": 13346336,
+    "#Container": 16,
+    "RAM Proc": 88617549824,
+    "Pretty RAM Proc": "82.53 GBi",
+    "Estimated Storage Size": 106575753552,
+    "Pretty Estimated Storage Size": "99.26 GBi",
+    "System": {
+        "Version": "0.12.2",
+        "Build": "1e00442",
+        "Build Time": "08:13:08 06-07-2021"
+    }
+}
+----------------
+I1019 12:26:42.732853     1 QueryPlan.cpp:46] Initializing QueryThread
+I1019 12:26:42.733016     1 DirectoryRegister.cpp:44] Created directory '"/tmp/JODA/UDIR_2"'
+I1019 12:26:42.733039     1 DirectoryRegister.cpp:28] Registered directory '"/tmp/JODA/UDIR_2"'
+I1019 12:26:42.979811    27 QueryThread.cpp:111] Starting selection
+I1019 12:26:42.990283    21 QueryThread.cpp:111] Starting selection
+I1019 12:26:42.991714    20 QueryThread.cpp:111] Starting selection
+I1019 12:26:42.992144    22 QueryThread.cpp:111] Starting selection
+I1019 12:26:42.993038    23 QueryThread.cpp:111] Starting selection
+I1019 12:26:42.993228    26 QueryThread.cpp:111] Starting selection
+I1019 12:26:42.993439    24 QueryThread.cpp:111] Starting selection
+I1019 12:26:42.995429    25 QueryThread.cpp:111] Starting selection
+I1019 12:26:47.282972    23 QueryThread.cpp:146] Starting Projection
+W1019 12:26:47.285228    23 JSONContainer.cpp:28] JSONContainer size not able to autodetect, this should not happen. Fallback size: 52428800
+I1019 12:26:47.321097    23 QueryThread.cpp:159] Creating View
+W1019 12:26:47.321166    23 JSONContainer.cpp:28] JSONContainer size not able to autodetect, this should not happen. Fallback size: 52428800
+I1019 12:26:47.365962    20 QueryThread.cpp:146] Starting Projection
+W1019 12:26:47.368152    20 JSONContainer.cpp:28] JSONContainer size not able to autodetect, this should not happen. Fallback size: 52428800
+I1019 12:26:47.403893    20 QueryThread.cpp:159] Creating View
+W1019 12:26:47.403959    20 JSONContainer.cpp:28] JSONContainer size not able to autodetect, this should not happen. Fallback size: 52428800
+I1019 12:26:47.538995    27 QueryThread.cpp:146] Starting Projection
+W1019 12:26:47.541196    27 JSONContainer.cpp:28] JSONContainer size not able to autodetect, this should not happen. Fallback size: 52428800
+I1019 12:26:47.548681    22 QueryThread.cpp:146] Starting Projection
+W1019 12:26:47.550851    22 JSONContainer.cpp:28] JSONContainer size not able to autodetect, this should not happen. Fallback size: 52428800
+I1019 12:26:47.564875    24 QueryThread.cpp:146] Starting Projection
+W1019 12:26:47.567087    24 JSONContainer.cpp:28] JSONContainer size not able to autodetect, this should not happen. Fallback size: 52428800
+I1019 12:26:47.577370    27 QueryThread.cpp:159] Creating View
+W1019 12:26:47.577428    27 JSONContainer.cpp:28] JSONContainer size not able to autodetect, this should not happen. Fallback size: 52428800
+I1019 12:26:47.579689    25 QueryThread.cpp:146] Starting Projection
+W1019 12:26:47.581857    25 JSONContainer.cpp:28] JSONContainer size not able to autodetect, this should not happen. Fallback size: 52428800
+I1019 12:26:47.587188    22 QueryThread.cpp:159] Creating View
+W1019 12:26:47.587230    22 JSONContainer.cpp:28] JSONContainer size not able to autodetect, this should not happen. Fallback size: 52428800
+I1019 12:26:47.603232    24 QueryThread.cpp:159] Creating View
+W1019 12:26:47.603293    24 JSONContainer.cpp:28] JSONContainer size not able to autodetect, this should not happen. Fallback size: 52428800
+I1019 12:26:47.604692    23 QueryThread.cpp:217] Storing result
+I1019 12:26:47.614374    21 QueryThread.cpp:146] Starting Projection
+W1019 12:26:47.616573    21 JSONContainer.cpp:28] JSONContainer size not able to autodetect, this should not happen. Fallback size: 52428800
+I1019 12:26:47.617700    25 QueryThread.cpp:159] Creating View
+W1019 12:26:47.617735    25 JSONContainer.cpp:28] JSONContainer size not able to autodetect, this should not happen. Fallback size: 52428800
+I1019 12:26:47.630297    26 QueryThread.cpp:146] Starting Projection
+W1019 12:26:47.632514    26 JSONContainer.cpp:28] JSONContainer size not able to autodetect, this should not happen. Fallback size: 52428800
+I1019 12:26:47.652916    21 QueryThread.cpp:159] Creating View
+W1019 12:26:47.652969    21 JSONContainer.cpp:28] JSONContainer size not able to autodetect, this should not happen. Fallback size: 52428800
+I1019 12:26:47.669739    26 QueryThread.cpp:159] Creating View
+W1019 12:26:47.669831    26 JSONContainer.cpp:28] JSONContainer size not able to autodetect, this should not happen. Fallback size: 52428800
+I1019 12:26:47.685004    20 QueryThread.cpp:217] Storing result
+I1019 12:26:47.815344    23 QueryThread.cpp:222] Finished query
+I1019 12:26:47.849879    27 QueryThread.cpp:217] Storing result
+I1019 12:26:47.859442    22 QueryThread.cpp:217] Storing result
+I1019 12:26:47.867405    24 QueryThread.cpp:217] Storing result
+I1019 12:26:47.881618    20 QueryThread.cpp:222] Finished query
+I1019 12:26:47.881897    25 QueryThread.cpp:217] Storing result
+I1019 12:26:47.904688    21 QueryThread.cpp:217] Storing result
+I1019 12:26:47.924072    23 QueryThread.cpp:111] Starting selection
+I1019 12:26:47.929250    26 QueryThread.cpp:217] Storing result
+I1019 12:26:48.004917    20 QueryThread.cpp:111] Starting selection
+I1019 12:26:48.040750    27 QueryThread.cpp:222] Finished query
+I1019 12:26:48.042945    22 QueryThread.cpp:222] Finished query
+I1019 12:26:48.065006    24 QueryThread.cpp:222] Finished query
+I1019 12:26:48.072057    25 QueryThread.cpp:222] Finished query
+I1019 12:26:48.138836    21 QueryThread.cpp:222] Finished query
+I1019 12:26:48.151299    27 QueryThread.cpp:111] Starting selection
+I1019 12:26:48.159859    22 QueryThread.cpp:111] Starting selection
+I1019 12:26:48.165482    26 QueryThread.cpp:222] Finished query
+I1019 12:26:48.183219    24 QueryThread.cpp:111] Starting selection
+I1019 12:26:48.192121    25 QueryThread.cpp:111] Starting selection
+I1019 12:26:48.257545    21 QueryThread.cpp:111] Starting selection
+I1019 12:26:48.288120    26 QueryThread.cpp:111] Starting selection
+I1019 12:26:49.638885    20 QueryThread.cpp:146] Starting Projection
+W1019 12:26:49.640276    20 JSONContainer.cpp:28] JSONContainer size not able to autodetect, this should not happen. Fallback size: 52428800
+I1019 12:26:49.664295    20 QueryThread.cpp:159] Creating View
+W1019 12:26:49.664359    20 JSONContainer.cpp:28] JSONContainer size not able to autodetect, this should not happen. Fallback size: 52428800
+I1019 12:26:49.771052    27 QueryThread.cpp:146] Starting Projection
+W1019 12:26:49.772341    27 JSONContainer.cpp:28] JSONContainer size not able to autodetect, this should not happen. Fallback size: 52428800
+I1019 12:26:49.777648    24 QueryThread.cpp:146] Starting Projection
+W1019 12:26:49.778985    24 JSONContainer.cpp:28] JSONContainer size not able to autodetect, this should not happen. Fallback size: 52428800
+I1019 12:26:49.794999    27 QueryThread.cpp:159] Creating View
+W1019 12:26:49.795048    27 JSONContainer.cpp:28] JSONContainer size not able to autodetect, this should not happen. Fallback size: 52428800
+I1019 12:26:49.797183    20 QueryThread.cpp:217] Storing result
+I1019 12:26:49.802099    24 QueryThread.cpp:159] Creating View
+W1019 12:26:49.802136    24 JSONContainer.cpp:28] JSONContainer size not able to autodetect, this should not happen. Fallback size: 52428800
+I1019 12:26:49.863888    21 QueryThread.cpp:146] Starting Projection
+I1019 12:26:49.863934    20 QueryThread.cpp:222] Finished query
+W1019 12:26:49.865283    21 JSONContainer.cpp:28] JSONContainer size not able to autodetect, this should not happen. Fallback size: 52428800
+I1019 12:26:49.889362    21 QueryThread.cpp:159] Creating View
+W1019 12:26:49.889420    21 JSONContainer.cpp:28] JSONContainer size not able to autodetect, this should not happen. Fallback size: 52428800
+I1019 12:26:49.917377    25 QueryThread.cpp:146] Starting Projection
+W1019 12:26:49.918754    25 JSONContainer.cpp:28] JSONContainer size not able to autodetect, this should not happen. Fallback size: 52428800
+I1019 12:26:49.919083    27 QueryThread.cpp:217] Storing result
+I1019 12:26:49.930361    24 QueryThread.cpp:217] Storing result
+I1019 12:26:49.942029    25 QueryThread.cpp:159] Creating View
+W1019 12:26:49.942078    25 JSONContainer.cpp:28] JSONContainer size not able to autodetect, this should not happen. Fallback size: 52428800
+I1019 12:26:49.943181    26 QueryThread.cpp:146] Starting Projection
+W1019 12:26:49.944562    26 JSONContainer.cpp:28] JSONContainer size not able to autodetect, this should not happen. Fallback size: 52428800
+I1019 12:26:49.968169    26 QueryThread.cpp:159] Creating View
+W1019 12:26:49.968230    26 JSONContainer.cpp:28] JSONContainer size not able to autodetect, this should not happen. Fallback size: 52428800
+I1019 12:26:49.991545    27 QueryThread.cpp:222] Finished query
+I1019 12:26:49.991696    23 QueryThread.cpp:146] Starting Projection
+I1019 12:26:49.992058    24 QueryThread.cpp:222] Finished query
+W1019 12:26:49.992911    23 JSONContainer.cpp:28] JSONContainer size not able to autodetect, this should not happen. Fallback size: 52428800
+I1019 12:26:50.015590    23 QueryThread.cpp:159] Creating View
+W1019 12:26:50.015659    23 JSONContainer.cpp:28] JSONContainer size not able to autodetect, this should not happen. Fallback size: 52428800
+I1019 12:26:50.022308    21 QueryThread.cpp:217] Storing result
+I1019 12:26:50.070806    25 QueryThread.cpp:217] Storing result
+I1019 12:26:50.083947    21 QueryThread.cpp:222] Finished query
+I1019 12:26:50.101797    26 QueryThread.cpp:217] Storing result
+I1019 12:26:50.130466    25 QueryThread.cpp:222] Finished query
+I1019 12:26:50.135154    23 QueryThread.cpp:217] Storing result
+I1019 12:26:50.160074    26 QueryThread.cpp:222] Finished query
+I1019 12:26:50.201987    23 QueryThread.cpp:222] Finished query
+I1019 12:26:50.283819    22 QueryThread.cpp:146] Starting Projection
+W1019 12:26:50.285117    22 JSONContainer.cpp:28] JSONContainer size not able to autodetect, this should not happen. Fallback size: 52428800
+I1019 12:26:50.314687    22 QueryThread.cpp:159] Creating View
+W1019 12:26:50.314711    22 JSONContainer.cpp:28] JSONContainer size not able to autodetect, this should not happen. Fallback size: 52428800
+I1019 12:26:50.441288    22 QueryThread.cpp:217] Storing result
+I1019 12:26:50.502940    22 QueryThread.cpp:222] Finished query
+ResultSize: 5073309
+
+I1019 12:26:50.504056     1 CLI.cpp:243] RAM: 1007.79 GBi | Used: 266.32 GBi | Free: 74% | Proc: 86.77 GBi
+I1019 12:26:50.504182     1 Timer.cpp:44] [MAIN] Query took 7.77139 s
+-----STATISTICS------
+{
+    "Query": "LOAD Twitter CHOOSE (((EXISTS('/retweeted_status/extended_tweet/entities/user_mentions') || ISSTRING('/retweeted_status/user/id')) || SIZE('/retweeted_status/extended_tweet/display_text_range') >= 2) || ISSTRING('/retweeted_status/user/id_str'))",
+    "Time": 1634646402,
+    "Pretty Time": "Tue Oct 19 12:26:42 2021\n",
+    "Threads": 8,
+    "Runtime": {
+        "Threads": [
+            {
+                "Select": 6.002,
+                "Project": 0.477,
+                "View_Cost": 0.063
+            },
+            {
+                "Select": 6.172,
+                "Project": 0.458,
+                "View_Cost": 0.062
+            },
+            {
+                "Select": 6.159,
+                "Project": 0.455,
+I1019 12:26:50.504526     1 QueryPlan.cpp:46] Initializing QueryThread
+                "View_Cost": 0.062
+            },
+            {
+                "Select": 6.224,
+                "Project": 0.448,
+                "View_Cost": 0.063
+            },
+            {
+                "Select": 6.303,
+                "Project": 0.455,
+                "View_Cost": 0.062
+            },
+            {
+                "Select": 6.286,
+                "Project": 0.457,
+                "View_Cost": 0.064
+            },
+            {
+                "Select": 6.351,
+                "Project": 0.465,
+                "View_Cost": 0.061
+            },
+            {
+                "Select": 6.674,
+                "Project": 0.468,
+                "View_Cost": 0.069
+            }
+        ],
+        "Store": 7.77,
+        "Evaluation": 7.77074265,
+        "Query": 7.77139267
+    },
+    "Result Size": 5073309,
+    "#Container": 16,
+    "RAM Proc": 93164150784,
+    "Pretty RAM Proc": "86.77 GBi",
+    "Estimated Storage Size": 106575753552,
+    "Pretty Estimated Storage Size": "99.26 GBi",
+I1019 12:26:50.504716     1 DirectoryRegister.cpp:44] Created directory '"/tmp/JODA/UDIR_3"'
+I1019 12:26:50.504745     1 DirectoryRegister.cpp:28] Registered directory '"/tmp/JODA/UDIR_3"'
+    "System": {
+        "Version": "0.12.2",
+        "Build": "1e00442",
+        "Build Time": "08:13:08 06-07-2021"
+    }
+}
+----------------
+I1019 12:26:50.505405    34 QueryThread.cpp:111] Starting selection
+I1019 12:26:50.505411    33 QueryThread.cpp:111] Starting selection
+I1019 12:26:50.505573    35 QueryThread.cpp:111] Starting selection
+I1019 12:26:50.506192    28 QueryThread.cpp:111] Starting selection
+I1019 12:26:50.506237    29 QueryThread.cpp:111] Starting selection
+I1019 12:26:50.506284    30 QueryThread.cpp:111] Starting selection
+I1019 12:26:50.506328    32 QueryThread.cpp:111] Starting selection
+I1019 12:26:50.506336    31 QueryThread.cpp:111] Starting selection
+I1019 12:26:53.669173    28 QueryThread.cpp:146] Starting Projection
+W1019 12:26:53.671331    28 JSONContainer.cpp:28] JSONContainer size not able to autodetect, this should not happen. Fallback size: 52428800
+I1019 12:26:53.684517    31 QueryThread.cpp:146] Starting Projection
+W1019 12:26:53.686674    31 JSONContainer.cpp:28] JSONContainer size not able to autodetect, this should not happen. Fallback size: 52428800
+I1019 12:26:53.691944    28 QueryThread.cpp:159] Creating View
+W1019 12:26:53.691977    28 JSONContainer.cpp:28] JSONContainer size not able to autodetect, this should not happen. Fallback size: 52428800
+I1019 12:26:53.706794    31 QueryThread.cpp:159] Creating View
+W1019 12:26:53.706843    31 JSONContainer.cpp:28] JSONContainer size not able to autodetect, this should not happen. Fallback size: 52428800
+I1019 12:26:53.713003    35 QueryThread.cpp:146] Starting Projection
+W1019 12:26:53.715157    35 JSONContainer.cpp:28] JSONContainer size not able to autodetect, this should not happen. Fallback size: 52428800
+I1019 12:26:53.725610    33 QueryThread.cpp:146] Starting Projection
+W1019 12:26:53.727725    33 JSONContainer.cpp:28] JSONContainer size not able to autodetect, this should not happen. Fallback size: 52428800
+I1019 12:26:53.729035    32 QueryThread.cpp:146] Starting Projection
+W1019 12:26:53.731110    32 JSONContainer.cpp:28] JSONContainer size not able to autodetect, this should not happen. Fallback size: 52428800
+I1019 12:26:53.735898    35 QueryThread.cpp:159] Creating View
+W1019 12:26:53.735937    35 JSONContainer.cpp:28] JSONContainer size not able to autodetect, this should not happen. Fallback size: 52428800
+I1019 12:26:53.748273    33 QueryThread.cpp:159] Creating View
+W1019 12:26:53.748347    33 JSONContainer.cpp:28] JSONContainer size not able to autodetect, this should not happen. Fallback size: 52428800
+I1019 12:26:53.751178    32 QueryThread.cpp:159] Creating View
+W1019 12:26:53.751209    32 JSONContainer.cpp:28] JSONContainer size not able to autodetect, this should not happen. Fallback size: 52428800
+I1019 12:26:53.758492    29 QueryThread.cpp:146] Starting Projection
+W1019 12:26:53.760634    29 JSONContainer.cpp:28] JSONContainer size not able to autodetect, this should not happen. Fallback size: 52428800
+I1019 12:26:53.777495    30 QueryThread.cpp:146] Starting Projection
+W1019 12:26:53.779690    30 JSONContainer.cpp:28] JSONContainer size not able to autodetect, this should not happen. Fallback size: 52428800
+I1019 12:26:53.781495    29 QueryThread.cpp:159] Creating View
+W1019 12:26:53.781520    29 JSONContainer.cpp:28] JSONContainer size not able to autodetect, this should not happen. Fallback size: 52428800
+I1019 12:26:53.796523    34 QueryThread.cpp:146] Starting Projection
+W1019 12:26:53.798646    34 JSONContainer.cpp:28] JSONContainer size not able to autodetect, this should not happen. Fallback size: 52428800
+I1019 12:26:53.800364    30 QueryThread.cpp:159] Creating View
+W1019 12:26:53.800392    30 JSONContainer.cpp:28] JSONContainer size not able to autodetect, this should not happen. Fallback size: 52428800
+I1019 12:26:53.819681    34 QueryThread.cpp:159] Creating View
+W1019 12:26:53.819752    34 JSONContainer.cpp:28] JSONContainer size not able to autodetect, this should not happen. Fallback size: 52428800
+I1019 12:26:53.822403    28 QueryThread.cpp:217] Storing result
+I1019 12:26:53.837568    31 QueryThread.cpp:217] Storing result
+I1019 12:26:53.859555    28 QueryThread.cpp:222] Finished query
+I1019 12:26:53.859612    28 QueryThread.cpp:111] Starting selection
+I1019 12:26:53.869206    35 QueryThread.cpp:217] Storing result
+I1019 12:26:53.874130    31 QueryThread.cpp:222] Finished query
+I1019 12:26:53.874179    31 QueryThread.cpp:111] Starting selection
+I1019 12:26:53.879513    33 QueryThread.cpp:217] Storing result
+I1019 12:26:53.883232    32 QueryThread.cpp:217] Storing result
+I1019 12:26:53.906847    35 QueryThread.cpp:222] Finished query
+I1019 12:26:53.906893    35 QueryThread.cpp:111] Starting selection
+I1019 12:26:53.912844    29 QueryThread.cpp:217] Storing result
+I1019 12:26:53.933610    30 QueryThread.cpp:217] Storing result
+I1019 12:26:53.939654    33 QueryThread.cpp:222] Finished query
+I1019 12:26:53.939714    33 QueryThread.cpp:111] Starting selection
+I1019 12:26:53.947451    32 QueryThread.cpp:222] Finished query
+I1019 12:26:53.947512    32 QueryThread.cpp:111] Starting selection
+I1019 12:26:53.948328    29 QueryThread.cpp:222] Finished query
+I1019 12:26:53.948349    29 QueryThread.cpp:111] Starting selection
+I1019 12:26:53.948679    34 QueryThread.cpp:217] Storing result
+I1019 12:26:53.971227    30 QueryThread.cpp:222] Finished query
+I1019 12:26:53.971289    30 QueryThread.cpp:111] Starting selection
+I1019 12:26:53.989917    34 QueryThread.cpp:222] Finished query
+I1019 12:26:53.989984    34 QueryThread.cpp:111] Starting selection
+I1019 12:26:55.644539    28 QueryThread.cpp:146] Starting Projection
+W1019 12:26:55.645742    28 JSONContainer.cpp:28] JSONContainer size not able to autodetect, this should not happen. Fallback size: 52428800
+I1019 12:26:55.658454    28 QueryThread.cpp:159] Creating View
+W1019 12:26:55.658511    28 JSONContainer.cpp:28] JSONContainer size not able to autodetect, this should not happen. Fallback size: 52428800
+I1019 12:26:55.739579    28 QueryThread.cpp:217] Storing result
+I1019 12:26:55.760946    28 QueryThread.cpp:222] Finished query
+I1019 12:26:55.816064    33 QueryThread.cpp:146] Starting Projection
+W1019 12:26:55.817313    33 JSONContainer.cpp:28] JSONContainer size not able to autodetect, this should not happen. Fallback size: 52428800
+I1019 12:26:55.829012    33 QueryThread.cpp:159] Creating View
+W1019 12:26:55.829069    33 JSONContainer.cpp:28] JSONContainer size not able to autodetect, this should not happen. Fallback size: 52428800
+I1019 12:26:55.905897    33 QueryThread.cpp:217] Storing result
+I1019 12:26:55.936987    33 QueryThread.cpp:222] Finished query
+I1019 12:26:55.983126    30 QueryThread.cpp:146] Starting Projection
+W1019 12:26:55.984445    30 JSONContainer.cpp:28] JSONContainer size not able to autodetect, this should not happen. Fallback size: 52428800
+I1019 12:26:55.997478    30 QueryThread.cpp:159] Creating View
+W1019 12:26:55.997532    30 JSONContainer.cpp:28] JSONContainer size not able to autodetect, this should not happen. Fallback size: 52428800
+I1019 12:26:56.078168    30 QueryThread.cpp:217] Storing result
+I1019 12:26:56.082033    29 QueryThread.cpp:146] Starting Projection
+W1019 12:26:56.083307    29 JSONContainer.cpp:28] JSONContainer size not able to autodetect, this should not happen. Fallback size: 52428800
+I1019 12:26:56.101336    29 QueryThread.cpp:159] Creating View
+W1019 12:26:56.101402    29 JSONContainer.cpp:28] JSONContainer size not able to autodetect, this should not happen. Fallback size: 52428800
+I1019 12:26:56.105481    30 QueryThread.cpp:222] Finished query
+I1019 12:26:56.181656    29 QueryThread.cpp:217] Storing result
+I1019 12:26:56.205790    29 QueryThread.cpp:222] Finished query
+I1019 12:26:56.249975    35 QueryThread.cpp:146] Starting Projection
+W1019 12:26:56.251230    35 JSONContainer.cpp:28] JSONContainer size not able to autodetect, this should not happen. Fallback size: 52428800
+I1019 12:26:56.264683    35 QueryThread.cpp:159] Creating View
+W1019 12:26:56.264734    35 JSONContainer.cpp:28] JSONContainer size not able to autodetect, this should not happen. Fallback size: 52428800
+I1019 12:26:56.343629    35 QueryThread.cpp:217] Storing result
+I1019 12:26:56.386327    35 QueryThread.cpp:222] Finished query
+I1019 12:26:56.558980    34 QueryThread.cpp:146] Starting Projection
+W1019 12:26:56.560300    34 JSONContainer.cpp:28] JSONContainer size not able to autodetect, this should not happen. Fallback size: 52428800
+I1019 12:26:56.578418    34 QueryThread.cpp:159] Creating View
+W1019 12:26:56.578476    34 JSONContainer.cpp:28] JSONContainer size not able to autodetect, this should not happen. Fallback size: 52428800
+I1019 12:26:56.608748    31 QueryThread.cpp:146] Starting Projection
+W1019 12:26:56.610097    31 JSONContainer.cpp:28] JSONContainer size not able to autodetect, this should not happen. Fallback size: 52428800
+I1019 12:26:56.614509    32 QueryThread.cpp:146] Starting Projection
+W1019 12:26:56.615763    32 JSONContainer.cpp:28] JSONContainer size not able to autodetect, this should not happen. Fallback size: 52428800
+I1019 12:26:56.624656    31 QueryThread.cpp:159] Creating View
+W1019 12:26:56.624683    31 JSONContainer.cpp:28] JSONContainer size not able to autodetect, this should not happen. Fallback size: 52428800
+I1019 12:26:56.629544    32 QueryThread.cpp:159] Creating View
+W1019 12:26:56.629565    32 JSONContainer.cpp:28] JSONContainer size not able to autodetect, this should not happen. Fallback size: 52428800
+I1019 12:26:56.657241    34 QueryThread.cpp:217] Storing result
+I1019 12:26:56.685389    34 QueryThread.cpp:222] Finished query
+I1019 12:26:56.708600    31 QueryThread.cpp:217] Storing result
+I1019 12:26:56.710515    32 QueryThread.cpp:217] Storing result
+I1019 12:26:56.733029    32 QueryThread.cpp:222] Finished query
+I1019 12:26:56.743105    31 QueryThread.cpp:222] Finished query
+ResultSize: 1985718
+
+-----STATISTICS------
+I1019 12:26:56.744105     1 CLI.cpp:243] RAM: 1007.79 GBi | Used: 266.94 GBi | Free: 74% | Proc: 87.38 GBi
+I1019 12:26:56.744223     1 Timer.cpp:44] [MAIN] Query took 6.23976 s
+{
+    "Query": "LOAD Twitter CHOOSE ((((EXISTS('/retweeted_status/extended_tweet/entities/user_mentions') || ISSTRING('/retweeted_status/user/id')) || SIZE('/retweeted_status/extended_tweet/display_text_range') >= 2) || ISSTRING('/retweeted_status/user/id_str')) && (EXISTS('/retweeted_status/user/profile_image_url') && EXISTS('/retweeted_status/entities/media')))",
+    "Time": 1634646410,
+    "Pretty Time": "Tue Oct 19 12:26:50 2021\n",
+    "Threads": 8,
+    "Runtime": {
+        "Threads": [
+            {
+                "Select": 4.942,
+                "Project": 0.248,
+                "View_Cost": 0.036
+            },
+            {
+                "Select": 5.09,
+                "Project": 0.243,
+                "View_Cost": 0.035
+            },
+            {
+                "Select": 5.276,
+                "Project": 0.25,
+                "View_Cost": 0.037
+            },
+            {
+                "Select": 5.379,
+                "Project": 0.253,
+                "View_Cost": 0.042
+I1019 12:26:56.744573     1 QueryPlan.cpp:46] Initializing QueryThread
+            },
+            {
+                "Select": 5.544,
+                "Project": 0.249,
+                "View_Cost": 0.037
+            },
+            {
+                "Select": 5.854,
+                "Project": 0.25,
+                "View_Cost": 0.042
+            },
+            {
+                "Select": 5.883,
+                "Project": 0.25,
+                "View_Cost": 0.037
+            },
+            {
+                "Select": 5.906,
+                "Project": 0.252,
+                "View_Cost": 0.038
+            }
+        ],
+        "Store": 6.238,
+        "Evaluation": 6.239125908,
+        "Query": 6.239757343
+    },
+    "Result Size": 1985718,
+    "#Container": 16,
+    "RAM Proc": 93823275008,
+    "Pretty RAM Proc": "87.38 GBi",
+I1019 12:26:56.744807     1 DirectoryRegister.cpp:44] Created directory '"/tmp/JODA/UDIR_4"'
+I1019 12:26:56.744833     1 DirectoryRegister.cpp:28] Registered directory '"/tmp/JODA/UDIR_4"'
+    "Estimated Storage Size": 106575753552,
+    "Pretty Estimated Storage Size": "99.26 GBi",
+    "System": {
+        "Version": "0.12.2",
+        "Build": "1e00442",
+        "Build Time": "08:13:08 06-07-2021"
+    }
+}
+----------------
+I1019 12:26:56.745556    42 QueryThread.cpp:111] Starting selection
+I1019 12:26:56.746304    36 QueryThread.cpp:111] Starting selection
+I1019 12:26:56.746387    39 QueryThread.cpp:111] Starting selection
+I1019 12:26:56.746419    37 QueryThread.cpp:111] Starting selection
+I1019 12:26:56.746436    38 QueryThread.cpp:111] Starting selection
+I1019 12:26:56.746491    40 QueryThread.cpp:111] Starting selection
+I1019 12:26:56.746562    41 QueryThread.cpp:111] Starting selection
+I1019 12:26:56.746728    43 QueryThread.cpp:111] Starting selection
+I1019 12:27:00.062866    39 QueryThread.cpp:146] Starting Projection
+W1019 12:27:00.064934    39 JSONContainer.cpp:28] JSONContainer size not able to autodetect, this should not happen. Fallback size: 52428800
+I1019 12:27:00.079767    39 QueryThread.cpp:159] Creating View
+W1019 12:27:00.079838    39 JSONContainer.cpp:28] JSONContainer size not able to autodetect, this should not happen. Fallback size: 52428800
+I1019 12:27:00.096176    40 QueryThread.cpp:146] Starting Projection
+W1019 12:27:00.098296    40 JSONContainer.cpp:28] JSONContainer size not able to autodetect, this should not happen. Fallback size: 52428800
+I1019 12:27:00.100839    38 QueryThread.cpp:146] Starting Projection
+W1019 12:27:00.102897    38 JSONContainer.cpp:28] JSONContainer size not able to autodetect, this should not happen. Fallback size: 52428800
+I1019 12:27:00.113735    40 QueryThread.cpp:159] Creating View
+W1019 12:27:00.113803    40 JSONContainer.cpp:28] JSONContainer size not able to autodetect, this should not happen. Fallback size: 52428800
+I1019 12:27:00.117835    38 QueryThread.cpp:159] Creating View
+W1019 12:27:00.117875    38 JSONContainer.cpp:28] JSONContainer size not able to autodetect, this should not happen. Fallback size: 52428800
+I1019 12:27:00.121605    43 QueryThread.cpp:146] Starting Projection
+W1019 12:27:00.123699    43 JSONContainer.cpp:28] JSONContainer size not able to autodetect, this should not happen. Fallback size: 52428800
+I1019 12:27:00.138835    43 QueryThread.cpp:159] Creating View
+W1019 12:27:00.138887    43 JSONContainer.cpp:28] JSONContainer size not able to autodetect, this should not happen. Fallback size: 52428800
+I1019 12:27:00.162235    36 QueryThread.cpp:146] Starting Projection
+I1019 12:27:00.162802    42 QueryThread.cpp:146] Starting Projection
+W1019 12:27:00.164336    36 JSONContainer.cpp:28] JSONContainer size not able to autodetect, this should not happen. Fallback size: 52428800
+W1019 12:27:00.164858    42 JSONContainer.cpp:28] JSONContainer size not able to autodetect, this should not happen. Fallback size: 52428800
+I1019 12:27:00.172394    39 QueryThread.cpp:217] Storing result
+I1019 12:27:00.180353    42 QueryThread.cpp:159] Creating View
+W1019 12:27:00.180424    42 JSONContainer.cpp:28] JSONContainer size not able to autodetect, this should not happen. Fallback size: 52428800
+I1019 12:27:00.180982    36 QueryThread.cpp:159] Creating View
+W1019 12:27:00.181002    36 JSONContainer.cpp:28] JSONContainer size not able to autodetect, this should not happen. Fallback size: 52428800
+I1019 12:27:00.193964    39 QueryThread.cpp:222] Finished query
+I1019 12:27:00.194017    39 QueryThread.cpp:111] Starting selection
+I1019 12:27:00.201038    37 QueryThread.cpp:146] Starting Projection
+W1019 12:27:00.203125    37 JSONContainer.cpp:28] JSONContainer size not able to autodetect, this should not happen. Fallback size: 52428800
+I1019 12:27:00.209306    40 QueryThread.cpp:217] Storing result
+I1019 12:27:00.210208    38 QueryThread.cpp:217] Storing result
+I1019 12:27:00.218390    37 QueryThread.cpp:159] Creating View
+W1019 12:27:00.218446    37 JSONContainer.cpp:28] JSONContainer size not able to autodetect, this should not happen. Fallback size: 52428800
+I1019 12:27:00.232141    38 QueryThread.cpp:222] Finished query
+I1019 12:27:00.232200    38 QueryThread.cpp:111] Starting selection
+I1019 12:27:00.233453    43 QueryThread.cpp:217] Storing result
+I1019 12:27:00.233763    40 QueryThread.cpp:222] Finished query
+I1019 12:27:00.233783    40 QueryThread.cpp:111] Starting selection
+I1019 12:27:00.256430    43 QueryThread.cpp:222] Finished query
+I1019 12:27:00.256482    43 QueryThread.cpp:111] Starting selection
+I1019 12:27:00.275027    42 QueryThread.cpp:217] Storing result
+I1019 12:27:00.275540    36 QueryThread.cpp:217] Storing result
+I1019 12:27:00.302841    42 QueryThread.cpp:222] Finished query
+I1019 12:27:00.302886    42 QueryThread.cpp:111] Starting selection
+I1019 12:27:00.303133    36 QueryThread.cpp:222] Finished query
+I1019 12:27:00.303150    36 QueryThread.cpp:111] Starting selection
+I1019 12:27:00.311825    37 QueryThread.cpp:217] Storing result
+I1019 12:27:00.336504    37 QueryThread.cpp:222] Finished query
+I1019 12:27:00.336567    37 QueryThread.cpp:111] Starting selection
+I1019 12:27:00.398376    41 QueryThread.cpp:146] Starting Projection
+W1019 12:27:00.400483    41 JSONContainer.cpp:28] JSONContainer size not able to autodetect, this should not happen. Fallback size: 52428800
+I1019 12:27:00.415899    41 QueryThread.cpp:159] Creating View
+W1019 12:27:00.415967    41 JSONContainer.cpp:28] JSONContainer size not able to autodetect, this should not happen. Fallback size: 52428800
+I1019 12:27:00.510285    41 QueryThread.cpp:217] Storing result
+I1019 12:27:00.535651    41 QueryThread.cpp:222] Finished query
+I1019 12:27:00.535712    41 QueryThread.cpp:111] Starting selection
+I1019 12:27:02.469841    40 QueryThread.cpp:146] Starting Projection
+W1019 12:27:02.471098    40 JSONContainer.cpp:28] JSONContainer size not able to autodetect, this should not happen. Fallback size: 52428800
+I1019 12:27:02.480708    40 QueryThread.cpp:159] Creating View
+W1019 12:27:02.480754    40 JSONContainer.cpp:28] JSONContainer size not able to autodetect, this should not happen. Fallback size: 52428800
+I1019 12:27:02.521122    39 QueryThread.cpp:146] Starting Projection
+W1019 12:27:02.522337    39 JSONContainer.cpp:28] JSONContainer size not able to autodetect, this should not happen. Fallback size: 52428800
+I1019 12:27:02.531781    39 QueryThread.cpp:159] Creating View
+W1019 12:27:02.531831    39 JSONContainer.cpp:28] JSONContainer size not able to autodetect, this should not happen. Fallback size: 52428800
+I1019 12:27:02.539670    38 QueryThread.cpp:146] Starting Projection
+W1019 12:27:02.540998    38 JSONContainer.cpp:28] JSONContainer size not able to autodetect, this should not happen. Fallback size: 52428800
+I1019 12:27:02.550416    40 QueryThread.cpp:217] Storing result
+I1019 12:27:02.551237    38 QueryThread.cpp:159] Creating View
+W1019 12:27:02.551257    38 JSONContainer.cpp:28] JSONContainer size not able to autodetect, this should not happen. Fallback size: 52428800
+I1019 12:27:02.566161    40 QueryThread.cpp:222] Finished query
+I1019 12:27:02.594305    39 QueryThread.cpp:217] Storing result
+I1019 12:27:02.610174    39 QueryThread.cpp:222] Finished query
+I1019 12:27:02.621394    38 QueryThread.cpp:217] Storing result
+I1019 12:27:02.642832    38 QueryThread.cpp:222] Finished query
+I1019 12:27:02.661041    43 QueryThread.cpp:146] Starting Projection
+W1019 12:27:02.662281    43 JSONContainer.cpp:28] JSONContainer size not able to autodetect, this should not happen. Fallback size: 52428800
+I1019 12:27:02.671860    43 QueryThread.cpp:159] Creating View
+W1019 12:27:02.671897    43 JSONContainer.cpp:28] JSONContainer size not able to autodetect, this should not happen. Fallback size: 52428800
+I1019 12:27:02.736109    43 QueryThread.cpp:217] Storing result
+I1019 12:27:02.758406    43 QueryThread.cpp:222] Finished query
+I1019 12:27:02.791311    42 QueryThread.cpp:146] Starting Projection
+W1019 12:27:02.792605    42 JSONContainer.cpp:28] JSONContainer size not able to autodetect, this should not happen. Fallback size: 52428800
+I1019 12:27:02.802887    42 QueryThread.cpp:159] Creating View
+W1019 12:27:02.802918    42 JSONContainer.cpp:28] JSONContainer size not able to autodetect, this should not happen. Fallback size: 52428800
+I1019 12:27:02.861905    36 QueryThread.cpp:146] Starting Projection
+W1019 12:27:02.863215    36 JSONContainer.cpp:28] JSONContainer size not able to autodetect, this should not happen. Fallback size: 52428800
+I1019 12:27:02.868278    42 QueryThread.cpp:217] Storing result
+I1019 12:27:02.873178    36 QueryThread.cpp:159] Creating View
+W1019 12:27:02.873198    36 JSONContainer.cpp:28] JSONContainer size not able to autodetect, this should not happen. Fallback size: 52428800
+I1019 12:27:02.889909    42 QueryThread.cpp:222] Finished query
+I1019 12:27:02.912489    41 QueryThread.cpp:146] Starting Projection
+W1019 12:27:02.913816    41 JSONContainer.cpp:28] JSONContainer size not able to autodetect, this should not happen. Fallback size: 52428800
+I1019 12:27:02.923703    41 QueryThread.cpp:159] Creating View
+W1019 12:27:02.923739    41 JSONContainer.cpp:28] JSONContainer size not able to autodetect, this should not happen. Fallback size: 52428800
+I1019 12:27:02.933791    36 QueryThread.cpp:217] Storing result
+I1019 12:27:02.947717    36 QueryThread.cpp:222] Finished query
+I1019 12:27:02.984269    41 QueryThread.cpp:217] Storing result
+I1019 12:27:02.999778    41 QueryThread.cpp:222] Finished query
+I1019 12:27:03.107884    37 QueryThread.cpp:146] Starting Projection
+W1019 12:27:03.109279    37 JSONContainer.cpp:28] JSONContainer size not able to autodetect, this should not happen. Fallback size: 52428800
+I1019 12:27:03.119397    37 QueryThread.cpp:159] Creating View
+W1019 12:27:03.119412    37 JSONContainer.cpp:28] JSONContainer size not able to autodetect, this should not happen. Fallback size: 52428800
+I1019 12:27:03.182878    37 QueryThread.cpp:217] Storing result
+I1019 12:27:03.204666    37 QueryThread.cpp:222] Finished query
+ResultSize: 1423329
+
+I1019 12:27:03.205227     1 CLI.cpp:243] RAM: 1007.79 GBi | Used: 267.44 GBi | Free: 73% | Proc: 87.89 GBi
+I1019 12:27:03.205345     1 Timer.cpp:44] [MAIN] Query took 6.46083 s
+-----STATISTICS------
+{
+    "Query": "LOAD Twitter CHOOSE (((((EXISTS('/retweeted_status/extended_tweet/entities/user_mentions') || ISSTRING('/retweeted_status/user/id')) || SIZE('/retweeted_status/extended_tweet/display_text_range') >= 2) || ISSTRING('/retweeted_status/user/id_str')) && (EXISTS('/retweeted_status/user/profile_image_url') && EXISTS('/retweeted_status/entities/media'))) && ISSTRING('/retweeted_status/user/time_zone'))",
+    "Time": 1634646416,
+    "Pretty Time": "Tue Oct 19 12:26:56 2021\n",
+    "Threads": 8,
+    "Runtime": {
+        "Threads": [
+            {
+                "Select": 5.579,
+                "Project": 0.193,
+                "View_Cost": 0.028
+            },
+            {
+                "Select": 5.637,
+                "Project": 0.182,
+                "View_Cost": 0.027
+            },
+            {
+                "Select": 5.655,
+                "Project": 0.19,
+                "View_Cost": 0.028
+            },
+            {
+                "Select": 5.773,
+                "Project": 0.186,
+                "View_Cost": 0.027
+            },
+            {
+                "Select": 5.899,
+                "Project": 0.189,
+                "View_Cost": 0.029
+            },
+            {
+                "Select": 5.968,
+                "Project": 0.185,
+                "View_Cost": 0.029
+            },
+            {
+                "Select": 6.022,
+                "Project": 0.183,
+                "View_Cost": 0.028
+            },
+            {
+                "Select": 6.219,
+                "Project": 0.185,
+                "View_Cost": 0.028
+            }
+        ],
+        "Store": 6.459,
+        "Evaluation": 6.460148313,
+        "Query": 6.460832326
+    },
+    "Result Size": 1423329,
+    "#Container": 16,
+    "RAM Proc": 94367293440,
+    "Pretty RAM Proc": "87.89 GBi",
+    "Estimated Storage Size": 106575753552,
+    "Pretty Estimated Storage Size": "99.26 GBi",
+    "System": {
+        "Version": "0.12.2",
+        "Build": "1e00442",
+        "Build Time": "08:13:08 06-07-2021"
+    }
+}
+----------------
+I1019 12:27:03.205721     1 QueryPlan.cpp:46] Initializing QueryThread
+I1019 12:27:03.205919     1 DirectoryRegister.cpp:44] Created directory '"/tmp/JODA/UDIR_5"'
+I1019 12:27:03.205946     1 DirectoryRegister.cpp:28] Registered directory '"/tmp/JODA/UDIR_5"'
+I1019 12:27:03.206622    50 QueryThread.cpp:111] Starting selection
+I1019 12:27:03.207362    44 QueryThread.cpp:111] Starting selection
+I1019 12:27:03.207444    45 QueryThread.cpp:111] Starting selection
+I1019 12:27:03.207466    47 QueryThread.cpp:111] Starting selection
+I1019 12:27:03.207521    46 QueryThread.cpp:111] Starting selection
+I1019 12:27:03.207626    49 QueryThread.cpp:111] Starting selection
+I1019 12:27:03.207628    48 QueryThread.cpp:111] Starting selection
+I1019 12:27:03.210683    51 QueryThread.cpp:111] Starting selection
+I1019 12:27:06.777521    45 QueryThread.cpp:146] Starting Projection
+W1019 12:27:06.779619    45 JSONContainer.cpp:28] JSONContainer size not able to autodetect, this should not happen. Fallback size: 52428800
+I1019 12:27:06.784538    49 QueryThread.cpp:146] Starting Projection
+W1019 12:27:06.786610    49 JSONContainer.cpp:28] JSONContainer size not able to autodetect, this should not happen. Fallback size: 52428800
+I1019 12:27:06.787772    47 QueryThread.cpp:146] Starting Projection
+W1019 12:27:06.789808    47 JSONContainer.cpp:28] JSONContainer size not able to autodetect, this should not happen. Fallback size: 52428800
+I1019 12:27:06.793764    45 QueryThread.cpp:159] Creating View
+W1019 12:27:06.793783    45 JSONContainer.cpp:28] JSONContainer size not able to autodetect, this should not happen. Fallback size: 52428800
+I1019 12:27:06.794057    46 QueryThread.cpp:146] Starting Projection
+W1019 12:27:06.796092    46 JSONContainer.cpp:28] JSONContainer size not able to autodetect, this should not happen. Fallback size: 52428800
+I1019 12:27:06.800669    49 QueryThread.cpp:159] Creating View
+W1019 12:27:06.800693    49 JSONContainer.cpp:28] JSONContainer size not able to autodetect, this should not happen. Fallback size: 52428800
+I1019 12:27:06.803864    47 QueryThread.cpp:159] Creating View
+W1019 12:27:06.803912    47 JSONContainer.cpp:28] JSONContainer size not able to autodetect, this should not happen. Fallback size: 52428800
+I1019 12:27:06.810061    46 QueryThread.cpp:159] Creating View
+W1019 12:27:06.810096    46 JSONContainer.cpp:28] JSONContainer size not able to autodetect, this should not happen. Fallback size: 52428800
+I1019 12:27:06.829376    44 QueryThread.cpp:146] Starting Projection
+W1019 12:27:06.831490    44 JSONContainer.cpp:28] JSONContainer size not able to autodetect, this should not happen. Fallback size: 52428800
+I1019 12:27:06.845561    44 QueryThread.cpp:159] Creating View
+W1019 12:27:06.845616    44 JSONContainer.cpp:28] JSONContainer size not able to autodetect, this should not happen. Fallback size: 52428800
+I1019 12:27:06.852636    50 QueryThread.cpp:146] Starting Projection
+W1019 12:27:06.854748    50 JSONContainer.cpp:28] JSONContainer size not able to autodetect, this should not happen. Fallback size: 52428800
+I1019 12:27:06.868675    50 QueryThread.cpp:159] Creating View
+W1019 12:27:06.868743    50 JSONContainer.cpp:28] JSONContainer size not able to autodetect, this should not happen. Fallback size: 52428800
+I1019 12:27:06.882336    45 QueryThread.cpp:217] Storing result
+I1019 12:27:06.890648    47 QueryThread.cpp:217] Storing result
+I1019 12:27:06.892503    49 QueryThread.cpp:217] Storing result
+I1019 12:27:06.893616    48 QueryThread.cpp:146] Starting Projection
+W1019 12:27:06.895696    48 JSONContainer.cpp:28] JSONContainer size not able to autodetect, this should not happen. Fallback size: 52428800
+I1019 12:27:06.897143    46 QueryThread.cpp:217] Storing result
+I1019 12:27:06.903853    45 QueryThread.cpp:222] Finished query
+I1019 12:27:06.903909    45 QueryThread.cpp:111] Starting selection
+I1019 12:27:06.904397    51 QueryThread.cpp:146] Starting Projection
+W1019 12:27:06.906450    51 JSONContainer.cpp:28] JSONContainer size not able to autodetect, this should not happen. Fallback size: 52428800
+I1019 12:27:06.910701    47 QueryThread.cpp:222] Finished query
+I1019 12:27:06.910727    47 QueryThread.cpp:111] Starting selection
+I1019 12:27:06.914515    48 QueryThread.cpp:159] Creating View
+W1019 12:27:06.914542    48 JSONContainer.cpp:28] JSONContainer size not able to autodetect, this should not happen. Fallback size: 52428800
+I1019 12:27:06.919137    46 QueryThread.cpp:222] Finished query
+I1019 12:27:06.919173    46 QueryThread.cpp:111] Starting selection
+I1019 12:27:06.920500    51 QueryThread.cpp:159] Creating View
+W1019 12:27:06.920519    51 JSONContainer.cpp:28] JSONContainer size not able to autodetect, this should not happen. Fallback size: 52428800
+I1019 12:27:06.932371    49 QueryThread.cpp:222] Finished query
+I1019 12:27:06.932435    49 QueryThread.cpp:111] Starting selection
+I1019 12:27:06.934255    44 QueryThread.cpp:217] Storing result
+I1019 12:27:06.955991    50 QueryThread.cpp:217] Storing result
+I1019 12:27:06.975010    44 QueryThread.cpp:222] Finished query
+I1019 12:27:06.975066    44 QueryThread.cpp:111] Starting selection
+I1019 12:27:06.978008    50 QueryThread.cpp:222] Finished query
+I1019 12:27:06.978044    50 QueryThread.cpp:111] Starting selection
+I1019 12:27:07.001335    48 QueryThread.cpp:217] Storing result
+I1019 12:27:07.006783    51 QueryThread.cpp:217] Storing result
+I1019 12:27:07.022445    48 QueryThread.cpp:222] Finished query
+I1019 12:27:07.022512    48 QueryThread.cpp:111] Starting selection
+I1019 12:27:07.027051    51 QueryThread.cpp:222] Finished query
+I1019 12:27:07.027086    51 QueryThread.cpp:111] Starting selection
+I1019 12:27:08.925873    45 QueryThread.cpp:146] Starting Projection
+W1019 12:27:08.927110    45 JSONContainer.cpp:28] JSONContainer size not able to autodetect, this should not happen. Fallback size: 52428800
+I1019 12:27:08.935606    45 QueryThread.cpp:159] Creating View
+W1019 12:27:08.935649    45 JSONContainer.cpp:28] JSONContainer size not able to autodetect, this should not happen. Fallback size: 52428800
+I1019 12:27:08.989760    45 QueryThread.cpp:217] Storing result
+I1019 12:27:09.002979    45 QueryThread.cpp:222] Finished query
+I1019 12:27:09.035889    49 QueryThread.cpp:146] Starting Projection
+W1019 12:27:09.037081    49 JSONContainer.cpp:28] JSONContainer size not able to autodetect, this should not happen. Fallback size: 52428800
+I1019 12:27:09.045766    49 QueryThread.cpp:159] Creating View
+W1019 12:27:09.045810    49 JSONContainer.cpp:28] JSONContainer size not able to autodetect, this should not happen. Fallback size: 52428800
+I1019 12:27:09.100052    49 QueryThread.cpp:217] Storing result
+I1019 12:27:09.124444    49 QueryThread.cpp:222] Finished query
+I1019 12:27:09.134148    46 QueryThread.cpp:146] Starting Projection
+W1019 12:27:09.135402    46 JSONContainer.cpp:28] JSONContainer size not able to autodetect, this should not happen. Fallback size: 52428800
+I1019 12:27:09.143816    46 QueryThread.cpp:159] Creating View
+W1019 12:27:09.143848    46 JSONContainer.cpp:28] JSONContainer size not able to autodetect, this should not happen. Fallback size: 52428800
+I1019 12:27:09.190351    44 QueryThread.cpp:146] Starting Projection
+W1019 12:27:09.191659    44 JSONContainer.cpp:28] JSONContainer size not able to autodetect, this should not happen. Fallback size: 52428800
+I1019 12:27:09.197824    46 QueryThread.cpp:217] Storing result
+I1019 12:27:09.200811    44 QueryThread.cpp:159] Creating View
+W1019 12:27:09.200830    44 JSONContainer.cpp:28] JSONContainer size not able to autodetect, this should not happen. Fallback size: 52428800
+I1019 12:27:09.214527    46 QueryThread.cpp:222] Finished query
+I1019 12:27:09.256951    44 QueryThread.cpp:217] Storing result
+I1019 12:27:09.280437    44 QueryThread.cpp:222] Finished query
+I1019 12:27:09.404724    47 QueryThread.cpp:146] Starting Projection
+W1019 12:27:09.406098    47 JSONContainer.cpp:28] JSONContainer size not able to autodetect, this should not happen. Fallback size: 52428800
+I1019 12:27:09.415026    47 QueryThread.cpp:159] Creating View
+W1019 12:27:09.415043    47 JSONContainer.cpp:28] JSONContainer size not able to autodetect, this should not happen. Fallback size: 52428800
+I1019 12:27:09.469442    47 QueryThread.cpp:217] Storing result
+I1019 12:27:09.490634    47 QueryThread.cpp:222] Finished query
+I1019 12:27:09.570394    50 QueryThread.cpp:146] Starting Projection
+W1019 12:27:09.571707    50 JSONContainer.cpp:28] JSONContainer size not able to autodetect, this should not happen. Fallback size: 52428800
+I1019 12:27:09.580760    50 QueryThread.cpp:159] Creating View
+W1019 12:27:09.580785    50 JSONContainer.cpp:28] JSONContainer size not able to autodetect, this should not happen. Fallback size: 52428800
+I1019 12:27:09.632230    50 QueryThread.cpp:217] Storing result
+I1019 12:27:09.644250    50 QueryThread.cpp:222] Finished query
+I1019 12:27:09.670087    48 QueryThread.cpp:146] Starting Projection
+W1019 12:27:09.671389    48 JSONContainer.cpp:28] JSONContainer size not able to autodetect, this should not happen. Fallback size: 52428800
+I1019 12:27:09.682197    48 QueryThread.cpp:159] Creating View
+W1019 12:27:09.682216    48 JSONContainer.cpp:28] JSONContainer size not able to autodetect, this should not happen. Fallback size: 52428800
+I1019 12:27:09.697774    51 QueryThread.cpp:146] Starting Projection
+W1019 12:27:09.699120    51 JSONContainer.cpp:28] JSONContainer size not able to autodetect, this should not happen. Fallback size: 52428800
+I1019 12:27:09.707892    51 QueryThread.cpp:159] Creating View
+W1019 12:27:09.707911    51 JSONContainer.cpp:28] JSONContainer size not able to autodetect, this should not happen. Fallback size: 52428800
+I1019 12:27:09.734210    48 QueryThread.cpp:217] Storing result
+I1019 12:27:09.756052    48 QueryThread.cpp:222] Finished query
+I1019 12:27:09.759613    51 QueryThread.cpp:217] Storing result
+I1019 12:27:09.776288    51 QueryThread.cpp:222] Finished query
+ResultSize: 1253365
+
+I1019 12:27:09.776840     1 CLI.cpp:243] RAM: 1007.79 GBi | Used: 267.89 GBi | Free: 73% | Proc: 88.34 GBi
+I1019 12:27:09.776955     1 Timer.cpp:44] [MAIN] Query took 6.57129 s
+-----STATISTICS------
+{
+    "Query": "LOAD Twitter CHOOSE ((((((EXISTS('/retweeted_status/extended_tweet/entities/user_mentions') || ISSTRING('/retweeted_status/user/id')) || SIZE('/retweeted_status/extended_tweet/display_text_range') >= 2) || ISSTRING('/retweeted_status/user/id_str')) && (EXISTS('/retweeted_status/user/profile_image_url') && EXISTS('/retweeted_status/entities/media'))) && ISSTRING('/retweeted_status/user/time_zone')) && (EXISTS('/retweeted_status/quoted_status/lang') || ISSTRING('/user/profile_banner_url')))",
+    "Time": 1634646423,
+    "Pretty Time": "Tue Oct 19 12:27:03 2021\n",
+    "Threads": 8,
+    "Runtime": {
+        "Threads": [
+            {
+                "Select": 5.586,
+                "Project": 0.168,
+                "View_Cost": 0.025
+            },
+            {
+                "Select": 5.674,
+                "Project": 0.172,
+                "View_Cost": 0.025
+            },
+            {
+                "Select": 5.795,
+                "Project": 0.166,
+                "View_Cost": 0.025
+            },
+            {
+                "Select": 5.831,
+                "Project": 0.171,
+                "View_Cost": 0.026
+            },
+            {
+                "Select": 6.068,
+                "Project": 0.167,
+                "View_Cost": 0.026
+            },
+            {
+                "Select": 6.232,
+                "Project": 0.165,
+                "View_Cost": 0.026
+            },
+            {
+                "Select": 6.327,
+                "Project": 0.171,
+                "View_Cost": 0.032
+            },
+            {
+                "Select": 6.358,
+                "Project": 0.164,
+                "View_Cost": 0.026
+            }
+        ],
+        "Store": 6.569,
+        "Evaluation": 6.570651612,
+        "Query": 6.571288936
+    },
+    "Result Size": 1253365,
+    "#Container": 16,
+    "RAM Proc": 94851567616,
+    "Pretty RAM Proc": "88.34 GBi",
+    "Estimated Storage Size": 106575753552,
+    "Pretty Estimated Storage Size": "99.26 GBi",
+    "System": {
+        "Version": "0.12.2",
+        "Build": "1e00442",
+        "Build Time": "08:13:08 06-07-2021"
+    }
+}
+----------------
+I1019 12:27:09.777215     1 QueryPlan.cpp:46] Initializing QueryThread
+I1019 12:27:09.777382     1 DirectoryRegister.cpp:44] Created directory '"/tmp/JODA/UDIR_6"'
+I1019 12:27:09.777434     1 DirectoryRegister.cpp:28] Registered directory '"/tmp/JODA/UDIR_6"'
+I1019 12:27:09.778090    58 QueryThread.cpp:111] Starting selection
+I1019 12:27:09.778112    59 QueryThread.cpp:111] Starting selection
+I1019 12:27:09.778872    52 QueryThread.cpp:111] Starting selection
+I1019 12:27:09.778959    53 QueryThread.cpp:111] Starting selection
+I1019 12:27:09.778959    55 QueryThread.cpp:111] Starting selection
+I1019 12:27:09.778986    56 QueryThread.cpp:111] Starting selection
+I1019 12:27:09.779023    54 QueryThread.cpp:111] Starting selection
+I1019 12:27:09.779093    57 QueryThread.cpp:111] Starting selection
+I1019 12:27:12.746997    53 QueryThread.cpp:146] Starting Projection
+W1019 12:27:12.749370    53 JSONContainer.cpp:28] JSONContainer size not able to autodetect, this should not happen. Fallback size: 52428800
+I1019 12:27:12.768402    53 QueryThread.cpp:159] Creating View
+W1019 12:27:12.768460    53 JSONContainer.cpp:28] JSONContainer size not able to autodetect, this should not happen. Fallback size: 52428800
+I1019 12:27:12.818158    59 QueryThread.cpp:146] Starting Projection
+W1019 12:27:12.820338    59 JSONContainer.cpp:28] JSONContainer size not able to autodetect, this should not happen. Fallback size: 52428800
+I1019 12:27:12.837399    59 QueryThread.cpp:159] Creating View
+W1019 12:27:12.837457    59 JSONContainer.cpp:28] JSONContainer size not able to autodetect, this should not happen. Fallback size: 52428800
+I1019 12:27:12.996822    58 QueryThread.cpp:146] Starting Projection
+W1019 12:27:12.998935    58 JSONContainer.cpp:28] JSONContainer size not able to autodetect, this should not happen. Fallback size: 52428800
+I1019 12:27:12.999197    53 QueryThread.cpp:217] Storing result
+I1019 12:27:13.016614    58 QueryThread.cpp:159] Creating View
+W1019 12:27:13.016670    58 JSONContainer.cpp:28] JSONContainer size not able to autodetect, this should not happen. Fallback size: 52428800
+I1019 12:27:13.071544    59 QueryThread.cpp:217] Storing result
+I1019 12:27:13.174193    53 QueryThread.cpp:222] Finished query
+I1019 12:27:13.174255    53 QueryThread.cpp:111] Starting selection
+I1019 12:27:13.183203    55 QueryThread.cpp:146] Starting Projection
+W1019 12:27:13.185377    55 JSONContainer.cpp:28] JSONContainer size not able to autodetect, this should not happen. Fallback size: 52428800
+I1019 12:27:13.199180    55 QueryThread.cpp:159] Creating View
+W1019 12:27:13.199245    55 JSONContainer.cpp:28] JSONContainer size not able to autodetect, this should not happen. Fallback size: 52428800
+I1019 12:27:13.246251    58 QueryThread.cpp:217] Storing result
+I1019 12:27:13.256794    59 QueryThread.cpp:222] Finished query
+I1019 12:27:13.256850    59 QueryThread.cpp:111] Starting selection
+I1019 12:27:13.283195    52 QueryThread.cpp:146] Starting Projection
+W1019 12:27:13.285300    52 JSONContainer.cpp:28] JSONContainer size not able to autodetect, this should not happen. Fallback size: 52428800
+I1019 12:27:13.292593    57 QueryThread.cpp:146] Starting Projection
+W1019 12:27:13.294781    57 JSONContainer.cpp:28] JSONContainer size not able to autodetect, this should not happen. Fallback size: 52428800
+I1019 12:27:13.298302    52 QueryThread.cpp:159] Creating View
+W1019 12:27:13.298336    52 JSONContainer.cpp:28] JSONContainer size not able to autodetect, this should not happen. Fallback size: 52428800
+I1019 12:27:13.300022    54 QueryThread.cpp:146] Starting Projection
+W1019 12:27:13.302175    54 JSONContainer.cpp:28] JSONContainer size not able to autodetect, this should not happen. Fallback size: 52428800
+I1019 12:27:13.308852    57 QueryThread.cpp:159] Creating View
+W1019 12:27:13.308907    57 JSONContainer.cpp:28] JSONContainer size not able to autodetect, this should not happen. Fallback size: 52428800
+I1019 12:27:13.315768    54 QueryThread.cpp:159] Creating View
+W1019 12:27:13.315827    54 JSONContainer.cpp:28] JSONContainer size not able to autodetect, this should not happen. Fallback size: 52428800
+I1019 12:27:13.326534    56 QueryThread.cpp:146] Starting Projection
+W1019 12:27:13.328658    56 JSONContainer.cpp:28] JSONContainer size not able to autodetect, this should not happen. Fallback size: 52428800
+I1019 12:27:13.342515    56 QueryThread.cpp:159] Creating View
+W1019 12:27:13.342566    56 JSONContainer.cpp:28] JSONContainer size not able to autodetect, this should not happen. Fallback size: 52428800
+I1019 12:27:13.360189    58 QueryThread.cpp:222] Finished query
+I1019 12:27:13.360250    58 QueryThread.cpp:111] Starting selection
+I1019 12:27:13.426344    55 QueryThread.cpp:217] Storing result
+I1019 12:27:13.530242    52 QueryThread.cpp:217] Storing result
+I1019 12:27:13.541744    57 QueryThread.cpp:217] Storing result
+I1019 12:27:13.550226    54 QueryThread.cpp:217] Storing result
+I1019 12:27:13.577605    56 QueryThread.cpp:217] Storing result
+I1019 12:27:13.610734    55 QueryThread.cpp:222] Finished query
+I1019 12:27:13.610781    55 QueryThread.cpp:111] Starting selection
+I1019 12:27:13.689738    52 QueryThread.cpp:222] Finished query
+I1019 12:27:13.689795    52 QueryThread.cpp:111] Starting selection
+I1019 12:27:13.717623    54 QueryThread.cpp:222] Finished query
+I1019 12:27:13.717679    54 QueryThread.cpp:111] Starting selection
+I1019 12:27:13.728703    57 QueryThread.cpp:222] Finished query
+I1019 12:27:13.728758    57 QueryThread.cpp:111] Starting selection
+I1019 12:27:13.729616    56 QueryThread.cpp:222] Finished query
+I1019 12:27:13.729637    56 QueryThread.cpp:111] Starting selection
+I1019 12:27:14.870687    53 QueryThread.cpp:146] Starting Projection
+W1019 12:27:14.871929    53 JSONContainer.cpp:28] JSONContainer size not able to autodetect, this should not happen. Fallback size: 52428800
+I1019 12:27:14.881289    53 QueryThread.cpp:159] Creating View
+W1019 12:27:14.881345    53 JSONContainer.cpp:28] JSONContainer size not able to autodetect, this should not happen. Fallback size: 52428800
+I1019 12:27:14.984053    53 QueryThread.cpp:217] Storing result
+I1019 12:27:15.031154    53 QueryThread.cpp:222] Finished query
+I1019 12:27:15.125856    58 QueryThread.cpp:146] Starting Projection
+W1019 12:27:15.127091    58 JSONContainer.cpp:28] JSONContainer size not able to autodetect, this should not happen. Fallback size: 52428800
+I1019 12:27:15.136368    58 QueryThread.cpp:159] Creating View
+W1019 12:27:15.136425    58 JSONContainer.cpp:28] JSONContainer size not able to autodetect, this should not happen. Fallback size: 52428800
+I1019 12:27:15.156574    59 QueryThread.cpp:146] Starting Projection
+W1019 12:27:15.157969    59 JSONContainer.cpp:28] JSONContainer size not able to autodetect, this should not happen. Fallback size: 52428800
+I1019 12:27:15.168781    59 QueryThread.cpp:159] Creating View
+W1019 12:27:15.168838    59 JSONContainer.cpp:28] JSONContainer size not able to autodetect, this should not happen. Fallback size: 52428800
+I1019 12:27:15.242933    58 QueryThread.cpp:217] Storing result
+I1019 12:27:15.282727    58 QueryThread.cpp:222] Finished query
+I1019 12:27:15.296072    59 QueryThread.cpp:217] Storing result
+I1019 12:27:15.350195    59 QueryThread.cpp:222] Finished query
+I1019 12:27:15.363739    55 QueryThread.cpp:146] Starting Projection
+W1019 12:27:15.364993    55 JSONContainer.cpp:28] JSONContainer size not able to autodetect, this should not happen. Fallback size: 52428800
+I1019 12:27:15.374156    55 QueryThread.cpp:159] Creating View
+W1019 12:27:15.374198    55 JSONContainer.cpp:28] JSONContainer size not able to autodetect, this should not happen. Fallback size: 52428800
+I1019 12:27:15.480854    55 QueryThread.cpp:217] Storing result
+I1019 12:27:15.521032    55 QueryThread.cpp:222] Finished query
+I1019 12:27:15.539894    52 QueryThread.cpp:146] Starting Projection
+W1019 12:27:15.541241    52 JSONContainer.cpp:28] JSONContainer size not able to autodetect, this should not happen. Fallback size: 52428800
+I1019 12:27:15.551095    52 QueryThread.cpp:159] Creating View
+W1019 12:27:15.551136    52 JSONContainer.cpp:28] JSONContainer size not able to autodetect, this should not happen. Fallback size: 52428800
+I1019 12:27:15.569161    54 QueryThread.cpp:146] Starting Projection
+W1019 12:27:15.570511    54 JSONContainer.cpp:28] JSONContainer size not able to autodetect, this should not happen. Fallback size: 52428800
+I1019 12:27:15.580814    54 QueryThread.cpp:159] Creating View
+W1019 12:27:15.580870    54 JSONContainer.cpp:28] JSONContainer size not able to autodetect, this should not happen. Fallback size: 52428800
+I1019 12:27:15.601411    57 QueryThread.cpp:146] Starting Projection
+W1019 12:27:15.602795    57 JSONContainer.cpp:28] JSONContainer size not able to autodetect, this should not happen. Fallback size: 52428800
+I1019 12:27:15.613257    57 QueryThread.cpp:159] Creating View
+W1019 12:27:15.613318    57 JSONContainer.cpp:28] JSONContainer size not able to autodetect, this should not happen. Fallback size: 52428800
+I1019 12:27:15.639777    56 QueryThread.cpp:146] Starting Projection
+W1019 12:27:15.641183    56 JSONContainer.cpp:28] JSONContainer size not able to autodetect, this should not happen. Fallback size: 52428800
+I1019 12:27:15.651973    56 QueryThread.cpp:159] Creating View
+W1019 12:27:15.652040    56 JSONContainer.cpp:28] JSONContainer size not able to autodetect, this should not happen. Fallback size: 52428800
+I1019 12:27:15.663579    52 QueryThread.cpp:217] Storing result
+I1019 12:27:15.707404    54 QueryThread.cpp:217] Storing result
+I1019 12:27:15.714686    52 QueryThread.cpp:222] Finished query
+I1019 12:27:15.728268    57 QueryThread.cpp:217] Storing result
+I1019 12:27:15.759785    54 QueryThread.cpp:222] Finished query
+I1019 12:27:15.778160    57 QueryThread.cpp:222] Finished query
+I1019 12:27:15.778975    56 QueryThread.cpp:217] Storing result
+I1019 12:27:15.819761    56 QueryThread.cpp:222] Finished query
+ResultSize: 4467128
+
+I1019 12:27:15.821080     1 CLI.cpp:243] RAM: 1007.79 GBi | Used: 272.15 GBi | Free: 73% | Proc: 92.58 GBi
+I1019 12:27:15.821198     1 Timer.cpp:44] [MAIN] Query took 6.04404 s
+-----STATISTICS------
+{
+    "Query": "LOAD Twitter CHOOSE ((MEMCOUNT('/retweeted_status/quoted_status/place/bounding_box') >= 2 || EXISTS('/delete/status/id_str')) || '/user/profile_background_tile' == true)",
+    "Time": 1634646429,
+    "Pretty Time": "Tue Oct 19 12:27:09 2021\n",
+    "Threads": 8,
+    "Runtime": {
+        "Threads": [
+            {
+                "Select": 4.658,
+                "Project": 0.365,
+                "View_Cost": 0.031
+            },
+            {
+                "Select": 4.978,
+                "Project": 0.366,
+                "View_Cost": 0.03
+            },
+            {
+                "Select": 4.933,
+                "Project": 0.392,
+                "View_Cost": 0.031
+            },
+            {
+                "Select": 5.151,
+                "Project": 0.36,
+                "View_Cost": 0.026
+            },
+            {
+                "Select": 5.348,
+                "Project": 0.37,
+                "View_Cost": 0.026
+            },
+            {
+                "Select": 5.366,
+                "Project": 0.388,
+                "View_Cost": 0.027
+            },
+            {
+                "Select": 5.38,
+                "Project": 0.375,
+                "View_Cost": 0.027
+            },
+            {
+                "Select": 5.451,
+                "Project": 0.39,
+                "View_Cost": 0.028
+            }
+        ],
+        "Store": 6.042,
+        "Evaluation": 6.043392444,
+        "Query": 6.044037257
+    },
+    "Result Size": 4467128,
+    "#Container": 16,
+    "RAM Proc": 99411869696,
+    "Pretty RAM Proc": "92.58 GBi",
+    "Estimated Storage Size": 106575753552,
+    "Pretty Estimated Storage Size": "99.26 GBi",
+    "System": {
+        "Version": "0.12.2",
+        "Build": "1e00442",
+        "Build Time": "08:13:08 06-07-2021"
+    }
+}
+----------------
+I1019 12:27:15.821602     1 QueryPlan.cpp:46] Initializing QueryThread
+I1019 12:27:15.821810     1 DirectoryRegister.cpp:44] Created directory '"/tmp/JODA/UDIR_7"'
+I1019 12:27:15.821839     1 DirectoryRegister.cpp:28] Registered directory '"/tmp/JODA/UDIR_7"'
+I1019 12:27:15.822456    66 QueryThread.cpp:111] Starting selection
+I1019 12:27:15.823132    60 QueryThread.cpp:111] Starting selection
+I1019 12:27:15.823285    61 QueryThread.cpp:111] Starting selection
+I1019 12:27:15.823356    62 QueryThread.cpp:111] Starting selection
+I1019 12:27:15.823369    63 QueryThread.cpp:111] Starting selection
+I1019 12:27:15.823433    64 QueryThread.cpp:111] Starting selection
+I1019 12:27:15.823467    65 QueryThread.cpp:111] Starting selection
+I1019 12:27:15.826663    67 QueryThread.cpp:111] Starting selection
+I1019 12:27:19.297740    67 QueryThread.cpp:146] Starting Projection
+W1019 12:27:19.299844    67 JSONContainer.cpp:28] JSONContainer size not able to autodetect, this should not happen. Fallback size: 52428800
+I1019 12:27:19.311450    67 QueryThread.cpp:159] Creating View
+W1019 12:27:19.311496    67 JSONContainer.cpp:28] JSONContainer size not able to autodetect, this should not happen. Fallback size: 52428800
+I1019 12:27:19.382403    67 QueryThread.cpp:217] Storing result
+I1019 12:27:19.412077    67 QueryThread.cpp:222] Finished query
+I1019 12:27:19.412139    67 QueryThread.cpp:111] Starting selection
+I1019 12:27:19.541242    65 QueryThread.cpp:146] Starting Projection
+W1019 12:27:19.543349    65 JSONContainer.cpp:28] JSONContainer size not able to autodetect, this should not happen. Fallback size: 52428800
+I1019 12:27:19.554919    65 QueryThread.cpp:159] Creating View
+W1019 12:27:19.554967    65 JSONContainer.cpp:28] JSONContainer size not able to autodetect, this should not happen. Fallback size: 52428800
+I1019 12:27:19.578088    66 QueryThread.cpp:146] Starting Projection
+W1019 12:27:19.580245    66 JSONContainer.cpp:28] JSONContainer size not able to autodetect, this should not happen. Fallback size: 52428800
+I1019 12:27:19.592178    66 QueryThread.cpp:159] Creating View
+W1019 12:27:19.592247    66 JSONContainer.cpp:28] JSONContainer size not able to autodetect, this should not happen. Fallback size: 52428800
+I1019 12:27:19.601310    61 QueryThread.cpp:146] Starting Projection
+W1019 12:27:19.603456    61 JSONContainer.cpp:28] JSONContainer size not able to autodetect, this should not happen. Fallback size: 52428800
+I1019 12:27:19.615197    61 QueryThread.cpp:159] Creating View
+W1019 12:27:19.615272    61 JSONContainer.cpp:28] JSONContainer size not able to autodetect, this should not happen. Fallback size: 52428800
+I1019 12:27:19.624938    65 QueryThread.cpp:217] Storing result
+I1019 12:27:19.658459    65 QueryThread.cpp:222] Finished query
+I1019 12:27:19.658517    65 QueryThread.cpp:111] Starting selection
+I1019 12:27:19.665210    66 QueryThread.cpp:217] Storing result
+I1019 12:27:19.681591    63 QueryThread.cpp:146] Starting Projection
+W1019 12:27:19.683734    63 JSONContainer.cpp:28] JSONContainer size not able to autodetect, this should not happen. Fallback size: 52428800
+I1019 12:27:19.685572    66 QueryThread.cpp:222] Finished query
+I1019 12:27:19.685596    66 QueryThread.cpp:111] Starting selection
+I1019 12:27:19.686570    61 QueryThread.cpp:217] Storing result
+I1019 12:27:19.695549    63 QueryThread.cpp:159] Creating View
+W1019 12:27:19.695621    63 JSONContainer.cpp:28] JSONContainer size not able to autodetect, this should not happen. Fallback size: 52428800
+I1019 12:27:19.705152    61 QueryThread.cpp:222] Finished query
+I1019 12:27:19.705214    61 QueryThread.cpp:111] Starting selection
+I1019 12:27:19.711103    62 QueryThread.cpp:146] Starting Projection
+I1019 12:27:19.711956    60 QueryThread.cpp:146] Starting Projection
+W1019 12:27:19.713239    62 JSONContainer.cpp:28] JSONContainer size not able to autodetect, this should not happen. Fallback size: 52428800
+W1019 12:27:19.714068    60 JSONContainer.cpp:28] JSONContainer size not able to autodetect, this should not happen. Fallback size: 52428800
+I1019 12:27:19.722949    64 QueryThread.cpp:146] Starting Projection
+W1019 12:27:19.725107    64 JSONContainer.cpp:28] JSONContainer size not able to autodetect, this should not happen. Fallback size: 52428800
+I1019 12:27:19.725618    62 QueryThread.cpp:159] Creating View
+W1019 12:27:19.725641    62 JSONContainer.cpp:28] JSONContainer size not able to autodetect, this should not happen. Fallback size: 52428800
+I1019 12:27:19.725787    60 QueryThread.cpp:159] Creating View
+W1019 12:27:19.725824    60 JSONContainer.cpp:28] JSONContainer size not able to autodetect, this should not happen. Fallback size: 52428800
+I1019 12:27:19.736546    64 QueryThread.cpp:159] Creating View
+W1019 12:27:19.736610    64 JSONContainer.cpp:28] JSONContainer size not able to autodetect, this should not happen. Fallback size: 52428800
+I1019 12:27:19.767570    63 QueryThread.cpp:217] Storing result
+I1019 12:27:19.797672    60 QueryThread.cpp:217] Storing result
+I1019 12:27:19.798316    62 QueryThread.cpp:217] Storing result
+I1019 12:27:19.804344    63 QueryThread.cpp:222] Finished query
+I1019 12:27:19.804399    63 QueryThread.cpp:111] Starting selection
+I1019 12:27:19.808590    64 QueryThread.cpp:217] Storing result
+I1019 12:27:19.816748    62 QueryThread.cpp:222] Finished query
+I1019 12:27:19.816807    62 QueryThread.cpp:111] Starting selection
+I1019 12:27:19.823156    60 QueryThread.cpp:222] Finished query
+I1019 12:27:19.823212    60 QueryThread.cpp:111] Starting selection
+I1019 12:27:19.826699    64 QueryThread.cpp:222] Finished query
+I1019 12:27:19.826730    64 QueryThread.cpp:111] Starting selection
+I1019 12:27:21.280930    67 QueryThread.cpp:146] Starting Projection
+W1019 12:27:21.282130    67 JSONContainer.cpp:28] JSONContainer size not able to autodetect, this should not happen. Fallback size: 52428800
+I1019 12:27:21.288734    67 QueryThread.cpp:159] Creating View
+W1019 12:27:21.288786    67 JSONContainer.cpp:28] JSONContainer size not able to autodetect, this should not happen. Fallback size: 52428800
+I1019 12:27:21.328279    67 QueryThread.cpp:217] Storing result
+I1019 12:27:21.344600    67 QueryThread.cpp:222] Finished query
+I1019 12:27:21.611630    66 QueryThread.cpp:146] Starting Projection
+W1019 12:27:21.612865    66 JSONContainer.cpp:28] JSONContainer size not able to autodetect, this should not happen. Fallback size: 52428800
+I1019 12:27:21.619695    66 QueryThread.cpp:159] Creating View
+W1019 12:27:21.619737    66 JSONContainer.cpp:28] JSONContainer size not able to autodetect, this should not happen. Fallback size: 52428800
+I1019 12:27:21.643671    61 QueryThread.cpp:146] Starting Projection
+W1019 12:27:21.644918    61 JSONContainer.cpp:28] JSONContainer size not able to autodetect, this should not happen. Fallback size: 52428800
+I1019 12:27:21.651695    61 QueryThread.cpp:159] Creating View
+W1019 12:27:21.651742    61 JSONContainer.cpp:28] JSONContainer size not able to autodetect, this should not happen. Fallback size: 52428800
+I1019 12:27:21.660598    66 QueryThread.cpp:217] Storing result
+I1019 12:27:21.669683    66 QueryThread.cpp:222] Finished query
+I1019 12:27:21.691787    61 QueryThread.cpp:217] Storing result
+I1019 12:27:21.706120    61 QueryThread.cpp:222] Finished query
+I1019 12:27:21.750844    65 QueryThread.cpp:146] Starting Projection
+W1019 12:27:21.752177    65 JSONContainer.cpp:28] JSONContainer size not able to autodetect, this should not happen. Fallback size: 52428800
+I1019 12:27:21.759573    65 QueryThread.cpp:159] Creating View
+W1019 12:27:21.759603    65 JSONContainer.cpp:28] JSONContainer size not able to autodetect, this should not happen. Fallback size: 52428800
+I1019 12:27:21.805564    65 QueryThread.cpp:217] Storing result
+I1019 12:27:21.827188    65 QueryThread.cpp:222] Finished query
+I1019 12:27:21.866153    60 QueryThread.cpp:146] Starting Projection
+W1019 12:27:21.867481    60 JSONContainer.cpp:28] JSONContainer size not able to autodetect, this should not happen. Fallback size: 52428800
+I1019 12:27:21.869508    62 QueryThread.cpp:146] Starting Projection
+W1019 12:27:21.870805    62 JSONContainer.cpp:28] JSONContainer size not able to autodetect, this should not happen. Fallback size: 52428800
+I1019 12:27:21.874859    60 QueryThread.cpp:159] Creating View
+W1019 12:27:21.874874    60 JSONContainer.cpp:28] JSONContainer size not able to autodetect, this should not happen. Fallback size: 52428800
+I1019 12:27:21.877856    62 QueryThread.cpp:159] Creating View
+W1019 12:27:21.877871    62 JSONContainer.cpp:28] JSONContainer size not able to autodetect, this should not happen. Fallback size: 52428800
+I1019 12:27:21.898128    63 QueryThread.cpp:146] Starting Projection
+W1019 12:27:21.899375    63 JSONContainer.cpp:28] JSONContainer size not able to autodetect, this should not happen. Fallback size: 52428800
+I1019 12:27:21.906613    63 QueryThread.cpp:159] Creating View
+W1019 12:27:21.906637    63 JSONContainer.cpp:28] JSONContainer size not able to autodetect, this should not happen. Fallback size: 52428800
+I1019 12:27:21.918406    60 QueryThread.cpp:217] Storing result
+I1019 12:27:21.922142    62 QueryThread.cpp:217] Storing result
+I1019 12:27:21.931901    62 QueryThread.cpp:222] Finished query
+I1019 12:27:21.936393    60 QueryThread.cpp:222] Finished query
+I1019 12:27:21.938519    64 QueryThread.cpp:146] Starting Projection
+W1019 12:27:21.939805    64 JSONContainer.cpp:28] JSONContainer size not able to autodetect, this should not happen. Fallback size: 52428800
+I1019 12:27:21.947041    64 QueryThread.cpp:159] Creating View
+W1019 12:27:21.947057    64 JSONContainer.cpp:28] JSONContainer size not able to autodetect, this should not happen. Fallback size: 52428800
+I1019 12:27:21.948141    63 QueryThread.cpp:217] Storing result
+I1019 12:27:21.966306    63 QueryThread.cpp:222] Finished query
+I1019 12:27:21.988181    64 QueryThread.cpp:217] Storing result
+I1019 12:27:21.998622    64 QueryThread.cpp:222] Finished query
+ResultSize: 970479
+
+-----STATISTICS------
+{
+I1019 12:27:21.999339     1 CLI.cpp:243] RAM: 1007.79 GBi | Used: 272.36 GBi | Free: 73% | Proc: 92.80 GBi
+I1019 12:27:21.999449     1 Timer.cpp:44] [MAIN] Query took 6.1779 s
+    "Query": "LOAD Twitter CHOOSE (((MEMCOUNT('/retweeted_status/quoted_status/place/bounding_box') >= 2 || EXISTS('/delete/status/id_str')) || '/user/profile_background_tile' == true) && (((EXISTS('/quoted_status/id') || ((STARTSWITH('/retweeted_status/quoted_status/user/created_at', \"T\") || STARTSWITH('/retweeted_status/quoted_status/user/created_at', \"S\")) || STARTSWITH('/retweeted_status/quoted_status/user/created_at', \"Mon \"))) || ISSTRING('/retweeted_status/quoted_status/extended_entities/media')) || EXISTS('/retweeted_status/user/screen_name')))",
+    "Time": 1634646435,
+    "Pretty Time": "Tue Oct 19 12:27:15 2021\n",
+    "Threads": 8,
+    "Runtime": {
+        "Threads": [
+            {
+                "Select": 5.334,
+                "Project": 0.131,
+                "View_Cost": 0.021
+            },
+            {
+                "Select": 5.675,
+                "Project": 0.135,
+                "View_Cost": 0.021
+            },
+            {
+                "Select": 5.71,
+                "Project": 0.133,
+                "View_Cost": 0.021
+            },
+            {
+                "Select": 5.803,
+                "Project": 0.138,
+                "View_Cost": 0.022
+            },
+            {
+                "Select": 5.934,
+                "Project": 0.139,
+                "View_Cost": 0.022
+            },
+            {
+                "Select": 5.925,
+                "Project": 0.137,
+                "View_Cost": 0.022
+            },
+            {
+                "Select": 5.945,
+                "Project": 0.135,
+                "View_Cost": 0.022
+            },
+            {
+                "Select": 6.005,
+                "Project": 0.135,
+                "View_Cost": 0.022
+            }
+        ],
+        "Store": 6.176,
+        "Evaluation": 6.177248608,
+        "Query": 6.177900368
+    },
+    "Result Size": 970479,
+    "#Container": 16,
+    "RAM Proc": 99642556416,
+    "Pretty RAM Proc": "92.80 GBi",
+    "Estimated Storage Size": 106575753552,
+    "Pretty Estimated Storage Size": "99.26 GBi",
+    "System": {
+        "Version": "0.12.2",
+        "Build": "1e00442",
+        "Build Time": "08:13:08 06-07-2021"
+    }
+}
+----------------
+I1019 12:27:21.999907     1 QueryPlan.cpp:46] Initializing QueryThread
+I1019 12:27:22.000130     1 DirectoryRegister.cpp:44] Created directory '"/tmp/JODA/UDIR_8"'
+I1019 12:27:22.000157     1 DirectoryRegister.cpp:28] Registered directory '"/tmp/JODA/UDIR_8"'
+I1019 12:27:22.000707    73 QueryThread.cpp:111] Starting selection
+I1019 12:27:22.000766    74 QueryThread.cpp:111] Starting selection
+I1019 12:27:22.001575    69 QueryThread.cpp:111] Starting selection
+I1019 12:27:22.001602    71 QueryThread.cpp:111] Starting selection
+I1019 12:27:22.001619    70 QueryThread.cpp:111] Starting selection
+I1019 12:27:22.001591    68 QueryThread.cpp:111] Starting selection
+I1019 12:27:22.001749    72 QueryThread.cpp:111] Starting selection
+I1019 12:27:22.002691    75 QueryThread.cpp:111] Starting selection
+I1019 12:27:25.612076    69 QueryThread.cpp:146] Starting Projection
+W1019 12:27:25.614153    69 JSONContainer.cpp:28] JSONContainer size not able to autodetect, this should not happen. Fallback size: 52428800
+I1019 12:27:25.621660    69 QueryThread.cpp:159] Creating View
+W1019 12:27:25.621716    69 JSONContainer.cpp:28] JSONContainer size not able to autodetect, this should not happen. Fallback size: 52428800
+I1019 12:27:25.662798    69 QueryThread.cpp:217] Storing result
+I1019 12:27:25.670624    69 QueryThread.cpp:222] Finished query
+I1019 12:27:25.670665    69 QueryThread.cpp:111] Starting selection
+I1019 12:27:25.764825    72 QueryThread.cpp:146] Starting Projection
+W1019 12:27:25.766916    72 JSONContainer.cpp:28] JSONContainer size not able to autodetect, this should not happen. Fallback size: 52428800
+I1019 12:27:25.774107    72 QueryThread.cpp:159] Creating View
+W1019 12:27:25.774160    72 JSONContainer.cpp:28] JSONContainer size not able to autodetect, this should not happen. Fallback size: 52428800
+I1019 12:27:25.787827    70 QueryThread.cpp:146] Starting Projection
+W1019 12:27:25.789929    70 JSONContainer.cpp:28] JSONContainer size not able to autodetect, this should not happen. Fallback size: 52428800
+I1019 12:27:25.797310    70 QueryThread.cpp:159] Creating View
+W1019 12:27:25.797356    70 JSONContainer.cpp:28] JSONContainer size not able to autodetect, this should not happen. Fallback size: 52428800
+I1019 12:27:25.813865    72 QueryThread.cpp:217] Storing result
+I1019 12:27:25.821919    72 QueryThread.cpp:222] Finished query
+I1019 12:27:25.821969    72 QueryThread.cpp:111] Starting selection
+I1019 12:27:25.836871    70 QueryThread.cpp:217] Storing result
+I1019 12:27:25.844637    70 QueryThread.cpp:222] Finished query
+I1019 12:27:25.844693    70 QueryThread.cpp:111] Starting selection
+I1019 12:27:25.994694    68 QueryThread.cpp:146] Starting Projection
+W1019 12:27:25.996778    68 JSONContainer.cpp:28] JSONContainer size not able to autodetect, this should not happen. Fallback size: 52428800
+I1019 12:27:26.004225    68 QueryThread.cpp:159] Creating View
+W1019 12:27:26.004279    68 JSONContainer.cpp:28] JSONContainer size not able to autodetect, this should not happen. Fallback size: 52428800
+I1019 12:27:26.018759    71 QueryThread.cpp:146] Starting Projection
+W1019 12:27:26.020820    71 JSONContainer.cpp:28] JSONContainer size not able to autodetect, this should not happen. Fallback size: 52428800
+I1019 12:27:26.028365    71 QueryThread.cpp:159] Creating View
+W1019 12:27:26.028414    71 JSONContainer.cpp:28] JSONContainer size not able to autodetect, this should not happen. Fallback size: 52428800
+I1019 12:27:26.042723    68 QueryThread.cpp:217] Storing result
+I1019 12:27:26.050981    68 QueryThread.cpp:222] Finished query
+I1019 12:27:26.051019    68 QueryThread.cpp:111] Starting selection
+I1019 12:27:26.056495    74 QueryThread.cpp:146] Starting Projection
+W1019 12:27:26.058588    74 JSONContainer.cpp:28] JSONContainer size not able to autodetect, this should not happen. Fallback size: 52428800
+I1019 12:27:26.065938    74 QueryThread.cpp:159] Creating View
+W1019 12:27:26.065982    74 JSONContainer.cpp:28] JSONContainer size not able to autodetect, this should not happen. Fallback size: 52428800
+I1019 12:27:26.066244    71 QueryThread.cpp:217] Storing result
+I1019 12:27:26.074378    71 QueryThread.cpp:222] Finished query
+I1019 12:27:26.074425    71 QueryThread.cpp:111] Starting selection
+I1019 12:27:26.102967    74 QueryThread.cpp:217] Storing result
+I1019 12:27:26.110831    74 QueryThread.cpp:222] Finished query
+I1019 12:27:26.110869    74 QueryThread.cpp:111] Starting selection
+I1019 12:27:26.115447    73 QueryThread.cpp:146] Starting Projection
+W1019 12:27:26.117528    73 JSONContainer.cpp:28] JSONContainer size not able to autodetect, this should not happen. Fallback size: 52428800
+I1019 12:27:26.124969    73 QueryThread.cpp:159] Creating View
+W1019 12:27:26.125012    73 JSONContainer.cpp:28] JSONContainer size not able to autodetect, this should not happen. Fallback size: 52428800
+I1019 12:27:26.161545    73 QueryThread.cpp:217] Storing result
+I1019 12:27:26.164211    75 QueryThread.cpp:146] Starting Projection
+W1019 12:27:26.166268    75 JSONContainer.cpp:28] JSONContainer size not able to autodetect, this should not happen. Fallback size: 52428800
+I1019 12:27:26.169975    73 QueryThread.cpp:222] Finished query
+I1019 12:27:26.170001    73 QueryThread.cpp:111] Starting selection
+I1019 12:27:26.173998    75 QueryThread.cpp:159] Creating View
+W1019 12:27:26.174027    75 JSONContainer.cpp:28] JSONContainer size not able to autodetect, this should not happen. Fallback size: 52428800
+I1019 12:27:26.210083    75 QueryThread.cpp:217] Storing result
+I1019 12:27:26.217733    75 QueryThread.cpp:222] Finished query
+I1019 12:27:26.217785    75 QueryThread.cpp:111] Starting selection
+I1019 12:27:27.654310    69 QueryThread.cpp:146] Starting Projection
+W1019 12:27:27.655508    69 JSONContainer.cpp:28] JSONContainer size not able to autodetect, this should not happen. Fallback size: 52428800
+I1019 12:27:27.659546    69 QueryThread.cpp:159] Creating View
+W1019 12:27:27.659583    69 JSONContainer.cpp:28] JSONContainer size not able to autodetect, this should not happen. Fallback size: 52428800
+I1019 12:27:27.678838    69 QueryThread.cpp:217] Storing result
+I1019 12:27:27.686219    69 QueryThread.cpp:222] Finished query
+I1019 12:27:27.891117    70 QueryThread.cpp:146] Starting Projection
+W1019 12:27:27.892343    70 JSONContainer.cpp:28] JSONContainer size not able to autodetect, this should not happen. Fallback size: 52428800
+I1019 12:27:27.896577    70 QueryThread.cpp:159] Creating View
+W1019 12:27:27.896598    70 JSONContainer.cpp:28] JSONContainer size not able to autodetect, this should not happen. Fallback size: 52428800
+I1019 12:27:27.915969    70 QueryThread.cpp:217] Storing result
+I1019 12:27:27.922696    70 QueryThread.cpp:222] Finished query
+I1019 12:27:28.045267    72 QueryThread.cpp:146] Starting Projection
+W1019 12:27:28.046602    72 JSONContainer.cpp:28] JSONContainer size not able to autodetect, this should not happen. Fallback size: 52428800
+I1019 12:27:28.051270    72 QueryThread.cpp:159] Creating View
+W1019 12:27:28.051302    72 JSONContainer.cpp:28] JSONContainer size not able to autodetect, this should not happen. Fallback size: 52428800
+I1019 12:27:28.070997    72 QueryThread.cpp:217] Storing result
+I1019 12:27:28.078080    72 QueryThread.cpp:222] Finished query
+I1019 12:27:28.131248    68 QueryThread.cpp:146] Starting Projection
+W1019 12:27:28.132484    68 JSONContainer.cpp:28] JSONContainer size not able to autodetect, this should not happen. Fallback size: 52428800
+I1019 12:27:28.136970    68 QueryThread.cpp:159] Creating View
+W1019 12:27:28.136996    68 JSONContainer.cpp:28] JSONContainer size not able to autodetect, this should not happen. Fallback size: 52428800
+I1019 12:27:28.155881    68 QueryThread.cpp:217] Storing result
+I1019 12:27:28.163942    68 QueryThread.cpp:222] Finished query
+I1019 12:27:28.248587    71 QueryThread.cpp:146] Starting Projection
+W1019 12:27:28.249888    71 JSONContainer.cpp:28] JSONContainer size not able to autodetect, this should not happen. Fallback size: 52428800
+I1019 12:27:28.254292    71 QueryThread.cpp:159] Creating View
+W1019 12:27:28.254307    71 JSONContainer.cpp:28] JSONContainer size not able to autodetect, this should not happen. Fallback size: 52428800
+I1019 12:27:28.273975    71 QueryThread.cpp:217] Storing result
+I1019 12:27:28.276362    74 QueryThread.cpp:146] Starting Projection
+W1019 12:27:28.277617    74 JSONContainer.cpp:28] JSONContainer size not able to autodetect, this should not happen. Fallback size: 52428800
+I1019 12:27:28.279732    71 QueryThread.cpp:222] Finished query
+I1019 12:27:28.282110    74 QueryThread.cpp:159] Creating View
+W1019 12:27:28.282127    74 JSONContainer.cpp:28] JSONContainer size not able to autodetect, this should not happen. Fallback size: 52428800
+I1019 12:27:28.308864    74 QueryThread.cpp:217] Storing result
+I1019 12:27:28.314971    74 QueryThread.cpp:222] Finished query
+I1019 12:27:28.390964    73 QueryThread.cpp:146] Starting Projection
+W1019 12:27:28.392282    73 JSONContainer.cpp:28] JSONContainer size not able to autodetect, this should not happen. Fallback size: 52428800
+I1019 12:27:28.397013    73 QueryThread.cpp:159] Creating View
+W1019 12:27:28.397053    73 JSONContainer.cpp:28] JSONContainer size not able to autodetect, this should not happen. Fallback size: 52428800
+I1019 12:27:28.416139    73 QueryThread.cpp:217] Storing result
+I1019 12:27:28.421700    73 QueryThread.cpp:222] Finished query
+I1019 12:27:28.456754    75 QueryThread.cpp:146] Starting Projection
+W1019 12:27:28.458024    75 JSONContainer.cpp:28] JSONContainer size not able to autodetect, this should not happen. Fallback size: 52428800
+I1019 12:27:28.462626    75 QueryThread.cpp:159] Creating View
+W1019 12:27:28.462641    75 JSONContainer.cpp:28] JSONContainer size not able to autodetect, this should not happen. Fallback size: 52428800
+I1019 12:27:28.485138    75 QueryThread.cpp:217] Storing result
+I1019 12:27:28.491221    75 QueryThread.cpp:222] Finished query
+ResultSize: 434583
+
+I1019 12:27:28.492565     1 CLI.cpp:243] RAM: 1007.79 GBi | Used: 272.51 GBi | Free: 73% | Proc: 92.95 GBi
+I1019 12:27:28.492684     1 Timer.cpp:44] [MAIN] Query took 6.49283 s
+-----STATISTICS------
+{
+    "Query": "LOAD Twitter CHOOSE ((((MEMCOUNT('/retweeted_status/quoted_status/place/bounding_box') >= 2 || EXISTS('/delete/status/id_str')) || '/user/profile_background_tile' == true) && (((EXISTS('/quoted_status/id') || ((STARTSWITH('/retweeted_status/quoted_status/user/created_at', \"T\") || STARTSWITH('/retweeted_status/quoted_status/user/created_at', \"S\")) || STARTSWITH('/retweeted_status/quoted_status/user/created_at', \"Mon \"))) || ISSTRING('/retweeted_status/quoted_status/extended_entities/media')) || EXISTS('/retweeted_status/user/screen_name'))) && (((EXISTS('/user/profile_sidebar_fill_color') && EXISTS('/quoted_status/user/profile_background_tile')) || ISSTRING('/retweeted_status/extended_tweet/entities/user_mentions')) || '/user/geo_enabled' == false))",
+    "Time": 1634646441,
+    "Pretty Time": "Tue Oct 19 12:27:21 2021\n",
+    "Threads": 8,
+    "Runtime": {
+        "Threads": [
+            {
+                "Select": 5.588,
+                "Project": 0.075,
+                "View_Cost": 0.014
+            },
+            {
+                "Select": 5.826,
+                "Project": 0.073,
+                "View_Cost": 0.014
+            },
+            {
+                "Select": 5.98,
+                "Project": 0.074,
+                "View_Cost": 0.015
+            },
+I1019 12:27:28.493005     1 QueryPlan.cpp:46] Initializing QueryThread
+            {
+                "Select": 6.067,
+                "Project": 0.072,
+                "View_Cost": 0.015
+            },
+            {
+                "Select": 6.185,
+                "Project": 0.072,
+                "View_Cost": 0.015
+            },
+            {
+                "Select": 6.215,
+                "Project": 0.078,
+                "View_Cost": 0.015
+            },
+            {
+                "Select": 6.329,
+                "Project": 0.071,
+                "View_Cost": 0.015
+            },
+            {
+                "Select": 6.394,
+                "Project": 0.074,
+                "View_Cost": 0.015
+I1019 12:27:28.493165     1 DirectoryRegister.cpp:44] Created directory '"/tmp/JODA/UDIR_9"'
+I1019 12:27:28.493182     1 DirectoryRegister.cpp:28] Registered directory '"/tmp/JODA/UDIR_9"'
+            }
+        ],
+        "Store": 6.491,
+        "Evaluation": 6.492179849,
+        "Query": 6.492834477
+    },
+    "Result Size": 434583,
+    "#Container": 16,
+    "RAM Proc": 99804741632,
+    "Pretty RAM Proc": "92.95 GBi",
+    "Estimated Storage Size": 106575753552,
+    "Pretty Estimated Storage Size": "99.26 GBi",
+    "System": {
+        "Version": "0.12.2",
+        "Build": "1e00442",
+        "Build Time": "08:13:08 06-07-2021"
+    }
+}
+----------------
+I1019 12:27:28.493575    78 QueryThread.cpp:111] Starting selection
+I1019 12:27:28.494514    76 QueryThread.cpp:111] Starting selection
+I1019 12:27:28.494585    77 QueryThread.cpp:111] Starting selection
+I1019 12:27:28.494707    79 QueryThread.cpp:111] Starting selection
+I1019 12:27:28.494719    80 QueryThread.cpp:111] Starting selection
+I1019 12:27:28.494756    82 QueryThread.cpp:111] Starting selection
+I1019 12:27:28.498725    83 QueryThread.cpp:111] Starting selection
+I1019 12:27:28.499122    81 QueryThread.cpp:111] Starting selection
+I1019 12:27:32.155035    80 QueryThread.cpp:146] Starting Projection
+W1019 12:27:32.157111    80 JSONContainer.cpp:28] JSONContainer size not able to autodetect, this should not happen. Fallback size: 52428800
+I1019 12:27:32.163270    80 QueryThread.cpp:159] Creating View
+W1019 12:27:32.163307    80 JSONContainer.cpp:28] JSONContainer size not able to autodetect, this should not happen. Fallback size: 52428800
+I1019 12:27:32.186967    80 QueryThread.cpp:217] Storing result
+I1019 12:27:32.191072    80 QueryThread.cpp:222] Finished query
+I1019 12:27:32.191095    80 QueryThread.cpp:111] Starting selection
+I1019 12:27:32.257623    83 QueryThread.cpp:146] Starting Projection
+W1019 12:27:32.259725    83 JSONContainer.cpp:28] JSONContainer size not able to autodetect, this should not happen. Fallback size: 52428800
+I1019 12:27:32.265729    83 QueryThread.cpp:159] Creating View
+W1019 12:27:32.265769    83 JSONContainer.cpp:28] JSONContainer size not able to autodetect, this should not happen. Fallback size: 52428800
+I1019 12:27:32.290434    83 QueryThread.cpp:217] Storing result
+I1019 12:27:32.294762    83 QueryThread.cpp:222] Finished query
+I1019 12:27:32.294786    83 QueryThread.cpp:111] Starting selection
+I1019 12:27:32.537402    79 QueryThread.cpp:146] Starting Projection
+W1019 12:27:32.539470    79 JSONContainer.cpp:28] JSONContainer size not able to autodetect, this should not happen. Fallback size: 52428800
+I1019 12:27:32.545539    79 QueryThread.cpp:159] Creating View
+W1019 12:27:32.545573    79 JSONContainer.cpp:28] JSONContainer size not able to autodetect, this should not happen. Fallback size: 52428800
+I1019 12:27:32.558542    78 QueryThread.cpp:146] Starting Projection
+W1019 12:27:32.560604    78 JSONContainer.cpp:28] JSONContainer size not able to autodetect, this should not happen. Fallback size: 52428800
+I1019 12:27:32.566715    78 QueryThread.cpp:159] Creating View
+W1019 12:27:32.566746    78 JSONContainer.cpp:28] JSONContainer size not able to autodetect, this should not happen. Fallback size: 52428800
+I1019 12:27:32.570153    79 QueryThread.cpp:217] Storing result
+I1019 12:27:32.575042    79 QueryThread.cpp:222] Finished query
+I1019 12:27:32.575073    79 QueryThread.cpp:111] Starting selection
+I1019 12:27:32.582162    82 QueryThread.cpp:146] Starting Projection
+W1019 12:27:32.584278    82 JSONContainer.cpp:28] JSONContainer size not able to autodetect, this should not happen. Fallback size: 52428800
+I1019 12:27:32.590327    78 QueryThread.cpp:217] Storing result
+I1019 12:27:32.590431    82 QueryThread.cpp:159] Creating View
+W1019 12:27:32.590453    82 JSONContainer.cpp:28] JSONContainer size not able to autodetect, this should not happen. Fallback size: 52428800
+I1019 12:27:32.595623    78 QueryThread.cpp:222] Finished query
+I1019 12:27:32.595649    78 QueryThread.cpp:111] Starting selection
+I1019 12:27:32.601984    77 QueryThread.cpp:146] Starting Projection
+W1019 12:27:32.604033    77 JSONContainer.cpp:28] JSONContainer size not able to autodetect, this should not happen. Fallback size: 52428800
+I1019 12:27:32.610152    77 QueryThread.cpp:159] Creating View
+W1019 12:27:32.610188    77 JSONContainer.cpp:28] JSONContainer size not able to autodetect, this should not happen. Fallback size: 52428800
+I1019 12:27:32.614158    82 QueryThread.cpp:217] Storing result
+I1019 12:27:32.618994    82 QueryThread.cpp:222] Finished query
+I1019 12:27:32.619020    82 QueryThread.cpp:111] Starting selection
+I1019 12:27:32.632772    77 QueryThread.cpp:217] Storing result
+I1019 12:27:32.637207    77 QueryThread.cpp:222] Finished query
+I1019 12:27:32.637241    77 QueryThread.cpp:111] Starting selection
+I1019 12:27:32.690989    81 QueryThread.cpp:146] Starting Projection
+W1019 12:27:32.693076    81 JSONContainer.cpp:28] JSONContainer size not able to autodetect, this should not happen. Fallback size: 52428800
+I1019 12:27:32.699275    81 QueryThread.cpp:159] Creating View
+W1019 12:27:32.699312    81 JSONContainer.cpp:28] JSONContainer size not able to autodetect, this should not happen. Fallback size: 52428800
+I1019 12:27:32.705386    76 QueryThread.cpp:146] Starting Projection
+W1019 12:27:32.707461    76 JSONContainer.cpp:28] JSONContainer size not able to autodetect, this should not happen. Fallback size: 52428800
+I1019 12:27:32.713611    76 QueryThread.cpp:159] Creating View
+W1019 12:27:32.713650    76 JSONContainer.cpp:28] JSONContainer size not able to autodetect, this should not happen. Fallback size: 52428800
+I1019 12:27:32.722193    81 QueryThread.cpp:217] Storing result
+I1019 12:27:32.726433    81 QueryThread.cpp:222] Finished query
+I1019 12:27:32.726469    81 QueryThread.cpp:111] Starting selection
+I1019 12:27:32.735569    76 QueryThread.cpp:217] Storing result
+I1019 12:27:32.740813    76 QueryThread.cpp:222] Finished query
+I1019 12:27:32.740850    76 QueryThread.cpp:111] Starting selection
+I1019 12:27:34.201815    80 QueryThread.cpp:146] Starting Projection
+W1019 12:27:34.203018    80 JSONContainer.cpp:28] JSONContainer size not able to autodetect, this should not happen. Fallback size: 52428800
+I1019 12:27:34.206424    80 QueryThread.cpp:159] Creating View
+W1019 12:27:34.206449    80 JSONContainer.cpp:28] JSONContainer size not able to autodetect, this should not happen. Fallback size: 52428800
+I1019 12:27:34.216923    80 QueryThread.cpp:217] Storing result
+I1019 12:27:34.220063    80 QueryThread.cpp:222] Finished query
+I1019 12:27:34.607882    83 QueryThread.cpp:146] Starting Projection
+W1019 12:27:34.609226    83 JSONContainer.cpp:28] JSONContainer size not able to autodetect, this should not happen. Fallback size: 52428800
+I1019 12:27:34.613292    83 QueryThread.cpp:159] Creating View
+W1019 12:27:34.613310    83 JSONContainer.cpp:28] JSONContainer size not able to autodetect, this should not happen. Fallback size: 52428800
+I1019 12:27:34.624822    83 QueryThread.cpp:217] Storing result
+I1019 12:27:34.625586    79 QueryThread.cpp:146] Starting Projection
+W1019 12:27:34.626773    79 JSONContainer.cpp:28] JSONContainer size not able to autodetect, this should not happen. Fallback size: 52428800
+I1019 12:27:34.627849    83 QueryThread.cpp:222] Finished query
+I1019 12:27:34.630439    79 QueryThread.cpp:159] Creating View
+W1019 12:27:34.630455    79 JSONContainer.cpp:28] JSONContainer size not able to autodetect, this should not happen. Fallback size: 52428800
+I1019 12:27:34.640502    79 QueryThread.cpp:217] Storing result
+I1019 12:27:34.643136    79 QueryThread.cpp:222] Finished query
+I1019 12:27:34.687280    78 QueryThread.cpp:146] Starting Projection
+W1019 12:27:34.688522    78 JSONContainer.cpp:28] JSONContainer size not able to autodetect, this should not happen. Fallback size: 52428800
+I1019 12:27:34.692238    78 QueryThread.cpp:159] Creating View
+W1019 12:27:34.692260    78 JSONContainer.cpp:28] JSONContainer size not able to autodetect, this should not happen. Fallback size: 52428800
+I1019 12:27:34.702682    78 QueryThread.cpp:217] Storing result
+I1019 12:27:34.705392    78 QueryThread.cpp:222] Finished query
+I1019 12:27:34.845079    82 QueryThread.cpp:146] Starting Projection
+W1019 12:27:34.846382    82 JSONContainer.cpp:28] JSONContainer size not able to autodetect, this should not happen. Fallback size: 52428800
+I1019 12:27:34.850180    82 QueryThread.cpp:159] Creating View
+W1019 12:27:34.850200    82 JSONContainer.cpp:28] JSONContainer size not able to autodetect, this should not happen. Fallback size: 52428800
+I1019 12:27:34.861371    82 QueryThread.cpp:217] Storing result
+I1019 12:27:34.864392    82 QueryThread.cpp:222] Finished query
+I1019 12:27:34.894770    77 QueryThread.cpp:146] Starting Projection
+W1019 12:27:34.896064    77 JSONContainer.cpp:28] JSONContainer size not able to autodetect, this should not happen. Fallback size: 52428800
+I1019 12:27:34.900012    77 QueryThread.cpp:159] Creating View
+W1019 12:27:34.900024    77 JSONContainer.cpp:28] JSONContainer size not able to autodetect, this should not happen. Fallback size: 52428800
+I1019 12:27:34.910434    77 QueryThread.cpp:217] Storing result
+I1019 12:27:34.913306    77 QueryThread.cpp:222] Finished query
+I1019 12:27:34.974531    81 QueryThread.cpp:146] Starting Projection
+W1019 12:27:34.975831    81 JSONContainer.cpp:28] JSONContainer size not able to autodetect, this should not happen. Fallback size: 52428800
+I1019 12:27:34.979771    81 QueryThread.cpp:159] Creating View
+W1019 12:27:34.979789    81 JSONContainer.cpp:28] JSONContainer size not able to autodetect, this should not happen. Fallback size: 52428800
+I1019 12:27:34.990298    81 QueryThread.cpp:217] Storing result
+I1019 12:27:34.993526    81 QueryThread.cpp:222] Finished query
+I1019 12:27:34.999660    76 QueryThread.cpp:146] Starting Projection
+W1019 12:27:35.000946    76 JSONContainer.cpp:28] JSONContainer size not able to autodetect, this should not happen. Fallback size: 52428800
+I1019 12:27:35.004796    76 QueryThread.cpp:159] Creating View
+W1019 12:27:35.004810    76 JSONContainer.cpp:28] JSONContainer size not able to autodetect, this should not happen. Fallback size: 52428800
+I1019 12:27:35.015442    76 QueryThread.cpp:217] Storing result
+I1019 12:27:35.018368    76 QueryThread.cpp:222] Finished query
+ResultSize: 226865
+
+-----STATISTICS------
+I1019 12:27:35.018955     1 CLI.cpp:243] RAM: 1007.79 GBi | Used: 272.58 GBi | Free: 73% | Proc: 93.03 GBi
+I1019 12:27:35.019076     1 Timer.cpp:44] [MAIN] Query took 6.52611 s
+{
+    "Query": "LOAD Twitter CHOOSE (((((MEMCOUNT('/retweeted_status/quoted_status/place/bounding_box') >= 2 || EXISTS('/delete/status/id_str')) || '/user/profile_background_tile' == true) && (((EXISTS('/quoted_status/id') || ((STARTSWITH('/retweeted_status/quoted_status/user/created_at', \"T\") || STARTSWITH('/retweeted_status/quoted_status/user/created_at', \"S\")) || STARTSWITH('/retweeted_status/quoted_status/user/created_at', \"Mon \"))) || ISSTRING('/retweeted_status/quoted_status/extended_entities/media')) || EXISTS('/retweeted_status/user/screen_name'))) && (((EXISTS('/user/profile_sidebar_fill_color') && EXISTS('/quoted_status/user/profile_background_tile')) || ISSTRING('/retweeted_status/extended_tweet/entities/user_mentions')) || '/user/geo_enabled' == false)) && (EXISTS('/user/id_str') && EXISTS('/retweeted_status/display_text_range')))",
+    "Time": 1634646448,
+    "Pretty Time": "Tue Oct 19 12:27:28 2021\n",
+    "Threads": 8,
+    "Runtime": {
+        "Threads": [
+            {
+                "Select": 5.665,
+                "Project": 0.046,
+                "View_Cost": 0.012
+            },
+            {
+                "Select": 6.065,
+                "Project": 0.049,
+                "View_Cost": 0.013
+            },
+            {
+                "Select": 6.087,
+                "Project": 0.047,
+                "View_Cost": 0.012
+            },
+            {
+                "Select": 6.15,
+                "Project": 0.047,
+                "View_Cost": 0.013
+            },
+            {
+                "Select": 6.307,
+                "Project": 0.048,
+                "View_Cost": 0.013
+            },
+            {
+                "Select": 6.358,
+                "Project": 0.046,
+                "View_Cost": 0.013
+            },
+            {
+                "Select": 6.433,
+                "Project": 0.046,
+                "View_Cost": 0.013
+            },
+            {
+                "Select": 6.463,
+                "Project": 0.045,
+                "View_Cost": 0.013
+            }
+        ],
+        "Store": 6.525,
+        "Evaluation": 6.525556681,
+        "Query": 6.526114147
+    },
+    "Result Size": 226865,
+    "#Container": 16,
+    "RAM Proc": 99885133824,
+    "Pretty RAM Proc": "93.03 GBi",
+    "Estimated Storage Size": 106575753552,
+    "Pretty Estimated Storage Size": "99.26 GBi",
+    "System": {
+        "Version": "0.12.2",
+        "Build": "1e00442",
+        "Build Time": "08:13:08 06-07-2021"
+    }
+}
+----------------
+I1019 12:27:35.019641     1 QueryPlan.cpp:46] Initializing QueryThread
+I1019 12:27:35.019891     1 DirectoryRegister.cpp:44] Created directory '"/tmp/JODA/UDIR_10"'
+I1019 12:27:35.019920     1 DirectoryRegister.cpp:28] Registered directory '"/tmp/JODA/UDIR_10"'
+I1019 12:27:35.020498    88 QueryThread.cpp:111] Starting selection
+I1019 12:27:35.020520    91 QueryThread.cpp:111] Starting selection
+I1019 12:27:35.020504    90 QueryThread.cpp:111] Starting selection
+I1019 12:27:35.021236    84 QueryThread.cpp:111] Starting selection
+I1019 12:27:35.021322    85 QueryThread.cpp:111] Starting selection
+I1019 12:27:35.021384    86 QueryThread.cpp:111] Starting selection
+I1019 12:27:35.021454    87 QueryThread.cpp:111] Starting selection
+I1019 12:27:35.021497    89 QueryThread.cpp:111] Starting selection
+I1019 12:27:38.744978    86 QueryThread.cpp:146] Starting Projection
+W1019 12:27:38.750355    86 JSONContainer.cpp:28] JSONContainer size not able to autodetect, this should not happen. Fallback size: 52428800
+I1019 12:27:38.755535    86 QueryThread.cpp:159] Creating View
+W1019 12:27:38.755580    86 JSONContainer.cpp:28] JSONContainer size not able to autodetect, this should not happen. Fallback size: 52428800
+I1019 12:27:38.763342    86 QueryThread.cpp:217] Storing result
+I1019 12:27:38.764744    86 QueryThread.cpp:222] Finished query
+I1019 12:27:38.764757    86 QueryThread.cpp:111] Starting selection
+I1019 12:27:38.858290    91 QueryThread.cpp:146] Starting Projection
+W1019 12:27:38.860354    91 JSONContainer.cpp:28] JSONContainer size not able to autodetect, this should not happen. Fallback size: 52428800
+I1019 12:27:38.865332    91 QueryThread.cpp:159] Creating View
+W1019 12:27:38.865355    91 JSONContainer.cpp:28] JSONContainer size not able to autodetect, this should not happen. Fallback size: 52428800
+I1019 12:27:38.879889    91 QueryThread.cpp:217] Storing result
+I1019 12:27:38.881539    91 QueryThread.cpp:222] Finished query
+I1019 12:27:38.881556    91 QueryThread.cpp:111] Starting selection
+I1019 12:27:39.154942    88 QueryThread.cpp:146] Starting Projection
+W1019 12:27:39.157021    88 JSONContainer.cpp:28] JSONContainer size not able to autodetect, this should not happen. Fallback size: 52428800
+I1019 12:27:39.161130    90 QueryThread.cpp:146] Starting Projection
+I1019 12:27:39.162133    88 QueryThread.cpp:159] Creating View
+W1019 12:27:39.162149    88 JSONContainer.cpp:28] JSONContainer size not able to autodetect, this should not happen. Fallback size: 52428800
+W1019 12:27:39.163188    90 JSONContainer.cpp:28] JSONContainer size not able to autodetect, this should not happen. Fallback size: 52428800
+I1019 12:27:39.168205    90 QueryThread.cpp:159] Creating View
+W1019 12:27:39.168220    90 JSONContainer.cpp:28] JSONContainer size not able to autodetect, this should not happen. Fallback size: 52428800
+I1019 12:27:39.175694    88 QueryThread.cpp:217] Storing result
+I1019 12:27:39.176195    90 QueryThread.cpp:217] Storing result
+I1019 12:27:39.177557    88 QueryThread.cpp:222] Finished query
+I1019 12:27:39.177572    88 QueryThread.cpp:111] Starting selection
+I1019 12:27:39.177867    90 QueryThread.cpp:222] Finished query
+I1019 12:27:39.177879    90 QueryThread.cpp:111] Starting selection
+I1019 12:27:39.210657    89 QueryThread.cpp:146] Starting Projection
+W1019 12:27:39.212723    89 JSONContainer.cpp:28] JSONContainer size not able to autodetect, this should not happen. Fallback size: 52428800
+I1019 12:27:39.217926    89 QueryThread.cpp:159] Creating View
+W1019 12:27:39.217955    89 JSONContainer.cpp:28] JSONContainer size not able to autodetect, this should not happen. Fallback size: 52428800
+I1019 12:27:39.218667    85 QueryThread.cpp:146] Starting Projection
+W1019 12:27:39.220692    85 JSONContainer.cpp:28] JSONContainer size not able to autodetect, this should not happen. Fallback size: 52428800
+I1019 12:27:39.225772    85 QueryThread.cpp:159] Creating View
+W1019 12:27:39.225790    85 JSONContainer.cpp:28] JSONContainer size not able to autodetect, this should not happen. Fallback size: 52428800
+I1019 12:27:39.230237    89 QueryThread.cpp:217] Storing result
+I1019 12:27:39.232066    89 QueryThread.cpp:222] Finished query
+I1019 12:27:39.232081    89 QueryThread.cpp:111] Starting selection
+I1019 12:27:39.236382    85 QueryThread.cpp:217] Storing result
+I1019 12:27:39.238093    85 QueryThread.cpp:222] Finished query
+I1019 12:27:39.238108    85 QueryThread.cpp:111] Starting selection
+I1019 12:27:39.446041    84 QueryThread.cpp:146] Starting Projection
+W1019 12:27:39.448127    84 JSONContainer.cpp:28] JSONContainer size not able to autodetect, this should not happen. Fallback size: 52428800
+I1019 12:27:39.453107    84 QueryThread.cpp:159] Creating View
+W1019 12:27:39.453131    84 JSONContainer.cpp:28] JSONContainer size not able to autodetect, this should not happen. Fallback size: 52428800
+I1019 12:27:39.461442    84 QueryThread.cpp:217] Storing result
+I1019 12:27:39.463258    84 QueryThread.cpp:222] Finished query
+I1019 12:27:39.463274    84 QueryThread.cpp:111] Starting selection
+I1019 12:27:39.656213    87 QueryThread.cpp:146] Starting Projection
+W1019 12:27:39.658347    87 JSONContainer.cpp:28] JSONContainer size not able to autodetect, this should not happen. Fallback size: 52428800
+I1019 12:27:39.663327    87 QueryThread.cpp:159] Creating View
+W1019 12:27:39.663353    87 JSONContainer.cpp:28] JSONContainer size not able to autodetect, this should not happen. Fallback size: 52428800
+I1019 12:27:39.671730    87 QueryThread.cpp:217] Storing result
+I1019 12:27:39.673377    87 QueryThread.cpp:222] Finished query
+I1019 12:27:39.673393    87 QueryThread.cpp:111] Starting selection
+I1019 12:27:40.923211    86 QueryThread.cpp:146] Starting Projection
+W1019 12:27:40.924427    86 JSONContainer.cpp:28] JSONContainer size not able to autodetect, this should not happen. Fallback size: 52428800
+I1019 12:27:40.927320    86 QueryThread.cpp:159] Creating View
+W1019 12:27:40.927345    86 JSONContainer.cpp:28] JSONContainer size not able to autodetect, this should not happen. Fallback size: 52428800
+I1019 12:27:40.931885    86 QueryThread.cpp:217] Storing result
+I1019 12:27:40.932611    86 QueryThread.cpp:222] Finished query
+I1019 12:27:41.177256    91 QueryThread.cpp:146] Starting Projection
+W1019 12:27:41.178601    91 JSONContainer.cpp:28] JSONContainer size not able to autodetect, this should not happen. Fallback size: 52428800
+I1019 12:27:41.181783    91 QueryThread.cpp:159] Creating View
+W1019 12:27:41.181798    91 JSONContainer.cpp:28] JSONContainer size not able to autodetect, this should not happen. Fallback size: 52428800
+I1019 12:27:41.186645    91 QueryThread.cpp:217] Storing result
+I1019 12:27:41.187309    91 QueryThread.cpp:222] Finished query
+I1019 12:27:41.283161    88 QueryThread.cpp:146] Starting Projection
+W1019 12:27:41.284384    88 JSONContainer.cpp:28] JSONContainer size not able to autodetect, this should not happen. Fallback size: 52428800
+I1019 12:27:41.287397    88 QueryThread.cpp:159] Creating View
+W1019 12:27:41.287411    88 JSONContainer.cpp:28] JSONContainer size not able to autodetect, this should not happen. Fallback size: 52428800
+I1019 12:27:41.291901    88 QueryThread.cpp:217] Storing result
+I1019 12:27:41.292863    88 QueryThread.cpp:222] Finished query
+I1019 12:27:41.304159    90 QueryThread.cpp:146] Starting Projection
+W1019 12:27:41.305388    90 JSONContainer.cpp:28] JSONContainer size not able to autodetect, this should not happen. Fallback size: 52428800
+I1019 12:27:41.308379    90 QueryThread.cpp:159] Creating View
+W1019 12:27:41.308391    90 JSONContainer.cpp:28] JSONContainer size not able to autodetect, this should not happen. Fallback size: 52428800
+I1019 12:27:41.312976    90 QueryThread.cpp:217] Storing result
+I1019 12:27:41.313846    90 QueryThread.cpp:222] Finished query
+I1019 12:27:41.459875    89 QueryThread.cpp:146] Starting Projection
+W1019 12:27:41.461164    89 JSONContainer.cpp:28] JSONContainer size not able to autodetect, this should not happen. Fallback size: 52428800
+I1019 12:27:41.464398    89 QueryThread.cpp:159] Creating View
+W1019 12:27:41.464416    89 JSONContainer.cpp:28] JSONContainer size not able to autodetect, this should not happen. Fallback size: 52428800
+I1019 12:27:41.469169    89 QueryThread.cpp:217] Storing result
+I1019 12:27:41.469967    89 QueryThread.cpp:222] Finished query
+I1019 12:27:41.474705    85 QueryThread.cpp:146] Starting Projection
+W1019 12:27:41.475965    85 JSONContainer.cpp:28] JSONContainer size not able to autodetect, this should not happen. Fallback size: 52428800
+I1019 12:27:41.478998    85 QueryThread.cpp:159] Creating View
+W1019 12:27:41.479012    85 JSONContainer.cpp:28] JSONContainer size not able to autodetect, this should not happen. Fallback size: 52428800
+I1019 12:27:41.483669    85 QueryThread.cpp:217] Storing result
+I1019 12:27:41.484498    85 QueryThread.cpp:222] Finished query
+I1019 12:27:41.744812    84 QueryThread.cpp:146] Starting Projection
+W1019 12:27:41.746119    84 JSONContainer.cpp:28] JSONContainer size not able to autodetect, this should not happen. Fallback size: 52428800
+I1019 12:27:41.749262    84 QueryThread.cpp:159] Creating View
+W1019 12:27:41.749276    84 JSONContainer.cpp:28] JSONContainer size not able to autodetect, this should not happen. Fallback size: 52428800
+I1019 12:27:41.754124    84 QueryThread.cpp:217] Storing result
+I1019 12:27:41.755091    84 QueryThread.cpp:222] Finished query
+I1019 12:27:41.987707    87 QueryThread.cpp:146] Starting Projection
+W1019 12:27:41.989025    87 JSONContainer.cpp:28] JSONContainer size not able to autodetect, this should not happen. Fallback size: 52428800
+I1019 12:27:41.992070    87 QueryThread.cpp:159] Creating View
+W1019 12:27:41.992084    87 JSONContainer.cpp:28] JSONContainer size not able to autodetect, this should not happen. Fallback size: 52428800
+I1019 12:27:41.996676    87 QueryThread.cpp:217] Storing result
+I1019 12:27:41.997447    87 QueryThread.cpp:222] Finished query
+ResultSize: 79126
+
+I1019 12:27:41.998273     1 CLI.cpp:243] RAM: 1007.79 GBi | Used: 272.61 GBi | Free: 73% | Proc: 93.05 GBi
+-----STATISTICS------
+I1019 12:27:41.998394     1 Timer.cpp:44] [MAIN] Query took 6.97881 s
+{
+    "Query": "LOAD Twitter CHOOSE ((((((MEMCOUNT('/retweeted_status/quoted_status/place/bounding_box') >= 2 || EXISTS('/delete/status/id_str')) || '/user/profile_background_tile' == true) && (((EXISTS('/quoted_status/id') || ((STARTSWITH('/retweeted_status/quoted_status/user/created_at', \"T\") || STARTSWITH('/retweeted_status/quoted_status/user/created_at', \"S\")) || STARTSWITH('/retweeted_status/quoted_status/user/created_at', \"Mon \"))) || ISSTRING('/retweeted_status/quoted_status/extended_entities/media')) || EXISTS('/retweeted_status/user/screen_name'))) && (((EXISTS('/user/profile_sidebar_fill_color') && EXISTS('/quoted_status/user/profile_background_tile')) || ISSTRING('/retweeted_status/extended_tweet/entities/user_mentions')) || '/user/geo_enabled' == false)) && (EXISTS('/user/id_str') && EXISTS('/retweeted_status/display_text_range'))) && (ISSTRING('/quoted_status/entities/user_mentions') || EXISTS('/quoted_status/user/name')))",
+    "Time": 1634646455,
+    "Pretty Time": "Tue Oct 19 12:27:35 2021\n",
+    "Threads": 8,
+    "Runtime": {
+        "Threads": [
+            {
+                "Select": 5.876,
+                "Project": 0.026,
+                "View_Cost": 0.014
+            },
+            {
+                "Select": 6.127,
+                "Project": 0.03,
+                "View_Cost": 0.011
+            },
+            {
+                "Select": 6.234,
+                "Project": 0.029,
+                "View_Cost": 0.011
+            },
+            {
+                "Select": 6.26,
+                "Project": 0.023,
+                "View_Cost": 0.011
+            },
+            {
+                "Select": 6.411,
+                "Project": 0.028,
+                "View_Cost": 0.011
+            },
+            {
+                "Select": 6.427,
+                "Project": 0.026,
+                "View_Cost": 0.011
+            },
+            {
+                "Select": 6.7,
+                "Project": 0.024,
+                "View_Cost": 0.011
+            },
+            {
+                "Select": 6.943,
+                "Project": 0.024,
+                "View_Cost": 0.011
+            }
+        ],
+        "Store": 6.977,
+        "Evaluation": 6.978076651,
+        "Query": 6.97880651
+    },
+    "Result Size": 79126,
+    "#Container": 16,
+    "RAM Proc": 99916587008,
+    "Pretty RAM Proc": "93.05 GBi",
+    "Estimated Storage Size": 106575753552,
+    "Pretty Estimated Storage Size": "99.26 GBi",
+    "System": {
+        "Version": "0.12.2",
+        "Build": "1e00442",
+        "Build Time": "08:13:08 06-07-2021"
+    }
+}
+----------------
+I1019 12:27:41.999054     1 QueryPlan.cpp:46] Initializing QueryThread
+I1019 12:27:41.999310     1 DirectoryRegister.cpp:44] Created directory '"/tmp/JODA/UDIR_11"'
+I1019 12:27:41.999338     1 DirectoryRegister.cpp:28] Registered directory '"/tmp/JODA/UDIR_11"'
+I1019 12:27:42.000063    98 QueryThread.cpp:111] Starting selection
+I1019 12:27:42.000165    99 QueryThread.cpp:111] Starting selection
+I1019 12:27:42.000804    92 QueryThread.cpp:111] Starting selection
+I1019 12:27:42.000921    95 QueryThread.cpp:111] Starting selection
+I1019 12:27:42.000968    96 QueryThread.cpp:111] Starting selection
+I1019 12:27:42.000991    93 QueryThread.cpp:111] Starting selection
+I1019 12:27:42.001000    94 QueryThread.cpp:111] Starting selection
+I1019 12:27:42.001103    97 QueryThread.cpp:111] Starting selection
+I1019 12:27:45.658126    95 QueryThread.cpp:146] Starting Projection
+W1019 12:27:45.660509    95 JSONContainer.cpp:28] JSONContainer size not able to autodetect, this should not happen. Fallback size: 52428800
+I1019 12:27:45.665131    95 QueryThread.cpp:159] Creating View
+W1019 12:27:45.665153    95 JSONContainer.cpp:28] JSONContainer size not able to autodetect, this should not happen. Fallback size: 52428800
+I1019 12:27:45.671787    95 QueryThread.cpp:217] Storing result
+I1019 12:27:45.673103    95 QueryThread.cpp:222] Finished query
+I1019 12:27:45.673117    95 QueryThread.cpp:111] Starting selection
+I1019 12:27:45.769913    93 QueryThread.cpp:146] Starting Projection
+W1019 12:27:45.772056    93 JSONContainer.cpp:28] JSONContainer size not able to autodetect, this should not happen. Fallback size: 52428800
+I1019 12:27:45.776785    93 QueryThread.cpp:159] Creating View
+W1019 12:27:45.776809    93 JSONContainer.cpp:28] JSONContainer size not able to autodetect, this should not happen. Fallback size: 52428800
+I1019 12:27:45.779932    99 QueryThread.cpp:146] Starting Projection
+W1019 12:27:45.782070    99 JSONContainer.cpp:28] JSONContainer size not able to autodetect, this should not happen. Fallback size: 52428800
+I1019 12:27:45.783476    93 QueryThread.cpp:217] Storing result
+I1019 12:27:45.784719    93 QueryThread.cpp:222] Finished query
+I1019 12:27:45.784735    93 QueryThread.cpp:111] Starting selection
+I1019 12:27:45.786875    99 QueryThread.cpp:159] Creating View
+W1019 12:27:45.786890    99 JSONContainer.cpp:28] JSONContainer size not able to autodetect, this should not happen. Fallback size: 52428800
+I1019 12:27:45.793514    99 QueryThread.cpp:217] Storing result
+I1019 12:27:45.794749    99 QueryThread.cpp:222] Finished query
+I1019 12:27:45.794764    99 QueryThread.cpp:111] Starting selection
+I1019 12:27:45.800802    98 QueryThread.cpp:146] Starting Projection
+I1019 12:27:45.802819    97 QueryThread.cpp:146] Starting Projection
+W1019 12:27:45.802924    98 JSONContainer.cpp:28] JSONContainer size not able to autodetect, this should not happen. Fallback size: 52428800
+W1019 12:27:45.804925    97 JSONContainer.cpp:28] JSONContainer size not able to autodetect, this should not happen. Fallback size: 52428800
+I1019 12:27:45.807691    98 QueryThread.cpp:159] Creating View
+W1019 12:27:45.807706    98 JSONContainer.cpp:28] JSONContainer size not able to autodetect, this should not happen. Fallback size: 52428800
+I1019 12:27:45.809733    97 QueryThread.cpp:159] Creating View
+W1019 12:27:45.809746    97 JSONContainer.cpp:28] JSONContainer size not able to autodetect, this should not happen. Fallback size: 52428800
+I1019 12:27:45.814126    98 QueryThread.cpp:217] Storing result
+I1019 12:27:45.815330    98 QueryThread.cpp:222] Finished query
+I1019 12:27:45.815344    98 QueryThread.cpp:111] Starting selection
+I1019 12:27:45.816079    97 QueryThread.cpp:217] Storing result
+I1019 12:27:45.817224    97 QueryThread.cpp:222] Finished query
+I1019 12:27:45.817237    97 QueryThread.cpp:111] Starting selection
+I1019 12:27:45.859808    94 QueryThread.cpp:146] Starting Projection
+W1019 12:27:45.861985    94 JSONContainer.cpp:28] JSONContainer size not able to autodetect, this should not happen. Fallback size: 52428800
+I1019 12:27:45.866665    94 QueryThread.cpp:159] Creating View
+W1019 12:27:45.866688    94 JSONContainer.cpp:28] JSONContainer size not able to autodetect, this should not happen. Fallback size: 52428800
+I1019 12:27:45.873421    94 QueryThread.cpp:217] Storing result
+I1019 12:27:45.874578    94 QueryThread.cpp:222] Finished query
+I1019 12:27:45.874593    94 QueryThread.cpp:111] Starting selection
+I1019 12:27:46.042574    92 QueryThread.cpp:146] Starting Projection
+W1019 12:27:46.044696    92 JSONContainer.cpp:28] JSONContainer size not able to autodetect, this should not happen. Fallback size: 52428800
+I1019 12:27:46.049463    92 QueryThread.cpp:159] Creating View
+W1019 12:27:46.049489    92 JSONContainer.cpp:28] JSONContainer size not able to autodetect, this should not happen. Fallback size: 52428800
+I1019 12:27:46.056140    92 QueryThread.cpp:217] Storing result
+I1019 12:27:46.057276    92 QueryThread.cpp:222] Finished query
+I1019 12:27:46.057317    92 QueryThread.cpp:111] Starting selection
+I1019 12:27:46.313571    96 QueryThread.cpp:146] Starting Projection
+W1019 12:27:46.315750    96 JSONContainer.cpp:28] JSONContainer size not able to autodetect, this should not happen. Fallback size: 52428800
+I1019 12:27:46.320406    96 QueryThread.cpp:159] Creating View
+W1019 12:27:46.320428    96 JSONContainer.cpp:28] JSONContainer size not able to autodetect, this should not happen. Fallback size: 52428800
+I1019 12:27:46.327742    96 QueryThread.cpp:217] Storing result
+I1019 12:27:46.328945    96 QueryThread.cpp:222] Finished query
+I1019 12:27:46.328960    96 QueryThread.cpp:111] Starting selection
+I1019 12:27:48.167376    94 QueryThread.cpp:146] Starting Projection
+W1019 12:27:48.168736    94 JSONContainer.cpp:28] JSONContainer size not able to autodetect, this should not happen. Fallback size: 52428800
+I1019 12:27:48.171725    94 QueryThread.cpp:159] Creating View
+W1019 12:27:48.171742    94 JSONContainer.cpp:28] JSONContainer size not able to autodetect, this should not happen. Fallback size: 52428800
+I1019 12:27:48.177237    94 QueryThread.cpp:217] Storing result
+I1019 12:27:48.177975    94 QueryThread.cpp:222] Finished query
+I1019 12:27:48.192605    95 QueryThread.cpp:146] Starting Projection
+W1019 12:27:48.193789    95 JSONContainer.cpp:28] JSONContainer size not able to autodetect, this should not happen. Fallback size: 52428800
+I1019 12:27:48.196550    95 QueryThread.cpp:159] Creating View
+W1019 12:27:48.196568    95 JSONContainer.cpp:28] JSONContainer size not able to autodetect, this should not happen. Fallback size: 52428800
+I1019 12:27:48.201382    95 QueryThread.cpp:217] Storing result
+I1019 12:27:48.202066    95 QueryThread.cpp:222] Finished query
+I1019 12:27:48.299962    92 QueryThread.cpp:146] Starting Projection
+W1019 12:27:48.301318    92 JSONContainer.cpp:28] JSONContainer size not able to autodetect, this should not happen. Fallback size: 52428800
+I1019 12:27:48.304359    92 QueryThread.cpp:159] Creating View
+W1019 12:27:48.304378    92 JSONContainer.cpp:28] JSONContainer size not able to autodetect, this should not happen. Fallback size: 52428800
+I1019 12:27:48.309576    92 QueryThread.cpp:217] Storing result
+I1019 12:27:48.310328    92 QueryThread.cpp:222] Finished query
+I1019 12:27:48.322697    93 QueryThread.cpp:146] Starting Projection
+W1019 12:27:48.324015    93 JSONContainer.cpp:28] JSONContainer size not able to autodetect, this should not happen. Fallback size: 52428800
+I1019 12:27:48.327181    93 QueryThread.cpp:159] Creating View
+W1019 12:27:48.327200    93 JSONContainer.cpp:28] JSONContainer size not able to autodetect, this should not happen. Fallback size: 52428800
+I1019 12:27:48.332422    93 QueryThread.cpp:217] Storing result
+I1019 12:27:48.333143    93 QueryThread.cpp:222] Finished query
+I1019 12:27:48.490595    99 QueryThread.cpp:146] Starting Projection
+W1019 12:27:48.491801    99 JSONContainer.cpp:28] JSONContainer size not able to autodetect, this should not happen. Fallback size: 52428800
+I1019 12:27:48.494665    99 QueryThread.cpp:159] Creating View
+W1019 12:27:48.494678    99 JSONContainer.cpp:28] JSONContainer size not able to autodetect, this should not happen. Fallback size: 52428800
+I1019 12:27:48.499536    99 QueryThread.cpp:217] Storing result
+I1019 12:27:48.500272    99 QueryThread.cpp:222] Finished query
+I1019 12:27:48.554085    98 QueryThread.cpp:146] Starting Projection
+W1019 12:27:48.555323    98 JSONContainer.cpp:28] JSONContainer size not able to autodetect, this should not happen. Fallback size: 52428800
+I1019 12:27:48.558176    98 QueryThread.cpp:159] Creating View
+W1019 12:27:48.558188    98 JSONContainer.cpp:28] JSONContainer size not able to autodetect, this should not happen. Fallback size: 52428800
+I1019 12:27:48.562938    98 QueryThread.cpp:217] Storing result
+I1019 12:27:48.563606    98 QueryThread.cpp:222] Finished query
+I1019 12:27:48.695014    97 QueryThread.cpp:146] Starting Projection
+W1019 12:27:48.696324    97 JSONContainer.cpp:28] JSONContainer size not able to autodetect, this should not happen. Fallback size: 52428800
+I1019 12:27:48.699561    97 QueryThread.cpp:159] Creating View
+W1019 12:27:48.699574    97 JSONContainer.cpp:28] JSONContainer size not able to autodetect, this should not happen. Fallback size: 52428800
+I1019 12:27:48.704329    97 QueryThread.cpp:217] Storing result
+I1019 12:27:48.705035    97 QueryThread.cpp:222] Finished query
+I1019 12:27:48.817519    96 QueryThread.cpp:146] Starting Projection
+W1019 12:27:48.818862    96 JSONContainer.cpp:28] JSONContainer size not able to autodetect, this should not happen. Fallback size: 52428800
+I1019 12:27:48.821882    96 QueryThread.cpp:159] Creating View
+W1019 12:27:48.821894    96 JSONContainer.cpp:28] JSONContainer size not able to autodetect, this should not happen. Fallback size: 52428800
+I1019 12:27:48.826558    96 QueryThread.cpp:217] Storing result
+I1019 12:27:48.827296    96 QueryThread.cpp:222] Finished query
+ResultSize: 56933
+
+I1019 12:27:48.827822     1 CLI.cpp:243] RAM: 1007.79 GBi | Used: 272.64 GBi | Free: 73% | Proc: 93.08 GBi
+-----RESULTS------
+I1019 12:27:48.828619     1 Timer.cpp:44] [MAIN] Query took 6.82962 s
+{"created_at":"Thu May 04 18:47:43 +0000 2017","id":860204308645761024,"id_str":"860204308645761024","text":"RT @__Dutch: This is great until the Prof has a version A, B, C of an exam 😭😭😭 https://t.co/ErW126VOxm","source":"<a href=\"http://twitter.com\" rel=\"nofollow\">Twitter Web Client</a>","truncated":false,"in_reply_to_status_id":null,"in_reply_to_status_id_str":null,"in_reply_to_user_id":null,"in_reply_to_user_id_str":null,"in_reply_to_screen_name":null,"user":{"id":104937671,"id_str":"104937671","name":"Trev aka TrevVanzant","screen_name":"TheTTT333","location":"Philly","url":"http://thettt333.tumblr.com/","description":"JAMerican🇯🇲 Music ting. Sports ting. Dad Hats dawggy. Michigan Wolverine. Civil Engineering I guess. Alumnae. Future Millionaire. Finesser. 23.","protected":false,"verified":false,"followers_count":2490,"friends_count":515,"listed_count":64,"favourites_count":6007,"statuses_count":208300,"created_at":"Thu Jan 14 21:25:45 +0000 2010","utc_offset":-14400,"time_zone":"Eastern Time (US & Canada)","geo_enabled":true,"lang":"en","contributors_enabled":false,"is_translator":false,"profile_background_color":"E30CE3","profile_background_image_url":"http://pbs.twimg.com/profile_background_images/112973172/er_sogoodrmx.jpg","profile_background_image_url_https":"https://pbs.twimg.com/profile_background_images/112973172/er_sogoodrmx.jpg","profile_background_tile":true,"profile_link_color":"F5CE0A","profile_sidebar_border_color":"FFFFFF","profile_sidebar_fill_color":"DDEEF6","profile_text_color":"FF0011","profile_use_background_image":true,"profile_image_url":"http://pbs.twimg.com/profile_images/810686163799392256/7oiWbYSi_normal.jpg","profile_image_url_https":"https://pbs.twimg.com/profile_images/810686163799392256/7oiWbYSi_normal.jpg","profile_banner_url":"https://pbs.twimg.com/profile_banners/104937671/1468258458","default_profile":false,"default_profile_image":false,"following":null,"follow_request_sent":null,"notifications":null},"geo":null,"coordinates":null,"place":null,"contributors":null,"retweeted_status":{"created_at":"Thu May 04 18:46:00 +0000 2017","id":860203877609680896,"id_str":"860203877609680896","text":"This is great until the Prof has a version A, B, C of an exam 😭😭😭 https://t.co/ErW126VOxm","display_text_range":[0,65],"source":"<a href=\"http://twitter.com/download/iphone\" rel=\"nofollow\">Twitter for iPhone</a>","truncated":false,"in_reply_to_status_id":null,"in_reply_to_status_id_str":null,"in_reply_to_user_id":null,"in_reply_to_user_id_str":null,"in_reply_to_screen_name":null,"user":{"id":46330725,"id_str":"46330725","name":"ChampagnePetty","screen_name":"__Dutch","location":"Chicago","url":"https://soundcloud.com/dutch_22","description":"when chicken is my portion, a constant friend is wings","protected":false,"verified":false,"followers_count":9415,"friends_count":606,"listed_count":172,"favourites_count":7509,"statuses_count":265839,"created_at":"Thu Jun 11 06:27:15 +0000 2009","utc_offset":-18000,"time_zone":"Central Time (US & Canada)","geo_enabled":true,"lang":"en","contributors_enabled":false,"is_translator":false,"profile_background_color":"000000","profile_background_image_url":"http://pbs.twimg.com/profile_background_images/378800000083538313/d30e3821b3a85d8e4155d8f95ad404be.jpeg","profile_background_image_url_https":"https://pbs.twimg.com/profile_background_images/378800000083538313/d30e3821b3a85d8e4155d8f95ad404be.jpeg","profile_background_tile":false,"profile_link_color":"999393","profile_sidebar_border_color":"FFFFFF","profile_sidebar_fill_color":"E83333","profile_text_color":"E6CC22","profile_use_background_image":true,"profile_image_url":"http://pbs.twimg.com/profile_images/860189570054459393/q34dSdah_normal.jpg","profile_image_url_https":"https://pbs.twimg.com/profile_images/860189570054459393/q34dSdah_normal.jpg","profile_banner_url":"https://pbs.twimg.com/profile_banners/46330725/1454201746","default_profile":false,"default_profile_image":false,"following":null,"follow_request_sent":null,"notifications":null},"geo":null,"coordinates":null,"place":null,"contributors":null,"quoted_status_id":859610844811984896,"quoted_status_id_str":"859610844811984896","quoted_status":{"created_at":"Wed May 03 03:29:30 +0000 2017","id":859610844811984896,"id_str":"859610844811984896","text":"Smartest Cheat Sheet ever. 😭📝 https://t.co/YDQBxvJRnm","display_text_range":[0,29],"source":"<a href=\"http://twitter.com/download/iphone\" rel=\"nofollow\">Twitter for iPhone</a>","truncated":false,"in_reply_to_status_id":null,"in_reply_to_status_id_str":null,"in_reply_to_user_id":null,"in_reply_to_user_id_str":null,"in_reply_to_screen_name":null,"user":{"id":90296475,"id_str":"90296475","name":"Charniq","screen_name":"Lingua_Action","location":"Somewhere shaking my ass","url":"https://youtu.be/JS5AJSj0Eno","description":"#229 | #SSU | http://www.instagram.com/charniqg | SC: CharniqG | Your Favorite Makeup Artist","protected":false,"verified":false,"followers_count":6705,"friends_count":1537,"listed_count":12,"favourites_count":2855,"statuses_count":91150,"created_at":"Mon Nov 16 01:44:39 +0000 2009","utc_offset":-18000,"time_zone":"Quito","geo_enabled":true,"lang":"en","contributors_enabled":false,"is_translator":false,"profile_background_color":"3D1547","profile_background_image_url":"http://pbs.twimg.com/profile_background_images/781559823/d5c7c667dfe1ba5037ab4de9fdc40e08.png","profile_background_image_url_https":"https://pbs.twimg.com/profile_background_images/781559823/d5c7c667dfe1ba5037ab4de9fdc40e08.png","profile_background_tile":true,"profile_link_color":"7A1C99","profile_sidebar_border_color":"FFFFFF","profile_sidebar_fill_color":"000000","profile_text_color":"EBD911","profile_use_background_image":true,"profile_image_url":"http://pbs.twimg.com/profile_images/860008636495659008/e4nHlcNE_normal.jpg","profile_image_url_https":"https://pbs.twimg.com/profile_images/860008636495659008/e4nHlcNE_normal.jpg","profile_banner_url":"https://pbs.twimg.com/profile_banners/90296475/1492490541","default_profile":false,"default_profile_image":false,"following":null,"follow_request_sent":null,"notifications":null},"geo":null,"coordinates":null,"place":{"id":"00e9226863a6e5a4","url":"https://api.twitter.com/1.1/geo/id/00e9226863a6e5a4.json","place_type":"city","name":"Savannah","full_name":"Savannah, GA","country_code":"US","country":"United States","bounding_box":{"type":"Polygon","coordinates":[[[-81.188663,31.922596],[-81.188663,32.111973],[-81.03057,32.111973],[-81.03057,31.922596]]]},"attributes":{}},"contributors":null,"is_quote_status":false,"retweet_count":11805,"favorite_count":19918,"entities":{"hashtags":[],"urls":[],"user_mentions":[],"symbols":[],"media":[{"id":859610835957809152,"id_str":"859610835957809152","indices":[30,53],"media_url":"http://pbs.twimg.com/media/C-3zgDpXgAAJLFj.jpg","media_url_https":"https://pbs.twimg.com/media/C-3zgDpXgAAJLFj.jpg","url":"https://t.co/YDQBxvJRnm","display_url":"pic.twitter.com/YDQBxvJRnm","expanded_url":"https://twitter.com/Lingua_Action/status/859610844811984896/photo/1","type":"photo","sizes":{"small":{"w":477,"h":680,"resize":"fit"},"thumb":{"w":150,"h":150,"resize":"crop"},"large":{"w":749,"h":1068,"resize":"fit"},"medium":{"w":749,"h":1068,"resize":"fit"}}}]},"extended_entities":{"media":[{"id":859610835957809152,"id_str":"859610835957809152","indices":[30,53],"media_url":"http://pbs.twimg.com/media/C-3zgDpXgAAJLFj.jpg","media_url_https":"https://pbs.twimg.com/media/C-3zgDpXgAAJLFj.jpg","url":"https://t.co/YDQBxvJRnm","display_url":"pic.twitter.com/YDQBxvJRnm","expanded_url":"https://twitter.com/Lingua_Action/status/859610844811984896/photo/1","type":"photo","sizes":{"small":{"w":477,"h":680,"resize":"fit"},"thumb":{"w":150,"h":150,"resize":"crop"},"large":{"w":749,"h":1068,"resize":"fit"},"medium":{"w":749,"h":1068,"resize":"fit"}}}]},"favorited":false,"retweeted":false,"possibly_sensitive":false,"filter_level":"low","lang":"en"},"is_quote_status":true,"retweet_count":1,"favorite_count":1,"entities":{"hashtags":[],"urls":[{"url":"https://t.co/ErW126VOxm","expanded_url":"https://twitter.com/lingua_action/status/859610844811984896","display_url":"twitter.com/lingua_action/…","indices":[66,89]}],"user_mentions":[],"symbols":[]},"favorited":false,"retweeted":false,"possibly_sensitive":true,"filter_level":"low","lang":"en"},"quoted_status_id":859610844811984896,"quoted_status_id_str":"859610844811984896","quoted_status":{"created_at":"Wed May 03 03:29:30 +0000 2017","id":859610844811984896,"id_str":"859610844811984896","text":"Smartest Cheat Sheet ever. 😭📝 https://t.co/YDQBxvJRnm","display_text_range":[0,29],"source":"<a href=\"http://twitter.com/download/iphone\" rel=\"nofollow\">Twitter for iPhone</a>","truncated":false,"in_reply_to_status_id":null,"in_reply_to_status_id_str":null,"in_reply_to_user_id":null,"in_reply_to_user_id_str":null,"in_reply_to_screen_name":null,"user":{"id":90296475,"id_str":"90296475","name":"Charniq","screen_name":"Lingua_Action","location":"Somewhere shaking my ass","url":"https://youtu.be/JS5AJSj0Eno","description":"#229 | #SSU | http://www.instagram.com/charniqg | SC: CharniqG | Your Favorite Makeup Artist","protected":false,"verified":false,"followers_count":6705,"friends_count":1537,"listed_count":12,"favourites_count":2855,"statuses_count":91150,"created_at":"Mon Nov 16 01:44:39 +0000 2009","utc_offset":-18000,"time_zone":"Quito","geo_enabled":true,"lang":"en","contributors_enabled":false,"is_translator":false,"profile_background_color":"3D1547","profile_background_image_url":"http://pbs.twimg.com/profile_background_images/781559823/d5c7c667dfe1ba5037ab4de9fdc40e08.png","profile_background_image_url_https":"https://pbs.twimg.com/profile_background_images/781559823/d5c7c667dfe1ba5037ab4de9fdc40e08.png","profile_background_tile":true,"profile_link_color":"7A1C99","profile_sidebar_border_color":"FFFFFF","profile_sidebar_fill_color":"000000","profile_text_color":"EBD911","profile_use_background_image":true,"profile_image_url":"http://pbs.twimg.com/profile_images/860008636495659008/e4nHlcNE_normal.jpg","profile_image_url_https":"https://pbs.twimg.com/profile_images/860008636495659008/e4nHlcNE_normal.jpg","profile_banner_url":"https://pbs.twimg.com/profile_banners/90296475/1492490541","default_profile":false,"default_profile_image":false,"following":null,"follow_request_sent":null,"notifications":null},"geo":null,"coordinates":null,"place":{"id":"00e9226863a6e5a4","url":"https://api.twitter.com/1.1/geo/id/00e9226863a6e5a4.json","place_type":"city","name":"Savannah","full_name":"Savannah, GA","country_code":"US","country":"United States","bounding_box":{"type":"Polygon","coordinates":[[[-81.188663,31.922596],[-81.188663,32.111973],[-81.03057,32.111973],[-81.03057,31.922596]]]},"attributes":{}},"contributors":null,"is_quote_status":false,"retweet_count":11805,"favorite_count":19918,"entities":{"hashtags":[],"urls":[],"user_mentions":[],"symbols":[],"media":[{"id":859610835957809152,"id_str":"859610835957809152","indices":[30,53],"media_url":"http://pbs.twimg.com/media/C-3zgDpXgAAJLFj.jpg","media_url_https":"https://pbs.twimg.com/media/C-3zgDpXgAAJLFj.jpg","url":"https://t.co/YDQBxvJRnm","display_url":"pic.twitter.com/YDQBxvJRnm","expanded_url":"https://twitter.com/Lingua_Action/status/859610844811984896/photo/1","type":"photo","sizes":{"small":{"w":477,"h":680,"resize":"fit"},"thumb":{"w":150,"h":150,"resize":"crop"},"large":{"w":749,"h":1068,"resize":"fit"},"medium":{"w":749,"h":1068,"resize":"fit"}}}]},"extended_entities":{"media":[{"id":859610835957809152,"id_str":"859610835957809152","indices":[30,53],"media_url":"http://pbs.twimg.com/media/C-3zgDpXgAAJLFj.jpg","media_url_https":"https://pbs.twimg.com/media/C-3zgDpXgAAJLFj.jpg","url":"https://t.co/YDQBxvJRnm","display_url":"pic.twitter.com/YDQBxvJRnm","expanded_url":"https://twitter.com/Lingua_Action/status/859610844811984896/photo/1","type":"photo","sizes":{"small":{"w":477,"h":680,"resize":"fit"},"thumb":{"w":150,"h":150,"resize":"crop"},"large":{"w":749,"h":1068,"resize":"fit"},"medium":{"w":749,"h":1068,"resize":"fit"}}}]},"favorited":false,"retweeted":false,"possibly_sensitive":false,"filter_level":"low","lang":"en"},"is_quote_status":true,"retweet_count":0,"favorite_count":0,"entities":{"hashtags":[],"urls":[{"url":"https://t.co/ErW126VOxm","expanded_url":"https://twitter.com/lingua_action/status/859610844811984896","display_url":"twitter.com/lingua_action/…","indices":[79,102]}],"user_mentions":[{"screen_name":"__Dutch","name":"ChampagnePetty","id":46330725,"id_str":"46330725","indices":[3,11]}],"symbols":[]},"favorited":false,"retweeted":false,"possibly_sensitive":false,"filter_level":"low","lang":"en","timestamp_ms":"1493923663661"}
+{"created_at":"Thu May 04 19:42:47 +0000 2017","id":860218166646984704,"id_str":"860218166646984704","text":"RT @ezlusztig: I don't want my 10 year old Jewish son growing up in a country whose values are warped by a White Nationalist GOP.… ","source":"<a href=\"http://twitter.com\" rel=\"nofollow\">Twitter Web Client</a>","truncated":false,"in_reply_to_status_id":null,"in_reply_to_status_id_str":null,"in_reply_to_user_id":null,"in_reply_to_user_id_str":null,"in_reply_to_screen_name":null,"user":{"id":16306939,"id_str":"16306939","name":"gigibarsoum","screen_name":"gigibarsoum","location":"Los Angeles","url":null,"description":null,"protected":false,"verified":false,"followers_count":269,"friends_count":814,"listed_count":15,"favourites_count":1981,"statuses_count":2654,"created_at":"Tue Sep 16 04:24:55 +0000 2008","utc_offset":-25200,"time_zone":"Pacific Time (US & Canada)","geo_enabled":true,"lang":"en","contributors_enabled":false,"is_translator":false,"profile_background_color":"352726","profile_background_image_url":"http://abs.twimg.com/images/themes/theme5/bg.gif","profile_background_image_url_https":"https://abs.twimg.com/images/themes/theme5/bg.gif","profile_background_tile":false,"profile_link_color":"D02B55","profile_sidebar_border_color":"829D5E","profile_sidebar_fill_color":"99CC33","profile_text_color":"3E4415","profile_use_background_image":true,"profile_image_url":"http://pbs.twimg.com/profile_images/722541321/AP_2-25-10_normal.jpg","profile_image_url_https":"https://pbs.twimg.com/profile_images/722541321/AP_2-25-10_normal.jpg","default_profile":false,"default_profile_image":false,"following":null,"follow_request_sent":null,"notifications":null},"geo":null,"coordinates":null,"place":null,"contributors":null,"retweeted_status":{"created_at":"Thu May 04 19:35:26 +0000 2017","id":860216314497032195,"id_str":"860216314497032195","text":"I don't want my 10 year old Jewish son growing up in a country whose values are warped by a White Nationalist GOP.… https://t.co/nQ2ArQYm0a","display_text_range":[0,140],"source":"<a href=\"http://twitter.com\" rel=\"nofollow\">Twitter Web Client</a>","truncated":true,"in_reply_to_status_id":null,"in_reply_to_status_id_str":null,"in_reply_to_user_id":null,"in_reply_to_user_id_str":null,"in_reply_to_screen_name":null,"user":{"id":746387674286559232,"id_str":"746387674286559232","name":"Elliott Lusztig","screen_name":"ezlusztig","location":"California USA","url":null,"description":"[Former Most Obnoxious Person on Twitter. Unforgivably profane, occasionally insightful - Never Putin's bitch. Not Zinedine Zidane. Stay strong, good people.]","protected":false,"verified":false,"followers_count":81727,"friends_count":3082,"listed_count":1126,"favourites_count":25954,"statuses_count":36171,"created_at":"Fri Jun 24 17:01:03 +0000 2016","utc_offset":-25200,"time_zone":"Pacific Time (US & Canada)","geo_enabled":false,"lang":"en","contributors_enabled":false,"is_translator":false,"profile_background_color":"F5F8FA","profile_background_image_url":"","profile_background_image_url_https":"","profile_background_tile":false,"profile_link_color":"1DA1F2","profile_sidebar_border_color":"C0DEED","profile_sidebar_fill_color":"DDEEF6","profile_text_color":"333333","profile_use_background_image":true,"profile_image_url":"http://pbs.twimg.com/profile_images/825034826382184449/EKPFb1Dr_normal.jpg","profile_image_url_https":"https://pbs.twimg.com/profile_images/825034826382184449/EKPFb1Dr_normal.jpg","profile_banner_url":"https://pbs.twimg.com/profile_banners/746387674286559232/1473576247","default_profile":true,"default_profile_image":false,"following":null,"follow_request_sent":null,"notifications":null},"geo":null,"coordinates":null,"place":null,"contributors":null,"quoted_status_id":839475082619604993,"quoted_status_id_str":"839475082619604993","quoted_status":{"created_at":"Wed Mar 08 13:57:11 +0000 2017","id":839475082619604993,"id_str":"839475082619604993","text":"I've decided to run against @DarrellIssa because I care deeply about the type of country my young kids grow up in.… https://t.co/gPdj3gLAFN","display_text_range":[0,140],"source":"<a href=\"http://twitter.com/download/iphone\" rel=\"nofollow\">Twitter for iPhone</a>","truncated":true,"in_reply_to_status_id":null,"in_reply_to_status_id_str":null,"in_reply_to_user_id":null,"in_reply_to_user_id_str":null,"in_reply_to_screen_name":null,"user":{"id":14573926,"id_str":"14573926","name":"Mike Levin","screen_name":"MikeLevinCA","location":"California, USA","url":"http://mikelevin.org","description":"Proud husband/dad, SoCal native, clean energy advocate, environmental attorney, Stanford & Duke alum, and candidate for Congress against Darrell Issa in CA-49.","protected":false,"verified":false,"followers_count":35859,"friends_count":9515,"listed_count":231,"favourites_count":2550,"statuses_count":1628,"created_at":"Mon Apr 28 19:30:07 +0000 2008","utc_offset":-25200,"time_zone":"Pacific Time (US & Canada)","geo_enabled":true,"lang":"en","contributors_enabled":false,"is_translator":false,"profile_background_color":"C0DEED","profile_background_image_url":"http://abs.twimg.com/images/themes/theme1/bg.png","profile_background_image_url_https":"https://abs.twimg.com/images/themes/theme1/bg.png","profile_background_tile":false,"profile_link_color":"1DA1F2","profile_sidebar_border_color":"C0DEED","profile_sidebar_fill_color":"DDEEF6","profile_text_color":"333333","profile_use_background_image":true,"profile_image_url":"http://pbs.twimg.com/profile_images/839451733440909313/CDWODhHW_normal.jpg","profile_image_url_https":"https://pbs.twimg.com/profile_images/839451733440909313/CDWODhHW_normal.jpg","profile_banner_url":"https://pbs.twimg.com/profile_banners/14573926/1488975882","default_profile":true,"default_profile_image":false,"following":null,"follow_request_sent":null,"notifications":null},"geo":null,"coordinates":null,"place":{"id":"4aea239b6a146e77","url":"https://api.twitter.com/1.1/geo/id/4aea239b6a146e77.json","place_type":"city","name":"San Juan Capistrano","full_name":"San Juan Capistrano, CA","country_code":"US","country":"United States","bounding_box":{"type":"Polygon","coordinates":[[[-117.686553,33.466555],[-117.686553,33.54673],[-117.611591,33.54673],[-117.611591,33.466555]]]},"attributes":{}},"contributors":null,"is_quote_status":false,"extended_tweet":{"full_text":"I've decided to run against @DarrellIssa because I care deeply about the type of country my young kids grow up in.  https://t.co/WLBYaPIedP https://t.co/0oqTCsiJEf","display_text_range":[0,139],"entities":{"hashtags":[],"urls":[{"url":"https://t.co/WLBYaPIedP","expanded_url":"http://mikelevin.org/contribute","display_url":"mikelevin.org/contribute","indices":[116,139]}],"user_mentions":[{"screen_name":"DarrellIssa","name":"Darrell Issa","id":22509548,"id_str":"22509548","indices":[28,40]}],"symbols":[],"media":[{"id":839475075350847490,"id_str":"839475075350847490","indices":[140,163],"media_url":"http://pbs.twimg.com/media/C6ZqIiAU4AIQTCD.jpg","media_url_https":"https://pbs.twimg.com/media/C6ZqIiAU4AIQTCD.jpg","url":"https://t.co/0oqTCsiJEf","display_url":"pic.twitter.com/0oqTCsiJEf","expanded_url":"https://twitter.com/MikeLevinCA/status/839475082619604993/photo/1","type":"photo","sizes":{"medium":{"w":1200,"h":960,"resize":"fit"},"thumb":{"w":150,"h":150,"resize":"crop"},"large":{"w":2048,"h":1638,"resize":"fit"},"small":{"w":680,"h":544,"resize":"fit"}}}]},"extended_entities":{"media":[{"id":839475075350847490,"id_str":"839475075350847490","indices":[140,163],"media_url":"http://pbs.twimg.com/media/C6ZqIiAU4AIQTCD.jpg","media_url_https":"https://pbs.twimg.com/media/C6ZqIiAU4AIQTCD.jpg","url":"https://t.co/0oqTCsiJEf","display_url":"pic.twitter.com/0oqTCsiJEf","expanded_url":"https://twitter.com/MikeLevinCA/status/839475082619604993/photo/1","type":"photo","sizes":{"medium":{"w":1200,"h":960,"resize":"fit"},"thumb":{"w":150,"h":150,"resize":"crop"},"large":{"w":2048,"h":1638,"resize":"fit"},"small":{"w":680,"h":544,"resize":"fit"}}}]}},"retweet_count":6585,"favorite_count":11328,"entities":{"hashtags":[],"urls":[{"url":"https://t.co/gPdj3gLAFN","expanded_url":"https://twitter.com/i/web/status/839475082619604993","display_url":"twitter.com/i/web/status/8…","indices":[116,139]}],"user_mentions":[{"screen_name":"DarrellIssa","name":"Darrell Issa","id":22509548,"id_str":"22509548","indices":[28,40]}],"symbols":[]},"favorited":false,"retweeted":false,"possibly_sensitive":false,"filter_level":"low","lang":"en"},"is_quote_status":true,"extended_tweet":{"full_text":"I don't want my 10 year old Jewish son growing up in a country whose values are warped by a White Nationalist GOP. Happy to donate. https://t.co/YqfNf7CJtw","display_text_range":[0,131],"entities":{"hashtags":[],"urls":[{"url":"https://t.co/YqfNf7CJtw","expanded_url":"https://twitter.com/MikeLevinCA/status/839475082619604993","display_url":"twitter.com/MikeLevinCA/st…","indices":[132,155]}],"user_mentions":[],"symbols":[]}},"retweet_count":98,"favorite_count":225,"entities":{"hashtags":[],"urls":[{"url":"https://t.co/nQ2ArQYm0a","expanded_url":"https://twitter.com/i/web/status/860216314497032195","display_url":"twitter.com/i/web/status/8…","indices":[116,139]}],"user_mentions":[],"symbols":[]},"favorited":false,"retweeted":false,"possibly_sensitive":false,"filter_level":"low","lang":"en"},"quoted_status_id":839475082619604993,"quoted_status_id_str":"839475082619604993","quoted_status":{"created_at":"Wed Mar 08 13:57:11 +0000 2017","id":839475082619604993,"id_str":"839475082619604993","text":"I've decided to run against @DarrellIssa because I care deeply about the type of country my young kids grow up in.… https://t.co/gPdj3gLAFN","display_text_range":[0,140],"source":"<a href=\"http://twitter.com/download/iphone\" rel=\"nofollow\">Twitter for iPhone</a>","truncated":true,"in_reply_to_status_id":null,"in_reply_to_status_id_str":null,"in_reply_to_user_id":null,"in_reply_to_user_id_str":null,"in_reply_to_screen_name":null,"user":{"id":14573926,"id_str":"14573926","name":"Mike Levin","screen_name":"MikeLevinCA","location":"California, USA","url":"http://mikelevin.org","description":"Proud husband/dad, SoCal native, clean energy advocate, environmental attorney, Stanford & Duke alum, and candidate for Congress against Darrell Issa in CA-49.","protected":false,"verified":false,"followers_count":35859,"friends_count":9515,"listed_count":231,"favourites_count":2550,"statuses_count":1628,"created_at":"Mon Apr 28 19:30:07 +0000 2008","utc_offset":-25200,"time_zone":"Pacific Time (US & Canada)","geo_enabled":true,"lang":"en","contributors_enabled":false,"is_translator":false,"profile_background_color":"C0DEED","profile_background_image_url":"http://abs.twimg.com/images/themes/theme1/bg.png","profile_background_image_url_https":"https://abs.twimg.com/images/themes/theme1/bg.png","profile_background_tile":false,"profile_link_color":"1DA1F2","profile_sidebar_border_color":"C0DEED","profile_sidebar_fill_color":"DDEEF6","profile_text_color":"333333","profile_use_background_image":true,"profile_image_url":"http://pbs.twimg.com/profile_images/839451733440909313/CDWODhHW_normal.jpg","profile_image_url_https":"https://pbs.twimg.com/profile_images/839451733440909313/CDWODhHW_normal.jpg","profile_banner_url":"https://pbs.twimg.com/profile_banners/14573926/1488975882","default_profile":true,"default_profile_image":false,"following":null,"follow_request_sent":null,"notifications":null},"geo":null,"coordinates":null,"place":{"id":"4aea239b6a146e77","url":"https://api.twitter.com/1.1/geo/id/4aea239b6a146e77.json","place_type":"city","name":"San Juan Capistrano","full_name":"San Juan Capistrano, CA","country_code":"US","country":"United States","bounding_box":{"type":"Polygon","coordinates":[[[-117.686553,33.466555],[-117.686553,33.54673],[-117.611591,33.54673],[-117.611591,33.466555]]]},"attributes":{}},"contributors":null,"is_quote_status":false,"extended_tweet":{"full_text":"I've decided to run against @DarrellIssa because I care deeply about the type of country my young kids grow up in.  https://t.co/WLBYaPIedP https://t.co/0oqTCsiJEf","display_text_range":[0,139],"entities":{"hashtags":[],"urls":[{"url":"https://t.co/WLBYaPIedP","expanded_url":"http://mikelevin.org/contribute","display_url":"mikelevin.org/contribute","indices":[116,139]}],"user_mentions":[{"screen_name":"DarrellIssa","name":"Darrell Issa","id":22509548,"id_str":"22509548","indices":[28,40]}],"symbols":[],"media":[{"id":839475075350847490,"id_str":"839475075350847490","indices":[140,163],"media_url":"http://pbs.twimg.com/media/C6ZqIiAU4AIQTCD.jpg","media_url_https":"https://pbs.twimg.com/media/C6ZqIiAU4AIQTCD.jpg","url":"https://t.co/0oqTCsiJEf","display_url":"pic.twitter.com/0oqTCsiJEf","expanded_url":"https://twitter.com/MikeLevinCA/status/839475082619604993/photo/1","type":"photo","sizes":{"medium":{"w":1200,"h":960,"resize":"fit"},"thumb":{"w":150,"h":150,"resize":"crop"},"large":{"w":2048,"h":1638,"resize":"fit"},"small":{"w":680,"h":544,"resize":"fit"}}}]},"extended_entities":{"media":[{"id":839475075350847490,"id_str":"839475075350847490","indices":[140,163],"media_url":"http://pbs.twimg.com/media/C6ZqIiAU4AIQTCD.jpg","media_url_https":"https://pbs.twimg.com/media/C6ZqIiAU4AIQTCD.jpg","url":"https://t.co/0oqTCsiJEf","display_url":"pic.twitter.com/0oqTCsiJEf","expanded_url":"https://twitter.com/MikeLevinCA/status/839475082619604993/photo/1","type":"photo","sizes":{"medium":{"w":1200,"h":960,"resize":"fit"},"thumb":{"w":150,"h":150,"resize":"crop"},"large":{"w":2048,"h":1638,"resize":"fit"},"small":{"w":680,"h":544,"resize":"fit"}}}]}},"retweet_count":6585,"favorite_count":11328,"entities":{"hashtags":[],"urls":[{"url":"https://t.co/gPdj3gLAFN","expanded_url":"https://twitter.com/i/web/status/839475082619604993","display_url":"twitter.com/i/web/status/8…","indices":[116,139]}],"user_mentions":[{"screen_name":"DarrellIssa","name":"Darrell Issa","id":22509548,"id_str":"22509548","indices":[28,40]}],"symbols":[]},"favorited":false,"retweeted":false,"possibly_sensitive":false,"filter_level":"low","lang":"en"},"is_quote_status":true,"retweet_count":0,"favorite_count":0,"entities":{"hashtags":[],"urls":[{"url":"","expanded_url":null,"indices":[131,131]}],"user_mentions":[{"screen_name":"ezlusztig","name":"Elliott Lusztig","id":746387674286559232,"id_str":"746387674286559232","indices":[3,13]}],"symbols":[]},"favorited":false,"retweeted":false,"filter_level":"low","lang":"en","timestamp_ms":"1493926967666"}
+{"created_at":"Thu May 04 18:17:20 +0000 2017","id":860196662429573120,"id_str":"860196662429573120","text":"RT @TheBreeHive: His son look like the man from Diary of A Mad Black Woman https://t.co/DD2vsSWXpx","source":"<a href=\"http://twitter.com/download/iphone\" rel=\"nofollow\">Twitter for iPhone</a>","truncated":false,"in_reply_to_status_id":null,"in_reply_to_status_id_str":null,"in_reply_to_user_id":null,"in_reply_to_user_id_str":null,"in_reply_to_screen_name":null,"user":{"id":400259310,"id_str":"400259310","name":"Gretzky","screen_name":"Uncle_flex","location":null,"url":null,"description":"Part-time Big boy.","protected":false,"verified":false,"followers_count":2343,"friends_count":2821,"listed_count":9,"favourites_count":6884,"statuses_count":32751,"created_at":"Fri Oct 28 19:01:00 +0000 2011","utc_offset":-10800,"time_zone":"Atlantic Time (Canada)","geo_enabled":true,"lang":"en","contributors_enabled":false,"is_translator":false,"profile_background_color":"131516","profile_background_image_url":"http://abs.twimg.com/images/themes/theme14/bg.gif","profile_background_image_url_https":"https://abs.twimg.com/images/themes/theme14/bg.gif","profile_background_tile":true,"profile_link_color":"009999","profile_sidebar_border_color":"EEEEEE","profile_sidebar_fill_color":"EFEFEF","profile_text_color":"333333","profile_use_background_image":true,"profile_image_url":"http://pbs.twimg.com/profile_images/858312451321991170/D4fhaktr_normal.jpg","profile_image_url_https":"https://pbs.twimg.com/profile_images/858312451321991170/D4fhaktr_normal.jpg","profile_banner_url":"https://pbs.twimg.com/profile_banners/400259310/1492976796","default_profile":false,"default_profile_image":false,"following":null,"follow_request_sent":null,"notifications":null},"geo":null,"coordinates":null,"place":null,"contributors":null,"retweeted_status":{"created_at":"Wed May 03 16:47:50 +0000 2017","id":859811749498957824,"id_str":"859811749498957824","text":"His son look like the man from Diary of A Mad Black Woman https://t.co/DD2vsSWXpx","display_text_range":[0,57],"source":"<a href=\"http://twitter.com/download/iphone\" rel=\"nofollow\">Twitter for iPhone</a>","truncated":false,"in_reply_to_status_id":null,"in_reply_to_status_id_str":null,"in_reply_to_user_id":null,"in_reply_to_user_id_str":null,"in_reply_to_screen_name":null,"user":{"id":516001917,"id_str":"516001917","name":"breezy 💅🏾","screen_name":"TheBreeHive","location":"somewhere minding my business","url":null,"description":"Finer | A Work in Progress| Ask not why I am so extra... ask yourself why you aren't enough.","protected":false,"verified":false,"followers_count":2108,"friends_count":1824,"listed_count":33,"favourites_count":11264,"statuses_count":88708,"created_at":"Tue Mar 06 00:07:00 +0000 2012","utc_offset":-25200,"time_zone":"Pacific Time (US & Canada)","geo_enabled":true,"lang":"en","contributors_enabled":false,"is_translator":false,"profile_background_color":"0099B9","profile_background_image_url":"http://pbs.twimg.com/profile_background_images/576066025591992320/mrG6cOag.jpeg","profile_background_image_url_https":"https://pbs.twimg.com/profile_background_images/576066025591992320/mrG6cOag.jpeg","profile_background_tile":true,"profile_link_color":"00ACB8","profile_sidebar_border_color":"5ED4DC","profile_sidebar_fill_color":"95E8EC","profile_text_color":"3C3940","profile_use_background_image":true,"profile_image_url":"http://pbs.twimg.com/profile_images/859842925647331330/GfBGLBdr_normal.jpg","profile_image_url_https":"https://pbs.twimg.com/profile_images/859842925647331330/GfBGLBdr_normal.jpg","profile_banner_url":"https://pbs.twimg.com/profile_banners/516001917/1493323510","default_profile":false,"default_profile_image":false,"following":null,"follow_request_sent":null,"notifications":null},"geo":null,"coordinates":null,"place":null,"contributors":null,"quoted_status_id":859598971307794434,"quoted_status_id_str":"859598971307794434","quoted_status":{"created_at":"Wed May 03 02:42:19 +0000 2017","id":859598971307794434,"id_str":"859598971307794434","text":"The son of rapper #Jadakiss just crossed #AlphaPhiAlpha at Clark. 🤙🏾@alphaphi1927 https://t.co/Y6Xlj7MvRR","display_text_range":[0,81],"source":"<a href=\"http://twitter.com/download/iphone\" rel=\"nofollow\">Twitter for iPhone</a>","truncated":false,"in_reply_to_status_id":null,"in_reply_to_status_id_str":null,"in_reply_to_user_id":null,"in_reply_to_user_id_str":null,"in_reply_to_screen_name":null,"user":{"id":1375421239,"id_str":"1375421239","name":"Watch The Yard","screen_name":"watchtheyard","location":"United States","url":"http://watchtheyard.com","description":"Black Greekdom's Digital Yard Show | The center of Black Fraternity + Sorority News/Culture & History | Black College Culture | Strolls, Probates, Step Shows","protected":false,"verified":false,"followers_count":19870,"friends_count":1014,"listed_count":21,"favourites_count":1418,"statuses_count":3047,"created_at":"Tue Apr 23 20:20:57 +0000 2013","utc_offset":-18000,"time_zone":"Central Time (US & Canada)","geo_enabled":false,"lang":"en","contributors_enabled":false,"is_translator":false,"profile_background_color":"090A0A","profile_background_image_url":"http://pbs.twimg.com/profile_background_images/378800000140887694/VggcLFg2.jpeg","profile_background_image_url_https":"https://pbs.twimg.com/profile_background_images/378800000140887694/VggcLFg2.jpeg","profile_background_tile":false,"profile_link_color":"0084B4","profile_sidebar_border_color":"FFFFFF","profile_sidebar_fill_color":"DDEEF6","profile_text_color":"333333","profile_use_background_image":true,"profile_image_url":"http://pbs.twimg.com/profile_images/490790745779879936/GwARzXXH_normal.jpeg","profile_image_url_https":"https://pbs.twimg.com/profile_images/490790745779879936/GwARzXXH_normal.jpeg","profile_banner_url":"https://pbs.twimg.com/profile_banners/1375421239/1440435335","default_profile":false,"default_profile_image":false,"following":null,"follow_request_sent":null,"notifications":null},"geo":null,"coordinates":null,"place":null,"contributors":null,"is_quote_status":false,"retweet_count":1165,"favorite_count":1522,"entities":{"hashtags":[{"text":"Jadakiss","indices":[18,27]},{"text":"AlphaPhiAlpha","indices":[41,55]}],"urls":[],"user_mentions":[{"screen_name":"AlphaPhi1927","name":"Alpha Phi","id":434304747,"id_str":"434304747","indices":[68,81]}],"symbols":[],"media":[{"id":859598960402591750,"id_str":"859598960402591750","indices":[82,105],"media_url":"http://pbs.twimg.com/media/C-3oszwXcAYvHjj.jpg","media_url_https":"https://pbs.twimg.com/media/C-3oszwXcAYvHjj.jpg","url":"https://t.co/Y6Xlj7MvRR","display_url":"pic.twitter.com/Y6Xlj7MvRR","expanded_url":"https://twitter.com/watchtheyard/status/859598971307794434/photo/1","type":"photo","sizes":{"thumb":{"w":150,"h":150,"resize":"crop"},"large":{"w":750,"h":1033,"resize":"fit"},"medium":{"w":750,"h":1033,"resize":"fit"},"small":{"w":494,"h":680,"resize":"fit"}}}]},"extended_entities":{"media":[{"id":859598960402591750,"id_str":"859598960402591750","indices":[82,105],"media_url":"http://pbs.twimg.com/media/C-3oszwXcAYvHjj.jpg","media_url_https":"https://pbs.twimg.com/media/C-3oszwXcAYvHjj.jpg","url":"https://t.co/Y6Xlj7MvRR","display_url":"pic.twitter.com/Y6Xlj7MvRR","expanded_url":"https://twitter.com/watchtheyard/status/859598971307794434/photo/1","type":"photo","sizes":{"thumb":{"w":150,"h":150,"resize":"crop"},"large":{"w":750,"h":1033,"resize":"fit"},"medium":{"w":750,"h":1033,"resize":"fit"},"small":{"w":494,"h":680,"resize":"fit"}}}]},"favorited":false,"retweeted":false,"possibly_sensitive":false,"filter_level":"low","lang":"en"},"is_quote_status":true,"retweet_count":12527,"favorite_count":15194,"entities":{"hashtags":[],"urls":[{"url":"https://t.co/DD2vsSWXpx","expanded_url":"https://twitter.com/watchtheyard/status/859598971307794434","display_url":"twitter.com/watchtheyard/s…","indices":[58,81]}],"user_mentions":[],"symbols":[]},"favorited":false,"retweeted":false,"possibly_sensitive":false,"filter_level":"low","lang":"en"},"quoted_status_id":859598971307794434,"quoted_status_id_str":"859598971307794434","quoted_status":{"created_at":"Wed May 03 02:42:19 +0000 2017","id":859598971307794434,"id_str":"859598971307794434","text":"The son of rapper #Jadakiss just crossed #AlphaPhiAlpha at Clark. 🤙🏾@alphaphi1927 https://t.co/Y6Xlj7MvRR","display_text_range":[0,81],"source":"<a href=\"http://twitter.com/download/iphone\" rel=\"nofollow\">Twitter for iPhone</a>","truncated":false,"in_reply_to_status_id":null,"in_reply_to_status_id_str":null,"in_reply_to_user_id":null,"in_reply_to_user_id_str":null,"in_reply_to_screen_name":null,"user":{"id":1375421239,"id_str":"1375421239","name":"Watch The Yard","screen_name":"watchtheyard","location":"United States","url":"http://watchtheyard.com","description":"Black Greekdom's Digital Yard Show | The center of Black Fraternity + Sorority News/Culture & History | Black College Culture | Strolls, Probates, Step Shows","protected":false,"verified":false,"followers_count":19870,"friends_count":1014,"listed_count":21,"favourites_count":1418,"statuses_count":3047,"created_at":"Tue Apr 23 20:20:57 +0000 2013","utc_offset":-18000,"time_zone":"Central Time (US & Canada)","geo_enabled":false,"lang":"en","contributors_enabled":false,"is_translator":false,"profile_background_color":"090A0A","profile_background_image_url":"http://pbs.twimg.com/profile_background_images/378800000140887694/VggcLFg2.jpeg","profile_background_image_url_https":"https://pbs.twimg.com/profile_background_images/378800000140887694/VggcLFg2.jpeg","profile_background_tile":false,"profile_link_color":"0084B4","profile_sidebar_border_color":"FFFFFF","profile_sidebar_fill_color":"DDEEF6","profile_text_color":"333333","profile_use_background_image":true,"profile_image_url":"http://pbs.twimg.com/profile_images/490790745779879936/GwARzXXH_normal.jpeg","profile_image_url_https":"https://pbs.twimg.com/profile_images/490790745779879936/GwARzXXH_normal.jpeg","profile_banner_url":"https://pbs.twimg.com/profile_banners/1375421239/1440435335","default_profile":false,"default_profile_image":false,"following":null,"follow_request_sent":null,"notifications":null},"geo":null,"coordinates":null,"place":null,"contributors":null,"is_quote_status":false,"retweet_count":1165,"favorite_count":1522,"entities":{"hashtags":[{"text":"Jadakiss","indices":[18,27]},{"text":"AlphaPhiAlpha","indices":[41,55]}],"urls":[],"user_mentions":[{"screen_name":"AlphaPhi1927","name":"Alpha Phi","id":434304747,"id_str":"434304747","indices":[68,81]}],"symbols":[],"media":[{"id":859598960402591750,"id_str":"859598960402591750","indices":[82,105],"media_url":"http://pbs.twimg.com/media/C-3oszwXcAYvHjj.jpg","media_url_https":"https://pbs.twimg.com/media/C-3oszwXcAYvHjj.jpg","url":"https://t.co/Y6Xlj7MvRR","display_url":"pic.twitter.com/Y6Xlj7MvRR","expanded_url":"https://twitter.com/watchtheyard/status/859598971307794434/photo/1","type":"photo","sizes":{"thumb":{"w":150,"h":150,"resize":"crop"},"large":{"w":750,"h":1033,"resize":"fit"},"medium":{"w":750,"h":1033,"resize":"fit"},"small":{"w":494,"h":680,"resize":"fit"}}}]},"extended_entities":{"media":[{"id":859598960402591750,"id_str":"859598960402591750","indices":[82,105],"media_url":"http://pbs.twimg.com/media/C-3oszwXcAYvHjj.jpg","media_url_https":"https://pbs.twimg.com/media/C-3oszwXcAYvHjj.jpg","url":"https://t.co/Y6Xlj7MvRR","display_url":"pic.twitter.com/Y6Xlj7MvRR","expanded_url":"https://twitter.com/watchtheyard/status/859598971307794434/photo/1","type":"photo","sizes":{"thumb":{"w":150,"h":150,"resize":"crop"},"large":{"w":750,"h":1033,"resize":"fit"},"medium":{"w":750,"h":1033,"resize":"fit"},"small":{"w":494,"h":680,"resize":"fit"}}}]},"favorited":false,"retweeted":false,"possibly_sensitive":false,"filter_level":"low","lang":"en"},"is_quote_status":true,"retweet_count":0,"favorite_count":0,"entities":{"hashtags":[],"urls":[{"url":"https://t.co/DD2vsSWXpx","expanded_url":"https://twitter.com/watchtheyard/status/859598971307794434","display_url":"twitter.com/watchtheyard/s…","indices":[75,98]}],"user_mentions":[{"screen_name":"TheBreeHive","name":"breezy 💅🏾","id":516001917,"id_str":"516001917","indices":[3,15]}],"symbols":[]},"favorited":false,"retweeted":false,"possibly_sensitive":false,"filter_level":"low","lang":"en","timestamp_ms":"1493921840661"}
+-------END--------
+-----STATISTICS------
+{
+    "Query": "LOAD Twitter CHOOSE (((((((MEMCOUNT('/retweeted_status/quoted_status/place/bounding_box') >= 2 || EXISTS('/delete/status/id_str')) || '/user/profile_background_tile' == true) && (((EXISTS('/quoted_status/id') || ((STARTSWITH('/retweeted_status/quoted_status/user/created_at', \"T\") || STARTSWITH('/retweeted_status/quoted_status/user/created_at', \"S\")) || STARTSWITH('/retweeted_status/quoted_status/user/created_at', \"Mon \"))) || ISSTRING('/retweeted_status/quoted_status/extended_entities/media')) || EXISTS('/retweeted_status/user/screen_name'))) && (((EXISTS('/user/profile_sidebar_fill_color') && EXISTS('/quoted_status/user/profile_background_tile')) || ISSTRING('/retweeted_status/extended_tweet/entities/user_mentions')) || '/user/geo_enabled' == false)) && (EXISTS('/user/id_str') && EXISTS('/retweeted_status/display_text_range'))) && (ISSTRING('/quoted_status/entities/user_mentions') || EXISTS('/quoted_status/user/name'))) && (STARTSWITH('/quoted_status/user/screen_name', \"B\") || '/quoted_status/user/verified' == false))",
+    "Time": 1634646461,
+    "Pretty Time": "Tue Oct 19 12:27:41 2021\n",
+    "Threads": 8,
+    "Runtime": {
+        "Threads": [
+            {
+                "Select": 6.145,
+                "Project": 0.023,
+                "View_Cost": 0.011
+            },
+            {
+                "Select": 6.171,
+                "Project": 0.022,
+                "View_Cost": 0.01
+            },
+            {
+                "Select": 6.278,
+                "Project": 0.023,
+                "View_Cost": 0.011
+            },
+            {
+                "Select": 6.3,
+                "Project": 0.023,
+                "View_Cost": 0.011
+            },
+            {
+                "Select": 6.469,
+                "Project": 0.022,
+                "View_Cost": 0.01
+            },
+            {
+                "Select": 6.533,
+                "Project": 0.022,
+                "View_Cost": 0.01
+            },
+            {
+                "Select": 6.673,
+                "Project": 0.022,
+                "View_Cost": 0.011
+            },
+            {
+                "Select": 6.795,
+                "Project": 0.023,
+                "View_Cost": 0.011
+            }
+        ],
+        "Store": 6.827,
+        "Evaluation": 6.828250734,
+        "Query": 6.829624488
+    },
+    "Result Size": 56933,
+    "#Container": 16,
+    "RAM Proc": 99940970496,
+    "Pretty RAM Proc": "93.08 GBi",
+    "Estimated Storage Size": 106575753552,
+    "Pretty Estimated Storage Size": "99.26 GBi",
+    "System": {
+        "Version": "0.12.2",
+        "Build": "1e00442",
+        "Build Time": "08:13:08 06-07-2021"
+    }
+}
+----------------
+I1019 12:28:02.656390     1 DirectoryRegister.cpp:10] Cleaning up remaining directories
+I1019 12:28:02.656674     1 DirectoryRegister.cpp:84] Removed directory '/tmp/JODA/UDIR_9'. 1 files and directories deleted.
+I1019 12:28:02.656739     1 DirectoryRegister.cpp:84] Removed directory '/tmp/JODA/UDIR_8'. 1 files and directories deleted.
+I1019 12:28:02.656796     1 DirectoryRegister.cpp:84] Removed directory '/tmp/JODA/UDIR_10'. 1 files and directories deleted.
+I1019 12:28:02.656852     1 DirectoryRegister.cpp:84] Removed directory '/tmp/JODA/UDIR_7'. 1 files and directories deleted.
+I1019 12:28:02.656908     1 DirectoryRegister.cpp:84] Removed directory '/tmp/JODA/UDIR_2'. 1 files and directories deleted.
+I1019 12:28:02.656962     1 DirectoryRegister.cpp:84] Removed directory '/tmp/JODA/UDIR_1'. 1 files and directories deleted.
+I1019 12:28:02.657018     1 DirectoryRegister.cpp:84] Removed directory '/tmp/JODA/UDIR_11'. 1 files and directories deleted.
+I1019 12:28:02.657074     1 DirectoryRegister.cpp:84] Removed directory '/tmp/JODA/UDIR_4'. 1 files and directories deleted.
+I1019 12:28:02.657131     1 DirectoryRegister.cpp:84] Removed directory '/tmp/JODA/UDIR_3'. 1 files and directories deleted.
+I1019 12:28:02.657186     1 DirectoryRegister.cpp:84] Removed directory '/tmp/JODA/UDIR_5'. 1 files and directories deleted.
+I1019 12:28:02.657240     1 DirectoryRegister.cpp:84] Removed directory '/tmp/JODA/UDIR_6'. 1 files and directories deleted.

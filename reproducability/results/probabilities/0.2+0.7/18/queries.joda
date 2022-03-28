@@ -1,0 +1,11 @@
+# Created with Random Explorer Benchmark Generator (version v0.0.1), seed 18 (MinSelectivity: 0.2, MaxSelectivity: 0.9, MaxChain: 3, MaxTries: 100, RandomBrowseProb: 0.2, GoBackProb: 0.7, Weighted-Paths: false, Predicates: [Exists,BoolEquality,IsString,IntEquality,FloatComparison,StrPrefix,ObjectSize,ArraySize])
+LOAD Twitter CHOOSE EXISTS('/retweeted_status/user/location') 
+LOAD Twitter CHOOSE ((EXISTS('/retweeted_status/quoted_status/user/profile_image_url_https') || EXISTS('/quoted_status/retweeted')) || '/user/default_profile' == false) 
+LOAD Twitter CHOOSE EXISTS('/retweeted_status/user/following') 
+LOAD Twitter CHOOSE MEMCOUNT('/retweeted_status/entities') <= 4 
+LOAD Twitter CHOOSE ((EXISTS('/retweeted_status/quoted_status/display_text_range') || '/in_reply_to_user_id' == 394269644731623438) || ISSTRING('/user/id_str')) 
+LOAD Twitter CHOOSE EXISTS('/retweeted_status/truncated') 
+LOAD Twitter CHOOSE ((((STARTSWITH('/retweeted_status/quoted_status/user/profile_background_color',"0") || STARTSWITH('/retweeted_status/quoted_status/user/profile_background_color',"F")) || STARTSWITH('/retweeted_status/quoted_status/user/profile_background_color',"1")) || STARTSWITH('/retweeted_status/quoted_status/user/profile_background_color',"E")) || EXISTS('/user/profile_background_tile')) 
+LOAD Twitter CHOOSE ('/quoted_status/quoted_status_id' == 837224898054018158 || '/retweeted_status/user/geo_enabled' == false) 
+LOAD Twitter CHOOSE ((((STARTSWITH('/retweeted_status/quoted_status/created_at',"T") || STARTSWITH('/retweeted_status/quoted_status/created_at',"S")) || STARTSWITH('/retweeted_status/quoted_status/created_at',"M")) || EXISTS('/quoted_status/user/id')) || EXISTS('/retweeted_status/user/lang')) 
+LOAD Twitter CHOOSE ((EXISTS('/retweeted_status/place/name') || EXISTS('/quoted_status/user/profile_use_background_image')) || ISSTRING('/user/url')) 

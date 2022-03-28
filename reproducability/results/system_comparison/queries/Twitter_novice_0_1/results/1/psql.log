@@ -1,0 +1,8 @@
+2022-03-02 15:13:13.785 UTC [1762] LOG:  statement: SELECT * FROM Twitter  WHERE jsonb_path_exists(doc,'$.user.lang.type() ? (@ == "string")') ;
+2022-03-02 16:09:52.746 UTC [1762] LOG:  duration: 3398961.315 ms
+2022-03-02 20:38:28.827 UTC [1762] LOG:  statement: SELECT * FROM Twitter  WHERE ( ( jsonb_path_exists(doc,'$.quoted_status.extended_tweet.entities.hashtags') OR jsonb_path_exists(doc,'$.in_reply_to_user_id ? (@ == 254061755934723090)') ) OR jsonb_path_exists(doc,'$.retweeted_status.user.screen_name') ) ;
+2022-03-02 21:39:05.755 UTC [1762] LOG:  duration: 3636927.377 ms
+2022-03-03 00:40:15.883 UTC [1762] LOG:  statement: SELECT * FROM Twitter  WHERE jsonb_path_exists(doc,'$.retweeted_status.entities.hashtags') ;
+2022-03-03 01:21:57.572 UTC [1762] LOG:  duration: 2501689.085 ms
+2022-03-03 04:21:35.559 UTC [1762] LOG:  statement: SELECT * FROM Twitter  WHERE jsonb_path_exists(doc,'$.user.follow_request_sent') ;
+2022-03-03 05:17:23.564 UTC [1762] LOG:  duration: 3348004.880 ms

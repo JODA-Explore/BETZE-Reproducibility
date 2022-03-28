@@ -1,0 +1,11 @@
+# Created with Random Explorer Benchmark Generator (version v0.0.1), seed 12 (MinSelectivity: 0.2, MaxSelectivity: 0.9, MaxChain: 3, MaxTries: 100, RandomBrowseProb: 0.6, GoBackProb: 0.2, Weighted-Paths: false, Predicates: [Exists,BoolEquality,IsString,IntEquality,FloatComparison,StrPrefix,ObjectSize,ArraySize])
+LOAD Twitter CHOOSE EXISTS('/retweeted_status/user/notifications') 
+LOAD Twitter CHOOSE ((('/retweeted_status/quoted_status/possibly_sensitive' == false || EXISTS('/retweeted_status/quoted_status/place')) || ISSTRING('/quoted_status/in_reply_to_screen_name')) || EXISTS('/retweeted_status/lang')) 
+LOAD Twitter CHOOSE (EXISTS('/delete/timestamp_ms') || EXISTS('/quoted_status/entities')) 
+LOAD Twitter CHOOSE EXISTS('/user/geo_enabled') 
+LOAD Twitter CHOOSE (EXISTS('/retweeted_status/user/notifications') && (((EXISTS('/quoted_status/retweeted') || EXISTS('/retweeted_status/place/name')) || EXISTS('/quoted_status/in_reply_to_status_id')) || '/retweeted_status/user/default_profile' == false)) 
+LOAD Twitter CHOOSE ((EXISTS('/delete/timestamp_ms') || EXISTS('/quoted_status/entities')) && EXISTS('/favorited')) 
+LOAD Twitter CHOOSE '/retweeted_status/user/id' <= 232662629770636768.000000 
+LOAD Twitter CHOOSE ((EXISTS('/delete/timestamp_ms') || EXISTS('/quoted_status/entities')) && ((SIZE('/display_text_range') <= 2 || EXISTS('/extended_entities')) || '/retweeted_status/quoted_status/user/statuses_count' <= 135001.797145)) 
+LOAD Twitter CHOOSE ((EXISTS('/delete/timestamp_ms') || EXISTS('/quoted_status/entities')) && ((ISSTRING('/retweeted_status/quoted_status/in_reply_to_user_id_str') || EXISTS('/retweeted_status/quoted_status/user/default_profile')) || EXISTS('/user/profile_background_image_url'))) 
+LOAD Twitter CHOOSE (((EXISTS('/delete/timestamp_ms') || EXISTS('/quoted_status/entities')) && ((ISSTRING('/retweeted_status/quoted_status/in_reply_to_user_id_str') || EXISTS('/retweeted_status/quoted_status/user/default_profile')) || EXISTS('/user/profile_background_image_url'))) && (ISSTRING('/retweeted_status/quoted_status/coordinates/type') || EXISTS('/retweeted_status/quoted_status/truncated'))) 

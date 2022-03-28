@@ -1,0 +1,102 @@
+=== Found JODA query file, executing JODA queries ===
+= File:'NoBench.json' =
+0.12.3: Pulling from nicotin/joda
+Digest: sha256:6c0c6b4a19967ae02ef348535acdb3eb8496453a8b868763c34370e10be0192f
+Status: Image is up to date for nicotin/joda:0.12.3
+ce054e8553eb6c9563a5aaf02d16799af290e1bf533e8f9610519003f4201d78
+0
+JODA: 1.74926 s
+joda-benchmark
+=== Found MongoDB query file, executing MongoDB queries ===
+= File:'NoBench.json' =
+5.0.3-focal: Pulling from library/mongo
+Digest: sha256:f7c401402aa3e689fc42c7109247ab2d5a3e3b4b8a3ace4c2bf7a5fc74ca4917
+Status: Image is up to date for mongo:5.0.3-focal
+6732dcbb745ec6b75532887dda5952d8c39785a97a134728030bc94ab26c278f
+2021-11-09T21:42:43.201+0000	connected to: mongodb://localhost/
+2021-11-09T21:42:46.203+0000	[######..................] benchmark.NoBench	15.1MB/54.9MB (27.4%)
+2021-11-09T21:42:49.203+0000	[############............] benchmark.NoBench	27.8MB/54.9MB (50.7%)
+2021-11-09T21:42:52.201+0000	[##################......] benchmark.NoBench	41.6MB/54.9MB (75.7%)
+2021-11-09T21:42:55.201+0000	[#######################.] benchmark.NoBench	54.5MB/54.9MB (99.3%)
+2021-11-09T21:42:55.308+0000	[########################] benchmark.NoBench	54.9MB/54.9MB (100.0%)
+2021-11-09T21:42:55.308+0000	100000 document(s) imported successfully. 0 document(s) failed to import.
+mongo-benchmark
+MongoDB: 18.9695 s
+mongo-benchmark
+=== Found Postgres query file, executing Postgres queries ===
+= File:'NoBench.json' =
+13.4-alpine: Pulling from library/postgres
+Digest: sha256:c170270dc9ba94f491375e366fa2cf46d0bc0027e4a69d70e6e9d1454ba748dc
+Status: Image is up to date for postgres:13.4-alpine
+231e0180175b36c64d0c481f96e7ed51b9f690e4edd16e47f39804465ea042a9
+3
+PSQL: 6.1387 s
+psql-benchmark
+=== Results ===
+= JQ =
+Overall: 
+= JODA =
+Overall: 1.74926
+Query Time: 0.370899
+0.051964136
+0.044981916
+0.047850186
+0.036653914
+0.032423143
+0.029321119
+0.034627279
+0.031499031
+0.027862662
+0.033715457
+= Mongo =
+Overall: 18.9695
+0.351
+0.486
+0.623
+0.512
+0.56
+0.291
+0.527
+0.511
+0.542
+0.383
+Query Time: 4.786
+= PostgreSQL =
+Overall: 6.1387
+=== AGG Results ===
+= JQ =
+
+= JODA =
+100000
+34172
+82443
+82313
+42304
+18711
+6632
+3068
+818
+278
+10
+= Mongo =
+34172
+82443
+82313
+42304
+18711
+6632
+3068
+818
+278
+10
+= PostgreSQL =
+ 34172
+ 82443
+ 82313
+ 42304
+ 18711
+  6632
+  3068
+   818
+   278
+    10

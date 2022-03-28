@@ -1,0 +1,6 @@
+# Created with Random Explorer Benchmark Generator (version v0.0.1), seed 4 (MinSelectivity: 0.2, MaxSelectivity: 0.9, MaxChain: 3, MaxTries: 100, RandomBrowseProb: 0.05, GoBackProb: 0.2, Weighted-Paths: false, Predicates: [Exists,BoolEquality,IsString,IntEquality,FloatComparison,StrPrefix,ObjectSize,ArraySize])
+LOAD Twitter CHOOSE ((EXISTS('/retweeted_status/quoted_status/display_text_range') || ISSTRING('/retweeted_status/quoted_status/lang')) || ISSTRING('/user/lang')) STORE Twitter_1
+LOAD Twitter CHOOSE (ISSTRING('/quoted_status/created_at') || EXISTS('/retweeted_status/truncated')) STORE Twitter_2
+LOAD Twitter CHOOSE EXISTS('/coordinates') STORE Twitter_3
+LOAD Twitter_3 CHOOSE ((((((STARTSWITH('/lang',"e") || STARTSWITH('/lang',"i")) || STARTSWITH('/lang',"t")) || STARTSWITH('/lang',"s")) || STARTSWITH('/lang',"h")) || EXISTS('/quoted_status/in_reply_to_user_id')) || EXISTS('/quoted_status/user/name')) STORE Twitter_3_1
+LOAD Twitter_3 CHOOSE ((EXISTS('/quoted_status/user/screen_name') || STARTSWITH('/retweeted_status/place/bounding_box/type',"Po")) || EXISTS('/retweeted_status/user/protected')) STORE Twitter_3_2

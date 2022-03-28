@@ -1,0 +1,11 @@
+# Created with Random Explorer Benchmark Generator (version v0.0.1), seed 15 (MinSelectivity: 0.2, MaxSelectivity: 0.9, MaxChain: 3, MaxTries: 100, RandomBrowseProb: 0.2, GoBackProb: 0.5, Weighted-Paths: false, Predicates: [Exists,BoolEquality,IsString,IntEquality,FloatComparison,StrPrefix,ObjectSize,ArraySize])
+LOAD Twitter CHOOSE '/id' >= 859114350579452416.000000 
+LOAD Twitter CHOOSE EXISTS('/retweeted_status/user/profile_background_tile') 
+LOAD Twitter CHOOSE ISSTRING('/retweeted_status/user/description') 
+LOAD Twitter CHOOSE (ISSTRING('/retweeted_status/user/description') && ((EXISTS('/retweeted_status/extended_tweet/entities/urls') || (STARTSWITH('/quoted_status/coordinates/type',"Poin") && STARTSWITH('/quoted_status/coordinates/type',"Po"))) || EXISTS('/possibly_sensitive'))) 
+LOAD Twitter CHOOSE (EXISTS('/quoted_status/created_at') || EXISTS('/retweeted_status/user/follow_request_sent')) 
+LOAD Twitter CHOOSE ((EXISTS('/retweeted_status/quoted_status/extended_tweet/entities/media') || EXISTS('/quoted_status/withheld_in_countries')) || ISSTRING('/user/id_str')) 
+LOAD Twitter CHOOSE (ISSTRING('/quoted_status/source') || EXISTS('/retweeted_status/lang')) 
+LOAD Twitter CHOOSE (ISSTRING('/quoted_status/place/id') || EXISTS('/retweeted_status/entities/urls')) 
+LOAD Twitter CHOOSE ((ISSTRING('/quoted_status/in_reply_to_user_id_str') || ((((STARTSWITH('/user/description',"I") || STARTSWITH('/user/description',"S")) || STARTSWITH('/user/description',"A")) || STARTSWITH('/user/description',"#")) || STARTSWITH('/user/description',"M"))) || EXISTS('/retweeted_status/favorited')) 
+LOAD Twitter CHOOSE EXISTS('/favorited') 

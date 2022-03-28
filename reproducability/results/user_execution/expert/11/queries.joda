@@ -1,0 +1,6 @@
+# Created with Random Explorer Benchmark Generator (version v0.0.1), seed 11 (MinSelectivity: 0.2, MaxSelectivity: 0.9, MaxChain: 3, MaxTries: 100, RandomBrowseProb: 0.05, GoBackProb: 0.2, Weighted-Paths: false, Predicates: [Exists,BoolEquality,IsString,IntEquality,FloatComparison,StrPrefix,ObjectSize,ArraySize])
+LOAD Twitter CHOOSE (EXISTS('/retweeted_status/scopes/followers') || EXISTS('/user/follow_request_sent')) STORE Twitter_1
+LOAD Twitter_1 CHOOSE EXISTS('/retweeted_status/is_quote_status') STORE Twitter_1_1
+LOAD Twitter_1_1 CHOOSE ((((STARTSWITH('/quoted_status/place/url',"https") && STARTSWITH('/quoted_status/place/url',"http")) && STARTSWITH('/quoted_status/place/url',"h")) || EXISTS('/retweeted_status/scopes/followers')) || EXISTS('/extended_entities')) STORE Twitter_1_1_1
+LOAD Twitter_1_1_1 CHOOSE (('/quoted_status/user/favourites_count' >= 54686.201349 || STARTSWITH('/quoted_status/in_reply_to_user_id_str',"8")) || '/retweeted_status/user/profile_background_tile' == false) STORE Twitter_1_1_1_1
+LOAD Twitter_1_1_1 CHOOSE (EXISTS('/quoted_status/place') || ISSTRING('/user/profile_banner_url')) STORE Twitter_1_1_1_2

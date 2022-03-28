@@ -1,0 +1,6 @@
+# Created with Random Explorer Benchmark Generator (version v0.0.1), seed 12 (MinSelectivity: 0.2, MaxSelectivity: 0.9, MaxChain: 3, MaxTries: 100, RandomBrowseProb: 0.05, GoBackProb: 0.2, Weighted-Paths: false, Predicates: [Exists,BoolEquality,IsString,IntEquality,FloatComparison,StrPrefix,ObjectSize,ArraySize])
+LOAD Twitter CHOOSE EXISTS('/retweeted_status/user/notifications') STORE Twitter_1
+LOAD Twitter_1 CHOOSE (((EXISTS('/retweeted_status/quoted_status/entities/hashtags') || ISSTRING('/quoted_status/user/profile_background_color')) || ((((STARTSWITH('/retweeted_status/user/screen_name',"s") || STARTSWITH('/retweeted_status/user/screen_name',"a")) || STARTSWITH('/retweeted_status/user/screen_name',"m")) || STARTSWITH('/retweeted_status/user/screen_name',"A")) || STARTSWITH('/retweeted_status/user/screen_name',"M"))) || '/quoted_status/user/utc_offset' <= -22471.187952) STORE Twitter_1_1
+LOAD Twitter_1_1 CHOOSE EXISTS('/retweeted_status/quoted_status/user/profile_image_url_https') STORE Twitter_1_1_1
+LOAD Twitter_1_1 CHOOSE ((STARTSWITH('/quoted_status/user/profile_text_color',"E") || '/quoted_status/truncated' == true) || ISSTRING('/quoted_status/user/screen_name')) STORE Twitter_1_1_2
+LOAD Twitter_1_1 CHOOSE EXISTS('/retweeted_status/quoted_status/text') STORE Twitter_1_1_3

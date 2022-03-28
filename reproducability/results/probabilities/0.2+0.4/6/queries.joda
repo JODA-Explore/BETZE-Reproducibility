@@ -1,0 +1,11 @@
+# Created with Random Explorer Benchmark Generator (version v0.0.1), seed 6 (MinSelectivity: 0.2, MaxSelectivity: 0.9, MaxChain: 3, MaxTries: 100, RandomBrowseProb: 0.2, GoBackProb: 0.4, Weighted-Paths: false, Predicates: [Exists,BoolEquality,IsString,IntEquality,FloatComparison,StrPrefix,ObjectSize,ArraySize])
+LOAD Twitter CHOOSE (((((STARTSWITH('/retweeted_status/user/profile_image_url_https',"https://a") && STARTSWITH('/retweeted_status/user/profile_image_url_https',"https:/")) && STARTSWITH('/retweeted_status/user/profile_image_url_https',"ht")) || ISSTRING('/retweeted_status/place/country')) || (STARTSWITH('/retweeted_status/quoted_status/in_reply_to_user_id_str',"1") || STARTSWITH('/retweeted_status/quoted_status/in_reply_to_user_id_str',"2"))) || ISSTRING('/retweeted_status/user/profile_banner_url')) 
+LOAD Twitter CHOOSE EXISTS('/retweeted_status/user/url') 
+LOAD Twitter CHOOSE (((((STARTSWITH('/retweeted_status/place/country_code',"C") || STARTSWITH('/retweeted_status/place/country_code',"P")) || STARTSWITH('/retweeted_status/place/country_code',"I")) || STARTSWITH('/retweeted_status/place/country_code',"M")) || STARTSWITH('/retweeted_status/place/country_code',"B")) || ISSTRING('/user/created_at')) 
+LOAD Twitter CHOOSE (STARTSWITH('/retweeted_status/coordinates/type',"P") || ISSTRING('/retweeted_status/user/profile_background_image_url')) 
+LOAD Twitter CHOOSE EXISTS('/filter_level') 
+LOAD Twitter CHOOSE '/user/verified' == false 
+LOAD Twitter CHOOSE ('/user/verified' == false && (((((STARTSWITH('/quoted_status/user/profile_sidebar_border_color',"F") || STARTSWITH('/quoted_status/user/profile_sidebar_border_color',"C")) || STARTSWITH('/quoted_status/user/profile_sidebar_border_color',"0")) || STARTSWITH('/quoted_status/user/profile_sidebar_border_color',"1")) || STARTSWITH('/quoted_status/user/profile_sidebar_border_color',"D")) || EXISTS('/retweeted_status/user/profile_image_url'))) 
+LOAD Twitter CHOOSE ('/user/verified' == false && ISSTRING('/retweeted_status/lang')) 
+LOAD Twitter CHOOSE ('/user/verified' == false && EXISTS('/retweeted_status/user/default_profile')) 
+LOAD Twitter CHOOSE (('/user/verified' == false && EXISTS('/retweeted_status/user/default_profile')) && '/user/default_profile' == false) 

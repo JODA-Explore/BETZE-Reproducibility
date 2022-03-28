@@ -1,0 +1,11 @@
+# Created with Random Explorer Benchmark Generator (version v0.0.1), seed 15 (MinSelectivity: 0.2, MaxSelectivity: 0.9, MaxChain: 3, MaxTries: 100, RandomBrowseProb: 0.2, GoBackProb: 0.3, Weighted-Paths: false, Predicates: [Exists,BoolEquality,IsString,IntEquality,FloatComparison,StrPrefix,ObjectSize,ArraySize])
+LOAD Twitter CHOOSE '/id' >= 859114350579452416.000000 STORE Twitter_1
+LOAD Twitter CHOOSE EXISTS('/retweeted_status/user/profile_background_tile') STORE Twitter_2
+LOAD Twitter_2 CHOOSE STARTSWITH('/retweeted_status/user/profile_background_image_url_https',"http") STORE Twitter_2_1
+LOAD Twitter_2_1 CHOOSE (((EXISTS('/retweeted_status/place/country') || ((((STARTSWITH('/retweeted_status/lang',"e") || STARTSWITH('/retweeted_status/lang',"i")) || STARTSWITH('/retweeted_status/lang',"t")) || STARTSWITH('/retweeted_status/lang',"n")) || STARTSWITH('/retweeted_status/lang',"f"))) || ISSTRING('/retweeted_status/quoted_status/place/place_type')) || EXISTS('/quoted_status/user/description')) STORE Twitter_2_1_1
+LOAD Twitter_2_1_1 CHOOSE '/retweeted_status/user/geo_enabled' == true STORE Twitter_2_1_1_1
+LOAD Twitter_2_1_1_1 CHOOSE ((EXISTS('/retweeted_status/extended_tweet/full_text') || (((STARTSWITH('/quoted_status/lang',"t") || STARTSWITH('/quoted_status/lang',"e")) || STARTSWITH('/quoted_status/lang',"p")) || STARTSWITH('/quoted_status/lang',"u"))) || EXISTS('/quoted_status/user/profile_image_url')) STORE Twitter_2_1_1_1_1
+LOAD Twitter CHOOSE (EXISTS('/retweeted_status/place/country') || EXISTS('/user/profile_background_image_url')) STORE Twitter_3
+LOAD Twitter_3 CHOOSE ((EXISTS('/quoted_status/extended_tweet') || ((((STARTSWITH('/text',"R") || STARTSWITH('/text',"@")) || STARTSWITH('/text',"#")) || STARTSWITH('/text',"I")) || STARTSWITH('/text',"T"))) || EXISTS('/retweeted_status/user/profile_sidebar_border_color')) STORE Twitter_3_1
+LOAD Twitter_3 CHOOSE (EXISTS('/quoted_status/user/friends_count') || EXISTS('/extended_entities/media')) STORE Twitter_3_2
+LOAD Twitter_3_2 CHOOSE (EXISTS('/retweeted_status/quoted_status/extended_tweet/entities/media') || EXISTS('/retweeted_status/user/id_str')) STORE Twitter_3_2_1

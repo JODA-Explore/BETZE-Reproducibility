@@ -1,0 +1,122 @@
+The files belonging to this database system will be owned by user "postgres".
+This user must also own the server process.
+
+The database cluster will be initialized with locale "en_US.utf8".
+The default database encoding has accordingly been set to "UTF8".
+The default text search configuration will be set to "english".
+
+Data page checksums are disabled.
+
+fixing permissions on existing directory /var/lib/postgresql/data ... ok
+creating subdirectories ... ok
+selecting dynamic shared memory implementation ... posix
+selecting default max_connections ... 100
+selecting default shared_buffers ... 128MB
+selecting default time zone ... UTC
+creating configuration files ... ok
+running bootstrap script ... ok
+sh: locale: not found
+2021-10-21 04:03:48.989 UTC [30] WARNING:  no usable system locales were found
+performing post-bootstrap initialization ... ok
+initdb: warning: enabling "trust" authentication for local connections
+You can change this by editing pg_hba.conf or using the option -A, or
+--auth-local and --auth-host, the next time you run initdb.
+syncing data to disk ... ok
+
+
+Success. You can now start the database server using:
+
+    pg_ctl -D /var/lib/postgresql/data -l logfile start
+
+waiting for server to start....2021-10-21 04:03:49.750 UTC [36] LOG:  starting PostgreSQL 13.4 on x86_64-pc-linux-musl, compiled by gcc (Alpine 10.3.1_git20210424) 10.3.1 20210424, 64-bit
+2021-10-21 04:03:49.777 UTC [36] LOG:  listening on Unix socket "/var/run/postgresql/.s.PGSQL.5432"
+2021-10-21 04:03:49.779 UTC [37] LOG:  database system was shut down at 2021-10-21 04:03:49 UTC
+2021-10-21 04:03:49.782 UTC [36] LOG:  database system is ready to accept connections
+ done
+server started
+2021-10-21 04:03:49.846 UTC [46] LOG:  statement: SELECT 1 FROM pg_database WHERE datname = 'postgres' ;
+2021-10-21 04:03:49.848 UTC [46] LOG:  duration: 2.044 ms
+
+/usr/local/bin/docker-entrypoint.sh: running /docker-entrypoint-initdb.d/1-benchmark.sql
+2021-10-21 04:03:49.858 UTC [48] LOG:  statement: CREATE UNLOGGED TABLE Twitter (doc jsonb);
+2021-10-21 04:03:49.864 UTC [48] LOG:  duration: 6.212 ms
+CREATE TABLE
+2021-10-21 04:03:49.864 UTC [48] LOG:  statement: COPY Twitter (doc) from program 'sed -e ''s/\\/\\\\/g'' /dataset/Twitter.json';
+2021-10-21 05:31:34.711 UTC [48] LOG:  duration: 5264847.203 ms
+COPY 13346336
+2021-10-21 05:31:34.712 UTC [48] LOG:  statement: SELECT COUNT(*) FROM Twitter WHERE ( ( ( jsonb_path_exists(doc,'$.retweeted_status.extended_tweet.entities.user_mentions') OR jsonb_path_exists(doc,'$.retweeted_status.user.id.type() ? (@ == "string")') ) OR (jsonb_path_exists(doc,'$.retweeted_status.extended_tweet.display_text_range.type() ? (@ == "array")') AND jsonb_path_exists(doc,'$.retweeted_status.extended_tweet.display_text_range.size() ? (@ >= 2)')) ) OR jsonb_path_exists(doc,'$.retweeted_status.user.id_str.type() ? (@ == "string")') ) ;
+2021-10-21 05:37:29.781 UTC [48] LOG:  duration: 355068.958 ms
+  count  
+---------
+ 5073309
+(1 row)
+
+2021-10-21 05:37:29.781 UTC [48] LOG:  statement: SELECT COUNT(*) FROM Twitter WHERE ( ( ( ( jsonb_path_exists(doc,'$.retweeted_status.extended_tweet.entities.user_mentions') OR jsonb_path_exists(doc,'$.retweeted_status.user.id.type() ? (@ == "string")') ) OR (jsonb_path_exists(doc,'$.retweeted_status.extended_tweet.display_text_range.type() ? (@ == "array")') AND jsonb_path_exists(doc,'$.retweeted_status.extended_tweet.display_text_range.size() ? (@ >= 2)')) ) OR jsonb_path_exists(doc,'$.retweeted_status.user.id_str.type() ? (@ == "string")') ) AND ( jsonb_path_exists(doc,'$.retweeted_status.user.profile_image_url') AND jsonb_path_exists(doc,'$.retweeted_status.entities.media') ) ) ;
+2021-10-21 05:42:13.453 UTC [48] LOG:  duration: 283671.543 ms
+  count  
+---------
+ 1985718
+(1 row)
+
+2021-10-21 05:42:13.453 UTC [48] LOG:  statement: SELECT COUNT(*) FROM Twitter WHERE ( ( ( ( ( jsonb_path_exists(doc,'$.retweeted_status.extended_tweet.entities.user_mentions') OR jsonb_path_exists(doc,'$.retweeted_status.user.id.type() ? (@ == "string")') ) OR (jsonb_path_exists(doc,'$.retweeted_status.extended_tweet.display_text_range.type() ? (@ == "array")') AND jsonb_path_exists(doc,'$.retweeted_status.extended_tweet.display_text_range.size() ? (@ >= 2)')) ) OR jsonb_path_exists(doc,'$.retweeted_status.user.id_str.type() ? (@ == "string")') ) AND ( jsonb_path_exists(doc,'$.retweeted_status.user.profile_image_url') AND jsonb_path_exists(doc,'$.retweeted_status.entities.media') ) ) AND jsonb_path_exists(doc,'$.retweeted_status.user.time_zone.type() ? (@ == "string")') ) ;
+2021-10-21 05:46:48.179 UTC [48] LOG:  duration: 274726.078 ms
+  count  
+---------
+ 1423329
+(1 row)
+
+2021-10-21 05:46:48.180 UTC [48] LOG:  statement: SELECT COUNT(*) FROM Twitter WHERE ( ( ( ( ( ( jsonb_path_exists(doc,'$.retweeted_status.extended_tweet.entities.user_mentions') OR jsonb_path_exists(doc,'$.retweeted_status.user.id.type() ? (@ == "string")') ) OR (jsonb_path_exists(doc,'$.retweeted_status.extended_tweet.display_text_range.type() ? (@ == "array")') AND jsonb_path_exists(doc,'$.retweeted_status.extended_tweet.display_text_range.size() ? (@ >= 2)')) ) OR jsonb_path_exists(doc,'$.retweeted_status.user.id_str.type() ? (@ == "string")') ) AND ( jsonb_path_exists(doc,'$.retweeted_status.user.profile_image_url') AND jsonb_path_exists(doc,'$.retweeted_status.entities.media') ) ) AND jsonb_path_exists(doc,'$.retweeted_status.user.time_zone.type() ? (@ == "string")') ) AND ( jsonb_path_exists(doc,'$.retweeted_status.quoted_status.lang') OR jsonb_path_exists(doc,'$.user.profile_banner_url.type() ? (@ == "string")') ) ) ;
+2021-10-21 05:51:46.181 UTC [48] LOG:  duration: 298000.639 ms
+  count  
+---------
+ 1253365
+(1 row)
+
+2021-10-21 05:51:46.181 UTC [48] LOG:  statement: SELECT COUNT(*) FROM Twitter WHERE ( ( (jsonb_path_exists(doc,'$.retweeted_status.quoted_status.place.bounding_box.type() ? (@ == "object")') AND jsonb_path_exists(doc,'$.retweeted_status.quoted_status.place.bounding_box.keyvalue().size() ? (@ >= 2)')) OR jsonb_path_exists(doc,'$.delete.status.id_str') ) OR jsonb_path_exists(doc,'$.user.profile_background_tile ? (@ == true)') ) ;
+2021-10-21 05:56:22.728 UTC [48] LOG:  duration: 276546.612 ms
+  count  
+---------
+ 4456547
+(1 row)
+
+2021-10-21 05:56:22.728 UTC [48] LOG:  statement: SELECT COUNT(*) FROM Twitter WHERE ( ( ( (jsonb_path_exists(doc,'$.retweeted_status.quoted_status.place.bounding_box.type() ? (@ == "object")') AND jsonb_path_exists(doc,'$.retweeted_status.quoted_status.place.bounding_box.keyvalue().size() ? (@ >= 2)')) OR jsonb_path_exists(doc,'$.delete.status.id_str') ) OR jsonb_path_exists(doc,'$.user.profile_background_tile ? (@ == true)') ) AND ( ( ( jsonb_path_exists(doc,'$.quoted_status.id') OR ( ( jsonb_path_exists(doc,'$.retweeted_status.quoted_status.user.created_at ? (@ starts with "T")') OR jsonb_path_exists(doc,'$.retweeted_status.quoted_status.user.created_at ? (@ starts with "S")') ) OR jsonb_path_exists(doc,'$.retweeted_status.quoted_status.user.created_at ? (@ starts with "Mon ")') ) ) OR jsonb_path_exists(doc,'$.retweeted_status.quoted_status.extended_entities.media.type() ? (@ == "string")') ) OR jsonb_path_exists(doc,'$.retweeted_status.user.screen_name') ) ) ;
+2021-10-21 06:02:15.186 UTC [48] LOG:  duration: 352457.816 ms
+ count  
+--------
+ 959898
+(1 row)
+
+2021-10-21 06:02:15.187 UTC [48] LOG:  statement: SELECT COUNT(*) FROM Twitter WHERE ( ( ( ( (jsonb_path_exists(doc,'$.retweeted_status.quoted_status.place.bounding_box.type() ? (@ == "object")') AND jsonb_path_exists(doc,'$.retweeted_status.quoted_status.place.bounding_box.keyvalue().size() ? (@ >= 2)')) OR jsonb_path_exists(doc,'$.delete.status.id_str') ) OR jsonb_path_exists(doc,'$.user.profile_background_tile ? (@ == true)') ) AND ( ( ( jsonb_path_exists(doc,'$.quoted_status.id') OR ( ( jsonb_path_exists(doc,'$.retweeted_status.quoted_status.user.created_at ? (@ starts with "T")') OR jsonb_path_exists(doc,'$.retweeted_status.quoted_status.user.created_at ? (@ starts with "S")') ) OR jsonb_path_exists(doc,'$.retweeted_status.quoted_status.user.created_at ? (@ starts with "Mon ")') ) ) OR jsonb_path_exists(doc,'$.retweeted_status.quoted_status.extended_entities.media.type() ? (@ == "string")') ) OR jsonb_path_exists(doc,'$.retweeted_status.user.screen_name') ) ) AND ( ( ( jsonb_path_exists(doc,'$.user.profile_sidebar_fill_color') AND jsonb_path_exists(doc,'$.quoted_status.user.profile_background_tile') ) OR jsonb_path_exists(doc,'$.retweeted_status.extended_tweet.entities.user_mentions.type() ? (@ == "string")') ) OR jsonb_path_exists(doc,'$.user.geo_enabled ? (@ == false)') ) ) ;
+2021-10-21 06:08:12.555 UTC [48] LOG:  duration: 357368.896 ms
+ count  
+--------
+ 424002
+(1 row)
+
+2021-10-21 06:08:12.556 UTC [48] LOG:  statement: SELECT COUNT(*) FROM Twitter WHERE ( ( ( ( ( (jsonb_path_exists(doc,'$.retweeted_status.quoted_status.place.bounding_box.type() ? (@ == "object")') AND jsonb_path_exists(doc,'$.retweeted_status.quoted_status.place.bounding_box.keyvalue().size() ? (@ >= 2)')) OR jsonb_path_exists(doc,'$.delete.status.id_str') ) OR jsonb_path_exists(doc,'$.user.profile_background_tile ? (@ == true)') ) AND ( ( ( jsonb_path_exists(doc,'$.quoted_status.id') OR ( ( jsonb_path_exists(doc,'$.retweeted_status.quoted_status.user.created_at ? (@ starts with "T")') OR jsonb_path_exists(doc,'$.retweeted_status.quoted_status.user.created_at ? (@ starts with "S")') ) OR jsonb_path_exists(doc,'$.retweeted_status.quoted_status.user.created_at ? (@ starts with "Mon ")') ) ) OR jsonb_path_exists(doc,'$.retweeted_status.quoted_status.extended_entities.media.type() ? (@ == "string")') ) OR jsonb_path_exists(doc,'$.retweeted_status.user.screen_name') ) ) AND ( ( ( jsonb_path_exists(doc,'$.user.profile_sidebar_fill_color') AND jsonb_path_exists(doc,'$.quoted_status.user.profile_background_tile') ) OR jsonb_path_exists(doc,'$.retweeted_status.extended_tweet.entities.user_mentions.type() ? (@ == "string")') ) OR jsonb_path_exists(doc,'$.user.geo_enabled ? (@ == false)') ) ) AND ( jsonb_path_exists(doc,'$.user.id_str') AND jsonb_path_exists(doc,'$.retweeted_status.display_text_range') ) ) ;
+2021-10-21 06:13:57.091 UTC [48] LOG:  duration: 344535.409 ms
+ count  
+--------
+ 216709
+(1 row)
+
+2021-10-21 06:13:57.092 UTC [48] LOG:  statement: SELECT COUNT(*) FROM Twitter WHERE ( ( ( ( ( ( (jsonb_path_exists(doc,'$.retweeted_status.quoted_status.place.bounding_box.type() ? (@ == "object")') AND jsonb_path_exists(doc,'$.retweeted_status.quoted_status.place.bounding_box.keyvalue().size() ? (@ >= 2)')) OR jsonb_path_exists(doc,'$.delete.status.id_str') ) OR jsonb_path_exists(doc,'$.user.profile_background_tile ? (@ == true)') ) AND ( ( ( jsonb_path_exists(doc,'$.quoted_status.id') OR ( ( jsonb_path_exists(doc,'$.retweeted_status.quoted_status.user.created_at ? (@ starts with "T")') OR jsonb_path_exists(doc,'$.retweeted_status.quoted_status.user.created_at ? (@ starts with "S")') ) OR jsonb_path_exists(doc,'$.retweeted_status.quoted_status.user.created_at ? (@ starts with "Mon ")') ) ) OR jsonb_path_exists(doc,'$.retweeted_status.quoted_status.extended_entities.media.type() ? (@ == "string")') ) OR jsonb_path_exists(doc,'$.retweeted_status.user.screen_name') ) ) AND ( ( ( jsonb_path_exists(doc,'$.user.profile_sidebar_fill_color') AND jsonb_path_exists(doc,'$.quoted_status.user.profile_background_tile') ) OR jsonb_path_exists(doc,'$.retweeted_status.extended_tweet.entities.user_mentions.type() ? (@ == "string")') ) OR jsonb_path_exists(doc,'$.user.geo_enabled ? (@ == false)') ) ) AND ( jsonb_path_exists(doc,'$.user.id_str') AND jsonb_path_exists(doc,'$.retweeted_status.display_text_range') ) ) AND ( jsonb_path_exists(doc,'$.quoted_status.entities.user_mentions.type() ? (@ == "string")') OR jsonb_path_exists(doc,'$.quoted_status.user.name') ) ) ;
+2021-10-21 06:18:43.949 UTC [48] LOG:  duration: 286857.359 ms
+ count 
+-------
+ 68970
+(1 row)
+
+2021-10-21 06:18:43.950 UTC [48] LOG:  statement: SELECT COUNT(*) FROM Twitter WHERE ( ( ( ( ( ( ( (jsonb_path_exists(doc,'$.retweeted_status.quoted_status.place.bounding_box.type() ? (@ == "object")') AND jsonb_path_exists(doc,'$.retweeted_status.quoted_status.place.bounding_box.keyvalue().size() ? (@ >= 2)')) OR jsonb_path_exists(doc,'$.delete.status.id_str') ) OR jsonb_path_exists(doc,'$.user.profile_background_tile ? (@ == true)') ) AND ( ( ( jsonb_path_exists(doc,'$.quoted_status.id') OR ( ( jsonb_path_exists(doc,'$.retweeted_status.quoted_status.user.created_at ? (@ starts with "T")') OR jsonb_path_exists(doc,'$.retweeted_status.quoted_status.user.created_at ? (@ starts with "S")') ) OR jsonb_path_exists(doc,'$.retweeted_status.quoted_status.user.created_at ? (@ starts with "Mon ")') ) ) OR jsonb_path_exists(doc,'$.retweeted_status.quoted_status.extended_entities.media.type() ? (@ == "string")') ) OR jsonb_path_exists(doc,'$.retweeted_status.user.screen_name') ) ) AND ( ( ( jsonb_path_exists(doc,'$.user.profile_sidebar_fill_color') AND jsonb_path_exists(doc,'$.quoted_status.user.profile_background_tile') ) OR jsonb_path_exists(doc,'$.retweeted_status.extended_tweet.entities.user_mentions.type() ? (@ == "string")') ) OR jsonb_path_exists(doc,'$.user.geo_enabled ? (@ == false)') ) ) AND ( jsonb_path_exists(doc,'$.user.id_str') AND jsonb_path_exists(doc,'$.retweeted_status.display_text_range') ) ) AND ( jsonb_path_exists(doc,'$.quoted_status.entities.user_mentions.type() ? (@ == "string")') OR jsonb_path_exists(doc,'$.quoted_status.user.name') ) ) AND ( jsonb_path_exists(doc,'$.quoted_status.user.screen_name ? (@ starts with "B")') OR jsonb_path_exists(doc,'$.quoted_status.user.verified ? (@ == false)') ) ) ;
+2021-10-21 06:23:35.971 UTC [48] LOG:  duration: 292021.195 ms
+ count 
+-------
+ 48900
+(1 row)
+
+2021-10-21 06:23:35.972 UTC [48] LOG:  statement: SELECT * FROM nonexistingsopostgresstops;
+2021-10-21 06:23:35.972 UTC [48] ERROR:  relation "nonexistingsopostgresstops" does not exist at character 15
+2021-10-21 06:23:35.972 UTC [48] STATEMENT:  SELECT * FROM nonexistingsopostgresstops;
+psql:/docker-entrypoint-initdb.d/1-benchmark.sql:14: ERROR:  relation "nonexistingsopostgresstops" does not exist
+LINE 1: SELECT * FROM nonexistingsopostgresstops;
+                      ^

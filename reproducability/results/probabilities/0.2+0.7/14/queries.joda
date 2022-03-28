@@ -1,0 +1,11 @@
+# Created with Random Explorer Benchmark Generator (version v0.0.1), seed 14 (MinSelectivity: 0.2, MaxSelectivity: 0.9, MaxChain: 3, MaxTries: 100, RandomBrowseProb: 0.2, GoBackProb: 0.7, Weighted-Paths: false, Predicates: [Exists,BoolEquality,IsString,IntEquality,FloatComparison,StrPrefix,ObjectSize,ArraySize])
+LOAD Twitter CHOOSE (ISSTRING('/retweeted_status/quoted_status/place/name') || ISSTRING('/retweeted_status/text')) 
+LOAD Twitter CHOOSE EXISTS('/retweeted_status/user/screen_name') 
+LOAD Twitter CHOOSE '/retweeted_status/user/favourites_count' <= 750082.891510 
+LOAD Twitter CHOOSE ((EXISTS('/extended_tweet/entities/media') || SIZE('/retweeted_status/quoted_status/place/bounding_box/coordinates') <= 1) || EXISTS('/favorited')) 
+LOAD Twitter CHOOSE (ISSTRING('/retweeted_status/quoted_status/user/description') || EXISTS('/user/geo_enabled')) 
+LOAD Twitter CHOOSE (((EXISTS('/retweeted_status/quoted_status/coordinates/coordinates') || (STARTSWITH('/coordinates/type',"Poin") && STARTSWITH('/coordinates/type',"Po"))) || '/quoted_status/user/followers_count' >= 87095056.642145) || STARTSWITH('/retweeted_status/user/profile_banner_url',"ht")) 
+LOAD Twitter CHOOSE ('/quoted_status/user/listed_count' <= 120161.935520 || '/retweeted_status/user/favourites_count' <= 330125.176313) 
+LOAD Twitter CHOOSE EXISTS('/user/profile_background_color') 
+LOAD Twitter CHOOSE (((EXISTS('/retweeted_status/quoted_status/quoted_status_id') || ((STARTSWITH('/quoted_status/user/profile_text_color',"0") || STARTSWITH('/quoted_status/user/profile_text_color',"F")) || STARTSWITH('/quoted_status/user/profile_text_color',"1"))) || ISSTRING('/quoted_status/place/url')) || '/user/followers_count' <= 11392514.541973) 
+LOAD Twitter CHOOSE (((STARTSWITH('/quoted_status/user/profile_background_color',"0") || STARTSWITH('/quoted_status/user/profile_background_color',"F")) || STARTSWITH('/quoted_status/user/profile_background_color',"E")) || EXISTS('/user/friends_count')) 

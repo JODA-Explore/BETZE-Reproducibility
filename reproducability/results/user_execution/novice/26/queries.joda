@@ -1,0 +1,21 @@
+# Created with Random Explorer Benchmark Generator (version v0.0.1), seed 26 (MinSelectivity: 0.2, MaxSelectivity: 0.9, MaxChain: 3, MaxTries: 100, RandomBrowseProb: 0.3, GoBackProb: 0.5, Weighted-Paths: false, Predicates: [Exists,BoolEquality,IsString,IntEquality,FloatComparison,StrPrefix,ObjectSize,ArraySize])
+LOAD Twitter CHOOSE ((EXISTS('/retweeted_status/quoted_status/favorited') || EXISTS('/extended_entities/media')) || EXISTS('/delete/timestamp_ms')) STORE Twitter_1
+LOAD Twitter_1 CHOOSE (EXISTS('/quoted_status/place/country_code') || EXISTS('/user/profile_background_color')) STORE Twitter_1_1
+LOAD Twitter_1 CHOOSE ISSTRING('/delete/status/id_str') STORE Twitter_1_2
+LOAD Twitter_1 CHOOSE (((EXISTS('/retweeted_status/quoted_status/withheld_in_countries') || EXISTS('/retweeted_status/extended_tweet/extended_entities')) || EXISTS('/retweeted_status/quoted_status/user/profile_use_background_image')) || EXISTS('/retweeted_status/entities/symbols')) STORE Twitter_1_3
+LOAD Twitter_1 CHOOSE ((('/retweeted_status/user/profile_background_tile' == true || ISSTRING('/quoted_status/user/created_at')) || EXISTS('/extended_tweet/entities/media')) || EXISTS('/delete/status')) STORE Twitter_1_4
+LOAD Twitter_1 CHOOSE EXISTS('/retweeted_status/in_reply_to_screen_name') STORE Twitter_1_5
+LOAD Twitter_1 CHOOSE ((ISSTRING('/quoted_status/user/id_str') || ISSTRING('/retweeted_status/place/id')) || MEMCOUNT('/retweeted_status/entities') <= 4) STORE Twitter_1_6
+LOAD Twitter_1 CHOOSE EXISTS('/truncated') STORE Twitter_1_7
+LOAD Twitter_1 CHOOSE ((ISSTRING('/quoted_status/geo/type') || STARTSWITH('/retweeted_status/quoted_status_id_str',"8589")) || EXISTS('/retweeted_status/coordinates')) STORE Twitter_1_8
+LOAD Twitter_1 CHOOSE ISSTRING('/retweeted_status/user/created_at') STORE Twitter_1_9
+LOAD Twitter_1_5 CHOOSE (((STARTSWITH('/retweeted_status/place/place_type',"c") || ISSTRING('/quoted_status/geo/type')) || EXISTS('/retweeted_status/extended_tweet/entities/user_mentions')) || EXISTS('/retweeted_status/quoted_status/in_reply_to_user_id')) STORE Twitter_1_5_1
+LOAD Twitter CHOOSE EXISTS('/retweeted_status/entities/hashtags') STORE Twitter_2
+LOAD Twitter_1_2 CHOOSE '/delete/status/user_id' <= 414518883203971392.000000 STORE Twitter_1_2_1
+LOAD Twitter_1_2 CHOOSE '/delete/status/user_id' <= 636798912904006400.000000 STORE Twitter_1_2_2
+LOAD Twitter_1_2 CHOOSE '/delete/status/id' >= 641011702469948288.000000 STORE Twitter_1_2_3
+LOAD Twitter_1_2_2 CHOOSE '/delete/status/user_id' <= 1634310336.623946 STORE Twitter_1_2_2_1
+LOAD Twitter_1_2_2 CHOOSE ((('/delete/status/user_id' == 963279762 || '/delete/status/user_id' <= 655884065.816471) || ((((STARTSWITH('/delete/status/id_str',"765") || STARTSWITH('/delete/status/id_str',"847")) || STARTSWITH('/delete/status/id_str',"8588")) || STARTSWITH('/delete/status/id_str',"8589")) || STARTSWITH('/delete/status/id_str',"43"))) || '/delete/status/user_id' >= 4360965085.229280) STORE Twitter_1_2_2_2
+LOAD Twitter_1_2_2 CHOOSE '/delete/status/user_id' <= 3889112404.034031 STORE Twitter_1_2_2_3
+LOAD Twitter_1_2_2 CHOOSE (((((STARTSWITH('/delete/timestamp_ms',"149366409") || STARTSWITH('/delete/timestamp_ms',"149366428")) || STARTSWITH('/delete/timestamp_ms',"149366491")) || STARTSWITH('/delete/timestamp_ms',"149366429")) || STARTSWITH('/delete/timestamp_ms',"149366451")) || '/delete/status/user_id' <= 3711596449.887527) STORE Twitter_1_2_2_4
+LOAD Twitter_1_2_2_4 CHOOSE (('/delete/status/id' <= 796511895171494656.000000 && '/delete/status/user_id' == 4164091904) || '/delete/status/id' <= 754523924297933568.000000) STORE Twitter_1_2_2_4_1

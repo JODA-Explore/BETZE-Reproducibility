@@ -1,0 +1,30 @@
+=== Found JODA query file, executing JODA queries ===
+=== Found MongoDB query file, executing MongoDB queries ===
+=== Found Postgres query file, executing Postgres queries ===
+=== Found JQ query file, executing JQ queries ===
+Sending build context to Docker daemon  9.433MB
+Step 1/2 : FROM alpine
+ ---> 14119a10abf4
+Step 2/2 : RUN apk add --no-cache --upgrade bash jq
+ ---> Using cache
+ ---> 91ec4132b45e
+Successfully built 91ec4132b45e
+Successfully tagged nicotin/jq:05-10-2021
+status: exited: 4
+JQ: 42.3816 s
+bc0e419b19dfb4f526e95b5e90acb02092ccd69cc524c81fb70ecfd0631886be
+=== Results ===
+= JODA =
+Overall: 
+Query Time: 
+
+= Mongo =
+Overall: 
+Query Time: 
+
+= PostgreSQL =
+Overall: 
+Query Time: 
+
+= JQ =
+Overall: 42.3816

@@ -1,0 +1,6 @@
+# Created with Random Explorer Benchmark Generator (version v0.0.1), seed 9 (MinSelectivity: 0.2, MaxSelectivity: 0.9, MaxChain: 3, MaxTries: 100, RandomBrowseProb: 0.05, GoBackProb: 0.2, Weighted-Paths: false, Predicates: [Exists,BoolEquality,IsString,IntEquality,FloatComparison,StrPrefix,ObjectSize,ArraySize])
+LOAD Twitter CHOOSE ((EXISTS('/retweeted_status/quoted_status/user/followers_count') || ((STARTSWITH('/retweeted_status/in_reply_to_user_id_str',"2") || STARTSWITH('/retweeted_status/in_reply_to_user_id_str',"1")) || STARTSWITH('/retweeted_status/in_reply_to_user_id_str',"4"))) || '/retweeted_status/user/default_profile_image' == false) STORE Twitter_1
+LOAD Twitter CHOOSE EXISTS('/possibly_sensitive') STORE Twitter_2
+LOAD Twitter CHOOSE ((EXISTS('/quoted_status/source') || ISSTRING('/quoted_status/place/url')) || EXISTS('/retweeted_status/user/follow_request_sent')) STORE Twitter_3
+LOAD Twitter_3 CHOOSE (((((STARTSWITH('/quoted_status/user/time_zone',"A") || STARTSWITH('/quoted_status/user/time_zone',"B")) || STARTSWITH('/quoted_status/user/time_zone',"M")) || STARTSWITH('/quoted_status/user/time_zone',"S")) || STARTSWITH('/quoted_status/user/time_zone',"C")) || STARTSWITH('/retweeted_status/user/profile_background_image_url',"http://")) STORE Twitter_3_1
+LOAD Twitter_3_1 CHOOSE SIZE('/extended_entities/media') <= 1 STORE Twitter_3_1_1

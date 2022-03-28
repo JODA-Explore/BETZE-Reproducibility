@@ -1,0 +1,42 @@
+=== Found JODA query file, executing JODA queries ===
+= File:'NoBench.json' =
+status: exited: 0
+JODA: 198.031 s
+869c200e03cb57d9009dbd71405e19bc805be99f98b41da3131c412f62bc6d8e
+=== Found MongoDB query file, executing MongoDB queries ===
+=== Found Postgres query file, executing Postgres queries ===
+=== Found JQ query file, executing JQ queries ===
+=== Results ===
+= JODA =
+Overall: 198.031
+Query Time: 181.608
+52.024582698
+28.619704345
+27.333134291
+10.180637036
+8.748656352
+14.472951558
+20.132598784
+6.806098194
+1.774893399
+2.656790554
+2.636210491
+1.856345134
+2.343258967
+0.228549385
+1.424820542
+0.095921786
+0.082781903
+0.089082018
+0.056528884
+0.044936233
+= Mongo =
+Overall: 
+Query Time: 
+
+= PostgreSQL =
+Overall: 
+Query Time: 
+
+= JQ =
+Overall: 

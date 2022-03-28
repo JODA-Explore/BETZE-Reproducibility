@@ -1,0 +1,12 @@
+LOAD Twitter FROM FILE "/dataset/Twitter.json" LINESEPARATED
+# Created with Random Explorer Benchmark Generator (version v0.0.1), seed 9 (MinSelectivity: 0.2, MaxSelectivity: 0.9, MaxChain: 3, MaxTries: 100, RandomBrowseProb: 0.2, GoBackProb: 0.3, Weighted-Paths: false, Predicates: [Exists,BoolEquality,IsString,IntEquality,FloatComparison,StrPrefix,ObjectSize,ArraySize])
+LOAD Twitter CHOOSE ((EXISTS('/retweeted_status/quoted_status/user/followers_count') || ((STARTSWITH('/retweeted_status/in_reply_to_user_id_str',"2") || STARTSWITH('/retweeted_status/in_reply_to_user_id_str',"1")) || STARTSWITH('/retweeted_status/in_reply_to_user_id_str',"4"))) || '/retweeted_status/user/default_profile_image' == false) STORE Twitter_1
+LOAD Twitter_1 CHOOSE (((EXISTS('/quoted_status/user/favourites_count') || ((((STARTSWITH('/quoted_status/user/id_str',"2") || STARTSWITH('/quoted_status/user/id_str',"1")) || STARTSWITH('/quoted_status/user/id_str',"3")) || STARTSWITH('/quoted_status/user/id_str',"7")) || STARTSWITH('/quoted_status/user/id_str',"4"))) || EXISTS('/retweeted_status/quoted_status/user')) || ISSTRING('/retweeted_status/user/url')) STORE Twitter_1_1
+LOAD Twitter_1 CHOOSE (EXISTS('/retweeted_status/quoted_status/user/profile_image_url') || SIZE('/retweeted_status/display_text_range') <= 2) STORE Twitter_1_2
+LOAD Twitter_1 CHOOSE (ISSTRING('/retweeted_status/quoted_status/user/profile_background_image_url_https') || '/user/id' <= 276815129586884832.000000) STORE Twitter_1_3
+LOAD Twitter_1 CHOOSE '/retweeted_status/user/default_profile' == false STORE Twitter_1_4
+LOAD Twitter_1_4 CHOOSE ((ISSTRING('/quoted_status/user/profile_image_url_https') || EXISTS('/retweeted_status/quoted_status/extended_tweet/display_text_range')) || EXISTS('/retweeted_status/extended_entities/media')) STORE Twitter_1_4_1
+LOAD Twitter_1_4_1 CHOOSE '/user/profile_use_background_image' == true STORE Twitter_1_4_1_1
+LOAD Twitter_1_1 CHOOSE '/retweeted_status/user/geo_enabled' == true STORE Twitter_1_1_1
+LOAD Twitter_1_1_1 CHOOSE ((EXISTS('/retweeted_status/extended_tweet/extended_entities/media') || ISSTRING('/retweeted_status/quoted_status/place/bounding_box/type')) || EXISTS('/quoted_status/user/profile_use_background_image')) STORE Twitter_1_1_1_1
+LOAD Twitter_1_1_1_1 CHOOSE ('/retweeted_status/scopes/followers' == false || STARTSWITH('/quoted_status/source',"<a href=")) STORE Twitter_1_1_1_1_1

@@ -1,0 +1,44 @@
+=== Found JODA query file, executing JODA queries ===
+= File:'Reddit.json' =
+status: exited: 0
+JODA: 2850.57 s
+3fd850ffdb39887531785994ba60645a5269838a325b0a2b757ffe0f0ca7ebcb
+=== Found MongoDB query file, executing MongoDB queries ===
+MongoDB: Terminated
+42806.565
+=== Found Postgres query file, executing Postgres queries ===
+PSQL: 0.257
+=== Results ===
+= JODA =
+Overall: 2850.57
+Query Time: 2745.71
+191.891996894
+491.718322215
+227.659205393
+182.89801746
+495.167952286
+192.087753
+491.81397398
+178.677523883
+113.092250009
+180.699713062
+= Mongo =
+Overall: Terminated
+42806.565
+Query Time: 0
+
+= PostgreSQL =
+Overall: 0.257
+Query Time: 0.001
+0.001
+0
+0
+0
+0
+0
+0
+0
+0
+0
+= JQ =
+Overall: 

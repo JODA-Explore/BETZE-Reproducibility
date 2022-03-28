@@ -1,0 +1,2131 @@
+I20220224 02:45:25.806442     1 ConfigParser.cpp:206] Setting configs
+I20220224 02:45:25.806557     1 joda.cpp:95] Loaded 6 queries
+I20220224 02:45:25.806612     1 joda.cpp:121] Joda Version 0.13.1 (API v2)
+I20220224 02:45:25.806632     1 joda.cpp:123] Build revision 59b4197 (10:25:46 17-02-2022)
+I20220224 02:45:25.806682     1 CLI.cpp:494] Using non interactive query processing due to terminal support.
+I20220224 02:45:25.806951     1 StorageCollection.cpp:53] Adding storage Twitter
+I20220224 02:45:25.807022     1 QueryPlan.cpp:46] Initializing QueryThread
+I20220224 02:45:25.807196     1 DirectoryRegister.cpp:44] Created directory '"/tmp/JODA/UDIR_1"'
+I20220224 02:45:25.807227     1 DirectoryRegister.cpp:28] Registered directory '"/tmp/JODA/UDIR_1"'
+I20220224 02:45:25.807247     1 QueryPlan.cpp:67] Starting parsing
+ResultSize: 29634708
+
+-----STATISTICS------
+{
+    "Query": "LOAD Twitter FROM FILE \"/dataset/Twitter.json\" LINESEPARATED",
+    "Time": 1645670725,
+I20220224 02:47:20.879456     1 CLI.cpp:245] RAM: 1007.79 GBi | Used: 1000.56 GBi | Free: 1% | Proc: 181.04 GBi
+I20220224 02:47:20.879662     1 StorageCollection.cpp:84] Removing result 3
+I20220224 02:47:20.879683     1 Timer.cpp:44] [MAIN] Query took 115.073 s
+    "Pretty Time": "Thu Feb 24 02:45:25 2022\n",
+    "Parsing Threads": 95,
+    "Runtime": {
+        "Parsing": 115.070145423,
+        "Evaluation": 0.000011523,
+        "Query": 115.07285549
+    },
+    "Result Size": 29634708,
+    "#Container": 220,
+    "RAM Proc": 194385956864,
+    "Pretty RAM Proc": "181.04 GBi",
+    "Estimated Storage Size": 219735746037,
+I20220224 02:47:20.880128     1 QueryPlan.cpp:46] Initializing QueryThread
+    "Pretty Estimated Storage Size": "204.64 GBi",
+    "System": {
+        "Version": "0.13.1",
+        "Build": "59b4197",
+        "Build Time": "10:25:46 17-02-2022"
+    }
+}
+----------------
+I20220224 02:47:20.880365     1 DirectoryRegister.cpp:44] Created directory '"/tmp/JODA/UDIR_2"'
+I20220224 02:47:20.880398     1 DirectoryRegister.cpp:28] Registered directory '"/tmp/JODA/UDIR_2"'
+I20220224 02:47:32.686846     1 QueryPlan.cpp:272] Finished merging aggregators
+W20220224 02:47:32.686933     1 JSONContainer.cpp:31] JSONContainer size not able to autodetect, this should not happen. Fallback size: 52428800
+ResultSize: 1
+
+I20220224 02:47:32.690441     1 CLI.cpp:245] RAM: 1007.79 GBi | Used: 1005.82 GBi | Free: 0% | Proc: 186.29 GBi
+I20220224 02:47:32.690608     1 StorageCollection.cpp:84] Removing result 4
+I20220224 02:47:32.690634     1 Timer.cpp:44] [MAIN] Query took 11.8108 s
+-----STATISTICS------
+{
+    "Query": "LOAD Twitter CHOOSE ISSTRING('/user/lang') AGG ('/count':COUNT('/place/name'))",
+    "Time": 1645670840,
+    "Pretty Time": "Thu Feb 24 02:47:20 2022\n",
+    "Threads": 95,
+    "Runtime": {
+        "Threads": [
+            {
+                "Select": 6.627,
+                "Aggregate": 1.7
+            },
+            {
+                "Select": 7.829,
+                "Aggregate": 0.48
+I20220224 02:47:32.691323     1 QueryPlan.cpp:46] Initializing QueryThread
+            },
+            {
+                "Select": 5.723,
+                "Aggregate": 2.419
+            },
+            {
+                "Select": 7.594,
+                "Aggregate": 1.126
+            },
+            {
+                "Select": 7.941,
+                "Aggregate": 0.512
+            },
+            {
+                "Select": 7.256,
+                "Aggregate": 1.342
+            },
+            {
+                "Select": 8.168,
+I20220224 02:47:32.691541     1 DirectoryRegister.cpp:44] Created directory '"/tmp/JODA/UDIR_3"'
+I20220224 02:47:32.691576     1 DirectoryRegister.cpp:28] Registered directory '"/tmp/JODA/UDIR_3"'
+                "Aggregate": 0.425
+            },
+            {
+                "Select": 7.713,
+                "Aggregate": 0.646
+            },
+            {
+                "Select": 8.249,
+                "Aggregate": 0.488
+            },
+            {
+                "Select": 7.818,
+                "Aggregate": 0.676
+            },
+            {
+                "Select": 8.042,
+                "Aggregate": 0.545
+            },
+            {
+                "Select": 7.729,
+                "Aggregate": 1.185
+            },
+            {
+                "Select": 8.079,
+                "Aggregate": 0.875
+            },
+            {
+                "Select": 8.545,
+                "Aggregate": 0.336
+            },
+            {
+                "Select": 8.685,
+                "Aggregate": 0.32
+            },
+            {
+                "Select": 7.9,
+                "Aggregate": 1.043
+            },
+            {
+                "Select": 8.146,
+                "Aggregate": 0.448
+            },
+            {
+                "Select": 7.912,
+                "Aggregate": 1.009
+            },
+            {
+                "Select": 8.719,
+                "Aggregate": 0.304
+            },
+            {
+                "Select": 7.452,
+                "Aggregate": 0.874
+            },
+            {
+                "Select": 7.626,
+                "Aggregate": 1.345
+            },
+            {
+                "Select": 8.248,
+                "Aggregate": 0.506
+            },
+            {
+                "Select": 8.01,
+                "Aggregate": 1.015
+            },
+            {
+                "Select": 8.727,
+                "Aggregate": 0.304
+            },
+            {
+                "Select": 8.521,
+                "Aggregate": 0.576
+            },
+            {
+                "Select": 8.143,
+                "Aggregate": 0.975
+            },
+            {
+                "Select": 7.221,
+                "Aggregate": 1.301
+            },
+            {
+                "Select": 8.191,
+                "Aggregate": 0.508
+            },
+            {
+                "Select": 7.749,
+                "Aggregate": 1.351
+            },
+            {
+                "Select": 7.789,
+                "Aggregate": 1.347
+            },
+            {
+                "Select": 7.839,
+                "Aggregate": 1.33
+            },
+            {
+                "Select": 4.481,
+                "Aggregate": 4.73
+            },
+            {
+                "Select": 8.143,
+                "Aggregate": 1.127
+            },
+            {
+                "Select": 8.424,
+                "Aggregate": 0.535
+            },
+            {
+                "Select": 8.142,
+                "Aggregate": 0.631
+            },
+            {
+                "Select": 9.009,
+                "Aggregate": 0.345
+            },
+            {
+                "Select": 8.709,
+                "Aggregate": 0.608
+            },
+            {
+                "Select": 8.527,
+                "Aggregate": 0.52
+            },
+            {
+                "Select": 8.789,
+                "Aggregate": 0.451
+            },
+            {
+                "Select": 6.885,
+                "Aggregate": 2.002
+            },
+            {
+                "Select": 8.45,
+                "Aggregate": 0.648
+            },
+            {
+                "Select": 8.771,
+                "Aggregate": 0.791
+            },
+            {
+                "Select": 8.821,
+                "Aggregate": 0.773
+            },
+            {
+                "Select": 7.129,
+                "Aggregate": 1.752
+            },
+            {
+                "Select": 8.433,
+                "Aggregate": 0.588
+            },
+            {
+                "Select": 5.258,
+                "Aggregate": 4.453
+            },
+            {
+                "Select": 8.831,
+                "Aggregate": 0.877
+            },
+            {
+                "Select": 8.756,
+                "Aggregate": 0.692
+            },
+            {
+                "Select": 8.886,
+                "Aggregate": 0.873
+            },
+            {
+                "Select": 8.024,
+                "Aggregate": 0.945
+            },
+            {
+                "Select": 8.279,
+                "Aggregate": 1.347
+            },
+            {
+                "Select": 8.987,
+                "Aggregate": 0.873
+            },
+            {
+                "Select": 8.927,
+                "Aggregate": 0.557
+            },
+            {
+                "Select": 8.595,
+                "Aggregate": 0.677
+            },
+            {
+                "Select": 8.69,
+                "Aggregate": 1.043
+            },
+            {
+                "Select": 9.081,
+                "Aggregate": 0.46
+            },
+            {
+                "Select": 9.245,
+                "Aggregate": 0.39
+            },
+            {
+                "Select": 9.013,
+                "Aggregate": 0.5
+            },
+            {
+                "Select": 9.047,
+                "Aggregate": 0.857
+            },
+            {
+                "Select": 8.853,
+                "Aggregate": 0.83
+            },
+            {
+                "Select": 8.784,
+                "Aggregate": 0.644
+            },
+            {
+                "Select": 9.13,
+                "Aggregate": 0.521
+            },
+            {
+                "Select": 8.322,
+                "Aggregate": 1.29
+            },
+            {
+                "Select": 8.717,
+                "Aggregate": 0.58
+            },
+            {
+                "Select": 9.034,
+                "Aggregate": 0.614
+            },
+            {
+                "Select": 8.647,
+                "Aggregate": 0.754
+            },
+            {
+                "Select": 8.984,
+                "Aggregate": 0.566
+            },
+            {
+                "Select": 9.641,
+                "Aggregate": 0.465
+            },
+            {
+                "Select": 8.972,
+                "Aggregate": 0.585
+            },
+            {
+                "Select": 9.017,
+                "Aggregate": 0.646
+            },
+            {
+                "Select": 9.083,
+                "Aggregate": 0.684
+            },
+            {
+                "Select": 8.803,
+                "Aggregate": 0.694
+            },
+            {
+                "Select": 7.263,
+                "Aggregate": 2.697
+            },
+            {
+                "Select": 9.07,
+                "Aggregate": 0.67
+            },
+            {
+                "Select": 9.098,
+                "Aggregate": 0.7
+            },
+            {
+                "Select": 9.684,
+                "Aggregate": 0.398
+            },
+            {
+                "Select": 9.201,
+                "Aggregate": 0.668
+            },
+            {
+                "Select": 9.194,
+                "Aggregate": 0.538
+            },
+            {
+                "Select": 9.321,
+                "Aggregate": 0.656
+            },
+            {
+                "Select": 9.15,
+                "Aggregate": 0.776
+            },
+            {
+                "Select": 9.333,
+                "Aggregate": 0.595
+            },
+            {
+                "Select": 9.188,
+                "Aggregate": 0.709
+            },
+            {
+                "Select": 9.373,
+                "Aggregate": 0.856
+            },
+            {
+                "Select": 9.262,
+                "Aggregate": 0.742
+            },
+            {
+                "Select": 9.486,
+                "Aggregate": 0.699
+            },
+            {
+                "Select": 10.02,
+                "Aggregate": 0.518
+            },
+            {
+                "Select": 10.485,
+                "Aggregate": 0.226
+            },
+            {
+                "Select": 10.236,
+                "Aggregate": 0.417
+            },
+            {
+                "Select": 10.655,
+                "Aggregate": 0.181
+            },
+            {
+                "Select": 10.78,
+                "Aggregate": 0.214
+            },
+            {
+                "Select": 10.757,
+                "Aggregate": 0.131
+            },
+            {
+                "Select": 10.913,
+                "Aggregate": 0.118
+            },
+            {
+                "Select": 10.204,
+                "Aggregate": 0.557
+            },
+            {
+                "Select": 9.842,
+                "Aggregate": 0.992
+            },
+            {
+                "Select": 10.84,
+                "Aggregate": 0.159
+            }
+        ],
+        "AggMerge": 3.550749432,
+        "Store": 0.0,
+        "Evaluation": 11.809284618,
+        "Query": 11.810777167
+    },
+    "Result Size": 1,
+    "#Container": 1,
+    "RAM Proc": 200023277568,
+    "Pretty RAM Proc": "186.29 GBi",
+    "Estimated Storage Size": 219735746037,
+    "Pretty Estimated Storage Size": "204.64 GBi",
+    "System": {
+        "Version": "0.13.1",
+        "Build": "59b4197",
+        "Build Time": "10:25:46 17-02-2022"
+    }
+}
+----------------
+I20220224 02:47:38.001889     1 QueryPlan.cpp:272] Finished merging aggregators
+W20220224 02:47:38.002032     1 JSONContainer.cpp:31] JSONContainer size not able to autodetect, this should not happen. Fallback size: 52428800
+ResultSize: 1
+
+I20220224 02:47:38.005321     1 CLI.cpp:245] RAM: 1007.79 GBi | Used: 1005.85 GBi | Free: 0% | Proc: 186.29 GBi
+I20220224 02:47:38.005424     1 StorageCollection.cpp:84] Removing result 5
+I20220224 02:47:38.005440     1 Timer.cpp:44] [MAIN] Query took 5.31429 s
+-----STATISTICS------
+{
+    "Query": "LOAD Twitter CHOOSE (ISSTRING('/user/lang') && (((EXISTS('/retweeted_status/quoted_status/user/screen_name') || (ISOBJECT('/quoted_status/scopes') && MEMCOUNT('/quoted_status/scopes') <= 1)) || EXISTS('/quoted_status/user/profile_banner_url')) || ISSTRING('/retweeted_status/user/profile_sidebar_border_color'))) AGG ('/count':COUNT('/user/profile_use_background_image'))",
+    "Time": 1645670852,
+    "Pretty Time": "Thu Feb 24 02:47:32 2022\n",
+    "Threads": 95,
+    "Runtime": {
+        "Threads": [
+            {
+                "Select": 3.96,
+                "Aggregate": 0.346
+            },
+            {
+                "Select": 3.65,
+                "Aggregate": 0.569
+            },
+            {
+                "Select": 3.673,
+                "Aggregate": 0.587
+            },
+            {
+                "Select": 3.717,
+                "Aggregate": 0.617
+            },
+            {
+                "Select": 3.794,
+                "Aggregate": 0.536
+            },
+            {
+                "Select": 3.717,
+                "Aggregate": 0.53
+            },
+            {
+                "Select": 3.846,
+                "Aggregate": 0.539
+            },
+            {
+                "Select": 4.003,
+                "Aggregate": 0.41
+            },
+            {
+                "Select": 3.724,
+                "Aggregate": 0.559
+            },
+            {
+                "Select": 3.902,
+                "Aggregate": 0.536
+            },
+            {
+                "Select": 3.838,
+                "Aggregate": 0.593
+            },
+            {
+                "Select": 3.783,
+                "Aggregate": 0.565
+            },
+            {
+                "Select": 3.993,
+                "Aggregate": 0.493
+            },
+            {
+                "Select": 3.991,
+                "Aggregate": 0.497
+            },
+I20220224 02:47:38.006211     1 QueryPlan.cpp:46] Initializing QueryThread
+            {
+                "Select": 4.006,
+                "Aggregate": 0.494
+            },
+            {
+                "Select": 3.882,
+                "Aggregate": 0.526
+            },
+            {
+                "Select": 3.975,
+                "Aggregate": 0.53
+            },
+            {
+                "Select": 3.813,
+                "Aggregate": 0.576
+I20220224 02:47:38.006440     1 DirectoryRegister.cpp:44] Created directory '"/tmp/JODA/UDIR_4"'
+I20220224 02:47:38.006466     1 DirectoryRegister.cpp:28] Registered directory '"/tmp/JODA/UDIR_4"'
+            },
+            {
+                "Select": 3.814,
+                "Aggregate": 0.656
+            },
+            {
+                "Select": 4.127,
+                "Aggregate": 0.344
+            },
+            {
+                "Select": 3.734,
+                "Aggregate": 0.831
+            },
+            {
+                "Select": 3.958,
+                "Aggregate": 0.524
+            },
+            {
+                "Select": 4.35,
+                "Aggregate": 0.274
+            },
+            {
+                "Select": 4.053,
+                "Aggregate": 0.573
+            },
+            {
+                "Select": 3.739,
+                "Aggregate": 0.829
+            },
+            {
+                "Select": 4.17,
+                "Aggregate": 0.471
+            },
+            {
+                "Select": 4.169,
+                "Aggregate": 0.485
+            },
+            {
+                "Select": 4.215,
+                "Aggregate": 0.333
+            },
+            {
+                "Select": 3.851,
+                "Aggregate": 0.677
+            },
+            {
+                "Select": 4.048,
+                "Aggregate": 0.626
+            },
+            {
+                "Select": 4.002,
+                "Aggregate": 0.655
+            },
+            {
+                "Select": 3.913,
+                "Aggregate": 0.726
+            },
+            {
+                "Select": 4.028,
+                "Aggregate": 0.676
+            },
+            {
+                "Select": 4.228,
+                "Aggregate": 0.486
+            },
+            {
+                "Select": 4.315,
+                "Aggregate": 0.403
+            },
+            {
+                "Select": 3.991,
+                "Aggregate": 0.602
+            },
+            {
+                "Select": 3.875,
+                "Aggregate": 0.733
+            },
+            {
+                "Select": 4.116,
+                "Aggregate": 0.595
+            },
+            {
+                "Select": 4.106,
+                "Aggregate": 0.657
+            },
+            {
+                "Select": 4.229,
+                "Aggregate": 0.484
+            },
+            {
+                "Select": 4.471,
+                "Aggregate": 0.231
+            },
+            {
+                "Select": 4.594,
+                "Aggregate": 0.225
+            },
+            {
+                "Select": 4.328,
+                "Aggregate": 0.484
+            },
+            {
+                "Select": 4.299,
+                "Aggregate": 0.497
+            },
+            {
+                "Select": 4.202,
+                "Aggregate": 0.601
+            },
+            {
+                "Select": 4.226,
+                "Aggregate": 0.563
+            },
+            {
+                "Select": 4.255,
+                "Aggregate": 0.513
+            },
+            {
+                "Select": 4.298,
+                "Aggregate": 0.462
+            },
+            {
+                "Select": 4.129,
+                "Aggregate": 0.719
+            },
+            {
+                "Select": 4.287,
+                "Aggregate": 0.457
+            },
+            {
+                "Select": 4.233,
+                "Aggregate": 0.518
+            },
+            {
+                "Select": 4.428,
+                "Aggregate": 0.447
+            },
+            {
+                "Select": 4.304,
+                "Aggregate": 0.576
+            },
+            {
+                "Select": 4.181,
+                "Aggregate": 0.623
+            },
+            {
+                "Select": 4.352,
+                "Aggregate": 0.54
+            },
+            {
+                "Select": 4.325,
+                "Aggregate": 0.467
+            },
+            {
+                "Select": 4.266,
+                "Aggregate": 0.488
+            },
+            {
+                "Select": 4.684,
+                "Aggregate": 0.231
+            },
+            {
+                "Select": 4.462,
+                "Aggregate": 0.466
+            },
+            {
+                "Select": 4.299,
+                "Aggregate": 0.595
+            },
+            {
+                "Select": 4.196,
+                "Aggregate": 0.601
+            },
+            {
+                "Select": 4.339,
+                "Aggregate": 0.617
+            },
+            {
+                "Select": 4.552,
+                "Aggregate": 0.402
+            },
+            {
+                "Select": 4.357,
+                "Aggregate": 0.604
+            },
+            {
+                "Select": 4.414,
+                "Aggregate": 0.568
+            },
+            {
+                "Select": 4.34,
+                "Aggregate": 0.658
+            },
+            {
+                "Select": 4.477,
+                "Aggregate": 0.403
+            },
+            {
+                "Select": 4.325,
+                "Aggregate": 0.557
+            },
+            {
+                "Select": 4.265,
+                "Aggregate": 0.745
+            },
+            {
+                "Select": 4.364,
+                "Aggregate": 0.52
+            },
+            {
+                "Select": 4.371,
+                "Aggregate": 0.645
+            },
+            {
+                "Select": 4.249,
+                "Aggregate": 0.614
+            },
+            {
+                "Select": 4.502,
+                "Aggregate": 0.526
+            },
+            {
+                "Select": 4.399,
+                "Aggregate": 0.569
+            },
+            {
+                "Select": 4.312,
+                "Aggregate": 0.661
+            },
+            {
+                "Select": 4.494,
+                "Aggregate": 0.576
+            },
+            {
+                "Select": 4.35,
+                "Aggregate": 0.611
+            },
+            {
+                "Select": 4.45,
+                "Aggregate": 0.638
+            },
+            {
+                "Select": 4.482,
+                "Aggregate": 0.562
+            },
+            {
+                "Select": 4.522,
+                "Aggregate": 0.572
+            },
+            {
+                "Select": 4.593,
+                "Aggregate": 0.52
+            },
+            {
+                "Select": 4.538,
+                "Aggregate": 0.549
+            },
+            {
+                "Select": 4.502,
+                "Aggregate": 0.619
+            },
+            {
+                "Select": 4.604,
+                "Aggregate": 0.531
+            },
+            {
+                "Select": 4.436,
+                "Aggregate": 0.716
+            },
+            {
+                "Select": 4.61,
+                "Aggregate": 0.535
+            },
+            {
+                "Select": 4.477,
+                "Aggregate": 0.671
+            },
+            {
+                "Select": 4.626,
+                "Aggregate": 0.496
+            },
+            {
+                "Select": 4.555,
+                "Aggregate": 0.501
+            },
+            {
+                "Select": 4.468,
+                "Aggregate": 0.721
+            },
+            {
+                "Select": 4.534,
+                "Aggregate": 0.598
+            },
+            {
+                "Select": 4.746,
+                "Aggregate": 0.464
+            },
+            {
+                "Select": 4.599,
+                "Aggregate": 0.646
+            },
+            {
+                "Select": 4.637,
+                "Aggregate": 0.61
+            },
+            {
+                "Select": 4.969,
+                "Aggregate": 0.325
+            }
+        ],
+        "AggMerge": 1.719995096,
+        "Store": 0.0,
+        "Evaluation": 5.313159626,
+        "Query": 5.314286912
+    },
+    "Result Size": 1,
+    "#Container": 1,
+    "RAM Proc": 200029347840,
+    "Pretty RAM Proc": "186.29 GBi",
+    "Estimated Storage Size": 219735746037,
+    "Pretty Estimated Storage Size": "204.64 GBi",
+    "System": {
+        "Version": "0.13.1",
+        "Build": "59b4197",
+        "Build Time": "10:25:46 17-02-2022"
+    }
+}
+----------------
+I20220224 02:47:39.169790     1 QueryPlan.cpp:272] Finished merging aggregators
+W20220224 02:47:39.169924     1 JSONContainer.cpp:31] JSONContainer size not able to autodetect, this should not happen. Fallback size: 52428800
+ResultSize: 1
+
+I20220224 02:47:39.173185     1 CLI.cpp:245] RAM: 1007.79 GBi | Used: 1005.85 GBi | Free: 0% | Proc: 186.30 GBi
+I20220224 02:47:39.173300     1 StorageCollection.cpp:84] Removing result 6
+-----STATISTICS------
+I20220224 02:47:39.173324     1 Timer.cpp:44] [MAIN] Query took 1.16738 s
+{
+    "Query": "LOAD Twitter CHOOSE ((ISSTRING('/user/lang') && (((EXISTS('/retweeted_status/quoted_status/user/screen_name') || (ISOBJECT('/quoted_status/scopes') && MEMCOUNT('/quoted_status/scopes') <= 1)) || EXISTS('/quoted_status/user/profile_banner_url')) || ISSTRING('/retweeted_status/user/profile_sidebar_border_color'))) && ((('/retweeted_status/quoted_status/user/id' >= 745423137079011072.000000 || EXISTS('/retweeted_status/quoted_status/place/full_name')) || EXISTS('/retweeted_status/quoted_status/geo/type')) || SIZE('/extended_entities/media') <= 1)) AGG ('/count':COUNT(''))",
+    "Time": 1645670858,
+    "Pretty Time": "Thu Feb 24 02:47:38 2022\n",
+    "Threads": 95,
+    "Runtime": {
+        "Threads": [
+            {
+                "Select": 0.718,
+                "Aggregate": 0.026
+            },
+            {
+                "Select": 0.796,
+                "Aggregate": 0.029
+            },
+            {
+                "Select": 0.75,
+                "Aggregate": 0.02
+            },
+            {
+                "Select": 0.736,
+                "Aggregate": 0.02
+            },
+            {
+                "Select": 0.746,
+                "Aggregate": 0.019
+            },
+            {
+                "Select": 0.82,
+                "Aggregate": 0.024
+            },
+            {
+                "Select": 0.815,
+                "Aggregate": 0.041
+            },
+            {
+                "Select": 0.816,
+                "Aggregate": 0.021
+            },
+            {
+                "Select": 0.818,
+                "Aggregate": 0.02
+            },
+            {
+                "Select": 0.853,
+                "Aggregate": 0.028
+            },
+            {
+                "Select": 0.765,
+                "Aggregate": 0.022
+            },
+            {
+                "Select": 0.781,
+                "Aggregate": 0.032
+            },
+            {
+                "Select": 0.868,
+                "Aggregate": 0.027
+            },
+            {
+                "Select": 0.869,
+                "Aggregate": 0.024
+            },
+            {
+                "Select": 0.748,
+                "Aggregate": 0.03
+            },
+            {
+                "Select": 0.874,
+                "Aggregate": 0.032
+            },
+            {
+                "Select": 0.876,
+                "Aggregate": 0.031
+            },
+            {
+                "Select": 0.864,
+                "Aggregate": 0.022
+            },
+            {
+                "Select": 0.873,
+                "Aggregate": 0.032
+            },
+            {
+                "Select": 0.897,
+                "Aggregate": 0.026
+            },
+            {
+                "Select": 0.896,
+                "Aggregate": 0.027
+I20220224 02:47:39.174074     1 QueryPlan.cpp:46] Initializing QueryThread
+            },
+            {
+                "Select": 0.899,
+                "Aggregate": 0.026
+            },
+            {
+                "Select": 0.898,
+                "Aggregate": 0.026
+            },
+            {
+                "Select": 0.894,
+                "Aggregate": 0.031
+            },
+            {
+                "Select": 0.869,
+                "Aggregate": 0.026
+            },
+            {
+                "Select": 0.898,
+                "Aggregate": 0.033
+            },
+            {
+                "Select": 0.892,
+                "Aggregate": 0.024
+            },
+            {
+                "Select": 0.916,
+                "Aggregate": 0.024
+            },
+            {
+                "Select": 0.841,
+                "Aggregate": 0.02
+            },
+            {
+                "Select": 0.86,
+I20220224 02:47:39.174366     1 DirectoryRegister.cpp:44] Created directory '"/tmp/JODA/UDIR_5"'
+I20220224 02:47:39.174399     1 DirectoryRegister.cpp:28] Registered directory '"/tmp/JODA/UDIR_5"'
+                "Aggregate": 0.02
+            },
+            {
+                "Select": 0.827,
+                "Aggregate": 0.023
+            },
+            {
+                "Select": 0.868,
+                "Aggregate": 0.023
+            },
+            {
+                "Select": 0.926,
+                "Aggregate": 0.022
+            },
+            {
+                "Select": 0.841,
+                "Aggregate": 0.023
+            },
+            {
+                "Select": 0.807,
+                "Aggregate": 0.031
+            },
+            {
+                "Select": 0.936,
+                "Aggregate": 0.033
+            },
+            {
+                "Select": 0.885,
+                "Aggregate": 0.031
+            },
+            {
+                "Select": 0.934,
+                "Aggregate": 0.041
+            },
+            {
+                "Select": 0.826,
+                "Aggregate": 0.033
+            },
+            {
+                "Select": 0.868,
+                "Aggregate": 0.032
+            },
+            {
+                "Select": 0.953,
+                "Aggregate": 0.041
+            },
+            {
+                "Select": 0.89,
+                "Aggregate": 0.032
+            },
+            {
+                "Select": 0.967,
+                "Aggregate": 0.034
+            },
+            {
+                "Select": 0.967,
+                "Aggregate": 0.034
+            },
+            {
+                "Select": 0.872,
+                "Aggregate": 0.033
+            },
+            {
+                "Select": 0.962,
+                "Aggregate": 0.027
+            },
+            {
+                "Select": 0.967,
+                "Aggregate": 0.04
+            },
+            {
+                "Select": 0.877,
+                "Aggregate": 0.034
+            },
+            {
+                "Select": 0.974,
+                "Aggregate": 0.039
+            },
+            {
+                "Select": 0.986,
+                "Aggregate": 0.032
+            },
+            {
+                "Select": 0.922,
+                "Aggregate": 0.033
+            },
+            {
+                "Select": 0.992,
+                "Aggregate": 0.028
+            },
+            {
+                "Select": 0.957,
+                "Aggregate": 0.035
+            },
+            {
+                "Select": 0.892,
+                "Aggregate": 0.031
+            },
+            {
+                "Select": 0.99,
+                "Aggregate": 0.034
+            },
+            {
+                "Select": 0.993,
+                "Aggregate": 0.036
+            },
+            {
+                "Select": 0.993,
+                "Aggregate": 0.035
+            },
+            {
+                "Select": 0.991,
+                "Aggregate": 0.036
+            },
+            {
+                "Select": 0.899,
+                "Aggregate": 0.033
+            },
+            {
+                "Select": 0.998,
+                "Aggregate": 0.032
+            },
+            {
+                "Select": 0.904,
+                "Aggregate": 0.029
+            },
+            {
+                "Select": 0.996,
+                "Aggregate": 0.037
+            },
+            {
+                "Select": 1.001,
+                "Aggregate": 0.033
+            },
+            {
+                "Select": 0.9,
+                "Aggregate": 0.029
+            },
+            {
+                "Select": 1.003,
+                "Aggregate": 0.033
+            },
+            {
+                "Select": 0.986,
+                "Aggregate": 0.052
+            },
+            {
+                "Select": 1.01,
+                "Aggregate": 0.036
+            },
+            {
+                "Select": 1.016,
+                "Aggregate": 0.032
+            },
+            {
+                "Select": 0.926,
+                "Aggregate": 0.031
+            },
+            {
+                "Select": 1.027,
+                "Aggregate": 0.031
+            },
+            {
+                "Select": 0.904,
+                "Aggregate": 0.033
+            },
+            {
+                "Select": 1.007,
+                "Aggregate": 0.033
+            },
+            {
+                "Select": 1.032,
+                "Aggregate": 0.033
+            },
+            {
+                "Select": 1.007,
+                "Aggregate": 0.034
+            },
+            {
+                "Select": 0.981,
+                "Aggregate": 0.03
+            },
+            {
+                "Select": 0.942,
+                "Aggregate": 0.03
+            },
+            {
+                "Select": 1.043,
+                "Aggregate": 0.036
+            },
+            {
+                "Select": 0.95,
+                "Aggregate": 0.033
+            },
+            {
+                "Select": 1.049,
+                "Aggregate": 0.031
+            },
+            {
+                "Select": 0.93,
+                "Aggregate": 0.031
+            },
+            {
+                "Select": 0.931,
+                "Aggregate": 0.03
+            },
+            {
+                "Select": 0.975,
+                "Aggregate": 0.029
+            },
+            {
+                "Select": 0.939,
+                "Aggregate": 0.03
+            },
+            {
+                "Select": 1.003,
+                "Aggregate": 0.028
+            },
+            {
+                "Select": 1.036,
+                "Aggregate": 0.038
+            },
+            {
+                "Select": 0.953,
+                "Aggregate": 0.031
+            },
+            {
+                "Select": 1.057,
+                "Aggregate": 0.033
+            },
+            {
+                "Select": 0.94,
+                "Aggregate": 0.031
+            },
+            {
+                "Select": 1.063,
+                "Aggregate": 0.036
+            },
+            {
+                "Select": 0.931,
+                "Aggregate": 0.031
+            },
+            {
+                "Select": 1.058,
+                "Aggregate": 0.037
+            },
+            {
+                "Select": 0.993,
+                "Aggregate": 0.032
+            },
+            {
+                "Select": 0.978,
+                "Aggregate": 0.03
+            },
+            {
+                "Select": 1.095,
+                "Aggregate": 0.037
+            },
+            {
+                "Select": 1.009,
+                "Aggregate": 0.032
+            }
+        ],
+        "AggMerge": 0.533249718,
+        "Store": 0.0,
+        "Evaluation": 1.166170683,
+        "Query": 1.167378843
+    },
+    "Result Size": 1,
+    "#Container": 1,
+    "RAM Proc": 200036532224,
+    "Pretty RAM Proc": "186.30 GBi",
+    "Estimated Storage Size": 219735746037,
+    "Pretty Estimated Storage Size": "204.64 GBi",
+    "System": {
+        "Version": "0.13.1",
+        "Build": "59b4197",
+        "Build Time": "10:25:46 17-02-2022"
+    }
+}
+----------------
+I20220224 02:47:39.557468     1 QueryPlan.cpp:272] Finished merging aggregators
+W20220224 02:47:39.557524     1 JSONContainer.cpp:31] JSONContainer size not able to autodetect, this should not happen. Fallback size: 52428800
+ResultSize: 1
+
+I20220224 02:47:39.560724     1 CLI.cpp:245] RAM: 1007.79 GBi | Used: 1005.85 GBi | Free: 0% | Proc: 186.30 GBi
+I20220224 02:47:39.560847     1 StorageCollection.cpp:84] Removing result 7
+-----STATISTICS------
+I20220224 02:47:39.560868     1 Timer.cpp:44] [MAIN] Query took 0.38695 s
+{
+    "Query": "LOAD Twitter CHOOSE (((ISSTRING('/user/lang') && (((EXISTS('/retweeted_status/quoted_status/user/screen_name') || (ISOBJECT('/quoted_status/scopes') && MEMCOUNT('/quoted_status/scopes') <= 1)) || EXISTS('/quoted_status/user/profile_banner_url')) || ISSTRING('/retweeted_status/user/profile_sidebar_border_color'))) && ((('/retweeted_status/quoted_status/user/id' >= 745423137079011072.000000 || EXISTS('/retweeted_status/quoted_status/place/full_name')) || EXISTS('/retweeted_status/quoted_status/geo/type')) || SIZE('/extended_entities/media') <= 1)) && ((('/user/verified' == true || EXISTS('/extended_entities')) && EXISTS('/quoted_status/geo')) || ISSTRING('/user/profile_banner_url'))) AGG ('/count':COUNT(''))",
+    "Time": 1645670859,
+    "Pretty Time": "Thu Feb 24 02:47:39 2022\n",
+    "Threads": 95,
+    "Runtime": {
+        "Threads": [
+            {
+                "Select": 0.235,
+                "Aggregate": 0.022
+            },
+            {
+                "Select": 0.166,
+                "Aggregate": 0.018
+            },
+            {
+                "Select": 0.165,
+                "Aggregate": 0.019
+            },
+            {
+                "Select": 0.23,
+                "Aggregate": 0.031
+            },
+            {
+                "Select": 0.138,
+                "Aggregate": 0.012
+            },
+            {
+                "Select": 0.225,
+                "Aggregate": 0.023
+            },
+            {
+                "Select": 0.239,
+                "Aggregate": 0.023
+            },
+            {
+                "Select": 0.22,
+                "Aggregate": 0.026
+            },
+            {
+                "Select": 0.186,
+                "Aggregate": 0.02
+            },
+            {
+                "Select": 0.233,
+                "Aggregate": 0.033
+            },
+            {
+                "Select": 0.161,
+                "Aggregate": 0.011
+            },
+            {
+                "Select": 0.178,
+                "Aggregate": 0.017
+            },
+            {
+                "Select": 0.13,
+                "Aggregate": 0.015
+            },
+            {
+                "Select": 0.249,
+                "Aggregate": 0.022
+            },
+            {
+                "Select": 0.239,
+                "Aggregate": 0.033
+I20220224 02:47:39.561645     1 QueryPlan.cpp:46] Initializing QueryThread
+            },
+            {
+                "Select": 0.214,
+                "Aggregate": 0.023
+            },
+            {
+                "Select": 0.163,
+                "Aggregate": 0.017
+            },
+            {
+                "Select": 0.244,
+                "Aggregate": 0.025
+            },
+            {
+                "Select": 0.168,
+                "Aggregate": 0.017
+            },
+            {
+                "Select": 0.229,
+                "Aggregate": 0.021
+            },
+            {
+                "Select": 0.219,
+                "Aggregate": 0.025
+            },
+            {
+                "Select": 0.182,
+                "Aggregate": 0.021
+            },
+            {
+I20220224 02:47:39.562002     1 DirectoryRegister.cpp:44] Created directory '"/tmp/JODA/UDIR_6"'
+I20220224 02:47:39.562036     1 DirectoryRegister.cpp:28] Registered directory '"/tmp/JODA/UDIR_6"'
+                "Select": 0.241,
+                "Aggregate": 0.032
+            },
+            {
+                "Select": 0.249,
+                "Aggregate": 0.026
+            },
+            {
+                "Select": 0.237,
+                "Aggregate": 0.035
+            },
+            {
+                "Select": 0.238,
+                "Aggregate": 0.024
+            },
+            {
+                "Select": 0.251,
+                "Aggregate": 0.027
+            },
+            {
+                "Select": 0.251,
+                "Aggregate": 0.031
+            },
+            {
+                "Select": 0.253,
+                "Aggregate": 0.022
+            },
+            {
+                "Select": 0.241,
+                "Aggregate": 0.027
+            },
+            {
+                "Select": 0.232,
+                "Aggregate": 0.031
+            },
+            {
+                "Select": 0.253,
+                "Aggregate": 0.023
+            },
+            {
+                "Select": 0.255,
+                "Aggregate": 0.032
+            },
+            {
+                "Select": 0.26,
+                "Aggregate": 0.03
+            },
+            {
+                "Select": 0.199,
+                "Aggregate": 0.015
+            },
+            {
+                "Select": 0.259,
+                "Aggregate": 0.028
+            },
+            {
+                "Select": 0.264,
+                "Aggregate": 0.026
+            },
+            {
+                "Select": 0.255,
+                "Aggregate": 0.02
+            },
+            {
+                "Select": 0.201,
+                "Aggregate": 0.015
+            },
+            {
+                "Select": 0.189,
+                "Aggregate": 0.015
+            },
+            {
+                "Select": 0.26,
+                "Aggregate": 0.022
+            },
+            {
+                "Select": 0.262,
+                "Aggregate": 0.027
+            },
+            {
+                "Select": 0.265,
+                "Aggregate": 0.027
+            },
+            {
+                "Select": 0.181,
+                "Aggregate": 0.014
+            },
+            {
+                "Select": 0.268,
+                "Aggregate": 0.028
+            },
+            {
+                "Select": 0.182,
+                "Aggregate": 0.014
+            },
+            {
+                "Select": 0.215,
+                "Aggregate": 0.022
+            },
+            {
+                "Select": 0.156,
+                "Aggregate": 0.013
+            },
+            {
+                "Select": 0.273,
+                "Aggregate": 0.03
+            },
+            {
+                "Select": 0.275,
+                "Aggregate": 0.029
+            },
+            {
+                "Select": 0.229,
+                "Aggregate": 0.049
+            },
+            {
+                "Select": 0.249,
+                "Aggregate": 0.028
+            },
+            {
+                "Select": 0.226,
+                "Aggregate": 0.018
+            },
+            {
+                "Select": 0.251,
+                "Aggregate": 0.027
+            },
+            {
+                "Select": 0.207,
+                "Aggregate": 0.025
+            },
+            {
+                "Select": 0.272,
+                "Aggregate": 0.027
+            },
+            {
+                "Select": 0.27,
+                "Aggregate": 0.039
+            },
+            {
+                "Select": 0.241,
+                "Aggregate": 0.025
+            },
+            {
+                "Select": 0.286,
+                "Aggregate": 0.024
+            },
+            {
+                "Select": 0.281,
+                "Aggregate": 0.038
+            },
+            {
+                "Select": 0.247,
+                "Aggregate": 0.025
+            },
+            {
+                "Select": 0.268,
+                "Aggregate": 0.038
+            },
+            {
+                "Select": 0.252,
+                "Aggregate": 0.023
+            },
+            {
+                "Select": 0.219,
+                "Aggregate": 0.026
+            },
+            {
+                "Select": 0.248,
+                "Aggregate": 0.039
+            },
+            {
+                "Select": 0.209,
+                "Aggregate": 0.018
+            },
+            {
+                "Select": 0.245,
+                "Aggregate": 0.026
+            },
+            {
+                "Select": 0.299,
+                "Aggregate": 0.025
+            },
+            {
+                "Select": 0.225,
+                "Aggregate": 0.025
+            },
+            {
+                "Select": 0.301,
+                "Aggregate": 0.027
+            },
+            {
+                "Select": 0.219,
+                "Aggregate": 0.017
+            },
+            {
+                "Select": 0.223,
+                "Aggregate": 0.044
+            },
+            {
+                "Select": 0.294,
+                "Aggregate": 0.038
+            },
+            {
+                "Select": 0.239,
+                "Aggregate": 0.018
+            },
+            {
+                "Select": 0.303,
+                "Aggregate": 0.029
+            },
+            {
+                "Select": 0.245,
+                "Aggregate": 0.041
+            },
+            {
+                "Select": 0.25,
+                "Aggregate": 0.026
+            },
+            {
+                "Select": 0.223,
+                "Aggregate": 0.027
+            },
+            {
+                "Select": 0.285,
+                "Aggregate": 0.027
+            },
+            {
+                "Select": 0.312,
+                "Aggregate": 0.027
+            },
+            {
+                "Select": 0.299,
+                "Aggregate": 0.029
+            },
+            {
+                "Select": 0.232,
+                "Aggregate": 0.023
+            },
+            {
+                "Select": 0.277,
+                "Aggregate": 0.022
+            },
+            {
+                "Select": 0.309,
+                "Aggregate": 0.039
+            },
+            {
+                "Select": 0.23,
+                "Aggregate": 0.018
+            },
+            {
+                "Select": 0.295,
+                "Aggregate": 0.024
+            },
+            {
+                "Select": 0.303,
+                "Aggregate": 0.031
+            },
+            {
+                "Select": 0.313,
+                "Aggregate": 0.038
+            },
+            {
+                "Select": 0.311,
+                "Aggregate": 0.041
+            },
+            {
+                "Select": 0.247,
+                "Aggregate": 0.03
+            },
+            {
+                "Select": 0.29,
+                "Aggregate": 0.028
+            },
+            {
+                "Select": 0.278,
+                "Aggregate": 0.027
+            },
+            {
+                "Select": 0.319,
+                "Aggregate": 0.038
+            },
+            {
+                "Select": 0.32,
+                "Aggregate": 0.039
+            },
+            {
+                "Select": 0.324,
+                "Aggregate": 0.034
+            }
+        ],
+        "AggMerge": 0.191450655,
+        "Store": 0.0,
+        "Evaluation": 0.385796524,
+        "Query": 0.386949511
+    },
+    "Result Size": 1,
+    "#Container": 1,
+    "RAM Proc": 200043241472,
+    "Pretty RAM Proc": "186.30 GBi",
+    "Estimated Storage Size": 219735746037,
+    "Pretty Estimated Storage Size": "204.64 GBi",
+    "System": {
+        "Version": "0.13.1",
+        "Build": "59b4197",
+        "Build Time": "10:25:46 17-02-2022"
+    }
+}
+----------------
+I20220224 02:47:39.824841     1 QueryPlan.cpp:272] Finished merging aggregators
+W20220224 02:47:39.824885     1 JSONContainer.cpp:31] JSONContainer size not able to autodetect, this should not happen. Fallback size: 52428800
+ResultSize: 1
+
+-----STATISTICS------
+I20220224 02:47:39.827587     1 CLI.cpp:245] RAM: 1007.79 GBi | Used: 1005.86 GBi | Free: 0% | Proc: 186.31 GBi
+I20220224 02:47:39.827684     1 StorageCollection.cpp:84] Removing result 8
+I20220224 02:47:39.827697     1 Timer.cpp:44] [MAIN] Query took 0.266205 s
+{
+    "Query": "LOAD Twitter CHOOSE ((((ISSTRING('/user/lang') && (((EXISTS('/retweeted_status/quoted_status/user/screen_name') || (ISOBJECT('/quoted_status/scopes') && MEMCOUNT('/quoted_status/scopes') <= 1)) || EXISTS('/quoted_status/user/profile_banner_url')) || ISSTRING('/retweeted_status/user/profile_sidebar_border_color'))) && ((('/retweeted_status/quoted_status/user/id' >= 745423137079011072.000000 || EXISTS('/retweeted_status/quoted_status/place/full_name')) || EXISTS('/retweeted_status/quoted_status/geo/type')) || SIZE('/extended_entities/media') <= 1)) && ((('/user/verified' == true || EXISTS('/extended_entities')) && EXISTS('/quoted_status/geo')) || ISSTRING('/user/profile_banner_url'))) && STARTSWITH('/retweeted_status/user/profile_background_image_url_https', \"h\")) AGG ('/count':COUNT(''))",
+    "Time": 1645670859,
+    "Pretty Time": "Thu Feb 24 02:47:39 2022\n",
+    "Threads": 95,
+    "Runtime": {
+        "Threads": [
+            {
+                "Select": 0.155,
+                "Aggregate": 0.018
+            },
+            {
+                "Select": 0.153,
+                "Aggregate": 0.02
+            },
+            {
+                "Select": 0.148,
+                "Aggregate": 0.019
+            },
+            {
+                "Select": 0.154,
+                "Aggregate": 0.011
+            },
+            {
+                "Select": 0.161,
+                "Aggregate": 0.018
+            },
+            {
+                "Select": 0.155,
+                "Aggregate": 0.024
+            },
+            {
+                "Select": 0.108,
+                "Aggregate": 0.014
+            },
+            {
+                "Select": 0.159,
+                "Aggregate": 0.024
+            },
+            {
+                "Select": 0.155,
+                "Aggregate": 0.028
+            },
+            {
+                "Select": 0.153,
+                "Aggregate": 0.022
+            },
+            {
+                "Select": 0.161,
+                "Aggregate": 0.02
+            },
+            {
+                "Select": 0.088,
+                "Aggregate": 0.009
+            },
+            {
+                "Select": 0.122,
+                "Aggregate": 0.014
+            },
+            {
+                "Select": 0.114,
+                "Aggregate": 0.014
+            },
+            {
+                "Select": 0.147,
+                "Aggregate": 0.022
+            },
+            {
+                "Select": 0.161,
+                "Aggregate": 0.025
+            },
+            {
+                "Select": 0.161,
+                "Aggregate": 0.024
+            },
+            {
+                "Select": 0.157,
+                "Aggregate": 0.023
+            },
+            {
+                "Select": 0.164,
+                "Aggregate": 0.022
+            },
+            {
+                "Select": 0.161,
+                "Aggregate": 0.025
+            },
+            {
+                "Select": 0.102,
+                "Aggregate": 0.014
+            },
+            {
+                "Select": 0.107,
+                "Aggregate": 0.009
+            },
+            {
+                "Select": 0.159,
+                "Aggregate": 0.022
+            },
+            {
+                "Select": 0.162,
+                "Aggregate": 0.026
+            },
+            {
+                "Select": 0.142,
+                "Aggregate": 0.016
+            },
+            {
+                "Select": 0.16,
+                "Aggregate": 0.021
+            },
+            {
+                "Select": 0.168,
+                "Aggregate": 0.023
+            },
+            {
+                "Select": 0.157,
+                "Aggregate": 0.034
+            },
+            {
+                "Select": 0.168,
+                "Aggregate": 0.023
+            },
+            {
+                "Select": 0.167,
+                "Aggregate": 0.027
+            },
+            {
+                "Select": 0.116,
+                "Aggregate": 0.011
+            },
+            {
+                "Select": 0.172,
+                "Aggregate": 0.02
+            },
+            {
+                "Select": 0.147,
+                "Aggregate": 0.018
+            },
+            {
+                "Select": 0.149,
+                "Aggregate": 0.02
+            },
+            {
+                "Select": 0.174,
+                "Aggregate": 0.026
+            },
+            {
+                "Select": 0.171,
+                "Aggregate": 0.02
+            },
+            {
+                "Select": 0.116,
+                "Aggregate": 0.01
+            },
+            {
+                "Select": 0.14,
+                "Aggregate": 0.012
+            },
+            {
+                "Select": 0.116,
+                "Aggregate": 0.01
+            },
+            {
+                "Select": 0.177,
+                "Aggregate": 0.025
+            },
+            {
+                "Select": 0.177,
+                "Aggregate": 0.025
+            },
+            {
+                "Select": 0.182,
+                "Aggregate": 0.021
+            },
+            {
+                "Select": 0.179,
+                "Aggregate": 0.023
+            },
+            {
+                "Select": 0.165,
+                "Aggregate": 0.023
+            },
+            {
+                "Select": 0.173,
+                "Aggregate": 0.023
+            },
+            {
+                "Select": 0.182,
+                "Aggregate": 0.022
+            },
+            {
+                "Select": 0.182,
+                "Aggregate": 0.022
+            },
+            {
+                "Select": 0.175,
+                "Aggregate": 0.019
+            },
+            {
+                "Select": 0.14,
+                "Aggregate": 0.009
+            },
+            {
+                "Select": 0.169,
+                "Aggregate": 0.02
+            },
+            {
+                "Select": 0.13,
+                "Aggregate": 0.01
+            },
+            {
+                "Select": 0.168,
+                "Aggregate": 0.022
+            },
+            {
+                "Select": 0.164,
+                "Aggregate": 0.021
+            },
+            {
+                "Select": 0.186,
+                "Aggregate": 0.022
+            },
+            {
+                "Select": 0.185,
+                "Aggregate": 0.022
+            },
+            {
+                "Select": 0.143,
+                "Aggregate": 0.01
+            },
+            {
+                "Select": 0.167,
+                "Aggregate": 0.019
+            },
+            {
+                "Select": 0.19,
+                "Aggregate": 0.022
+            },
+            {
+                "Select": 0.137,
+                "Aggregate": 0.009
+            },
+            {
+                "Select": 0.15,
+                "Aggregate": 0.015
+            },
+            {
+                "Select": 0.161,
+                "Aggregate": 0.034
+            },
+            {
+                "Select": 0.192,
+                "Aggregate": 0.023
+            },
+            {
+                "Select": 0.179,
+                "Aggregate": 0.021
+            },
+            {
+                "Select": 0.197,
+                "Aggregate": 0.021
+            },
+            {
+                "Select": 0.195,
+                "Aggregate": 0.021
+            },
+            {
+                "Select": 0.175,
+                "Aggregate": 0.022
+            },
+            {
+                "Select": 0.172,
+                "Aggregate": 0.014
+            },
+            {
+                "Select": 0.196,
+                "Aggregate": 0.024
+            },
+            {
+                "Select": 0.195,
+                "Aggregate": 0.024
+            },
+            {
+                "Select": 0.2,
+                "Aggregate": 0.019
+            },
+            {
+                "Select": 0.135,
+                "Aggregate": 0.014
+            },
+            {
+                "Select": 0.136,
+                "Aggregate": 0.009
+            },
+            {
+                "Select": 0.196,
+                "Aggregate": 0.021
+            },
+            {
+                "Select": 0.172,
+                "Aggregate": 0.02
+            },
+            {
+                "Select": 0.206,
+                "Aggregate": 0.022
+            },
+            {
+                "Select": 0.155,
+                "Aggregate": 0.018
+            },
+            {
+                "Select": 0.209,
+                "Aggregate": 0.022
+            },
+            {
+                "Select": 0.203,
+                "Aggregate": 0.024
+            },
+            {
+                "Select": 0.204,
+                "Aggregate": 0.025
+            },
+            {
+                "Select": 0.213,
+                "Aggregate": 0.02
+            },
+            {
+                "Select": 0.166,
+                "Aggregate": 0.021
+            },
+            {
+                "Select": 0.192,
+                "Aggregate": 0.024
+            },
+            {
+                "Select": 0.2,
+                "Aggregate": 0.022
+            },
+            {
+                "Select": 0.213,
+                "Aggregate": 0.025
+            },
+            {
+                "Select": 0.169,
+                "Aggregate": 0.022
+            },
+            {
+                "Select": 0.213,
+                "Aggregate": 0.025
+            },
+            {
+                "Select": 0.207,
+                "Aggregate": 0.023
+            },
+            {
+                "Select": 0.213,
+                "Aggregate": 0.027
+            },
+            {
+                "Select": 0.143,
+                "Aggregate": 0.017
+            },
+            {
+                "Select": 0.135,
+                "Aggregate": 0.023
+            },
+            {
+                "Select": 0.207,
+                "Aggregate": 0.027
+            },
+            {
+                "Select": 0.175,
+                "Aggregate": 0.021
+            },
+            {
+                "Select": 0.214,
+                "Aggregate": 0.031
+            },
+            {
+                "Select": 0.17,
+                "Aggregate": 0.023
+            },
+            {
+                "Select": 0.218,
+                "Aggregate": 0.027
+            }
+        ],
+        "AggMerge": 0.14312284,
+        "Store": 0.0,
+        "Evaluation": 0.265046547,
+        "Query": 0.26620547
+    },
+    "Result Size": 1,
+    "#Container": 1,
+    "RAM Proc": 200049250304,
+    "Pretty RAM Proc": "186.31 GBi",
+    "Estimated Storage Size": 219735746037,
+    "Pretty Estimated Storage Size": "204.64 GBi",
+    "System": {
+        "Version": "0.13.1",
+        "Build": "59b4197",
+        "Build Time": "10:25:46 17-02-2022"
+    }
+}
+----------------
+I20220224 02:48:00.561884     1 DirectoryRegister.cpp:10] Cleaning up remaining directories
+I20220224 02:48:00.562209     1 DirectoryRegister.cpp:84] Removed directory '/tmp/JODA/UDIR_6'. 1 files and directories deleted.
+I20220224 02:48:00.562278     1 DirectoryRegister.cpp:84] Removed directory '/tmp/JODA/UDIR_5'. 1 files and directories deleted.
+I20220224 02:48:00.562335     1 DirectoryRegister.cpp:84] Removed directory '/tmp/JODA/UDIR_4'. 1 files and directories deleted.
+I20220224 02:48:00.562391     1 DirectoryRegister.cpp:84] Removed directory '/tmp/JODA/UDIR_3'. 1 files and directories deleted.
+I20220224 02:48:00.562448     1 DirectoryRegister.cpp:84] Removed directory '/tmp/JODA/UDIR_2'. 1 files and directories deleted.
+I20220224 02:48:00.562503     1 DirectoryRegister.cpp:84] Removed directory '/tmp/JODA/UDIR_1'. 1 files and directories deleted.

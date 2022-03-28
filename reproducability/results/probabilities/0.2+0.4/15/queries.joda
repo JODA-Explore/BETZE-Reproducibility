@@ -1,0 +1,11 @@
+# Created with Random Explorer Benchmark Generator (version v0.0.1), seed 15 (MinSelectivity: 0.2, MaxSelectivity: 0.9, MaxChain: 3, MaxTries: 100, RandomBrowseProb: 0.2, GoBackProb: 0.4, Weighted-Paths: false, Predicates: [Exists,BoolEquality,IsString,IntEquality,FloatComparison,StrPrefix,ObjectSize,ArraySize])
+LOAD Twitter CHOOSE '/id' >= 859114350579452416.000000 
+LOAD Twitter CHOOSE EXISTS('/retweeted_status/user/profile_background_tile') 
+LOAD Twitter CHOOSE ISSTRING('/retweeted_status/user/description') 
+LOAD Twitter CHOOSE (ISSTRING('/retweeted_status/user/description') && EXISTS('/user/profile_banner_url')) 
+LOAD Twitter CHOOSE ((ISSTRING('/retweeted_status/user/description') && EXISTS('/user/profile_banner_url')) && '/retweeted_status/user/profile_background_tile' == true) 
+LOAD Twitter CHOOSE ISSTRING('/user/description') 
+LOAD Twitter CHOOSE (ISSTRING('/user/description') && EXISTS('/retweeted_status/user/created_at')) 
+LOAD Twitter CHOOSE (ISSTRING('/user/description') && EXISTS('/retweeted_status/user/time_zone')) 
+LOAD Twitter CHOOSE (ISSTRING('/user/description') && (((SIZE('/retweeted_status/quoted_status/coordinates/coordinates') <= 2 || ISSTRING('/quoted_status/place/url')) || ((((STARTSWITH('/place/id',"0") || STARTSWITH('/place/id',"5")) || STARTSWITH('/place/id',"4")) || STARTSWITH('/place/id',"3")) || STARTSWITH('/place/id',"1"))) || ISSTRING('/retweeted_status/user/profile_image_url_https'))) 
+LOAD Twitter CHOOSE ('/id' >= 859114350579452416.000000 && EXISTS('/retweeted_status/user/profile_banner_url')) 

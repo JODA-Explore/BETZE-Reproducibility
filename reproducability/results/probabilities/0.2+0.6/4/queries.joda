@@ -1,0 +1,11 @@
+# Created with Random Explorer Benchmark Generator (version v0.0.1), seed 4 (MinSelectivity: 0.2, MaxSelectivity: 0.9, MaxChain: 3, MaxTries: 100, RandomBrowseProb: 0.2, GoBackProb: 0.6, Weighted-Paths: false, Predicates: [Exists,BoolEquality,IsString,IntEquality,FloatComparison,StrPrefix,ObjectSize,ArraySize])
+LOAD Twitter CHOOSE ((EXISTS('/retweeted_status/quoted_status/display_text_range') || ISSTRING('/retweeted_status/quoted_status/lang')) || ISSTRING('/user/lang')) 
+LOAD Twitter CHOOSE ((EXISTS('/place/attributes') || SIZE('/retweeted_status/place/bounding_box/coordinates') <= 1) || EXISTS('/entities/symbols')) 
+LOAD Twitter CHOOSE ((STARTSWITH('/quoted_status/user/profile_sidebar_fill_color',"F") || STARTSWITH('/quoted_status/user/profile_sidebar_fill_color',"E")) || ISSTRING('/user/profile_sidebar_border_color')) 
+LOAD Twitter CHOOSE EXISTS('/in_reply_to_status_id_str') 
+LOAD Twitter CHOOSE (EXISTS('/retweeted_status/quoted_status/user/profile_text_color') || EXISTS('/in_reply_to_screen_name')) 
+LOAD Twitter CHOOSE '/retweeted_status/user/default_profile_image' == false 
+LOAD Twitter CHOOSE (((EXISTS('/place/attributes') || SIZE('/retweeted_status/place/bounding_box/coordinates') <= 1) || EXISTS('/entities/symbols')) && EXISTS('/retweeted_status/id_str')) 
+LOAD Twitter CHOOSE (((EXISTS('/place/attributes') || SIZE('/retweeted_status/place/bounding_box/coordinates') <= 1) || EXISTS('/entities/symbols')) && ((EXISTS('/retweeted_status/quoted_status/place/bounding_box/coordinates') || EXISTS('/quoted_status/user/lang')) || ISSTRING('/retweeted_status/source'))) 
+LOAD Twitter CHOOSE (((EXISTS('/place/attributes') || SIZE('/retweeted_status/place/bounding_box/coordinates') <= 1) || EXISTS('/entities/symbols')) && EXISTS('/retweeted_status/user/default_profile_image')) 
+LOAD Twitter CHOOSE (((EXISTS('/place/attributes') || SIZE('/retweeted_status/place/bounding_box/coordinates') <= 1) || EXISTS('/entities/symbols')) && ((((STARTSWITH('/retweeted_status/user/profile_background_image_url_https',"https") && STARTSWITH('/retweeted_status/user/profile_background_image_url_https',"http")) || STARTSWITH('/retweeted_status/id_str',"85908")) || EXISTS('/retweeted_status/extended_tweet')) || ISSTRING('/retweeted_status/user/id_str'))) 

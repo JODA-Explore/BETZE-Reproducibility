@@ -1,0 +1,21 @@
+# Created with Random Explorer Benchmark Generator (version v0.0.1), seed 20 (MinSelectivity: 0.2, MaxSelectivity: 0.9, MaxChain: 3, MaxTries: 100, RandomBrowseProb: 0.2, GoBackProb: 0.3, Weighted-Paths: false, Predicates: [Exists,BoolEquality,IsString,IntEquality,FloatComparison,StrPrefix,ObjectSize,ArraySize])
+LOAD Twitter CHOOSE EXISTS('/retweeted_status/entities/symbols') STORE Twitter_1
+LOAD Twitter CHOOSE (EXISTS('/quoted_status/user/following') || EXISTS('/retweeted_status/possibly_sensitive')) STORE Twitter_2
+LOAD Twitter CHOOSE ISSTRING('/filter_level') STORE Twitter_3
+LOAD Twitter_2 CHOOSE ((EXISTS('/retweeted_status/extended_tweet/extended_entities') || EXISTS('/quoted_status/geo/coordinates')) || EXISTS('/retweeted_status/quoted_status/user/followers_count')) STORE Twitter_2_1
+LOAD Twitter_2 CHOOSE EXISTS('/retweeted_status/entities/media') STORE Twitter_2_2
+LOAD Twitter_2_2 CHOOSE '/user/id' >= 666002423810393728.000000 STORE Twitter_2_2_1
+LOAD Twitter_2_2_1 CHOOSE ((STARTSWITH('/quoted_status/user/name',"م") && STARTSWITH('/quoted_status/user/name',"まこ")) || '/retweeted_status/user/id' <= 299244107995981440.000000) STORE Twitter_2_2_1_1
+LOAD Twitter_2_2_1_1 CHOOSE ((((STARTSWITH('/user/lang',"e") || STARTSWITH('/user/lang',"zh")) || STARTSWITH('/user/lang',"z")) || SIZE('/quoted_status/extended_entities/media') <= 1) || '/user/utc_offset' <= 5143.061815) STORE Twitter_2_2_1_1_1
+LOAD Twitter CHOOSE EXISTS('/user/is_translator') STORE Twitter_4
+LOAD Twitter CHOOSE (((STARTSWITH('/retweeted_status/quoted_status/place/country',"E") || STARTSWITH('/retweeted_status/quoted_status/place/country',"I")) || STARTSWITH('/retweeted_status/quoted_status/place/country',"P")) || EXISTS('/retweeted_status/user/profile_sidebar_border_color')) STORE Twitter_5
+LOAD Twitter CHOOSE EXISTS('/retweeted_status/in_reply_to_status_id_str') STORE Twitter_6
+LOAD Twitter_1 CHOOSE ((((((STARTSWITH('/quoted_status/extended_tweet/full_text',"@") || STARTSWITH('/quoted_status/extended_tweet/full_text',"T")) || STARTSWITH('/quoted_status/extended_tweet/full_text',"#")) || STARTSWITH('/quoted_status/extended_tweet/full_text',"S")) || STARTSWITH('/quoted_status/extended_tweet/full_text',"I")) || EXISTS('/quoted_status/geo')) || EXISTS('/retweeted_status/possibly_sensitive')) STORE Twitter_1_1
+LOAD Twitter_1_1 CHOOSE (((EXISTS('/quoted_status/user/profile_text_color') || SIZE('/retweeted_status/quoted_status/extended_tweet/extended_entities/media') <= 1) || ((((STARTSWITH('/quoted_status/place/place_type',"c") || STARTSWITH('/quoted_status/place/place_type',"nei")) || STARTSWITH('/quoted_status/place/place_type',"admin")) || STARTSWITH('/quoted_status/place/place_type',"a")) && STARTSWITH('/quoted_status/place/place_type',"ne"))) || '/user/id' >= 750706925311333120.000000) STORE Twitter_1_1_1
+LOAD Twitter_1_1 CHOOSE STARTSWITH('/retweeted_status/user/profile_background_image_url_https',"https://") STORE Twitter_1_1_2
+LOAD Twitter_1_1 CHOOSE '/user/geo_enabled' == true STORE Twitter_1_1_3
+LOAD Twitter_1_1_3 CHOOSE '/is_quote_status' == false STORE Twitter_1_1_3_1
+LOAD Twitter_1_1_3 CHOOSE '/retweeted_status/user/default_profile' == true STORE Twitter_1_1_3_2
+LOAD Twitter_1_1_3_2 CHOOSE (EXISTS('/retweeted_status/place/id') || EXISTS('/retweeted_status/extended_tweet')) STORE Twitter_1_1_3_2_1
+LOAD Twitter_2_2_1_1_1 CHOOSE '/retweeted_status/user/profile_background_tile' == false STORE Twitter_2_2_1_1_1_1
+LOAD Twitter_2_2_1_1_1 CHOOSE EXISTS('/user/profile_banner_url') STORE Twitter_2_2_1_1_1_2

@@ -1,0 +1,11 @@
+# Created with Random Explorer Benchmark Generator (version v0.0.1), seed 1 (MinSelectivity: 0.2, MaxSelectivity: 0.9, MaxChain: 3, MaxTries: 100, RandomBrowseProb: 0.2, GoBackProb: 0.3, Weighted-Paths: false, Predicates: [Exists,BoolEquality,IsString,IntEquality,FloatComparison,StrPrefix,ObjectSize,ArraySize])
+LOAD Twitter CHOOSE ((EXISTS('/quoted_status/extended_tweet') || EXISTS('/retweeted_status/quoted_status/user/friends_count')) || EXISTS('/retweeted_status/user/verified')) STORE Twitter_1
+LOAD Twitter_1 CHOOSE EXISTS('/extended_entities') STORE Twitter_1_1
+LOAD Twitter CHOOSE EXISTS('/retweeted_status/source') STORE Twitter_2
+LOAD Twitter_2 CHOOSE ((EXISTS('/retweeted_status/quoted_status/extended_tweet/display_text_range') || EXISTS('/retweeted_status/quoted_status/extended_tweet/entities/symbols')) || '/retweeted_status/user/profile_background_tile' == true) STORE Twitter_2_1
+LOAD Twitter_2 CHOOSE EXISTS('/extended_entities') STORE Twitter_2_2
+LOAD Twitter_2_2 CHOOSE '/retweeted_status/user/geo_enabled' == false STORE Twitter_2_2_1
+LOAD Twitter_2_2 CHOOSE ISSTRING('/user/description') STORE Twitter_2_2_2
+LOAD Twitter_2_2_2 CHOOSE STARTSWITH('/retweeted_status/user/profile_background_image_url_https',"http") STORE Twitter_2_2_2_1
+LOAD Twitter_2_2_2_1 CHOOSE (('/quoted_status/favorite_count' == 11 || ((STARTSWITH('/quoted_status/lang',"e") || STARTSWITH('/quoted_status/lang',"j")) || STARTSWITH('/quoted_status/lang',"und"))) || '/retweeted_status/user/default_profile' == false) STORE Twitter_2_2_2_1_1
+LOAD Twitter_1 CHOOSE '/retweeted_status/user/id' <= 249257411003581024.000000 STORE Twitter_1_2

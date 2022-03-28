@@ -1,0 +1,21 @@
+# Created with Random Explorer Benchmark Generator (version v0.0.1), seed 15 (MinSelectivity: 0.2, MaxSelectivity: 0.9, MaxChain: 3, MaxTries: 100, RandomBrowseProb: 0.05, GoBackProb: 0.2, Predicates: [Exists,BoolEquality,IsString,IntEquality,FloatComparison,StrPrefix,ObjectSize,ArraySize])
+LOAD Twitter CHOOSE '/id' >= 859114350579452416.000000 STORE Twitter_1
+LOAD Twitter_1 CHOOSE (((STARTSWITH('/quoted_status/place/country',"I") || STARTSWITH('/quoted_status/place/country',"T")) || ISSTRING('/retweeted_status/coordinates/coordinates')) || EXISTS('/possibly_sensitive')) STORE Twitter_1_1
+LOAD Twitter_1 CHOOSE ISSTRING('/retweeted_status/source') STORE Twitter_1_2
+LOAD Twitter_1 CHOOSE (((ISSTRING('/retweeted_status/quoted_status_id_str') || ISSTRING('/quoted_status/extended_tweet/display_text_range')) || ((((STARTSWITH('/place/country_code',"I") || STARTSWITH('/place/country_code',"P")) || STARTSWITH('/place/country_code',"C")) || STARTSWITH('/place/country_code',"M")) || STARTSWITH('/place/country_code',"B"))) || '/retweeted_status/user/followers_count' <= 71245213.877526) STORE Twitter_1_3
+LOAD Twitter_1_3 CHOOSE (ISSTRING('/extended_tweet/full_text') || '/id' <= 859116203920095360.000000) STORE Twitter_1_3_1
+LOAD Twitter_1_3_1 CHOOSE ((ISSTRING('/retweeted_status/quoted_status/user/protected') || ISSTRING('/retweeted_status/quoted_status/extended_entities')) || ISSTRING('/user/location')) STORE Twitter_1_3_1_1
+LOAD Twitter_1_3_1 CHOOSE '/user/geo_enabled' == false STORE Twitter_1_3_1_2
+LOAD Twitter_1_3_1_2 CHOOSE (EXISTS('/retweeted_status/quoted_status/user/profile_image_url') || SIZE('/entities/media') <= 1) STORE Twitter_1_3_1_2_1
+LOAD Twitter_1_3_1_2_1 CHOOSE ((('/retweeted_status/user/protected' == true || ISSTRING('/user/verified')) || EXISTS('/retweeted_status/quoted_status/user/friends_count')) || ISSTRING('/retweeted_status/user/time_zone')) STORE Twitter_1_3_1_2_1_1
+LOAD Twitter_1_3_1_2_1_1 CHOOSE EXISTS('/quoted_status/id_str') STORE Twitter_1_3_1_2_1_1_1
+LOAD Twitter_1_3_1_2_1_1_1 CHOOSE (EXISTS('/retweeted_status/favorited') && EXISTS('/retweeted_status/extended_tweet/display_text_range')) STORE Twitter_1_3_1_2_1_1_1_1
+LOAD Twitter_1_3_1_2_1_1_1_1 CHOOSE (ISSTRING('/quoted_status/quoted_status_id_str') || '/retweeted_status/quoted_status/user/geo_enabled' == true) STORE Twitter_1_3_1_2_1_1_1_1_1
+LOAD Twitter_1_3_1_2_1_1_1_1 CHOOSE '/retweeted_status/user/profile_use_background_image' == false STORE Twitter_1_3_1_2_1_1_1_1_2
+LOAD Twitter_1_3_1_2_1_1_1_1_2 CHOOSE ISSTRING('/retweeted_status/user/time_zone') STORE Twitter_1_3_1_2_1_1_1_1_2_1
+LOAD Twitter_1_3_1_2_1_1_1_1_2_1 CHOOSE ((EXISTS('/quoted_status/place/bounding_box/coordinates') || EXISTS('/retweeted_status/user/profile_banner_url')) && '/retweeted_status/quoted_status_id' >= 847718360214744320.000000) STORE Twitter_1_3_1_2_1_1_1_1_2_1_1
+LOAD Twitter_1_3_1_2_1_1_1_1_2_1 CHOOSE (EXISTS('/retweeted_status/quoted_status/user/lang') && EXISTS('/quoted_status/display_text_range')) STORE Twitter_1_3_1_2_1_1_1_1_2_1_2
+LOAD Twitter_1_3_1_2_1_1_1_1_2_1_2 CHOOSE ((ISSTRING('/retweeted_status/in_reply_to_status_id_str') || ISSTRING('/retweeted_status/extended_tweet/entities/symbols')) || STARTSWITH('/retweeted_status/quoted_status/id_str',"8591")) STORE Twitter_1_3_1_2_1_1_1_1_2_1_2_1
+LOAD Twitter_1_3_1_2_1_1_1_1_2_1_2_1 CHOOSE SIZE('/retweeted_status/quoted_status/extended_tweet/entities/user_mentions') <= 2 STORE Twitter_1_3_1_2_1_1_1_1_2_1_2_1_1
+LOAD Twitter_1_3_1_2_1_1_1_1_2_1_2_1 CHOOSE ((EXISTS('/retweeted_status/quoted_status/user/profile_image_url') && EXISTS('/retweeted_status/extended_tweet/entities')) && ((STARTSWITH('/retweeted_status/extended_tweet/full_text',"A great wa") || STARTSWITH('/retweeted_status/extended_tweet/full_text',"A great w")) || STARTSWITH('/retweeted_status/extended_tweet/full_text',"#KeikoLaFu"))) STORE Twitter_1_3_1_2_1_1_1_1_2_1_2_1_2
+LOAD Twitter_1_3_1_2_1_1_1_1_2_1_2_1_2 CHOOSE ((ISSTRING('/quoted_status/extended_tweet/entities/urls') || '/id' == 859114782333869872) || '/retweeted_status/quoted_status/user/favourites_count' >= 4612.154136) STORE Twitter_1_3_1_2_1_1_1_1_2_1_2_1_2_1

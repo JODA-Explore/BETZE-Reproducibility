@@ -1,0 +1,21 @@
+# Created with Random Explorer Benchmark Generator (version v0.0.1), seed 23 (MinSelectivity: 0.2, MaxSelectivity: 0.9, MaxChain: 3, MaxTries: 100, RandomBrowseProb: 0.05, GoBackProb: 0.2, Weighted-Paths: false, Predicates: [Exists,BoolEquality,IsString,IntEquality,FloatComparison,StrPrefix,ObjectSize,ArraySize])
+LOAD Twitter CHOOSE EXISTS('/user/verified') STORE Twitter_1
+LOAD Twitter_1 CHOOSE (SIZE('/extended_tweet/entities/media') <= 1 || EXISTS('/retweeted_status/in_reply_to_screen_name')) STORE Twitter_1_1
+LOAD Twitter_1_1 CHOOSE ISSTRING('/retweeted_status/user/url') STORE Twitter_1_1_1
+LOAD Twitter_1_1_1 CHOOSE SIZE('/retweeted_status/entities/media') <= 1 STORE Twitter_1_1_1_1
+LOAD Twitter_1_1_1_1 CHOOSE '/retweeted_status/user/profile_background_tile' == false STORE Twitter_1_1_1_1_1
+LOAD Twitter_1_1 CHOOSE (EXISTS('/retweeted_status/user') && EXISTS('/retweeted_status/possibly_sensitive')) STORE Twitter_1_1_2
+LOAD Twitter_1_1 CHOOSE ((STARTSWITH('/retweeted_status/user/id_str',"8") || '/user/favourites_count' == 716582) || SIZE('/entities/media') <= 1) STORE Twitter_1_1_3
+LOAD Twitter_1_1_3 CHOOSE (((((STARTSWITH('/retweeted_status/extended_tweet/full_text',"H") || STARTSWITH('/retweeted_status/extended_tweet/full_text',"I")) || STARTSWITH('/retweeted_status/extended_tweet/full_text',"L")) || STARTSWITH('/retweeted_status/extended_tweet/full_text',"P")) || STARTSWITH('/retweeted_status/extended_tweet/full_text',"C")) || '/retweeted_status/user/profile_background_tile' == false) STORE Twitter_1_1_3_1
+LOAD Twitter_1_1_3_1 CHOOSE (ISSTRING('/quoted_status/place/place_type') || ISSTRING('/retweeted_status/user/url')) STORE Twitter_1_1_3_1_1
+LOAD Twitter_1_1_3_1 CHOOSE ISSTRING('/user/time_zone') STORE Twitter_1_1_3_1_2
+LOAD Twitter_1_1_3_1_2 CHOOSE ((EXISTS('/retweeted_status/quoted_status/user/listed_count') || ((((STARTSWITH('/retweeted_status/quoted_status/lang',"e") || STARTSWITH('/retweeted_status/quoted_status/lang',"t")) || STARTSWITH('/retweeted_status/quoted_status/lang',"fr")) || STARTSWITH('/retweeted_status/quoted_status/lang',"ar")) || STARTSWITH('/retweeted_status/quoted_status/lang',"ja"))) || '/user/profile_background_tile' == false) STORE Twitter_1_1_3_1_2_1
+LOAD Twitter_1_1_3_1_2 CHOOSE ((EXISTS('/quoted_status/user/profile_image_url_https') || ((((STARTSWITH('/quoted_status/place/full_name',"P") || STARTSWITH('/quoted_status/place/full_name',"T")) || STARTSWITH('/quoted_status/place/full_name',"A")) || STARTSWITH('/quoted_status/place/full_name',"कोलकात")) || STARTSWITH('/quoted_status/place/full_name',"कोल"))) || EXISTS('/retweeted_status/entities/media')) STORE Twitter_1_1_3_1_2_2
+LOAD Twitter_1_1_3_1_2_2 CHOOSE (('/quoted_status/user/statuses_count' == 345742 || ((((STARTSWITH('/retweeted_status/user/profile_text_color',"9") || STARTSWITH('/retweeted_status/user/profile_text_color',"A")) || STARTSWITH('/retweeted_status/user/profile_text_color',"E")) || STARTSWITH('/retweeted_status/user/profile_text_color',"1")) || STARTSWITH('/retweeted_status/user/profile_text_color',"00"))) || '/quoted_status/favorite_count' <= 50591.572512) STORE Twitter_1_1_3_1_2_2_1
+LOAD Twitter_1_1_3_1_2_2 CHOOSE (EXISTS('/quoted_status/user/following') || '/retweeted_status/user/profile_use_background_image' == false) STORE Twitter_1_1_3_1_2_2_2
+LOAD Twitter_1_1_3_1_2_2_2 CHOOSE (EXISTS('/quoted_status/entities') || ISSTRING('/retweeted_status/user/url')) STORE Twitter_1_1_3_1_2_2_2_1
+LOAD Twitter_1_1_3_1_1 CHOOSE ISSTRING('/user/url') STORE Twitter_1_1_3_1_1_1
+LOAD Twitter_1_1_3_1_1_1 CHOOSE EXISTS('/retweeted_status/display_text_range') STORE Twitter_1_1_3_1_1_1_1
+LOAD Twitter_1_1_3_1_1_1_1 CHOOSE ((STARTSWITH('/quoted_status/user/profile_background_image_url',"http://a") && STARTSWITH('/quoted_status/user/profile_background_image_url',"http:")) || '/retweeted_status/user/geo_enabled' == false) STORE Twitter_1_1_3_1_1_1_1_1
+LOAD Twitter_1_1_3_1_1_1_1_1 CHOOSE EXISTS('/entities/media') STORE Twitter_1_1_3_1_1_1_1_1_1
+LOAD Twitter_1_1_3_1_1_1_1_1_1 CHOOSE ((((STARTSWITH('/user/lang',"e") || STARTSWITH('/user/lang',"z")) || STARTSWITH('/user/lang',"p")) || STARTSWITH('/user/lang',"d")) || STARTSWITH('/user/lang',"f")) STORE Twitter_1_1_3_1_1_1_1_1_1_1

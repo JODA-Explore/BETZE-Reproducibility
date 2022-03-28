@@ -1,0 +1,97 @@
+=== Found JODA query file, executing JODA queries ===
+= File:'NoBench.json' =
+0.12.3: Pulling from nicotin/joda
+Digest: sha256:6c0c6b4a19967ae02ef348535acdb3eb8496453a8b868763c34370e10be0192f
+Status: Image is up to date for nicotin/joda:0.12.3
+055e03f00d2cc6b50054940a53792e8879237d37f2bd13a0363bcc8b9ed8db64
+0
+JODA: 0.872344 s
+joda-benchmark
+=== Found MongoDB query file, executing MongoDB queries ===
+= File:'NoBench.json' =
+5.0.3-focal: Pulling from library/mongo
+Digest: sha256:f7c401402aa3e689fc42c7109247ab2d5a3e3b4b8a3ace4c2bf7a5fc74ca4917
+Status: Image is up to date for mongo:5.0.3-focal
+09a4cb0cb8721658bb4cf2dbb2ae148df69cc772a67c8de46c441ca67c3d643d
+2021-11-10T04:11:51.020+0000	connected to: mongodb://localhost/
+2021-11-10T04:11:51.761+0000	10000 document(s) imported successfully. 0 document(s) failed to import.
+mongo-benchmark
+MongoDB: 3.02953 s
+mongo-benchmark
+=== Found Postgres query file, executing Postgres queries ===
+= File:'NoBench.json' =
+13.4-alpine: Pulling from library/postgres
+Digest: sha256:c170270dc9ba94f491375e366fa2cf46d0bc0027e4a69d70e6e9d1454ba748dc
+Status: Image is up to date for postgres:13.4-alpine
+665c067fd5604ad84fa79464783e6af34baf81898bb01444d977203ed5042257
+3
+PSQL: 2.31281 s
+psql-benchmark
+=== Results ===
+= JQ =
+Overall: 
+= JODA =
+Overall: 0.872344
+Query Time: 0.210683
+0.017294518
+0.021547675
+0.023333608
+0.02627787
+0.026240305
+0.025816297
+0.022867485
+0.016688627
+0.015879987
+0.014736811
+= Mongo =
+Overall: 3.02953
+0.042
+0.056
+0.046
+0.047
+0.071
+0.022
+0.064
+0.064
+0.049
+0.042
+Query Time: 0.503
+= PostgreSQL =
+Overall: 2.31281
+=== AGG Results ===
+= JQ =
+
+= JODA =
+10000
+2917
+8011
+2893
+4117
+1283
+4994
+627
+142
+49
+23
+= Mongo =
+2917
+8011
+2893
+4117
+1283
+4994
+627
+142
+49
+23
+= PostgreSQL =
+  2917
+  8011
+  2893
+  4117
+  1283
+  4994
+   627
+   142
+    49
+    23

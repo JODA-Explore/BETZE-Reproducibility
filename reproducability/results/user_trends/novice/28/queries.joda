@@ -1,0 +1,21 @@
+# Created with Random Explorer Benchmark Generator (version v0.0.1), seed 28 (MinSelectivity: 0.2, MaxSelectivity: 0.9, MaxChain: 3, MaxTries: 100, RandomBrowseProb: 0.3, GoBackProb: 0.5, Weighted-Paths: false, Predicates: [Exists,BoolEquality,IsString,IntEquality,FloatComparison,StrPrefix,ObjectSize,ArraySize])
+LOAD Twitter CHOOSE (((ISSTRING('/retweeted_status/quoted_status/place/country') || STARTSWITH('/retweeted_status/quoted_status/in_reply_to_status_id_str',"859")) || (STARTSWITH('/geo/type',"Poi") && STARTSWITH('/geo/type',"Po"))) || EXISTS('/retweeted_status/created_at')) STORE Twitter_1
+LOAD Twitter CHOOSE ((EXISTS('/quoted_status/entities/symbols') || ISSTRING('/user/screen_name')) && ISSTRING('/retweeted_status/user/profile_sidebar_border_color')) STORE Twitter_2
+LOAD Twitter CHOOSE ISSTRING('/retweeted_status/source') STORE Twitter_3
+LOAD Twitter CHOOSE (('/retweeted_status/quoted_status/user/favourites_count' == 162206 || '/user/friends_count' == 456719) || '/truncated' == false) STORE Twitter_4
+LOAD Twitter_4 CHOOSE (EXISTS('/retweeted_status/quoted_status/user/location') || ISSTRING('/retweeted_status/user/lang')) STORE Twitter_4_1
+LOAD Twitter CHOOSE (((STARTSWITH('/retweeted_status/user/profile_image_url',"http://p") && STARTSWITH('/retweeted_status/user/profile_image_url',"http://ab")) || EXISTS('/retweeted_status/scopes/followers')) || EXISTS('/entities/user_mentions')) STORE Twitter_5
+LOAD Twitter CHOOSE ISSTRING('/timestamp_ms') STORE Twitter_6
+LOAD Twitter_6 CHOOSE EXISTS('/retweeted_status/favorited') STORE Twitter_6_1
+LOAD Twitter_6 CHOOSE EXISTS('/retweeted_status/in_reply_to_status_id') STORE Twitter_6_2
+LOAD Twitter_6 CHOOSE (((EXISTS('/retweeted_status/quoted_status/possibly_sensitive') || EXISTS('/quoted_status/user/default_profile')) || '/retweeted_status/quoted_status/user/geo_enabled' == true) || ISSTRING('/retweeted_status/user/time_zone')) STORE Twitter_6_3
+LOAD Twitter_6 CHOOSE (((EXISTS('/retweeted_status/extended_entities') || (STARTSWITH('/retweeted_status/id_str',"859") || STARTSWITH('/retweeted_status/id_str',"8589"))) || EXISTS('/extended_tweet/entities/symbols')) || ISSTRING('/in_reply_to_status_id_str')) STORE Twitter_6_4
+LOAD Twitter_6 CHOOSE ISSTRING('/user/url') STORE Twitter_6_5
+LOAD Twitter_6 CHOOSE (EXISTS('/extended_tweet/extended_entities/media') || ISSTRING('/retweeted_status/lang')) STORE Twitter_6_6
+LOAD Twitter_6 CHOOSE EXISTS('/possibly_sensitive') STORE Twitter_6_7
+LOAD Twitter_6 CHOOSE (((((((STARTSWITH('/retweeted_status/place/name',"S") || STARTSWITH('/retweeted_status/place/name',"C")) || STARTSWITH('/retweeted_status/place/name',"B")) || STARTSWITH('/retweeted_status/place/name',"M")) || STARTSWITH('/retweeted_status/place/name',"A")) || '/quoted_status/scopes/followers' == false) || SIZE('/retweeted_status/entities/media') <= 1) || EXISTS('/quoted_status/in_reply_to_status_id')) STORE Twitter_6_8
+LOAD Twitter_6 CHOOSE ((ISSTRING('/retweeted_status/quoted_status/user/url') || '/user/id' == 589617648651742870) || ISSTRING('/retweeted_status/user/profile_background_image_url')) STORE Twitter_6_9
+LOAD Twitter_6 CHOOSE ISSTRING('/retweeted_status/user/url') STORE Twitter_6_10
+LOAD Twitter_6 CHOOSE ((EXISTS('/retweeted_status/quoted_status/quoted_status_id') || EXISTS('/retweeted_status/place/attributes')) || ISSTRING('/retweeted_status/user/description')) STORE Twitter_6_11
+LOAD Twitter_6 CHOOSE (((ISSTRING('/retweeted_status/quoted_status/extended_tweet/full_text') || '/retweeted_status/quoted_status/favorite_count' == 987130) || EXISTS('/retweeted_status/quoted_status/coordinates/type')) || EXISTS('/retweeted_status/user')) STORE Twitter_6_12
+LOAD Twitter_6 CHOOSE (ISSTRING('/retweeted_status/place/name') || '/possibly_sensitive' == false) STORE Twitter_6_13

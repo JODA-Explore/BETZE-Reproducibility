@@ -1,0 +1,11 @@
+# Created with Random Explorer Benchmark Generator (version v0.0.1), seed 19 (MinSelectivity: 0.2, MaxSelectivity: 0.9, MaxChain: 3, MaxTries: 100, RandomBrowseProb: 0.2, GoBackProb: 0.3, Weighted-Paths: false, Predicates: [Exists,BoolEquality,IsString,IntEquality,FloatComparison,StrPrefix,ObjectSize,ArraySize])
+LOAD Twitter CHOOSE EXISTS('/favorited') STORE Twitter_1
+LOAD Twitter_1 CHOOSE MEMCOUNT('/retweeted_status') <= 24 STORE Twitter_1_1
+LOAD Twitter_1_1 CHOOSE (((ISSTRING('/place/id') || EXISTS('/quoted_status/user/profile_background_tile')) || EXISTS('/quoted_status/user/location')) || '/user/geo_enabled' == false) STORE Twitter_1_1_1
+LOAD Twitter_1_1 CHOOSE (((EXISTS('/retweeted_status/coordinates/coordinates') || SIZE('/quoted_status/coordinates/coordinates') <= 2) || STARTSWITH('/retweeted_status/user/profile_background_image_url_https',"https://pb")) || EXISTS('/retweeted_status/user/profile_link_color')) STORE Twitter_1_1_2
+LOAD Twitter_1_1 CHOOSE ('/quoted_status/user/geo_enabled' == true || EXISTS('/retweeted_status/truncated')) STORE Twitter_1_1_3
+LOAD Twitter_1_1 CHOOSE (EXISTS('/quoted_status_id_str') || EXISTS('/retweeted_status/user/screen_name')) STORE Twitter_1_1_4
+LOAD Twitter_1_1_4 CHOOSE ((EXISTS('/quoted_status/contributors') || ((((STARTSWITH('/retweeted_status/user/profile_link_color',"0") || STARTSWITH('/retweeted_status/user/profile_link_color',"F")) || STARTSWITH('/retweeted_status/user/profile_link_color',"1")) || STARTSWITH('/retweeted_status/user/profile_link_color',"2")) || STARTSWITH('/retweeted_status/user/profile_link_color',"E"))) || ISSTRING('/user/time_zone')) STORE Twitter_1_1_4_1
+LOAD Twitter_1_1_4 CHOOSE ISSTRING('/retweeted_status/user/location') STORE Twitter_1_1_4_2
+LOAD Twitter_1_1_2 CHOOSE ((EXISTS('/retweeted_status') && EXISTS('/retweeted_status/created_at')) && '/retweeted_status/user/profile_background_tile' == false) STORE Twitter_1_1_2_1
+LOAD Twitter_1_1_2 CHOOSE ('/user/is_translator' == true || ISSTRING('/retweeted_status/user/location')) STORE Twitter_1_1_2_2

@@ -1,0 +1,101 @@
+=== Found JODA query file, executing JODA queries ===
+= File:'NoBench.json' =
+0.12.3: Pulling from nicotin/joda
+Digest: sha256:6c0c6b4a19967ae02ef348535acdb3eb8496453a8b868763c34370e10be0192f
+Status: Image is up to date for nicotin/joda:0.12.3
+a10b66d0018491c75f4f7e8b1a5f5e3fa9bf5503c262ac2fdd2973201d9b146c
+0
+JODA: 1.33577 s
+joda-benchmark
+=== Found MongoDB query file, executing MongoDB queries ===
+= File:'NoBench.json' =
+5.0.3-focal: Pulling from library/mongo
+Digest: sha256:f7c401402aa3e689fc42c7109247ab2d5a3e3b4b8a3ace4c2bf7a5fc74ca4917
+Status: Image is up to date for mongo:5.0.3-focal
+81f1f842f8c445d336d96fa89d593bdb36fe2810a4329d5a5730bc41925a3813
+2021-11-08T10:05:13.427+0000	connected to: mongodb://localhost/
+2021-11-08T10:05:16.428+0000	[#######.................] benchmark.NoBench	16.6MB/54.9MB (30.2%)
+2021-11-08T10:05:19.428+0000	[############............] benchmark.NoBench	29.5MB/54.9MB (53.6%)
+2021-11-08T10:05:22.428+0000	[###################.....] benchmark.NoBench	43.5MB/54.9MB (79.2%)
+2021-11-08T10:05:25.082+0000	[########################] benchmark.NoBench	54.9MB/54.9MB (100.0%)
+2021-11-08T10:05:25.082+0000	100000 document(s) imported successfully. 0 document(s) failed to import.
+mongo-benchmark
+MongoDB: 18.0776 s
+mongo-benchmark
+=== Found Postgres query file, executing Postgres queries ===
+= File:'NoBench.json' =
+13.4-alpine: Pulling from library/postgres
+Digest: sha256:c170270dc9ba94f491375e366fa2cf46d0bc0027e4a69d70e6e9d1454ba748dc
+Status: Image is up to date for postgres:13.4-alpine
+32b83c4d77c204aa1fc5e94e6439345e3f4c2e36d905f3e52204c848390447e9
+3
+PSQL: 6.03222 s
+psql-benchmark
+=== Results ===
+= JQ =
+Overall: 
+= JODA =
+Overall: 1.33577
+Query Time: 0.380985
+0.044632013
+0.041002839
+0.045611187
+0.040817971
+0.035674915
+0.027661599
+0.044145087
+0.031543086
+0.032971158
+0.036925356
+= Mongo =
+Overall: 18.0776
+0.346
+0.523
+0.504
+0.388
+0.508
+0.276
+0.519
+0.52
+0.398
+0.347
+Query Time: 4.329
+= PostgreSQL =
+Overall: 6.03222
+=== AGG Results ===
+= JQ =
+
+= JODA =
+100000
+34172
+82443
+82313
+42304
+18711
+6632
+3068
+818
+278
+10
+= Mongo =
+34172
+82443
+82313
+42304
+18711
+6632
+3068
+818
+278
+10
+= PostgreSQL =
+ 34172
+ 82443
+ 82313
+ 42304
+ 18711
+  6632
+  3068
+   818
+   278
+    10

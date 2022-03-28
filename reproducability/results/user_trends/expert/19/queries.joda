@@ -1,0 +1,21 @@
+# Created with Random Explorer Benchmark Generator (version v0.0.1), seed 19 (MinSelectivity: 0.2, MaxSelectivity: 0.9, MaxChain: 3, MaxTries: 100, RandomBrowseProb: 0.05, GoBackProb: 0.2, Predicates: [Exists,BoolEquality,IsString,IntEquality,FloatComparison,StrPrefix,ObjectSize,ArraySize])
+LOAD Twitter CHOOSE EXISTS('/user/time_zone') STORE Twitter_1
+LOAD Twitter_1 CHOOSE EXISTS('/possibly_sensitive') STORE Twitter_1_1
+LOAD Twitter_1_1 CHOOSE (EXISTS('/retweeted_status/quoted_status/id') || ISSTRING('/retweeted_status/user/created_at')) STORE Twitter_1_1_1
+LOAD Twitter_1_1 CHOOSE (((ISSTRING('/place/attributes') || EXISTS('/user/friends_count')) && ISSTRING('/quoted_status/user/verified')) || '/retweeted_status/user/verified' == false) STORE Twitter_1_1_2
+LOAD Twitter_1_1_2 CHOOSE SIZE('/retweeted_status/display_text_range') <= 2 STORE Twitter_1_1_2_1
+LOAD Twitter_1_1_2_1 CHOOSE (EXISTS('/quoted_status/geo') || ((((STARTSWITH('/retweeted_status/lang',"i") || STARTSWITH('/retweeted_status/lang',"t")) || STARTSWITH('/retweeted_status/lang',"h")) || STARTSWITH('/retweeted_status/lang',"u")) || STARTSWITH('/retweeted_status/lang',"f"))) STORE Twitter_1_1_2_1_1
+LOAD Twitter_1_1_2_1_1 CHOOSE (ISSTRING('/quoted_status/place/url') || ISSTRING('/retweeted_status/quoted_status/filter_level')) STORE Twitter_1_1_2_1_1_1
+LOAD Twitter_1_1_2_1_1_1 CHOOSE ISSTRING('/retweeted_status/quoted_status/user/location') STORE Twitter_1_1_2_1_1_1_1
+LOAD Twitter_1_1_2_1_1_1_1 CHOOSE '/retweeted_status/quoted_status/user/profile_background_tile' == true STORE Twitter_1_1_2_1_1_1_1_1
+LOAD Twitter_1_1_2_1_1_1_1_1 CHOOSE ((MEMCOUNT('/retweeted_status') <= 29 && EXISTS('/retweeted_status/quoted_status/lang')) && SIZE('/quoted_status/entities/media') <= 1) STORE Twitter_1_1_2_1_1_1_1_1_1
+LOAD Twitter_1_1_2_1_1_1_1_1_1 CHOOSE (EXISTS('/entities') && '/user/geo_enabled' == false) STORE Twitter_1_1_2_1_1_1_1_1_1_1
+LOAD Twitter_1_1_2_1_1_1_1_1_1_1 CHOOSE '/quoted_status/user/utc_offset' <= -1049.433530 STORE Twitter_1_1_2_1_1_1_1_1_1_1_1
+LOAD Twitter_1_1_2_1_1_1_1_1_1_1_1 CHOOSE ((EXISTS('/quoted_status/extended_entities') && EXISTS('/retweeted_status/user/profile_image_url')) && '/quoted_status/user/verified' == false) STORE Twitter_1_1_2_1_1_1_1_1_1_1_1_1
+LOAD Twitter_1_1_2_1_1_1_1_1_1_1_1 CHOOSE (EXISTS('/in_reply_to_screen_name') && '/quoted_status/user/verified' == true) STORE Twitter_1_1_2_1_1_1_1_1_1_1_1_2
+LOAD Twitter_1_1_2_1_1_1_1_1_1_1_1 CHOOSE (EXISTS('/quoted_status/entities/media') && STARTSWITH('/retweeted_status/created_at',"Mon ")) STORE Twitter_1_1_2_1_1_1_1_1_1_1_1_3
+LOAD Twitter_1_1_2_1_1_1_1_1_1_1_1_3 CHOOSE (((ISSTRING('/retweeted_status/quoted_status_id') || EXISTS('/possibly_sensitive')) && ISSTRING('/retweeted_status/quoted_status/extended_entities')) || ISSTRING('/retweeted_status/quoted_status/user/url')) STORE Twitter_1_1_2_1_1_1_1_1_1_1_1_3_1
+LOAD Twitter_1_1_2_1_1_1_1_1_1_1_1_3_1 CHOOSE (STARTSWITH('/user/profile_sidebar_fill_color',"D") || STARTSWITH('/user/profile_sidebar_fill_color',"252429")) STORE Twitter_1_1_2_1_1_1_1_1_1_1_1_3_1_1
+LOAD Twitter_1_1_2_1_1_1_1_1_1_1_1_3_1_1 CHOOSE (EXISTS('/quoted_status/coordinates') && ((((STARTSWITH('/retweeted_status/quoted_status/user/time_zone',"M") || STARTSWITH('/retweeted_status/quoted_status/user/time_zone',"B")) || STARTSWITH('/retweeted_status/quoted_status/user/time_zone',"A")) || STARTSWITH('/retweeted_status/quoted_status/user/time_zone',"East")) || STARTSWITH('/retweeted_status/quoted_status/user/time_zone',"Centr"))) STORE Twitter_1_1_2_1_1_1_1_1_1_1_1_3_1_1_1
+LOAD Twitter_1_1_2_1_1_1_1_1_1_1_1_3_1_1_1 CHOOSE ((('/retweeted_status/quoted_status/user/profile_background_tile' == true && ISSTRING('/user/contributors_enabled')) || ISSTRING('/retweeted_status/quoted_status_id_str')) && ISSTRING('/retweeted_status/user/location')) STORE Twitter_1_1_2_1_1_1_1_1_1_1_1_3_1_1_1_1
+LOAD Twitter_1_1_2_1_1_1_1_1_1_1_1_3_1_1_1_1 CHOOSE ISSTRING('/user/location') STORE Twitter_1_1_2_1_1_1_1_1_1_1_1_3_1_1_1_1_1

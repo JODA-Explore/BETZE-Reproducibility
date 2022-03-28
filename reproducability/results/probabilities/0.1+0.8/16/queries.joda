@@ -1,0 +1,11 @@
+# Created with Random Explorer Benchmark Generator (version v0.0.1), seed 16 (MinSelectivity: 0.2, MaxSelectivity: 0.9, MaxChain: 3, MaxTries: 100, RandomBrowseProb: 0.1, GoBackProb: 0.8, Weighted-Paths: false, Predicates: [Exists,BoolEquality,IsString,IntEquality,FloatComparison,StrPrefix,ObjectSize,ArraySize])
+LOAD Twitter CHOOSE EXISTS('/retweeted_status/entities/user_mentions') 
+LOAD Twitter CHOOSE EXISTS('/retweeted_status/user/description') 
+LOAD Twitter CHOOSE ISSTRING('/retweeted_status/user/screen_name') 
+LOAD Twitter CHOOSE EXISTS('/retweeted_status/user/screen_name') 
+LOAD Twitter CHOOSE EXISTS('/retweeted_status/entities/symbols') 
+LOAD Twitter CHOOSE '/retweeted_status/favorited' == false 
+LOAD Twitter CHOOSE (((ISSTRING('/in_reply_to_status_id_str') || EXISTS('/user')) && ISSTRING('/quoted_status/source')) || EXISTS('/retweeted_status/user/description')) 
+LOAD Twitter CHOOSE '/retweeted_status/user/is_translator' == false 
+LOAD Twitter CHOOSE (((EXISTS('/retweeted_status/quoted_status/place/full_name') || '/retweeted_status/user/favourites_count' == 975822) || ISSTRING('/retweeted_status/quoted_status/place/country')) || EXISTS('/filter_level')) 
+LOAD Twitter CHOOSE ISSTRING('/user/id_str') 

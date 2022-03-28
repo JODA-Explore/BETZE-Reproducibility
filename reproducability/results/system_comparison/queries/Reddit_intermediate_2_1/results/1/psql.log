@@ -1,0 +1,20 @@
+2022-02-26 13:00:24.170 UTC [566] LOG:  statement: SELECT doc #> '{author_flair_css_class}' as group, COUNT(*) FROM Reddit  WHERE jsonb_path_exists(doc,'$.author_flair_text.type() ? (@ == "string")')  GROUP BY doc #> '{author_flair_css_class}';
+2022-02-26 13:00:24.174 UTC [566] LOG:  duration: 3.689 ms
+2022-02-26 13:00:24.174 UTC [566] LOG:  statement: SELECT doc #> '{subreddit_id}' as group, COUNT(*) FROM Reddit  WHERE jsonb_path_exists(doc,'$.author_flair_text.type() ? (@ == "string")')  GROUP BY doc #> '{subreddit_id}';
+2022-02-26 13:00:24.174 UTC [566] LOG:  duration: 0.302 ms
+2022-02-26 13:00:24.174 UTC [566] LOG:  statement: SELECT doc #> '{subreddit_id}' as group, COUNT(doc #> '{retrieved_on}') FROM Reddit  WHERE ( ( ( jsonb_path_exists(doc,'$.ups ? (@ >= -2568.142387)') AND jsonb_path_exists(doc,'$.retrieved_on ? (@ == 1426815198)') ) OR jsonb_path_exists(doc,'$.score_hidden ? (@ == false)') ) AND jsonb_path_exists(doc,'$.parent_id ? (@ starts with "t1_")') )  GROUP BY doc #> '{subreddit_id}';
+2022-02-26 13:00:24.175 UTC [566] LOG:  duration: 0.686 ms
+2022-02-26 13:00:24.175 UTC [566] LOG:  statement: SELECT doc #> '{subreddit_id}' as group, COUNT(doc #> '{controversiality}') FROM Reddit  WHERE jsonb_path_exists(doc,'$.gilded ? (@ <= 9.694694)')  GROUP BY doc #> '{subreddit_id}';
+2022-02-26 13:00:24.176 UTC [566] LOG:  duration: 0.307 ms
+2022-02-26 13:00:24.176 UTC [566] LOG:  statement: SELECT doc #> '{id}' as group, COUNT(doc #> '{subreddit_id}') FROM Reddit  WHERE ( jsonb_path_exists(doc,'$.retrieved_on ? (@ == 1426747845)') OR jsonb_path_exists(doc,'$.author_flair_text.type() ? (@ == "string")') )  GROUP BY doc #> '{id}';
+2022-02-26 13:00:24.176 UTC [566] LOG:  duration: 0.335 ms
+2022-02-26 13:00:24.176 UTC [566] LOG:  statement: SELECT doc #> '{author_flair_css_class}' as group, COUNT(*) FROM Reddit  WHERE jsonb_path_exists(doc,'$.author_flair_text.type() ? (@ == "string")')  GROUP BY doc #> '{author_flair_css_class}';
+2022-02-26 13:00:24.177 UTC [566] LOG:  duration: 0.298 ms
+2022-02-26 13:00:24.177 UTC [566] LOG:  statement: SELECT doc #> '{score}' as group, COUNT(*) FROM Reddit  WHERE jsonb_path_exists(doc,'$.gilded ? (@ <= 10.911910)')  GROUP BY doc #> '{score}';
+2022-02-26 13:00:24.177 UTC [566] LOG:  duration: 0.276 ms
+2022-02-26 13:00:24.177 UTC [566] LOG:  statement: SELECT doc #> '{body}' as group, COUNT(*) FROM Reddit  WHERE ( ( ( jsonb_path_exists(doc,'$.retrieved_on ? (@ == 1426067628)') OR jsonb_path_exists(doc,'$.score_hidden ? (@ == false)') ) AND ( ( ( ( jsonb_path_exists(doc,'$.author_flair_css_class ? (@ starts with "S")') OR jsonb_path_exists(doc,'$.author_flair_css_class ? (@ starts with "A")') ) OR jsonb_path_exists(doc,'$.author_flair_css_class ? (@ starts with "z")') ) OR jsonb_path_exists(doc,'$.author_flair_css_class ? (@ starts with "C")') ) OR jsonb_path_exists(doc,'$.author_flair_css_class ? (@ starts with "O")') ) ) OR jsonb_path_exists(doc,'$.parent_id ? (@ starts with "t1_")') )  GROUP BY doc #> '{body}';
+2022-02-26 13:00:24.178 UTC [566] LOG:  duration: 0.549 ms
+2022-02-26 13:00:24.178 UTC [566] LOG:  statement: SELECT doc #> '{author_flair_css_class}' as group, COUNT(doc #> '{link_id}') FROM Reddit  WHERE jsonb_path_exists(doc,'$.author_flair_text.type() ? (@ == "string")')  GROUP BY doc #> '{author_flair_css_class}';
+2022-02-26 13:00:24.178 UTC [566] LOG:  duration: 0.278 ms
+2022-02-26 13:00:24.179 UTC [566] LOG:  statement: SELECT doc #> '{body}' as group, COUNT(*) FROM Reddit  WHERE ( ( ( ( ( ( jsonb_path_exists(doc,'$.author_flair_css_class ? (@ starts with "S")') OR jsonb_path_exists(doc,'$.author_flair_css_class ? (@ starts with "A")') ) OR jsonb_path_exists(doc,'$.author_flair_css_class ? (@ starts with "z")') ) OR jsonb_path_exists(doc,'$.author_flair_css_class ? (@ starts with "C")') ) OR jsonb_path_exists(doc,'$.author_flair_css_class ? (@ starts with "O")') ) OR jsonb_path_exists(doc,'$.edited ? (@ >= 1427185962.264386)') ) OR jsonb_path_exists(doc,'$.author_flair_text.type() ? (@ == "string")') )  GROUP BY doc #> '{body}';
+2022-02-26 13:00:24.179 UTC [566] LOG:  duration: 0.437 ms

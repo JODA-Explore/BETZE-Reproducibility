@@ -1,0 +1,50 @@
+=== Found JODA query file, executing JODA queries ===
+= File:'Twitter.json' =
+0.12.4: Pulling from nicotin/joda
+Digest: sha256:b253680f2c5ee1118e2c282e0c4ebff5cb6e87643fb98abcf1e686caaa35152a
+Status: Image is up to date for nicotin/joda:0.12.4
+f8ba5cdcffcae15593815bc1b690d3c5b0b0b2941e95c94ae5cbe0f7e1506823
+0
+JODA: 87.9199 s
+joda-benchmark
+=== Results ===
+= JQ =
+Overall: 
+= JODA =
+Overall: 87.9199
+Query Time: 19.2507
+5.413051276
+3.975729826
+1.928317173
+1.098495849
+1.08465861
+1.256514097
+1.864469621
+0.951466635
+0.749631047
+0.928406414
+= Mongo =
+Overall: 
+
+Query Time: 
+= PostgreSQL =
+Overall: 
+=== AGG Results ===
+= JQ =
+
+= JODA =
+13346336
+10691615
+11361303
+8706582
+3088276
+2868722
+5073309
+2969135
+5073309
+5073309
+5073309
+= Mongo =
+
+= PostgreSQL =
+

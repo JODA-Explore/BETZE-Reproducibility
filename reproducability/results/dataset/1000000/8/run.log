@@ -1,0 +1,136 @@
+=== Found JODA query file, executing JODA queries ===
+= File:'NoBench.json' =
+0.12.3: Pulling from nicotin/joda
+Digest: sha256:6c0c6b4a19967ae02ef348535acdb3eb8496453a8b868763c34370e10be0192f
+Status: Image is up to date for nicotin/joda:0.12.3
+23a130b7794842012f7375f85c6b142224cd9955cfef6c0f527be81bf00acdb4
+0
+JODA: 6.32881 s
+joda-benchmark
+=== Found MongoDB query file, executing MongoDB queries ===
+= File:'NoBench.json' =
+5.0.3-focal: Pulling from library/mongo
+Digest: sha256:f7c401402aa3e689fc42c7109247ab2d5a3e3b4b8a3ace4c2bf7a5fc74ca4917
+Status: Image is up to date for mongo:5.0.3-focal
+63e61c26ea258a77b2ac784206c77a5e4537ff7617bd31af708e19ae16ba7a7f
+2021-11-09T08:46:40.391+0000	connected to: mongodb://localhost/
+2021-11-09T08:46:43.391+0000	[........................] benchmark.NoBench	17.5MB/574MB (3.1%)
+2021-11-09T08:46:46.392+0000	[#.......................] benchmark.NoBench	32.3MB/574MB (5.6%)
+2021-11-09T08:46:49.392+0000	[#.......................] benchmark.NoBench	46.6MB/574MB (8.1%)
+2021-11-09T08:46:52.397+0000	[##......................] benchmark.NoBench	60.0MB/574MB (10.5%)
+2021-11-09T08:46:55.391+0000	[###.....................] benchmark.NoBench	73.6MB/574MB (12.8%)
+2021-11-09T08:46:58.391+0000	[###.....................] benchmark.NoBench	88.5MB/574MB (15.4%)
+2021-11-09T08:47:01.391+0000	[####....................] benchmark.NoBench	103MB/574MB (17.9%)
+2021-11-09T08:47:04.396+0000	[####....................] benchmark.NoBench	117MB/574MB (20.4%)
+2021-11-09T08:47:07.395+0000	[#####...................] benchmark.NoBench	132MB/574MB (23.0%)
+2021-11-09T08:47:10.391+0000	[######..................] benchmark.NoBench	146MB/574MB (25.5%)
+2021-11-09T08:47:13.391+0000	[######..................] benchmark.NoBench	161MB/574MB (28.0%)
+2021-11-09T08:47:16.391+0000	[#######.................] benchmark.NoBench	175MB/574MB (30.4%)
+2021-11-09T08:47:19.391+0000	[#######.................] benchmark.NoBench	190MB/574MB (33.0%)
+2021-11-09T08:47:22.393+0000	[########................] benchmark.NoBench	204MB/574MB (35.5%)
+2021-11-09T08:47:25.391+0000	[#########...............] benchmark.NoBench	217MB/574MB (37.8%)
+2021-11-09T08:47:28.393+0000	[#########...............] benchmark.NoBench	231MB/574MB (40.3%)
+2021-11-09T08:47:31.392+0000	[##########..............] benchmark.NoBench	248MB/574MB (43.2%)
+2021-11-09T08:47:34.391+0000	[##########..............] benchmark.NoBench	262MB/574MB (45.8%)
+2021-11-09T08:47:37.391+0000	[###########.............] benchmark.NoBench	277MB/574MB (48.3%)
+2021-11-09T08:47:40.391+0000	[############............] benchmark.NoBench	291MB/574MB (50.8%)
+2021-11-09T08:47:43.391+0000	[############............] benchmark.NoBench	308MB/574MB (53.7%)
+2021-11-09T08:47:46.391+0000	[#############...........] benchmark.NoBench	322MB/574MB (56.2%)
+2021-11-09T08:47:49.395+0000	[##############..........] benchmark.NoBench	336MB/574MB (58.6%)
+2021-11-09T08:47:52.391+0000	[##############..........] benchmark.NoBench	352MB/574MB (61.3%)
+2021-11-09T08:47:55.392+0000	[###############.........] benchmark.NoBench	366MB/574MB (63.9%)
+2021-11-09T08:47:58.392+0000	[###############.........] benchmark.NoBench	381MB/574MB (66.5%)
+2021-11-09T08:48:01.392+0000	[################........] benchmark.NoBench	396MB/574MB (69.1%)
+2021-11-09T08:48:04.391+0000	[#################.......] benchmark.NoBench	410MB/574MB (71.6%)
+2021-11-09T08:48:07.392+0000	[#################.......] benchmark.NoBench	425MB/574MB (74.1%)
+2021-11-09T08:48:10.391+0000	[##################......] benchmark.NoBench	438MB/574MB (76.4%)
+2021-11-09T08:48:13.391+0000	[##################......] benchmark.NoBench	453MB/574MB (79.0%)
+2021-11-09T08:48:16.391+0000	[###################.....] benchmark.NoBench	469MB/574MB (81.8%)
+2021-11-09T08:48:19.391+0000	[####################....] benchmark.NoBench	484MB/574MB (84.3%)
+2021-11-09T08:48:22.392+0000	[####################....] benchmark.NoBench	499MB/574MB (86.9%)
+2021-11-09T08:48:25.391+0000	[#####################...] benchmark.NoBench	515MB/574MB (89.7%)
+2021-11-09T08:48:28.395+0000	[######################..] benchmark.NoBench	529MB/574MB (92.2%)
+2021-11-09T08:48:31.392+0000	[######################..] benchmark.NoBench	544MB/574MB (94.9%)
+2021-11-09T08:48:34.392+0000	[#######################.] benchmark.NoBench	559MB/574MB (97.4%)
+2021-11-09T08:48:37.230+0000	[########################] benchmark.NoBench	574MB/574MB (100.0%)
+2021-11-09T08:48:37.230+0000	1000000 document(s) imported successfully. 0 document(s) failed to import.
+mongo-benchmark
+MongoDB: 162.843 s
+mongo-benchmark
+=== Found Postgres query file, executing Postgres queries ===
+= File:'NoBench.json' =
+13.4-alpine: Pulling from library/postgres
+Digest: sha256:c170270dc9ba94f491375e366fa2cf46d0bc0027e4a69d70e6e9d1454ba748dc
+Status: Image is up to date for postgres:13.4-alpine
+51bcbd8b329c36c96b9b1c88481743100f3c893294fb9e6bd713978a260e98ae
+3
+PSQL: 40.7961 s
+psql-benchmark
+=== Results ===
+= JQ =
+Overall: 
+= JODA =
+Overall: 6.32881
+Query Time: 2.75139
+0.23806955
+0.191722881
+0.260688143
+0.238793401
+0.281768311
+0.174350251
+0.357797365
+0.332983395
+0.340099374
+0.335118301
+= Mongo =
+Overall: 162.843
+2.783
+4.325
+5.699
+4.326
+5.371
+2.993
+5.395
+5.286
+4.471
+3.494
+Query Time: 44.143
+= PostgreSQL =
+Overall: 40.7961
+=== AGG Results ===
+= JQ =
+
+= JODA =
+1000000
+346717
+745481
+739140
+383933
+155590
+22994
+49322
+11758
+4034
+111
+= Mongo =
+346717
+745481
+739140
+383933
+155590
+22994
+49322
+11758
+4034
+111
+= PostgreSQL =
+ 346717
+ 745481
+ 739140
+ 383933
+ 155590
+ 22994
+ 49322
+ 11758
+  4034
+   111

@@ -1,0 +1,21 @@
+# Created with Random Explorer Benchmark Generator (version v0.0.1), seed 14 (MinSelectivity: 0.2, MaxSelectivity: 0.9, MaxChain: 3, MaxTries: 100, RandomBrowseProb: 0.3, GoBackProb: 0.5, Predicates: [Exists,BoolEquality,IsString,IntEquality,FloatComparison,StrPrefix,ObjectSize,ArraySize])
+LOAD Twitter CHOOSE ((ISSTRING('/extended_tweet') || EXISTS('/retweeted_status/quoted_status/place/country_code')) || EXISTS('/retweeted_status/user/lang')) STORE Twitter_1
+LOAD Twitter CHOOSE EXISTS('/possibly_sensitive') STORE Twitter_2
+LOAD Twitter CHOOSE EXISTS('/user/friends_count') STORE Twitter_3
+LOAD Twitter_3 CHOOSE (ISSTRING('/retweeted_status/quoted_status/user/profile_background_color') || EXISTS('/extended_entities')) STORE Twitter_3_1
+LOAD Twitter_3_1 CHOOSE (MEMCOUNT('/retweeted_status/extended_entities') >= 1 || ISSTRING('/retweeted_status/lang')) STORE Twitter_3_1_1
+LOAD Twitter_3_1_1 CHOOSE (((EXISTS('/retweeted_status/quoted_status/user/profile_background_image_url_https') || (STARTSWITH('/user/profile_sidebar_fill_color',"F") || STARTSWITH('/user/profile_sidebar_fill_color',"E"))) || STARTSWITH('/retweeted_status/quoted_status/id_str',"85")) || ISSTRING('/retweeted_status/in_reply_to_user_id_str')) STORE Twitter_3_1_1_1
+LOAD Twitter_2 CHOOSE EXISTS('/retweeted_status/user/location') STORE Twitter_2_1
+LOAD Twitter_2 CHOOSE (((EXISTS('/user/friends_count') && MEMCOUNT('/quoted_status/geo') >= 2) || EXISTS('/quoted_status/extended_entities/media')) || EXISTS('/retweeted_status/user/url')) STORE Twitter_2_2
+LOAD Twitter_2_2 CHOOSE (((EXISTS('/retweeted_status/quoted_status/place/country') || EXISTS('/retweeted_status/quoted_status/user/profile_background_tile')) || SIZE('/retweeted_status/entities/media') >= 1) || '/quoted_status_id' <= 131692012792539168.000000) STORE Twitter_2_2_1
+LOAD Twitter_3 CHOOSE EXISTS('/retweeted_status/source') STORE Twitter_3_2
+LOAD Twitter_3 CHOOSE (ISSTRING('/in_reply_to_user_id_str') || '/user/default_profile' == true) STORE Twitter_3_3
+LOAD Twitter_3 CHOOSE ((ISSTRING('/retweeted_status/quoted_status/user/profile_sidebar_fill_color') || EXISTS('/place')) && ISSTRING('/retweeted_status/user/profile_link_color')) STORE Twitter_3_4
+LOAD Twitter_3_1_1_1 CHOOSE ISSTRING('/retweeted_status/quoted_status/user/id_str') STORE Twitter_3_1_1_1_1
+LOAD Twitter_3_1_1_1 CHOOSE EXISTS('/retweeted_status/quoted_status/truncated') STORE Twitter_3_1_1_1_2
+LOAD Twitter_3_1_1_1 CHOOSE ISSTRING('/retweeted_status/quoted_status/user/profile_image_url') STORE Twitter_3_1_1_1_3
+LOAD Twitter_3_1_1_1 CHOOSE (EXISTS('/retweeted_status/geo/type') || EXISTS('/retweeted_status/quoted_status/entities/user_mentions')) STORE Twitter_3_1_1_1_4
+LOAD Twitter_3_1_1_1 CHOOSE ((EXISTS('/retweeted_status/extended_tweet/extended_entities/media') || ISSTRING('/quoted_status/coordinates')) || EXISTS('/quoted_status/user/favourites_count')) STORE Twitter_3_1_1_1_5
+LOAD Twitter_3_1_1_1 CHOOSE ISSTRING('/retweeted_status/quoted_status/user/location') STORE Twitter_3_1_1_1_6
+LOAD Twitter_3_1_1_1 CHOOSE (EXISTS('/retweeted_status/quoted_status/geo/coordinates') || '/retweeted_status/user/profile_use_background_image' == true) STORE Twitter_3_1_1_1_7
+LOAD Twitter_3_3 CHOOSE (ISSTRING('/retweeted_status/quoted_status/extended_tweet/extended_entities') || ISSTRING('/retweeted_status/source')) STORE Twitter_3_3_1

@@ -1,0 +1,11 @@
+# Created with Random Explorer Benchmark Generator (version v0.0.1), seed 13 (MinSelectivity: 0.2, MaxSelectivity: 0.9, MaxChain: 3, MaxTries: 100, RandomBrowseProb: 0.2, GoBackProb: 0.3, Weighted-Paths: false, Predicates: [Exists,BoolEquality,IsString,IntEquality,FloatComparison,StrPrefix,ObjectSize,ArraySize])
+LOAD Twitter CHOOSE ('/quoted_status/user/default_profile' == false || ISSTRING('/timestamp_ms')) STORE Twitter_1
+LOAD Twitter_1 CHOOSE (((STARTSWITH('/user/profile_link_color',"0") || STARTSWITH('/user/profile_link_color',"F")) || STARTSWITH('/user/profile_link_color',"1")) || EXISTS('/retweeted_status/created_at')) STORE Twitter_1_1
+LOAD Twitter_1_1 CHOOSE ISSTRING('/user/description') STORE Twitter_1_1_1
+LOAD Twitter_1_1_1 CHOOSE ISSTRING('/retweeted_status/user/url') STORE Twitter_1_1_1_1
+LOAD Twitter_1_1_1 CHOOSE EXISTS('/retweeted_status/user/followers_count') STORE Twitter_1_1_1_2
+LOAD Twitter_1_1_1 CHOOSE ((ISSTRING('/retweeted_status/quoted_status/user/location') || EXISTS('/retweeted_status/quoted_status/user/profile_image_url')) || EXISTS('/retweeted_status/user/default_profile')) STORE Twitter_1_1_1_3
+LOAD Twitter_1_1_1 CHOOSE EXISTS('/retweeted_status/user/notifications') STORE Twitter_1_1_1_4
+LOAD Twitter_1_1_1 CHOOSE (('/quoted_status/in_reply_to_user_id' == 767258608408533439 || EXISTS('/retweeted_status/extended_tweet')) || '/retweeted_status/favorited' == false) STORE Twitter_1_1_1_5
+LOAD Twitter_1_1_1 CHOOSE ('/retweeted_status/quoted_status/truncated' == false || EXISTS('/retweeted_status/user/profile_background_image_url_https')) STORE Twitter_1_1_1_6
+LOAD Twitter_1_1_1_6 CHOOSE ((((STARTSWITH('/quoted_status/user/url',"https://") || STARTSWITH('/quoted_status/user/url',"https:/")) || STARTSWITH('/quoted_status/user/url',"http://t")) || ISSTRING('/quoted_status/place/country_code')) || ISSTRING('/retweeted_status/user/location')) STORE Twitter_1_1_1_6_1

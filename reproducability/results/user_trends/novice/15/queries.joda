@@ -1,0 +1,21 @@
+# Created with Random Explorer Benchmark Generator (version v0.0.1), seed 15 (MinSelectivity: 0.2, MaxSelectivity: 0.9, MaxChain: 3, MaxTries: 100, RandomBrowseProb: 0.3, GoBackProb: 0.5, Predicates: [Exists,BoolEquality,IsString,IntEquality,FloatComparison,StrPrefix,ObjectSize,ArraySize])
+LOAD Twitter CHOOSE '/id' >= 859114350579452416.000000 STORE Twitter_1
+LOAD Twitter CHOOSE EXISTS('/retweeted_status/user/profile_background_tile') STORE Twitter_2
+LOAD Twitter CHOOSE ((((STARTSWITH('/retweeted_status/quoted_status/user/url',"https://") || STARTSWITH('/retweeted_status/quoted_status/user/url',"https:")) || STARTSWITH('/retweeted_status/quoted_status/user/url',"https")) || STARTSWITH('/retweeted_status/quoted_status/user/url',"http://s")) || EXISTS('/retweeted_status/user/profile_background_image_url_https')) STORE Twitter_3
+LOAD Twitter CHOOSE ISSTRING('/retweeted_status/user/profile_sidebar_fill_color') STORE Twitter_4
+LOAD Twitter CHOOSE ((EXISTS('/retweeted_status/quoted_status/user/followers_count') || '/retweeted_status/quoted_status/favorite_count' == 514268) || EXISTS('/retweeted_status/user/is_translator')) STORE Twitter_5
+LOAD Twitter CHOOSE EXISTS('/retweeted_status/user/geo_enabled') STORE Twitter_6
+LOAD Twitter_1 CHOOSE (((MEMCOUNT('/retweeted_status/quoted_status/extended_tweet/entities') <= 4 || ISSTRING('/coordinates/coordinates')) || EXISTS('/user/profile_link_color')) && ISSTRING('/retweeted_status/filter_level')) STORE Twitter_1_1
+LOAD Twitter_1 CHOOSE (((ISSTRING('/retweeted_status/quoted_status/id_str') || STARTSWITH('/user/profile_sidebar_fill_color',"F")) || '/quoted_status/user/verified' == false) || ISSTRING('/retweeted_status/user/lang')) STORE Twitter_1_2
+LOAD Twitter_1 CHOOSE EXISTS('/retweeted_status/in_reply_to_user_id_str') STORE Twitter_1_3
+LOAD Twitter_1 CHOOSE (MEMCOUNT('/place') >= 9 || EXISTS('/retweeted_status/user/contributors_enabled')) STORE Twitter_1_4
+LOAD Twitter_1 CHOOSE (ISSTRING('/retweeted_status/quoted_status/user/listed_count') || EXISTS('/possibly_sensitive')) STORE Twitter_1_5
+LOAD Twitter CHOOSE (((EXISTS('/retweeted_status/quoted_status/extended_tweet') || STARTSWITH('/quoted_status/user/profile_image_url',"http://p")) || EXISTS('/retweeted_status/quoted_status/text')) || ISSTRING('/delete/timestamp_ms')) STORE Twitter_7
+LOAD Twitter CHOOSE ((ISSTRING('/retweeted_status/place/country') || EXISTS('/quoted_status/place/attributes')) || EXISTS('/filter_level')) STORE Twitter_8
+LOAD Twitter CHOOSE (((EXISTS('/retweeted_status/quoted_status/entities/symbols') || ISSTRING('/quoted_status/user/url')) || ISSTRING('/retweeted_status/place/country_code')) || EXISTS('/retweeted_status/user/profile_background_image_url')) STORE Twitter_9
+LOAD Twitter_5 CHOOSE (EXISTS('/quoted_status/entities/urls') || '/possibly_sensitive' == false) STORE Twitter_5_1
+LOAD Twitter_5 CHOOSE (EXISTS('/retweeted_status/coordinates/coordinates') || '/retweeted_status/possibly_sensitive' == false) STORE Twitter_5_2
+LOAD Twitter_5 CHOOSE ((EXISTS('/quoted_status/user/profile_use_background_image') || EXISTS('/retweeted_status/quoted_status/geo/coordinates')) || EXISTS('/retweeted_status/extended_entities')) STORE Twitter_5_3
+LOAD Twitter_5 CHOOSE (EXISTS('/retweeted_status/user') && '/user/default_profile' == false) STORE Twitter_5_4
+LOAD Twitter_5 CHOOSE ((EXISTS('/retweeted_status/place/bounding_box/type') || EXISTS('/is_quote_status')) && EXISTS('/retweeted_status/entities/media')) STORE Twitter_5_5
+LOAD Twitter_1_5 CHOOSE (ISSTRING('/retweeted_status/extended_entities/media') || EXISTS('/retweeted_status/user/created_at')) STORE Twitter_1_5_1

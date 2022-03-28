@@ -1,0 +1,6 @@
+# Created with Random Explorer Benchmark Generator (version v0.0.1), seed 20 (MinSelectivity: 0.2, MaxSelectivity: 0.9, MaxChain: 3, MaxTries: 100, RandomBrowseProb: 0.05, GoBackProb: 0.2, Weighted-Paths: false, Predicates: [Exists,BoolEquality,IsString,IntEquality,FloatComparison,StrPrefix,ObjectSize,ArraySize])
+LOAD Twitter CHOOSE EXISTS('/retweeted_status/entities/symbols') STORE Twitter_1
+LOAD Twitter_1 CHOOSE EXISTS('/retweeted_status/possibly_sensitive') STORE Twitter_1_1
+LOAD Twitter_1_1 CHOOSE ((EXISTS('/retweeted_status/quoted_status/entities/urls') || '/retweeted_status/quoted_status/possibly_sensitive' == false) || EXISTS('/retweeted_status/entities/media')) STORE Twitter_1_1_1
+LOAD Twitter_1_1_1 CHOOSE (((ISSTRING('/quoted_status/user/id_str') || ((((STARTSWITH('/retweeted_status/user/url',"https:/") || STARTSWITH('/retweeted_status/user/url',"https:")) || STARTSWITH('/retweeted_status/user/url',"https")) || STARTSWITH('/retweeted_status/user/url',"http://s")) || STARTSWITH('/retweeted_status/user/url',"http://m"))) || '/retweeted_status/in_reply_to_status_id' == 836765357368877120) || EXISTS('/quoted_status/user/notifications')) STORE Twitter_1_1_1_1
+LOAD Twitter_1_1_1_1 CHOOSE EXISTS('/retweeted_status/quoted_status/in_reply_to_user_id_str') STORE Twitter_1_1_1_1_1

@@ -1,0 +1,21 @@
+# Created with Random Explorer Benchmark Generator (version v0.0.1), seed 18 (MinSelectivity: 0.2, MaxSelectivity: 0.9, MaxChain: 3, MaxTries: 100, RandomBrowseProb: 0.05, GoBackProb: 0.2, Predicates: [Exists,BoolEquality,IsString,IntEquality,FloatComparison,StrPrefix,ObjectSize,ArraySize])
+LOAD Twitter CHOOSE EXISTS('/retweeted_status/user/location') STORE Twitter_1
+LOAD Twitter CHOOSE EXISTS('/retweeted_status/user/default_profile_image') STORE Twitter_2
+LOAD Twitter CHOOSE ((('/user/listed_count' <= 104955.283376 && ISSTRING('/quoted_status/entities/hashtags')) || (STARTSWITH('/in_reply_to_status_id_str',"85911") || STARTSWITH('/in_reply_to_status_id_str',"8590"))) || EXISTS('/retweeted_status/user/location')) STORE Twitter_3
+LOAD Twitter_3 CHOOSE (EXISTS('/quoted_status/display_text_range') || ISSTRING('/retweeted_status/user/location')) STORE Twitter_3_1
+LOAD Twitter_3_1 CHOOSE EXISTS('/retweeted_status/extended_entities') STORE Twitter_3_1_1
+LOAD Twitter_3_1_1 CHOOSE (((EXISTS('/favorited') && ISSTRING('/retweeted_status/quoted_status/extended_tweet/full_text')) || '/quoted_status/possibly_sensitive' == true) || '/user/profile_background_tile' == false) STORE Twitter_3_1_1_1
+LOAD Twitter_3_1_1_1 CHOOSE '/user/id' <= 185135236692072032.000000 STORE Twitter_3_1_1_1_1
+LOAD Twitter_3_1_1_1_1 CHOOSE EXISTS('/user/profile_banner_url') STORE Twitter_3_1_1_1_1_1
+LOAD Twitter_3_1_1_1_1_1 CHOOSE (EXISTS('/retweeted_status/geo/coordinates') || ISSTRING('/retweeted_status/user/time_zone')) STORE Twitter_3_1_1_1_1_1_1
+LOAD Twitter_3_1_1_1_1_1_1 CHOOSE ((MEMCOUNT('/retweeted_status/quoted_status/place/bounding_box') >= 2 || ISSTRING('/retweeted_status/quoted_status/id')) || ISSTRING('/user/description')) STORE Twitter_3_1_1_1_1_1_1_1
+LOAD Twitter_3_1_1_1_1_1_1_1 CHOOSE SIZE('/extended_entities/media') <= 1 STORE Twitter_3_1_1_1_1_1_1_1_1
+LOAD Twitter_3_1_1_1_1_1_1_1_1 CHOOSE ISSTRING('/user/time_zone') STORE Twitter_3_1_1_1_1_1_1_1_1_1
+LOAD Twitter_3_1_1_1_1_1_1_1_1_1 CHOOSE '/user/utc_offset' <= -9063.954508 STORE Twitter_3_1_1_1_1_1_1_1_1_1_1
+LOAD Twitter_3_1_1_1_1_1_1_1_1_1_1 CHOOSE ((EXISTS('/retweeted_status/user/verified') && EXISTS('/quoted_status/user/profile_link_color')) || '/retweeted_status/user/geo_enabled' == false) STORE Twitter_3_1_1_1_1_1_1_1_1_1_1_1
+LOAD Twitter_3_1_1_1_1_1_1_1_1_1_1 CHOOSE (((ISSTRING('/user/profile_use_background_image') || MEMCOUNT('/retweeted_status/quoted_status') >= 27) || ISSTRING('/user')) || ISSTRING('/user/location')) STORE Twitter_3_1_1_1_1_1_1_1_1_1_1_2
+LOAD Twitter_3_1_1_1_1_1_1_1_1_1_1_2 CHOOSE '/retweeted_status/user/default_profile' == false STORE Twitter_3_1_1_1_1_1_1_1_1_1_1_2_1
+LOAD Twitter_3_1_1_1_1_1_1_1_1_1_1_2_1 CHOOSE (((EXISTS('/coordinates') && EXISTS('/retweeted_status/quoted_status/user/id')) || ISSTRING('/retweeted_status/quoted_status/id')) || '/id' <= 859111211817609984.000000) STORE Twitter_3_1_1_1_1_1_1_1_1_1_1_2_1_1
+LOAD Twitter_3_1_1_1_1_1_1_1_1_1_1_2_1_1 CHOOSE (((EXISTS('/retweeted_status/quoted_status/user/statuses_count') || EXISTS('/retweeted_status/place/bounding_box/coordinates')) || ISSTRING('/extended_entities/media')) || '/retweeted_status/user/geo_enabled' == true) STORE Twitter_3_1_1_1_1_1_1_1_1_1_1_2_1_1_1
+LOAD Twitter_3_1_1_1_1_1_1_1_1_1_1_2_1_1_1 CHOOSE ((EXISTS('/retweeted_status/quoted_status/user/profile_sidebar_fill_color') || EXISTS('/geo')) && ((((STARTSWITH('/user/time_zone',"M") || STARTSWITH('/user/time_zone',"C")) || STARTSWITH('/user/time_zone',"Hawaii")) || STARTSWITH('/user/time_zone',"Atlanti")) || STARTSWITH('/user/time_zone',"Alaska"))) STORE Twitter_3_1_1_1_1_1_1_1_1_1_1_2_1_1_1_1
+LOAD Twitter_3_1_1_1_1_1_1_1_1_1_1_2_1_1_1_1 CHOOSE ((ISSTRING('/quoted_status/is_quote_status') || ISSTRING('/quoted_status/in_reply_to_user_id')) || ((((STARTSWITH('/user/profile_sidebar_border_color',"F") || STARTSWITH('/user/profile_sidebar_border_color',"5E")) || STARTSWITH('/user/profile_sidebar_border_color',"363")) || STARTSWITH('/user/profile_sidebar_border_color',"181A1")) || STARTSWITH('/user/profile_sidebar_border_color',"00"))) STORE Twitter_3_1_1_1_1_1_1_1_1_1_1_2_1_1_1_1_1

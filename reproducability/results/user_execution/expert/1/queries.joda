@@ -1,0 +1,6 @@
+# Created with Random Explorer Benchmark Generator (version v0.0.1), seed 1 (MinSelectivity: 0.2, MaxSelectivity: 0.9, MaxChain: 3, MaxTries: 100, RandomBrowseProb: 0.05, GoBackProb: 0.2, Weighted-Paths: false, Predicates: [Exists,BoolEquality,IsString,IntEquality,FloatComparison,StrPrefix,ObjectSize,ArraySize])
+LOAD Twitter CHOOSE ((EXISTS('/quoted_status/extended_tweet') || EXISTS('/retweeted_status/quoted_status/user/friends_count')) || EXISTS('/retweeted_status/user/verified')) STORE Twitter_1
+LOAD Twitter CHOOSE EXISTS('/retweeted_status/text') STORE Twitter_2
+LOAD Twitter_2 CHOOSE STARTSWITH('/user/profile_background_image_url_https',"https://a") STORE Twitter_2_1
+LOAD Twitter_2 CHOOSE (('/retweeted_status/quoted_status/id' >= 371466544818089408.000000 || EXISTS('/quoted_status/entities/hashtags')) || ((((STARTSWITH('/lang',"e") || STARTSWITH('/lang',"i")) || STARTSWITH('/lang',"t")) || STARTSWITH('/lang',"f")) || STARTSWITH('/lang',"n"))) STORE Twitter_2_2
+LOAD Twitter_2_2 CHOOSE (ISSTRING('/retweeted_status/quoted_status_id_str') || ISSTRING('/user/description')) STORE Twitter_2_2_1

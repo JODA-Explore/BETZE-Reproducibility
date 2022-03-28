@@ -1,0 +1,11 @@
+# Created with Random Explorer Benchmark Generator (version v0.0.1), seed 25 (MinSelectivity: 0.2, MaxSelectivity: 0.9, MaxChain: 3, MaxTries: 100, RandomBrowseProb: 0.2, GoBackProb: 0.3, Weighted-Paths: false, Predicates: [Exists,BoolEquality,IsString,IntEquality,FloatComparison,StrPrefix,ObjectSize,ArraySize])
+LOAD Twitter CHOOSE EXISTS('/retweeted_status/retweeted') STORE Twitter_1
+LOAD Twitter_1 CHOOSE EXISTS('/retweeted_status/display_text_range') STORE Twitter_1_1
+LOAD Twitter_1_1 CHOOSE '/retweeted_status/is_quote_status' == false STORE Twitter_1_1_1
+LOAD Twitter_1 CHOOSE (EXISTS('/retweeted_status/quoted_status/extended_tweet/entities/symbols') || EXISTS('/extended_entities/media')) STORE Twitter_1_2
+LOAD Twitter_1_1_1 CHOOSE ISSTRING('/retweeted_status/user/time_zone') STORE Twitter_1_1_1_1
+LOAD Twitter_1_1_1_1 CHOOSE (ISSTRING('/retweeted_status/place/url') || ISSTRING('/user/location')) STORE Twitter_1_1_1_1_1
+LOAD Twitter_1_1_1_1_1 CHOOSE SIZE('/retweeted_status/extended_entities/media') <= 1 STORE Twitter_1_1_1_1_1_1
+LOAD Twitter_1_1_1_1_1 CHOOSE (((STARTSWITH('/user/profile_sidebar_border_color',"FF") || STARTSWITH('/user/profile_sidebar_border_color',"C")) || ISSTRING('/retweeted_status/place/country')) || EXISTS('/retweeted_status/extended_tweet/entities/media')) STORE Twitter_1_1_1_1_1_2
+LOAD Twitter_1_1_1_1_1_2 CHOOSE ('/user/id' == 561881306261979406 || '/retweeted_status/user/profile_use_background_image' == true) STORE Twitter_1_1_1_1_1_2_1
+LOAD Twitter_1_1_1_1_1_2_1 CHOOSE ('/retweeted_status/in_reply_to_user_id' == 641037384436873377 || EXISTS('/retweeted_status/extended_tweet')) STORE Twitter_1_1_1_1_1_2_1_1

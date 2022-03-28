@@ -1,0 +1,6 @@
+# Created with Random Explorer Benchmark Generator (version v0.0.1), seed 1 (MinSelectivity: 0.2, MaxSelectivity: 0.9, MaxChain: 3, MaxTries: 100, RandomBrowseProb: 0.05, GoBackProb: 0.2, Weighted-Paths: false, Predicates: [Exists,BoolEquality,IsString,IntEquality,FloatComparison,StrPrefix,ObjectSize,ArraySize])
+LOAD Reddit CHOOSE ISSTRING('/author_flair_text')  AGG ('': GROUP COUNT('') AS count BY '/author_flair_css_class')
+LOAD Reddit CHOOSE (ISSTRING('/author_flair_text') && (('/score' == 1713 || ((((STARTSWITH('/author_flair_css_class',"S") || STARTSWITH('/author_flair_css_class',"A")) || STARTSWITH('/author_flair_css_class',"z")) || STARTSWITH('/author_flair_css_class',"C")) || STARTSWITH('/author_flair_css_class',"O"))) || STARTSWITH('/parent_id',"t3")))  AGG ('': GROUP COUNT('') AS count BY '/downs')
+LOAD Reddit CHOOSE (ISSTRING('/author_flair_text') && ('/score' == 418 || '/score' <= 2583.149373))  AGG ('': GROUP COUNT('') AS count BY '/retrieved_on')
+LOAD Reddit CHOOSE (ISSTRING('/author_flair_text') && ((('/edited' == 1420110190 || '/score_hidden' == false) && ISSTRING('/distinguished')) || '/retrieved_on' <= 1426688639.523958))  AGG ('': GROUP COUNT('/name') AS count BY '/parent_id')
+LOAD Reddit CHOOSE (ISSTRING('/author_flair_text') && '/score' <= 2234.072577)  AGG ('': GROUP COUNT('') AS count BY '/author_flair_text')

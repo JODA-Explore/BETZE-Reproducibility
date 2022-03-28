@@ -1,0 +1,7 @@
+LOAD Twitter FROM FILE "/dataset/Twitter.json" LINESEPARATED
+# Created with Random Explorer Benchmark Generator (version v0.0.1), seed 8 (MinSelectivity: 0.2, MaxSelectivity: 0.9, MaxChain: 3, MaxTries: 100, RandomBrowseProb: 0.05, GoBackProb: 0.2, Weighted-Paths: false, Predicates: [Exists,BoolEquality,IsString,IntEquality,FloatComparison,StrPrefix,ObjectSize,ArraySize])
+LOAD Twitter CHOOSE EXISTS('/retweeted_status/user/profile_image_url') STORE Twitter_1
+LOAD Twitter_1 CHOOSE ((EXISTS('/quoted_status/place/bounding_box/type') || ((STARTSWITH('/retweeted_status/user/screen_name',"s") || STARTSWITH('/retweeted_status/user/screen_name',"a")) || STARTSWITH('/retweeted_status/user/screen_name',"m"))) || '/id' >= 859114054653744128.000000) STORE Twitter_1_1
+LOAD Twitter_1_1 CHOOSE ((STARTSWITH('/retweeted_status/user/profile_background_image_url',"http://p") && STARTSWITH('/retweeted_status/user/profile_background_image_url',"http")) || '/quoted_status/user/followers_count' >= 11923115.070571) STORE Twitter_1_1_1
+LOAD Twitter_1_1 CHOOSE (((EXISTS('/retweeted_status/quoted_status/coordinates') || (STARTSWITH('/quoted_status/place/country',"E") || STARTSWITH('/quoted_status/place/country',"У"))) || '/retweeted_status/quoted_status/user/default_profile' == false) || EXISTS('/retweeted_status/possibly_sensitive')) STORE Twitter_1_1_2
+LOAD Twitter_1_1_2 CHOOSE (((STARTSWITH('/lang',"e") || STARTSWITH('/lang',"f")) || EXISTS('/quoted_status/extended_tweet/entities')) || STARTSWITH('/retweeted_status/user/profile_image_url',"http://ab")) STORE Twitter_1_1_2_1

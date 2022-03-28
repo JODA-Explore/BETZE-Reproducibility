@@ -1,0 +1,11 @@
+# Created with Random Explorer Benchmark Generator (version v0.0.1), seed 22 (MinSelectivity: 0.2, MaxSelectivity: 0.9, MaxChain: 3, MaxTries: 100, RandomBrowseProb: 0.2, GoBackProb: 0.3, Weighted-Paths: false, Predicates: [Exists,BoolEquality,IsString,IntEquality,FloatComparison,StrPrefix,ObjectSize,ArraySize])
+LOAD Twitter CHOOSE EXISTS('/in_reply_to_status_id') STORE Twitter_1
+LOAD Twitter_1 CHOOSE ((ISSTRING('/quoted_status/place/bounding_box/type') || EXISTS('/retweeted_status/quoted_status/entities/symbols')) || EXISTS('/retweeted_status/entities/symbols')) STORE Twitter_1_1
+LOAD Twitter_1 CHOOSE (('/user/profile_background_tile' == true || ((((STARTSWITH('/quoted_status/user/screen_name',"A") || STARTSWITH('/quoted_status/user/screen_name',"S")) || STARTSWITH('/quoted_status/user/screen_name',"s")) || STARTSWITH('/quoted_status/user/screen_name',"a")) || STARTSWITH('/quoted_status/user/screen_name',"M"))) || EXISTS('/quoted_status/entities')) STORE Twitter_1_2
+LOAD Twitter_1_2 CHOOSE EXISTS('/retweeted_status/entities/user_mentions') STORE Twitter_1_2_1
+LOAD Twitter_1_2_1 CHOOSE ISSTRING('/quoted_status/user/profile_image_url') STORE Twitter_1_2_1_1
+LOAD Twitter_1_2_1 CHOOSE EXISTS('/quoted_status/entities/hashtags') STORE Twitter_1_2_1_2
+LOAD Twitter_1_2_1_2 CHOOSE SIZE('/quoted_status/extended_entities/media') <= 1 STORE Twitter_1_2_1_2_1
+LOAD Twitter_1_2_1_2_1 CHOOSE '/retweeted_status/quoted_status/user/profile_background_tile' == true STORE Twitter_1_2_1_2_1_1
+LOAD Twitter_1_2_1_2_1_1 CHOOSE (ISSTRING('/retweeted_status/place/full_name') || STARTSWITH('/retweeted_status/user/profile_background_image_url_https',"https://a")) STORE Twitter_1_2_1_2_1_1_1
+LOAD Twitter_1_2_1_2_1 CHOOSE (((((STARTSWITH('/retweeted_status/place/country_code',"A") || STARTSWITH('/retweeted_status/place/country_code',"C")) || STARTSWITH('/retweeted_status/place/country_code',"G")) || STARTSWITH('/retweeted_status/place/country_code',"I")) || STARTSWITH('/retweeted_status/place/country_code',"T")) || ISSTRING('/retweeted_status/quoted_status/user/time_zone')) STORE Twitter_1_2_1_2_1_2

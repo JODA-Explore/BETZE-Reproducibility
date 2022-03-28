@@ -1,0 +1,6 @@
+# Created with Random Explorer Benchmark Generator (version v0.0.1), seed 7 (MinSelectivity: 0.2, MaxSelectivity: 0.9, MaxChain: 3, MaxTries: 100, RandomBrowseProb: 0.05, GoBackProb: 0.2, Weighted-Paths: false, Predicates: [Exists,BoolEquality,IsString,IntEquality,FloatComparison,StrPrefix,ObjectSize,ArraySize])
+LOAD Twitter CHOOSE ('/delete/status/id' >= 596329841933858432.000000 || EXISTS('/retweeted_status/entities/urls')) STORE Twitter_1
+LOAD Twitter CHOOSE (EXISTS('/retweeted_status/place/bounding_box/type') || EXISTS('/retweeted_status/user/id')) STORE Twitter_2
+LOAD Twitter_2 CHOOSE '/retweeted_status/user/profile_use_background_image' == true STORE Twitter_2_1
+LOAD Twitter_2_1 CHOOSE (ISSTRING('/retweeted_status/quoted_status/user/id_str') || EXISTS('/user/profile_banner_url')) STORE Twitter_2_1_1
+LOAD Twitter_1 CHOOSE ISSTRING('/retweeted_status/created_at') STORE Twitter_1_1

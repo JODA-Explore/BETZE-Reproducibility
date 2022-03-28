@@ -1,0 +1,31 @@
+=== Found JODA query file, executing JODA queries ===
+= File:'Twitter.json' =
+status: exited: 0
+JODA: 3167.09 s
+59daa810e6a772bd882380e3e47b14d6f4bd63f5d2876b65e729a24a587372ca
+=== Found MongoDB query file, executing MongoDB queries ===
+MongoDB: Terminated
+62812.504
+=== Found Postgres query file, executing Postgres queries ===
+PSQL: 39916.724
+=== Results ===
+= JODA =
+Overall: 3167.09
+Query Time: 3019.17
+801.222655479
+532.232787409
+572.047454684
+554.272136302
+559.390581336
+= Mongo =
+Overall: Terminated
+62812.504
+Query Time: 0
+
+= PostgreSQL =
+Overall: 39916.724
+Query Time: 6574.62
+3369.86
+3204.76
+= JQ =
+Overall: 
